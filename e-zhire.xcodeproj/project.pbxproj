@@ -1,0 +1,1396 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03014A141EE69C8D00507047 /* EZTermVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03014A131EE69C8C00507047 /* EZTermVC.m */; };
+		03014A181EE6C72800507047 /* EZPrivacyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03014A171EE6C72800507047 /* EZPrivacyVC.m */; };
+		03014A1C1EE6EC1F00507047 /* EZSignCreateAccountVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03014A1B1EE6EC1F00507047 /* EZSignCreateAccountVC.m */; };
+		030E14921EEFCE9C0071D9D1 /* AvailableServiceJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 030E14911EEFCE9C0071D9D1 /* AvailableServiceJsonModel.m */; };
+		030E14951EEFD01E0071D9D1 /* subCategoriesJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 030E14941EEFD01E0071D9D1 /* subCategoriesJsonModel.m */; };
+		030E14991EF02E490071D9D1 /* EZNextPaymentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 030E14981EF02E490071D9D1 /* EZNextPaymentVC.m */; };
+		0315CCC51EE572BD00DFE6FC /* EZVideoPlayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0315CCC41EE572BD00DFE6FC /* EZVideoPlayVC.m */; };
+		0315CCC91EE578A300DFE6FC /* HappyCustomerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0315CCC81EE578A300DFE6FC /* HappyCustomerVC.m */; };
+		0315CCCB1EE5812E00DFE6FC /* Testimonlial-female.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0315CCCA1EE5812D00DFE6FC /* Testimonlial-female.jpg */; };
+		0315CCCE1EE5831600DFE6FC /* CustomerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0315CCCD1EE5831600DFE6FC /* CustomerCell.m */; };
+		0315CCD01EE598E200DFE6FC /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 0315CCCF1EE598E200DFE6FC /* splash.png */; };
+		0349500C1EE9604400AA9E6D /* EZPaymentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0349500B1EE9604400AA9E6D /* EZPaymentVC.m */; };
+		035540B91F024886008428F3 /* EZClientAccountVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 035540B81F024886008428F3 /* EZClientAccountVC.m */; };
+		035540BD1F025006008428F3 /* EZworkorderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 035540BC1F025006008428F3 /* EZworkorderVC.m */; };
+		035540C01F025852008428F3 /* EZOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 035540BF1F025852008428F3 /* EZOrderCell.m */; };
+		035540C51F025AAE008428F3 /* EZInvoicesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 035540C41F025AAE008428F3 /* EZInvoicesVC.m */; };
+		035540C91F026B7A008428F3 /* InvoicesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 035540C81F026B7A008428F3 /* InvoicesCell.m */; };
+		035540CD1F02787D008428F3 /* EZInvoicesDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 035540CC1F02787D008428F3 /* EZInvoicesDetail.m */; };
+		035540D11F028D50008428F3 /* InvoiceDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 035540D01F028D50008428F3 /* InvoiceDetailCell.m */; };
+		036D05DF1F01380E000633E2 /* headerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 036D05DE1F01380E000633E2 /* headerCell.m */; };
+		038A7FCF1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 038A7FCE1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.m */; };
+		03992B521EE2EDEA00636A47 /* EZServiceProviderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03992B511EE2EDEA00636A47 /* EZServiceProviderVC.m */; };
+		03ADF4911F0394CE0045EADD /* EZWorkViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03ADF4901F0394CE0045EADD /* EZWorkViewVC.m */; };
+		03C18A501F06342900672C3E /* AssociateManagementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C18A4F1F06342900672C3E /* AssociateManagementVC.m */; };
+		03C18A601F068F9D00672C3E /* EZAddServiceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C18A5F1F068F9D00672C3E /* EZAddServiceVC.m */; };
+		03C18A631F068FB600672C3E /* SelectSeriveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C18A621F068FB600672C3E /* SelectSeriveCell.m */; };
+		03C18A661F068FBE00672C3E /* EZAddServiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C18A651F068FBE00672C3E /* EZAddServiceCell.m */; };
+		03C74B871EE28F7C00684199 /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C74B861EE28F7C00684199 /* DetailCell.m */; };
+		03C74B911EE2E9FB00684199 /* EZServiceProviderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C74B901EE2E9FB00684199 /* EZServiceProviderCell.m */; };
+		03C8903F1F04E5AD002FC3DC /* EZPaymentinformationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C8903E1F04E5AD002FC3DC /* EZPaymentinformationCell.m */; };
+		03C890431F04E740002FC3DC /* EZEditPaymentcell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C890421F04E740002FC3DC /* EZEditPaymentcell.m */; };
+		03C8904A1F0524BC002FC3DC /* EZEditPaymentInformationVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C890491F0524BC002FC3DC /* EZEditPaymentInformationVc.m */; };
+		03C8904E1F0526D3002FC3DC /* EZAssociateAccountVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C8904D1F0526D3002FC3DC /* EZAssociateAccountVC.m */; };
+		03C890521F0529A7002FC3DC /* AssociateAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C890511F0529A7002FC3DC /* AssociateAccountCell.m */; };
+		03CBF74C1EFD048100F6C52D /* EZReviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CBF74B1EFD048100F6C52D /* EZReviewVC.m */; };
+		03CBF7501EFD252600F6C52D /* EZPhotoCellVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CBF74F1EFD252600F6C52D /* EZPhotoCellVC.m */; };
+		03CBF7541EFD25F000F6C52D /* EZAboutDetailCellVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CBF7531EFD25F000F6C52D /* EZAboutDetailCellVC.m */; };
+		03CBF7581EFD263700F6C52D /* EZReviewCellVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CBF7571EFD263700F6C52D /* EZReviewCellVC.m */; };
+		03CBF75C1EFD3C3500F6C52D /* EZClientPriceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CBF75B1EFD3C3500F6C52D /* EZClientPriceCell.m */; };
+		03D191FD1EEFAB3B0031F65C /* EZAssociateSignup.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D191FC1EEFAB3B0031F65C /* EZAssociateSignup.m */; };
+		03D8A6181F07872300713B46 /* MyAvailbilityScheduleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8A6171F07872300713B46 /* MyAvailbilityScheduleVC.m */; };
+		03D8A61D1F07962900713B46 /* MonthCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8A61C1F07962900713B46 /* MonthCell.m */; };
+		03D8A6401F07B6F400713B46 /* FSCalendar+Deprecated.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8A61F1F07B6F400713B46 /* FSCalendar+Deprecated.m */; };
+		03D8A6411F07B6F400713B46 /* FSCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8A6211F07B6F400713B46 /* FSCalendar.m */; };
+		03D8A6421F07B6F400713B46 /* FSCalendarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8A6231F07B6F400713B46 /* FSCalendarAppearance.m */; };
+		03D8A6431F07B6F400713B46 /* FSCalendarCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8A6251F07B6F400713B46 /* FSCalendarCalculator.m */; };
+		03D8A6441F07B6F400713B46 /* FSCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8A6271F07B6F400713B46 /* FSCalendarCell.m */; };
+		03D8A6451F07B6F400713B46 /* FSCalendarCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8A6291F07B6F400713B46 /* FSCalendarCollectionView.m */; };
+		03D8A6461F07B6F400713B46 /* FSCalendarCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8A62B1F07B6F400713B46 /* FSCalendarCollectionViewLayout.m */; };
+		03D8A6471F07B6F400713B46 /* FSCalendarConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8A62D1F07B6F400713B46 /* FSCalendarConstants.m */; };
+		03D8A6481F07B6F400713B46 /* FSCalendarDelegationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8A62F1F07B6F400713B46 /* FSCalendarDelegationFactory.m */; };
+		03D8A6491F07B6F400713B46 /* FSCalendarDelegationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8A6311F07B6F400713B46 /* FSCalendarDelegationProxy.m */; };
+		03D8A64A1F07B6F400713B46 /* FSCalendarExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8A6341F07B6F400713B46 /* FSCalendarExtensions.m */; };
+		03D8A64B1F07B6F400713B46 /* FSCalendarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8A6361F07B6F400713B46 /* FSCalendarHeaderView.m */; };
+		03D8A64C1F07B6F400713B46 /* FSCalendarScopeHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8A6381F07B6F400713B46 /* FSCalendarScopeHandle.m */; };
+		03D8A64D1F07B6F400713B46 /* FSCalendarStickyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8A63A1F07B6F400713B46 /* FSCalendarStickyHeader.m */; };
+		03D8A64E1F07B6F400713B46 /* FSCalendarTransitionCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8A63C1F07B6F400713B46 /* FSCalendarTransitionCoordinator.m */; };
+		03D8A64F1F07B6F400713B46 /* FSCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8A63E1F07B6F400713B46 /* FSCalendarWeekdayView.m */; };
+		03D8A6501F07B6F400713B46 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03D8A63F1F07B6F400713B46 /* Info.plist */; };
+		03E969051EEE6F44000FD50C /* TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E969041EEE6F44000FD50C /* TextField.m */; };
+		03E969091EEEBA08000FD50C /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E969081EEEBA08000FD50C /* NetworkManager.m */; };
+		03E9690D1EEEBCC1000FD50C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E9690C1EEEBCC1000FD50C /* Reachability.m */; };
+		03EC06591EF12DB4008FBE16 /* EZForgotPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EC06581EF12DB4008FBE16 /* EZForgotPasswordVC.m */; };
+		03EC06611EF1798E008FBE16 /* EZServiceDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EC06601EF1798E008FBE16 /* EZServiceDetailVC.m */; };
+		03FA9EB51EFBBB2100DAC8CC /* EZSearchServiceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FA9EB41EFBBB2100DAC8CC /* EZSearchServiceVC.m */; };
+		03FA9EB91EFBC12400DAC8CC /* SearchServiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FA9EB81EFBC12400DAC8CC /* SearchServiceCell.m */; };
+		03FBCCE11EF93CF400C02003 /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03FBCCE01EF93CF400C02003 /* Oswald-Regular.ttf */; };
+		03FBCCE21EF93D0300C02003 /* OSWALD-BOLD.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 8BA781701EDEFDEF0027F75F /* OSWALD-BOLD.TTF */; };
+		8B37448D1EDDAF2B001B4F55 /* clean@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B37448C1EDDAF2B001B4F55 /* clean@2x.png */; };
+		8B40D06B1EE0435A00739CA1 /* EZServiceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B40D06A1EE0435A00739CA1 /* EZServiceVC.m */; };
+		8B40D06E1EE0437300739CA1 /* EZHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B40D06D1EE0437300739CA1 /* EZHomeVC.m */; };
+		8B52E1C61EDEA0B700211D79 /* EZContactVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B52E1C51EDEA0B700211D79 /* EZContactVC.m */; };
+		8B52E1C91EDEB65500211D79 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B52E1C81EDEB65500211D79 /* LoginVC.m */; };
+		8B52E1CD1EDED97800211D79 /* EZFaqVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B52E1CC1EDED97800211D79 /* EZFaqVC.m */; };
+		8B52E1D11EDEE1AD00211D79 /* EZFaqCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B52E1D01EDEE1AD00211D79 /* EZFaqCell.m */; };
+		8B53A2BA1EE17B7800EE6EAA /* imageAnimationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B53A2B91EE17B7700EE6EAA /* imageAnimationCell.m */; };
+		8B86AA0C1EDC45550031793A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B86AA0B1EDC45550031793A /* main.m */; };
+		8B86AA0F1EDC45550031793A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B86AA0E1EDC45550031793A /* AppDelegate.m */; };
+		8B86AA121EDC45550031793A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B86AA111EDC45550031793A /* ViewController.m */; };
+		8B86AA151EDC45560031793A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B86AA131EDC45560031793A /* Main.storyboard */; };
+		8B86AA171EDC45560031793A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B86AA161EDC45560031793A /* Assets.xcassets */; };
+		8B86AA1A1EDC45560031793A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B86AA181EDC45560031793A /* LaunchScreen.storyboard */; };
+		8B86AA2E1EDC50C60031793A /* EZCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B86AA2C1EDC50C60031793A /* EZCollectionReusableView.m */; };
+		8B86AA2F1EDC50C60031793A /* EZLoadingCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B86AA2D1EDC50C60031793A /* EZLoadingCollectionReusableView.xib */; };
+		8B86AA331EDC52120031793A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B86AA321EDC52120031793A /* Foundation.framework */; };
+		8B86AA371EDC52910031793A /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B86AA361EDC52910031793A /* CategoryCell.m */; };
+		8B86AA401EDC5D640031793A /* EZCommonMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B86AA3F1EDC5D640031793A /* EZCommonMethod.m */; };
+		8B86AA471EDC6B730031793A /* EZBottomTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B86AA461EDC6B730031793A /* EZBottomTabVC.m */; };
+		8B873C441F065FF9009428A2 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B873C431F065FF9009428A2 /* MessageUI.framework */; };
+		8BA781751EDF02D10027F75F /* MoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA781741EDF02D10027F75F /* MoreVC.m */; };
+		A8A4DF963DB0F603457F95C8 /* Pods_e_zhire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D91A524DA00F2199F38858D /* Pods_e_zhire.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03014A121EE69C8C00507047 /* EZTermVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZTermVC.h; sourceTree = "<group>"; };
+		03014A131EE69C8C00507047 /* EZTermVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZTermVC.m; sourceTree = "<group>"; };
+		03014A161EE6C72800507047 /* EZPrivacyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZPrivacyVC.h; sourceTree = "<group>"; };
+		03014A171EE6C72800507047 /* EZPrivacyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZPrivacyVC.m; sourceTree = "<group>"; };
+		03014A1A1EE6EC1F00507047 /* EZSignCreateAccountVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZSignCreateAccountVC.h; sourceTree = "<group>"; };
+		03014A1B1EE6EC1F00507047 /* EZSignCreateAccountVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZSignCreateAccountVC.m; sourceTree = "<group>"; };
+		030E14901EEFCE9C0071D9D1 /* AvailableServiceJsonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvailableServiceJsonModel.h; sourceTree = "<group>"; };
+		030E14911EEFCE9C0071D9D1 /* AvailableServiceJsonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvailableServiceJsonModel.m; sourceTree = "<group>"; };
+		030E14931EEFD01E0071D9D1 /* subCategoriesJsonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = subCategoriesJsonModel.h; sourceTree = "<group>"; };
+		030E14941EEFD01E0071D9D1 /* subCategoriesJsonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = subCategoriesJsonModel.m; sourceTree = "<group>"; };
+		030E14971EF02E490071D9D1 /* EZNextPaymentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZNextPaymentVC.h; sourceTree = "<group>"; };
+		030E14981EF02E490071D9D1 /* EZNextPaymentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZNextPaymentVC.m; sourceTree = "<group>"; };
+		0315CCC31EE572BD00DFE6FC /* EZVideoPlayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZVideoPlayVC.h; sourceTree = "<group>"; };
+		0315CCC41EE572BD00DFE6FC /* EZVideoPlayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZVideoPlayVC.m; sourceTree = "<group>"; };
+		0315CCC71EE578A300DFE6FC /* HappyCustomerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HappyCustomerVC.h; sourceTree = "<group>"; };
+		0315CCC81EE578A300DFE6FC /* HappyCustomerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HappyCustomerVC.m; sourceTree = "<group>"; };
+		0315CCCA1EE5812D00DFE6FC /* Testimonlial-female.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Testimonlial-female.jpg"; sourceTree = "<group>"; };
+		0315CCCC1EE5831600DFE6FC /* CustomerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerCell.h; sourceTree = "<group>"; };
+		0315CCCD1EE5831600DFE6FC /* CustomerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerCell.m; sourceTree = "<group>"; };
+		0315CCCF1EE598E200DFE6FC /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		0349500A1EE9604400AA9E6D /* EZPaymentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZPaymentVC.h; sourceTree = "<group>"; };
+		0349500B1EE9604400AA9E6D /* EZPaymentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZPaymentVC.m; sourceTree = "<group>"; };
+		035540B71F024885008428F3 /* EZClientAccountVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZClientAccountVC.h; sourceTree = "<group>"; };
+		035540B81F024886008428F3 /* EZClientAccountVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZClientAccountVC.m; sourceTree = "<group>"; };
+		035540BB1F025006008428F3 /* EZworkorderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZworkorderVC.h; sourceTree = "<group>"; };
+		035540BC1F025006008428F3 /* EZworkorderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZworkorderVC.m; sourceTree = "<group>"; };
+		035540BE1F025852008428F3 /* EZOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZOrderCell.h; sourceTree = "<group>"; };
+		035540BF1F025852008428F3 /* EZOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZOrderCell.m; sourceTree = "<group>"; };
+		035540C31F025AAE008428F3 /* EZInvoicesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZInvoicesVC.h; sourceTree = "<group>"; };
+		035540C41F025AAE008428F3 /* EZInvoicesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZInvoicesVC.m; sourceTree = "<group>"; };
+		035540C71F026B7A008428F3 /* InvoicesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvoicesCell.h; sourceTree = "<group>"; };
+		035540C81F026B7A008428F3 /* InvoicesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvoicesCell.m; sourceTree = "<group>"; };
+		035540CB1F02787D008428F3 /* EZInvoicesDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZInvoicesDetail.h; sourceTree = "<group>"; };
+		035540CC1F02787D008428F3 /* EZInvoicesDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZInvoicesDetail.m; sourceTree = "<group>"; };
+		035540CF1F028D50008428F3 /* InvoiceDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvoiceDetailCell.h; sourceTree = "<group>"; };
+		035540D01F028D50008428F3 /* InvoiceDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvoiceDetailCell.m; sourceTree = "<group>"; };
+		036D05DD1F01380E000633E2 /* headerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = headerCell.h; sourceTree = "<group>"; };
+		036D05DE1F01380E000633E2 /* headerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = headerCell.m; sourceTree = "<group>"; };
+		038A7FCD1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZSearchZipeCodeVC.h; sourceTree = "<group>"; };
+		038A7FCE1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZSearchZipeCodeVC.m; sourceTree = "<group>"; };
+		03992B501EE2EDEA00636A47 /* EZServiceProviderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZServiceProviderVC.h; sourceTree = "<group>"; };
+		03992B511EE2EDEA00636A47 /* EZServiceProviderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZServiceProviderVC.m; sourceTree = "<group>"; };
+		03ADF48F1F0394CE0045EADD /* EZWorkViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZWorkViewVC.h; sourceTree = "<group>"; };
+		03ADF4901F0394CE0045EADD /* EZWorkViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZWorkViewVC.m; sourceTree = "<group>"; };
+		03C18A4E1F06342800672C3E /* AssociateManagementVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssociateManagementVC.h; sourceTree = "<group>"; };
+		03C18A4F1F06342900672C3E /* AssociateManagementVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssociateManagementVC.m; sourceTree = "<group>"; };
+		03C18A5E1F068F9D00672C3E /* EZAddServiceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZAddServiceVC.h; sourceTree = "<group>"; };
+		03C18A5F1F068F9D00672C3E /* EZAddServiceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZAddServiceVC.m; sourceTree = "<group>"; };
+		03C18A611F068FB600672C3E /* SelectSeriveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectSeriveCell.h; sourceTree = "<group>"; };
+		03C18A621F068FB600672C3E /* SelectSeriveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectSeriveCell.m; sourceTree = "<group>"; };
+		03C18A641F068FBE00672C3E /* EZAddServiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZAddServiceCell.h; sourceTree = "<group>"; };
+		03C18A651F068FBE00672C3E /* EZAddServiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZAddServiceCell.m; sourceTree = "<group>"; };
+		03C74B851EE28F7C00684199 /* DetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCell.h; sourceTree = "<group>"; };
+		03C74B861EE28F7C00684199 /* DetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCell.m; sourceTree = "<group>"; };
+		03C74B8F1EE2E9FB00684199 /* EZServiceProviderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZServiceProviderCell.h; sourceTree = "<group>"; };
+		03C74B901EE2E9FB00684199 /* EZServiceProviderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZServiceProviderCell.m; sourceTree = "<group>"; };
+		03C8903D1F04E5AD002FC3DC /* EZPaymentinformationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZPaymentinformationCell.h; sourceTree = "<group>"; };
+		03C8903E1F04E5AD002FC3DC /* EZPaymentinformationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZPaymentinformationCell.m; sourceTree = "<group>"; };
+		03C890411F04E740002FC3DC /* EZEditPaymentcell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZEditPaymentcell.h; sourceTree = "<group>"; };
+		03C890421F04E740002FC3DC /* EZEditPaymentcell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZEditPaymentcell.m; sourceTree = "<group>"; };
+		03C890481F0524BC002FC3DC /* EZEditPaymentInformationVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZEditPaymentInformationVc.h; sourceTree = "<group>"; };
+		03C890491F0524BC002FC3DC /* EZEditPaymentInformationVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZEditPaymentInformationVc.m; sourceTree = "<group>"; };
+		03C8904C1F0526D3002FC3DC /* EZAssociateAccountVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZAssociateAccountVC.h; sourceTree = "<group>"; };
+		03C8904D1F0526D3002FC3DC /* EZAssociateAccountVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZAssociateAccountVC.m; sourceTree = "<group>"; };
+		03C890501F0529A7002FC3DC /* AssociateAccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssociateAccountCell.h; sourceTree = "<group>"; };
+		03C890511F0529A7002FC3DC /* AssociateAccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssociateAccountCell.m; sourceTree = "<group>"; };
+		03CBF74A1EFD048100F6C52D /* EZReviewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZReviewVC.h; sourceTree = "<group>"; };
+		03CBF74B1EFD048100F6C52D /* EZReviewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZReviewVC.m; sourceTree = "<group>"; };
+		03CBF74E1EFD252500F6C52D /* EZPhotoCellVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZPhotoCellVC.h; sourceTree = "<group>"; };
+		03CBF74F1EFD252600F6C52D /* EZPhotoCellVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZPhotoCellVC.m; sourceTree = "<group>"; };
+		03CBF7521EFD25F000F6C52D /* EZAboutDetailCellVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZAboutDetailCellVC.h; sourceTree = "<group>"; };
+		03CBF7531EFD25F000F6C52D /* EZAboutDetailCellVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZAboutDetailCellVC.m; sourceTree = "<group>"; };
+		03CBF7561EFD263700F6C52D /* EZReviewCellVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZReviewCellVC.h; sourceTree = "<group>"; };
+		03CBF7571EFD263700F6C52D /* EZReviewCellVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZReviewCellVC.m; sourceTree = "<group>"; };
+		03CBF75A1EFD3C3500F6C52D /* EZClientPriceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZClientPriceCell.h; sourceTree = "<group>"; };
+		03CBF75B1EFD3C3500F6C52D /* EZClientPriceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZClientPriceCell.m; sourceTree = "<group>"; };
+		03D191FB1EEFAB3B0031F65C /* EZAssociateSignup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZAssociateSignup.h; sourceTree = "<group>"; };
+		03D191FC1EEFAB3B0031F65C /* EZAssociateSignup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZAssociateSignup.m; sourceTree = "<group>"; };
+		03D8A6161F07872300713B46 /* MyAvailbilityScheduleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyAvailbilityScheduleVC.h; path = "e-zhire/ModelVC/MyAvailbilityScheduleVC.h"; sourceTree = "<group>"; };
+		03D8A6171F07872300713B46 /* MyAvailbilityScheduleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyAvailbilityScheduleVC.m; path = "e-zhire/ModelVC/MyAvailbilityScheduleVC.m"; sourceTree = "<group>"; };
+		03D8A61B1F07962900713B46 /* MonthCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthCell.h; sourceTree = "<group>"; };
+		03D8A61C1F07962900713B46 /* MonthCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthCell.m; sourceTree = "<group>"; };
+		03D8A61F1F07B6F400713B46 /* FSCalendar+Deprecated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCalendar+Deprecated.m"; sourceTree = "<group>"; };
+		03D8A6201F07B6F400713B46 /* FSCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendar.h; sourceTree = "<group>"; };
+		03D8A6211F07B6F400713B46 /* FSCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendar.m; sourceTree = "<group>"; };
+		03D8A6221F07B6F400713B46 /* FSCalendarAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarAppearance.h; sourceTree = "<group>"; };
+		03D8A6231F07B6F400713B46 /* FSCalendarAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarAppearance.m; sourceTree = "<group>"; };
+		03D8A6241F07B6F400713B46 /* FSCalendarCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCalculator.h; sourceTree = "<group>"; };
+		03D8A6251F07B6F400713B46 /* FSCalendarCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCalculator.m; sourceTree = "<group>"; };
+		03D8A6261F07B6F400713B46 /* FSCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCell.h; sourceTree = "<group>"; };
+		03D8A6271F07B6F400713B46 /* FSCalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCell.m; sourceTree = "<group>"; };
+		03D8A6281F07B6F400713B46 /* FSCalendarCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCollectionView.h; sourceTree = "<group>"; };
+		03D8A6291F07B6F400713B46 /* FSCalendarCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCollectionView.m; sourceTree = "<group>"; };
+		03D8A62A1F07B6F400713B46 /* FSCalendarCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCollectionViewLayout.h; sourceTree = "<group>"; };
+		03D8A62B1F07B6F400713B46 /* FSCalendarCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCollectionViewLayout.m; sourceTree = "<group>"; };
+		03D8A62C1F07B6F400713B46 /* FSCalendarConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarConstants.h; sourceTree = "<group>"; };
+		03D8A62D1F07B6F400713B46 /* FSCalendarConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarConstants.m; sourceTree = "<group>"; };
+		03D8A62E1F07B6F400713B46 /* FSCalendarDelegationFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarDelegationFactory.h; sourceTree = "<group>"; };
+		03D8A62F1F07B6F400713B46 /* FSCalendarDelegationFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarDelegationFactory.m; sourceTree = "<group>"; };
+		03D8A6301F07B6F400713B46 /* FSCalendarDelegationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarDelegationProxy.h; sourceTree = "<group>"; };
+		03D8A6311F07B6F400713B46 /* FSCalendarDelegationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarDelegationProxy.m; sourceTree = "<group>"; };
+		03D8A6321F07B6F400713B46 /* FSCalendarDynamicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarDynamicHeader.h; sourceTree = "<group>"; };
+		03D8A6331F07B6F400713B46 /* FSCalendarExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarExtensions.h; sourceTree = "<group>"; };
+		03D8A6341F07B6F400713B46 /* FSCalendarExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarExtensions.m; sourceTree = "<group>"; };
+		03D8A6351F07B6F400713B46 /* FSCalendarHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarHeaderView.h; sourceTree = "<group>"; };
+		03D8A6361F07B6F400713B46 /* FSCalendarHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarHeaderView.m; sourceTree = "<group>"; };
+		03D8A6371F07B6F400713B46 /* FSCalendarScopeHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarScopeHandle.h; sourceTree = "<group>"; };
+		03D8A6381F07B6F400713B46 /* FSCalendarScopeHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarScopeHandle.m; sourceTree = "<group>"; };
+		03D8A6391F07B6F400713B46 /* FSCalendarStickyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarStickyHeader.h; sourceTree = "<group>"; };
+		03D8A63A1F07B6F400713B46 /* FSCalendarStickyHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarStickyHeader.m; sourceTree = "<group>"; };
+		03D8A63B1F07B6F400713B46 /* FSCalendarTransitionCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarTransitionCoordinator.h; sourceTree = "<group>"; };
+		03D8A63C1F07B6F400713B46 /* FSCalendarTransitionCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarTransitionCoordinator.m; sourceTree = "<group>"; };
+		03D8A63D1F07B6F400713B46 /* FSCalendarWeekdayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarWeekdayView.h; sourceTree = "<group>"; };
+		03D8A63E1F07B6F400713B46 /* FSCalendarWeekdayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarWeekdayView.m; sourceTree = "<group>"; };
+		03D8A63F1F07B6F400713B46 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03E969031EEE6F44000FD50C /* TextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextField.h; sourceTree = "<group>"; };
+		03E969041EEE6F44000FD50C /* TextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextField.m; sourceTree = "<group>"; };
+		03E969071EEEBA08000FD50C /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		03E969081EEEBA08000FD50C /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		03E9690B1EEEBCC1000FD50C /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		03E9690C1EEEBCC1000FD50C /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		03E9690E1EEEBEAD000FD50C /* ApiConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiConstant.h; sourceTree = "<group>"; };
+		03EC06571EF12DB4008FBE16 /* EZForgotPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZForgotPasswordVC.h; sourceTree = "<group>"; };
+		03EC06581EF12DB4008FBE16 /* EZForgotPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZForgotPasswordVC.m; sourceTree = "<group>"; };
+		03EC065F1EF1798E008FBE16 /* EZServiceDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZServiceDetailVC.h; sourceTree = "<group>"; };
+		03EC06601EF1798E008FBE16 /* EZServiceDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZServiceDetailVC.m; sourceTree = "<group>"; wrapsLines = 0; };
+		03FA9EB31EFBBB2100DAC8CC /* EZSearchServiceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZSearchServiceVC.h; sourceTree = "<group>"; };
+		03FA9EB41EFBBB2100DAC8CC /* EZSearchServiceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZSearchServiceVC.m; sourceTree = "<group>"; };
+		03FA9EB71EFBC12400DAC8CC /* SearchServiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchServiceCell.h; sourceTree = "<group>"; };
+		03FA9EB81EFBC12400DAC8CC /* SearchServiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchServiceCell.m; sourceTree = "<group>"; };
+		03FBCCE01EF93CF400C02003 /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
+		2D91A524DA00F2199F38858D /* Pods_e_zhire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_e_zhire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C654540FF5B1EF24FCC869D /* Pods-e-zhire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-zhire.release.xcconfig"; path = "Pods/Target Support Files/Pods-e-zhire/Pods-e-zhire.release.xcconfig"; sourceTree = "<group>"; };
+		8B37448C1EDDAF2B001B4F55 /* clean@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clean@2x.png"; sourceTree = "<group>"; };
+		8B40D0691EE0435A00739CA1 /* EZServiceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZServiceVC.h; sourceTree = "<group>"; };
+		8B40D06A1EE0435A00739CA1 /* EZServiceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZServiceVC.m; sourceTree = "<group>"; };
+		8B40D06C1EE0437300739CA1 /* EZHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZHomeVC.h; sourceTree = "<group>"; };
+		8B40D06D1EE0437300739CA1 /* EZHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZHomeVC.m; sourceTree = "<group>"; };
+		8B52E1C41EDEA0B700211D79 /* EZContactVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZContactVC.h; sourceTree = "<group>"; };
+		8B52E1C51EDEA0B700211D79 /* EZContactVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZContactVC.m; sourceTree = "<group>"; };
+		8B52E1C71EDEB65500211D79 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		8B52E1C81EDEB65500211D79 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		8B52E1CB1EDED97800211D79 /* EZFaqVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZFaqVC.h; sourceTree = "<group>"; };
+		8B52E1CC1EDED97800211D79 /* EZFaqVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZFaqVC.m; sourceTree = "<group>"; };
+		8B52E1CF1EDEE1AD00211D79 /* EZFaqCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZFaqCell.h; sourceTree = "<group>"; };
+		8B52E1D01EDEE1AD00211D79 /* EZFaqCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZFaqCell.m; sourceTree = "<group>"; };
+		8B53A2B81EE17B7700EE6EAA /* imageAnimationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageAnimationCell.h; sourceTree = "<group>"; };
+		8B53A2B91EE17B7700EE6EAA /* imageAnimationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imageAnimationCell.m; sourceTree = "<group>"; };
+		8B86AA071EDC45550031793A /* e-zhire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-zhire.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B86AA0B1EDC45550031793A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8B86AA0D1EDC45550031793A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8B86AA0E1EDC45550031793A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8B86AA101EDC45550031793A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8B86AA111EDC45550031793A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8B86AA141EDC45560031793A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8B86AA161EDC45560031793A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B86AA191EDC45560031793A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8B86AA1B1EDC45560031793A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B86AA2B1EDC50C60031793A /* EZCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZCollectionReusableView.h; sourceTree = "<group>"; };
+		8B86AA2C1EDC50C60031793A /* EZCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZCollectionReusableView.m; sourceTree = "<group>"; };
+		8B86AA2D1EDC50C60031793A /* EZLoadingCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EZLoadingCollectionReusableView.xib; sourceTree = "<group>"; };
+		8B86AA301EDC51C20031793A /* e-zhirePrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "e-zhirePrefixHeader.pch"; sourceTree = "<group>"; };
+		8B86AA321EDC52120031793A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8B86AA351EDC52910031793A /* CategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCell.h; sourceTree = "<group>"; };
+		8B86AA361EDC52910031793A /* CategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCell.m; sourceTree = "<group>"; };
+		8B86AA3E1EDC5D640031793A /* EZCommonMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZCommonMethod.h; sourceTree = "<group>"; };
+		8B86AA3F1EDC5D640031793A /* EZCommonMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZCommonMethod.m; sourceTree = "<group>"; };
+		8B86AA451EDC6B730031793A /* EZBottomTabVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZBottomTabVC.h; sourceTree = "<group>"; };
+		8B86AA461EDC6B730031793A /* EZBottomTabVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZBottomTabVC.m; sourceTree = "<group>"; };
+		8B873C431F065FF9009428A2 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		8BA781701EDEFDEF0027F75F /* OSWALD-BOLD.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OSWALD-BOLD.TTF"; sourceTree = "<group>"; };
+		8BA781731EDF02D10027F75F /* MoreVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreVC.h; sourceTree = "<group>"; };
+		8BA781741EDF02D10027F75F /* MoreVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreVC.m; sourceTree = "<group>"; };
+		C9AE593DB5E6FCE66A998620 /* Pods-e-zhire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-zhire.debug.xcconfig"; path = "Pods/Target Support Files/Pods-e-zhire/Pods-e-zhire.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B86AA041EDC45550031793A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B873C441F065FF9009428A2 /* MessageUI.framework in Frameworks */,
+				8B86AA331EDC52120031793A /* Foundation.framework in Frameworks */,
+				A8A4DF963DB0F603457F95C8 /* Pods_e_zhire.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03014A111EE69BF100507047 /* TermVC */ = {
+			isa = PBXGroup;
+			children = (
+				03014A121EE69C8C00507047 /* EZTermVC.h */,
+				03014A131EE69C8C00507047 /* EZTermVC.m */,
+			);
+			name = TermVC;
+			path = FaqVC;
+			sourceTree = "<group>";
+		};
+		03014A151EE6C6FA00507047 /* PrivacyVC */ = {
+			isa = PBXGroup;
+			children = (
+				03014A161EE6C72800507047 /* EZPrivacyVC.h */,
+				03014A171EE6C72800507047 /* EZPrivacyVC.m */,
+			);
+			name = PrivacyVC;
+			path = FaqVC;
+			sourceTree = "<group>";
+		};
+		03014A191EE6EBE700507047 /* SignCreateVC */ = {
+			isa = PBXGroup;
+			children = (
+				03014A1A1EE6EC1F00507047 /* EZSignCreateAccountVC.h */,
+				03014A1B1EE6EC1F00507047 /* EZSignCreateAccountVC.m */,
+			);
+			name = SignCreateVC;
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		030E148F1EEFCE310071D9D1 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				030E14901EEFCE9C0071D9D1 /* AvailableServiceJsonModel.h */,
+				030E14911EEFCE9C0071D9D1 /* AvailableServiceJsonModel.m */,
+				030E14931EEFD01E0071D9D1 /* subCategoriesJsonModel.h */,
+				030E14941EEFD01E0071D9D1 /* subCategoriesJsonModel.m */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		030E14961EF02E170071D9D1 /* NextPayemtVC */ = {
+			isa = PBXGroup;
+			children = (
+				030E14971EF02E490071D9D1 /* EZNextPaymentVC.h */,
+				030E14981EF02E490071D9D1 /* EZNextPaymentVC.m */,
+			);
+			name = NextPayemtVC;
+			path = FaqVC;
+			sourceTree = "<group>";
+		};
+		0315CCC21EE5727900DFE6FC /* VideoVC */ = {
+			isa = PBXGroup;
+			children = (
+				0315CCC31EE572BD00DFE6FC /* EZVideoPlayVC.h */,
+				0315CCC41EE572BD00DFE6FC /* EZVideoPlayVC.m */,
+			);
+			path = VideoVC;
+			sourceTree = "<group>";
+		};
+		0315CCC61EE5788900DFE6FC /* HappyCustomerVC */ = {
+			isa = PBXGroup;
+			children = (
+				0315CCC71EE578A300DFE6FC /* HappyCustomerVC.h */,
+				0315CCC81EE578A300DFE6FC /* HappyCustomerVC.m */,
+			);
+			path = HappyCustomerVC;
+			sourceTree = "<group>";
+		};
+		034950091EE9600300AA9E6D /* PaymentVC */ = {
+			isa = PBXGroup;
+			children = (
+				0349500A1EE9604400AA9E6D /* EZPaymentVC.h */,
+				0349500B1EE9604400AA9E6D /* EZPaymentVC.m */,
+			);
+			name = PaymentVC;
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		035540B61F024844008428F3 /* ClientAccountVC */ = {
+			isa = PBXGroup;
+			children = (
+				035540B71F024885008428F3 /* EZClientAccountVC.h */,
+				035540B81F024886008428F3 /* EZClientAccountVC.m */,
+			);
+			name = ClientAccountVC;
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		035540BA1F024FE2008428F3 /* WorkOrderVC */ = {
+			isa = PBXGroup;
+			children = (
+				035540BB1F025006008428F3 /* EZworkorderVC.h */,
+				035540BC1F025006008428F3 /* EZworkorderVC.m */,
+			);
+			name = WorkOrderVC;
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		035540C11F02585D008428F3 /* OrderCell */ = {
+			isa = PBXGroup;
+			children = (
+				035540BE1F025852008428F3 /* EZOrderCell.h */,
+				035540BF1F025852008428F3 /* EZOrderCell.m */,
+			);
+			name = OrderCell;
+			sourceTree = "<group>";
+		};
+		035540C21F025A78008428F3 /* InvoiceVC */ = {
+			isa = PBXGroup;
+			children = (
+				035540C31F025AAE008428F3 /* EZInvoicesVC.h */,
+				035540C41F025AAE008428F3 /* EZInvoicesVC.m */,
+			);
+			name = InvoiceVC;
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		035540C61F026B54008428F3 /* InvoicesCell */ = {
+			isa = PBXGroup;
+			children = (
+				035540C71F026B7A008428F3 /* InvoicesCell.h */,
+				035540C81F026B7A008428F3 /* InvoicesCell.m */,
+			);
+			name = InvoicesCell;
+			sourceTree = "<group>";
+		};
+		035540CA1F027851008428F3 /* InvoiceDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				035540CB1F02787D008428F3 /* EZInvoicesDetail.h */,
+				035540CC1F02787D008428F3 /* EZInvoicesDetail.m */,
+			);
+			name = InvoiceDetailVC;
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		035540CE1F028D28008428F3 /* InvoiceDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				035540CF1F028D50008428F3 /* InvoiceDetailCell.h */,
+				035540D01F028D50008428F3 /* InvoiceDetailCell.m */,
+			);
+			name = InvoiceDetailCell;
+			sourceTree = "<group>";
+		};
+		038A7FCC1EFE5C7D00B4C31E /* SearchZipCodeVC */ = {
+			isa = PBXGroup;
+			children = (
+				038A7FCD1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.h */,
+				038A7FCE1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.m */,
+			);
+			name = SearchZipCodeVC;
+			sourceTree = "<group>";
+		};
+		03992B4F1EE2EDA800636A47 /* ServiceProviderVC */ = {
+			isa = PBXGroup;
+			children = (
+				03992B501EE2EDEA00636A47 /* EZServiceProviderVC.h */,
+				03992B511EE2EDEA00636A47 /* EZServiceProviderVC.m */,
+			);
+			path = ServiceProviderVC;
+			sourceTree = "<group>";
+		};
+		03ADF48E1F03948D0045EADD /* WorkViewVC */ = {
+			isa = PBXGroup;
+			children = (
+				03ADF48F1F0394CE0045EADD /* EZWorkViewVC.h */,
+				03ADF4901F0394CE0045EADD /* EZWorkViewVC.m */,
+			);
+			name = WorkViewVC;
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		03C18A4D1F0633B400672C3E /* AssociateManagement */ = {
+			isa = PBXGroup;
+			children = (
+				03C18A4E1F06342800672C3E /* AssociateManagementVC.h */,
+				03C18A4F1F06342900672C3E /* AssociateManagementVC.m */,
+			);
+			name = AssociateManagement;
+			path = FaqVC;
+			sourceTree = "<group>";
+		};
+		03C18A5D1F068F9000672C3E /* AddServiceVC */ = {
+			isa = PBXGroup;
+			children = (
+				03C18A641F068FBE00672C3E /* EZAddServiceCell.h */,
+				03C18A651F068FBE00672C3E /* EZAddServiceCell.m */,
+				03C18A611F068FB600672C3E /* SelectSeriveCell.h */,
+				03C18A621F068FB600672C3E /* SelectSeriveCell.m */,
+				03C18A5E1F068F9D00672C3E /* EZAddServiceVC.h */,
+				03C18A5F1F068F9D00672C3E /* EZAddServiceVC.m */,
+			);
+			path = AddServiceVC;
+			sourceTree = "<group>";
+		};
+		03C74B841EE28F4100684199 /* DetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				03C74B851EE28F7C00684199 /* DetailCell.h */,
+				03C74B861EE28F7C00684199 /* DetailCell.m */,
+			);
+			path = DetailCell;
+			sourceTree = "<group>";
+		};
+		03C74B8E1EE2E9DA00684199 /* ServiceProviderCell */ = {
+			isa = PBXGroup;
+			children = (
+				03C74B8F1EE2E9FB00684199 /* EZServiceProviderCell.h */,
+				03C74B901EE2E9FB00684199 /* EZServiceProviderCell.m */,
+			);
+			path = ServiceProviderCell;
+			sourceTree = "<group>";
+		};
+		03C8903C1F04E546002FC3DC /* Paymentinformationcell */ = {
+			isa = PBXGroup;
+			children = (
+				03C8903D1F04E5AD002FC3DC /* EZPaymentinformationCell.h */,
+				03C8903E1F04E5AD002FC3DC /* EZPaymentinformationCell.m */,
+			);
+			name = Paymentinformationcell;
+			sourceTree = "<group>";
+		};
+		03C890401F04E70F002FC3DC /* EditPaymentCell */ = {
+			isa = PBXGroup;
+			children = (
+				03C890411F04E740002FC3DC /* EZEditPaymentcell.h */,
+				03C890421F04E740002FC3DC /* EZEditPaymentcell.m */,
+			);
+			name = EditPaymentCell;
+			sourceTree = "<group>";
+		};
+		03C890441F0501D2002FC3DC /* PyamentInformatioVC */ = {
+			isa = PBXGroup;
+			children = (
+				03C890481F0524BC002FC3DC /* EZEditPaymentInformationVc.h */,
+				03C890491F0524BC002FC3DC /* EZEditPaymentInformationVc.m */,
+			);
+			name = PyamentInformatioVC;
+			path = FaqVC;
+			sourceTree = "<group>";
+		};
+		03C8904B1F05268C002FC3DC /* AssociateAccountVC */ = {
+			isa = PBXGroup;
+			children = (
+				03C8904C1F0526D3002FC3DC /* EZAssociateAccountVC.h */,
+				03C8904D1F0526D3002FC3DC /* EZAssociateAccountVC.m */,
+			);
+			name = AssociateAccountVC;
+			path = FaqVC;
+			sourceTree = "<group>";
+		};
+		03C8904F1F05297F002FC3DC /* AssociateAccountCell */ = {
+			isa = PBXGroup;
+			children = (
+				03C890501F0529A7002FC3DC /* AssociateAccountCell.h */,
+				03C890511F0529A7002FC3DC /* AssociateAccountCell.m */,
+			);
+			name = AssociateAccountCell;
+			sourceTree = "<group>";
+		};
+		03CBF7491EFD043D00F6C52D /* ReviewVC */ = {
+			isa = PBXGroup;
+			children = (
+				03CBF74A1EFD048100F6C52D /* EZReviewVC.h */,
+				03CBF74B1EFD048100F6C52D /* EZReviewVC.m */,
+			);
+			name = ReviewVC;
+			path = ServiceVC;
+			sourceTree = "<group>";
+		};
+		03CBF74D1EFD24D600F6C52D /* PhotoCell */ = {
+			isa = PBXGroup;
+			children = (
+				03CBF74E1EFD252500F6C52D /* EZPhotoCellVC.h */,
+				03CBF74F1EFD252600F6C52D /* EZPhotoCellVC.m */,
+			);
+			name = PhotoCell;
+			path = CollectionViewReusableView;
+			sourceTree = "<group>";
+		};
+		03CBF7511EFD257400F6C52D /* AboutDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				03CBF7521EFD25F000F6C52D /* EZAboutDetailCellVC.h */,
+				03CBF7531EFD25F000F6C52D /* EZAboutDetailCellVC.m */,
+			);
+			name = AboutDetailCell;
+			path = CollectionViewReusableView;
+			sourceTree = "<group>";
+		};
+		03CBF7551EFD260D00F6C52D /* ReviewCell */ = {
+			isa = PBXGroup;
+			children = (
+				03CBF7561EFD263700F6C52D /* EZReviewCellVC.h */,
+				03CBF7571EFD263700F6C52D /* EZReviewCellVC.m */,
+			);
+			name = ReviewCell;
+			path = CollectionViewReusableView;
+			sourceTree = "<group>";
+		};
+		03CBF7591EFD3BC100F6C52D /* ClientPriceCell */ = {
+			isa = PBXGroup;
+			children = (
+				03CBF75A1EFD3C3500F6C52D /* EZClientPriceCell.h */,
+				03CBF75B1EFD3C3500F6C52D /* EZClientPriceCell.m */,
+			);
+			name = ClientPriceCell;
+			sourceTree = "<group>";
+		};
+		03D191FA1EEFAB090031F65C /* AssociateSignUp */ = {
+			isa = PBXGroup;
+			children = (
+				03D191FB1EEFAB3B0031F65C /* EZAssociateSignup.h */,
+				03D191FC1EEFAB3B0031F65C /* EZAssociateSignup.m */,
+			);
+			name = AssociateSignUp;
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		03D8A6191F07874A00713B46 /* MyAvailbilityScheduleVC  */ = {
+			isa = PBXGroup;
+			children = (
+				03D8A6161F07872300713B46 /* MyAvailbilityScheduleVC.h */,
+				03D8A6171F07872300713B46 /* MyAvailbilityScheduleVC.m */,
+			);
+			name = "MyAvailbilityScheduleVC ";
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		03D8A61A1F0795FE00713B46 /* MonthCell */ = {
+			isa = PBXGroup;
+			children = (
+				03D8A61B1F07962900713B46 /* MonthCell.h */,
+				03D8A61C1F07962900713B46 /* MonthCell.m */,
+			);
+			name = MonthCell;
+			sourceTree = "<group>";
+		};
+		03D8A61E1F07B6F400713B46 /* FSCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				03D8A61F1F07B6F400713B46 /* FSCalendar+Deprecated.m */,
+				03D8A6201F07B6F400713B46 /* FSCalendar.h */,
+				03D8A6211F07B6F400713B46 /* FSCalendar.m */,
+				03D8A6221F07B6F400713B46 /* FSCalendarAppearance.h */,
+				03D8A6231F07B6F400713B46 /* FSCalendarAppearance.m */,
+				03D8A6241F07B6F400713B46 /* FSCalendarCalculator.h */,
+				03D8A6251F07B6F400713B46 /* FSCalendarCalculator.m */,
+				03D8A6261F07B6F400713B46 /* FSCalendarCell.h */,
+				03D8A6271F07B6F400713B46 /* FSCalendarCell.m */,
+				03D8A6281F07B6F400713B46 /* FSCalendarCollectionView.h */,
+				03D8A6291F07B6F400713B46 /* FSCalendarCollectionView.m */,
+				03D8A62A1F07B6F400713B46 /* FSCalendarCollectionViewLayout.h */,
+				03D8A62B1F07B6F400713B46 /* FSCalendarCollectionViewLayout.m */,
+				03D8A62C1F07B6F400713B46 /* FSCalendarConstants.h */,
+				03D8A62D1F07B6F400713B46 /* FSCalendarConstants.m */,
+				03D8A62E1F07B6F400713B46 /* FSCalendarDelegationFactory.h */,
+				03D8A62F1F07B6F400713B46 /* FSCalendarDelegationFactory.m */,
+				03D8A6301F07B6F400713B46 /* FSCalendarDelegationProxy.h */,
+				03D8A6311F07B6F400713B46 /* FSCalendarDelegationProxy.m */,
+				03D8A6321F07B6F400713B46 /* FSCalendarDynamicHeader.h */,
+				03D8A6331F07B6F400713B46 /* FSCalendarExtensions.h */,
+				03D8A6341F07B6F400713B46 /* FSCalendarExtensions.m */,
+				03D8A6351F07B6F400713B46 /* FSCalendarHeaderView.h */,
+				03D8A6361F07B6F400713B46 /* FSCalendarHeaderView.m */,
+				03D8A6371F07B6F400713B46 /* FSCalendarScopeHandle.h */,
+				03D8A6381F07B6F400713B46 /* FSCalendarScopeHandle.m */,
+				03D8A6391F07B6F400713B46 /* FSCalendarStickyHeader.h */,
+				03D8A63A1F07B6F400713B46 /* FSCalendarStickyHeader.m */,
+				03D8A63B1F07B6F400713B46 /* FSCalendarTransitionCoordinator.h */,
+				03D8A63C1F07B6F400713B46 /* FSCalendarTransitionCoordinator.m */,
+				03D8A63D1F07B6F400713B46 /* FSCalendarWeekdayView.h */,
+				03D8A63E1F07B6F400713B46 /* FSCalendarWeekdayView.m */,
+				03D8A63F1F07B6F400713B46 /* Info.plist */,
+			);
+			path = FSCalendar;
+			sourceTree = "<group>";
+		};
+		03E969021EEE6EF0000FD50C /* Custom Classes */ = {
+			isa = PBXGroup;
+			children = (
+				03E969031EEE6F44000FD50C /* TextField.h */,
+				03E969041EEE6F44000FD50C /* TextField.m */,
+			);
+			path = "Custom Classes";
+			sourceTree = "<group>";
+		};
+		03E969061EEEB972000FD50C /* Api method */ = {
+			isa = PBXGroup;
+			children = (
+				03E9690E1EEEBEAD000FD50C /* ApiConstant.h */,
+				03E969071EEEBA08000FD50C /* NetworkManager.h */,
+				03E969081EEEBA08000FD50C /* NetworkManager.m */,
+			);
+			name = "Api method";
+			sourceTree = "<group>";
+		};
+		03E9690A1EEEBCC1000FD50C /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				03E9690B1EEEBCC1000FD50C /* Reachability.h */,
+				03E9690C1EEEBCC1000FD50C /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		03EC06561EF12D69008FBE16 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				03EC06571EF12DB4008FBE16 /* EZForgotPasswordVC.h */,
+				03EC06581EF12DB4008FBE16 /* EZForgotPasswordVC.m */,
+			);
+			name = ForgotPassword;
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		03EC065E1EF17970008FBE16 /* ServiceDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				03EC065F1EF1798E008FBE16 /* EZServiceDetailVC.h */,
+				03EC06601EF1798E008FBE16 /* EZServiceDetailVC.m */,
+			);
+			name = ServiceDetailVC;
+			path = ServiceVC;
+			sourceTree = "<group>";
+		};
+		03FA9EB21EFBBACD00DAC8CC /* SearchServiceVC */ = {
+			isa = PBXGroup;
+			children = (
+				03FA9EB31EFBBB2100DAC8CC /* EZSearchServiceVC.h */,
+				03FA9EB41EFBBB2100DAC8CC /* EZSearchServiceVC.m */,
+			);
+			name = SearchServiceVC;
+			path = ServiceVC;
+			sourceTree = "<group>";
+		};
+		03FA9EB61EFBC0EA00DAC8CC /* SearchServiceCell */ = {
+			isa = PBXGroup;
+			children = (
+				03FA9EB71EFBC12400DAC8CC /* SearchServiceCell.h */,
+				03FA9EB81EFBC12400DAC8CC /* SearchServiceCell.m */,
+			);
+			name = SearchServiceCell;
+			path = CollectionViewReusableView;
+			sourceTree = "<group>";
+		};
+		56616920C5867CF1A960BD74 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C9AE593DB5E6FCE66A998620 /* Pods-e-zhire.debug.xcconfig */,
+				4C654540FF5B1EF24FCC869D /* Pods-e-zhire.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8B40D0671EE0435500739CA1 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				8B40D06C1EE0437300739CA1 /* EZHomeVC.h */,
+				8B40D06D1EE0437300739CA1 /* EZHomeVC.m */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		8B40D0681EE0435A00739CA1 /* ServiceVC */ = {
+			isa = PBXGroup;
+			children = (
+				8B40D0691EE0435A00739CA1 /* EZServiceVC.h */,
+				8B40D06A1EE0435A00739CA1 /* EZServiceVC.m */,
+			);
+			path = ServiceVC;
+			sourceTree = "<group>";
+		};
+		8B52E1C31EDEA01700211D79 /* ContactVC */ = {
+			isa = PBXGroup;
+			children = (
+				8B52E1C41EDEA0B700211D79 /* EZContactVC.h */,
+				8B52E1C51EDEA0B700211D79 /* EZContactVC.m */,
+			);
+			path = ContactVC;
+			sourceTree = "<group>";
+		};
+		8B52E1CA1EDED93C00211D79 /* FaqVC */ = {
+			isa = PBXGroup;
+			children = (
+				8B52E1CB1EDED97800211D79 /* EZFaqVC.h */,
+				8B52E1CC1EDED97800211D79 /* EZFaqVC.m */,
+			);
+			path = FaqVC;
+			sourceTree = "<group>";
+		};
+		8B52E1CE1EDEE18600211D79 /* FaqCell */ = {
+			isa = PBXGroup;
+			children = (
+				8B52E1CF1EDEE1AD00211D79 /* EZFaqCell.h */,
+				8B52E1D01EDEE1AD00211D79 /* EZFaqCell.m */,
+			);
+			path = FaqCell;
+			sourceTree = "<group>";
+		};
+		8B53A2B71EE17AEA00EE6EAA /* ImageAminationCell */ = {
+			isa = PBXGroup;
+			children = (
+				8B53A2B81EE17B7700EE6EAA /* imageAnimationCell.h */,
+				8B53A2B91EE17B7700EE6EAA /* imageAnimationCell.m */,
+			);
+			path = ImageAminationCell;
+			sourceTree = "<group>";
+		};
+		8B86A9FE1EDC45550031793A = {
+			isa = PBXGroup;
+			children = (
+				0315CCCA1EE5812D00DFE6FC /* Testimonlial-female.jpg */,
+				0315CCCF1EE598E200DFE6FC /* splash.png */,
+				8B37448C1EDDAF2B001B4F55 /* clean@2x.png */,
+				8B86AA091EDC45550031793A /* e-zhire */,
+				8B86AA081EDC45550031793A /* Products */,
+				8B86AA311EDC52120031793A /* Frameworks */,
+				56616920C5867CF1A960BD74 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		8B86AA081EDC45550031793A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B86AA071EDC45550031793A /* e-zhire.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B86AA091EDC45550031793A /* e-zhire */ = {
+			isa = PBXGroup;
+			children = (
+				03D8A61E1F07B6F400713B46 /* FSCalendar */,
+				030E148F1EEFCE310071D9D1 /* JSONModel */,
+				03E9690A1EEEBCC1000FD50C /* Reachability */,
+				03E969061EEEB972000FD50C /* Api method */,
+				03E969021EEE6EF0000FD50C /* Custom Classes */,
+				8B86AA3D1EDC5D4E0031793A /* CommonMethod */,
+				8B86AA291EDC507A0031793A /* CollectionCell */,
+				8B86AA211EDC46580031793A /* ModelVC */,
+				8B86AA0D1EDC45550031793A /* AppDelegate.h */,
+				8B86AA0E1EDC45550031793A /* AppDelegate.m */,
+				8B86AA101EDC45550031793A /* ViewController.h */,
+				8B86AA111EDC45550031793A /* ViewController.m */,
+				8B86AA131EDC45560031793A /* Main.storyboard */,
+				8B86AA161EDC45560031793A /* Assets.xcassets */,
+				8B86AA181EDC45560031793A /* LaunchScreen.storyboard */,
+				8B86AA1B1EDC45560031793A /* Info.plist */,
+				8B86AA0A1EDC45550031793A /* Supporting Files */,
+			);
+			path = "e-zhire";
+			sourceTree = "<group>";
+		};
+		8B86AA0A1EDC45550031793A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8BA7816F1EDEFDE80027F75F /* Font */,
+				8B86AA0B1EDC45550031793A /* main.m */,
+				8B86AA301EDC51C20031793A /* e-zhirePrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8B86AA211EDC46580031793A /* ModelVC */ = {
+			isa = PBXGroup;
+			children = (
+				03C18A5D1F068F9000672C3E /* AddServiceVC */,
+				0315CCC61EE5788900DFE6FC /* HappyCustomerVC */,
+				0315CCC21EE5727900DFE6FC /* VideoVC */,
+				03992B4F1EE2EDA800636A47 /* ServiceProviderVC */,
+				8B40D0681EE0435A00739CA1 /* ServiceVC */,
+				03EC065E1EF17970008FBE16 /* ServiceDetailVC */,
+				03FA9EB21EFBBACD00DAC8CC /* SearchServiceVC */,
+				03CBF7491EFD043D00F6C52D /* ReviewVC */,
+				038A7FCC1EFE5C7D00B4C31E /* SearchZipCodeVC */,
+				8B40D0671EE0435500739CA1 /* HomeVC */,
+				03D191FA1EEFAB090031F65C /* AssociateSignUp */,
+				03014A191EE6EBE700507047 /* SignCreateVC */,
+				034950091EE9600300AA9E6D /* PaymentVC */,
+				030E14961EF02E170071D9D1 /* NextPayemtVC */,
+				03014A111EE69BF100507047 /* TermVC */,
+				03014A151EE6C6FA00507047 /* PrivacyVC */,
+				8BA781721EDF02B60027F75F /* MoreVC */,
+				8B86AA411EDC67500031793A /* TabBarVC */,
+				8B52E1C31EDEA01700211D79 /* ContactVC */,
+				8B86AA221EDC466B0031793A /* LoginVC */,
+				035540B61F024844008428F3 /* ClientAccountVC */,
+				035540BA1F024FE2008428F3 /* WorkOrderVC */,
+				03ADF48E1F03948D0045EADD /* WorkViewVC */,
+				035540C21F025A78008428F3 /* InvoiceVC */,
+				035540CA1F027851008428F3 /* InvoiceDetailVC */,
+				03EC06561EF12D69008FBE16 /* ForgotPassword */,
+				8B52E1CA1EDED93C00211D79 /* FaqVC */,
+				03C890441F0501D2002FC3DC /* PyamentInformatioVC */,
+				03C18A4D1F0633B400672C3E /* AssociateManagement */,
+				03C8904B1F05268C002FC3DC /* AssociateAccountVC */,
+				03D8A6191F07874A00713B46 /* MyAvailbilityScheduleVC  */,
+			);
+			path = ModelVC;
+			sourceTree = "<group>";
+		};
+		8B86AA221EDC466B0031793A /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				8B52E1C71EDEB65500211D79 /* LoginVC.h */,
+				8B52E1C81EDEB65500211D79 /* LoginVC.m */,
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		8B86AA291EDC507A0031793A /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				03D8A61A1F0795FE00713B46 /* MonthCell */,
+				03C74B8E1EE2E9DA00684199 /* ServiceProviderCell */,
+				03C74B841EE28F4100684199 /* DetailCell */,
+				8B53A2B71EE17AEA00EE6EAA /* ImageAminationCell */,
+				8B52E1CE1EDEE18600211D79 /* FaqCell */,
+				8B86AA341EDC526C0031793A /* CategoryCell */,
+				8B86AA2A1EDC50C60031793A /* CollectionViewReusableView */,
+				03FA9EB61EFBC0EA00DAC8CC /* SearchServiceCell */,
+				03CBF74D1EFD24D600F6C52D /* PhotoCell */,
+				03CBF7511EFD257400F6C52D /* AboutDetailCell */,
+				03CBF7551EFD260D00F6C52D /* ReviewCell */,
+				03CBF7591EFD3BC100F6C52D /* ClientPriceCell */,
+				035540C11F02585D008428F3 /* OrderCell */,
+				035540C61F026B54008428F3 /* InvoicesCell */,
+				035540CE1F028D28008428F3 /* InvoiceDetailCell */,
+				03C8903C1F04E546002FC3DC /* Paymentinformationcell */,
+				03C890401F04E70F002FC3DC /* EditPaymentCell */,
+				03C8904F1F05297F002FC3DC /* AssociateAccountCell */,
+				0315CCCC1EE5831600DFE6FC /* CustomerCell.h */,
+				0315CCCD1EE5831600DFE6FC /* CustomerCell.m */,
+			);
+			path = CollectionCell;
+			sourceTree = "<group>";
+		};
+		8B86AA2A1EDC50C60031793A /* CollectionViewReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				8B86AA2B1EDC50C60031793A /* EZCollectionReusableView.h */,
+				8B86AA2C1EDC50C60031793A /* EZCollectionReusableView.m */,
+				8B86AA2D1EDC50C60031793A /* EZLoadingCollectionReusableView.xib */,
+			);
+			path = CollectionViewReusableView;
+			sourceTree = "<group>";
+		};
+		8B86AA311EDC52120031793A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B873C431F065FF9009428A2 /* MessageUI.framework */,
+				8B86AA321EDC52120031793A /* Foundation.framework */,
+				2D91A524DA00F2199F38858D /* Pods_e_zhire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B86AA341EDC526C0031793A /* CategoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				8B86AA351EDC52910031793A /* CategoryCell.h */,
+				8B86AA361EDC52910031793A /* CategoryCell.m */,
+				036D05DD1F01380E000633E2 /* headerCell.h */,
+				036D05DE1F01380E000633E2 /* headerCell.m */,
+			);
+			path = CategoryCell;
+			sourceTree = "<group>";
+		};
+		8B86AA3D1EDC5D4E0031793A /* CommonMethod */ = {
+			isa = PBXGroup;
+			children = (
+				8B86AA3E1EDC5D640031793A /* EZCommonMethod.h */,
+				8B86AA3F1EDC5D640031793A /* EZCommonMethod.m */,
+			);
+			path = CommonMethod;
+			sourceTree = "<group>";
+		};
+		8B86AA411EDC67500031793A /* TabBarVC */ = {
+			isa = PBXGroup;
+			children = (
+				8B86AA451EDC6B730031793A /* EZBottomTabVC.h */,
+				8B86AA461EDC6B730031793A /* EZBottomTabVC.m */,
+			);
+			path = TabBarVC;
+			sourceTree = "<group>";
+		};
+		8BA7816F1EDEFDE80027F75F /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				8BA781701EDEFDEF0027F75F /* OSWALD-BOLD.TTF */,
+				03FBCCE01EF93CF400C02003 /* Oswald-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		8BA781721EDF02B60027F75F /* MoreVC */ = {
+			isa = PBXGroup;
+			children = (
+				8BA781731EDF02D10027F75F /* MoreVC.h */,
+				8BA781741EDF02D10027F75F /* MoreVC.m */,
+			);
+			path = MoreVC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8B86AA061EDC45550031793A /* e-zhire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B86AA1E1EDC45560031793A /* Build configuration list for PBXNativeTarget "e-zhire" */;
+			buildPhases = (
+				4DB5AF73F51DF57041A0517F /* [CP] Check Pods Manifest.lock */,
+				8B86AA031EDC45550031793A /* Sources */,
+				8B86AA041EDC45550031793A /* Frameworks */,
+				8B86AA051EDC45550031793A /* Resources */,
+				33BC53E5D0A405100C7255BE /* [CP] Embed Pods Frameworks */,
+				1FB9D3939A5F1C5CF0735034 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "e-zhire";
+			productName = "e-zhire";
+			productReference = 8B86AA071EDC45550031793A /* e-zhire.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B86A9FF1EDC45550031793A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Inext;
+				TargetAttributes = {
+					8B86AA061EDC45550031793A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 8J8Y6K57XF;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 8B86AA021EDC45550031793A /* Build configuration list for PBXProject "e-zhire" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8B86A9FE1EDC45550031793A;
+			productRefGroup = 8B86AA081EDC45550031793A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B86AA061EDC45550031793A /* e-zhire */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B86AA051EDC45550031793A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B86AA1A1EDC45560031793A /* LaunchScreen.storyboard in Resources */,
+				0315CCD01EE598E200DFE6FC /* splash.png in Resources */,
+				8B86AA171EDC45560031793A /* Assets.xcassets in Resources */,
+				8B37448D1EDDAF2B001B4F55 /* clean@2x.png in Resources */,
+				8B86AA151EDC45560031793A /* Main.storyboard in Resources */,
+				0315CCCB1EE5812E00DFE6FC /* Testimonlial-female.jpg in Resources */,
+				8B86AA2F1EDC50C60031793A /* EZLoadingCollectionReusableView.xib in Resources */,
+				03FBCCE11EF93CF400C02003 /* Oswald-Regular.ttf in Resources */,
+				03D8A6501F07B6F400713B46 /* Info.plist in Resources */,
+				03FBCCE21EF93D0300C02003 /* OSWALD-BOLD.TTF in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FB9D3939A5F1C5CF0735034 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-e-zhire/Pods-e-zhire-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		33BC53E5D0A405100C7255BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-e-zhire/Pods-e-zhire-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DB5AF73F51DF57041A0517F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B86AA031EDC45550031793A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03992B521EE2EDEA00636A47 /* EZServiceProviderVC.m in Sources */,
+				8B86AA121EDC45550031793A /* ViewController.m in Sources */,
+				03C18A661F068FBE00672C3E /* EZAddServiceCell.m in Sources */,
+				03014A1C1EE6EC1F00507047 /* EZSignCreateAccountVC.m in Sources */,
+				8B52E1C91EDEB65500211D79 /* LoginVC.m in Sources */,
+				03C18A631F068FB600672C3E /* SelectSeriveCell.m in Sources */,
+				03014A181EE6C72800507047 /* EZPrivacyVC.m in Sources */,
+				8B86AA371EDC52910031793A /* CategoryCell.m in Sources */,
+				03CBF74C1EFD048100F6C52D /* EZReviewVC.m in Sources */,
+				03C18A601F068F9D00672C3E /* EZAddServiceVC.m in Sources */,
+				8B40D06B1EE0435A00739CA1 /* EZServiceVC.m in Sources */,
+				8B53A2BA1EE17B7800EE6EAA /* imageAnimationCell.m in Sources */,
+				03ADF4911F0394CE0045EADD /* EZWorkViewVC.m in Sources */,
+				035540C91F026B7A008428F3 /* InvoicesCell.m in Sources */,
+				03D8A64D1F07B6F400713B46 /* FSCalendarStickyHeader.m in Sources */,
+				03E9690D1EEEBCC1000FD50C /* Reachability.m in Sources */,
+				03D8A6491F07B6F400713B46 /* FSCalendarDelegationProxy.m in Sources */,
+				8B86AA0C1EDC45550031793A /* main.m in Sources */,
+				03C74B911EE2E9FB00684199 /* EZServiceProviderCell.m in Sources */,
+				0315CCCE1EE5831600DFE6FC /* CustomerCell.m in Sources */,
+				03C18A501F06342900672C3E /* AssociateManagementVC.m in Sources */,
+				8B52E1C61EDEA0B700211D79 /* EZContactVC.m in Sources */,
+				03C8903F1F04E5AD002FC3DC /* EZPaymentinformationCell.m in Sources */,
+				03C890431F04E740002FC3DC /* EZEditPaymentcell.m in Sources */,
+				03C890521F0529A7002FC3DC /* AssociateAccountCell.m in Sources */,
+				03CBF7501EFD252600F6C52D /* EZPhotoCellVC.m in Sources */,
+				03D8A6461F07B6F400713B46 /* FSCalendarCollectionViewLayout.m in Sources */,
+				030E14951EEFD01E0071D9D1 /* subCategoriesJsonModel.m in Sources */,
+				03D8A6401F07B6F400713B46 /* FSCalendar+Deprecated.m in Sources */,
+				03D8A64B1F07B6F400713B46 /* FSCalendarHeaderView.m in Sources */,
+				03D8A6411F07B6F400713B46 /* FSCalendar.m in Sources */,
+				03D8A64E1F07B6F400713B46 /* FSCalendarTransitionCoordinator.m in Sources */,
+				8B86AA401EDC5D640031793A /* EZCommonMethod.m in Sources */,
+				0315CCC51EE572BD00DFE6FC /* EZVideoPlayVC.m in Sources */,
+				8B52E1CD1EDED97800211D79 /* EZFaqVC.m in Sources */,
+				8B86AA0F1EDC45550031793A /* AppDelegate.m in Sources */,
+				035540BD1F025006008428F3 /* EZworkorderVC.m in Sources */,
+				03EC06611EF1798E008FBE16 /* EZServiceDetailVC.m in Sources */,
+				035540CD1F02787D008428F3 /* EZInvoicesDetail.m in Sources */,
+				03FA9EB51EFBBB2100DAC8CC /* EZSearchServiceVC.m in Sources */,
+				03D8A64A1F07B6F400713B46 /* FSCalendarExtensions.m in Sources */,
+				036D05DF1F01380E000633E2 /* headerCell.m in Sources */,
+				038A7FCF1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.m in Sources */,
+				03C74B871EE28F7C00684199 /* DetailCell.m in Sources */,
+				03D8A61D1F07962900713B46 /* MonthCell.m in Sources */,
+				03FA9EB91EFBC12400DAC8CC /* SearchServiceCell.m in Sources */,
+				030E14921EEFCE9C0071D9D1 /* AvailableServiceJsonModel.m in Sources */,
+				03D8A6481F07B6F400713B46 /* FSCalendarDelegationFactory.m in Sources */,
+				03EC06591EF12DB4008FBE16 /* EZForgotPasswordVC.m in Sources */,
+				8BA781751EDF02D10027F75F /* MoreVC.m in Sources */,
+				03C8904A1F0524BC002FC3DC /* EZEditPaymentInformationVc.m in Sources */,
+				03D8A6431F07B6F400713B46 /* FSCalendarCalculator.m in Sources */,
+				03D8A6421F07B6F400713B46 /* FSCalendarAppearance.m in Sources */,
+				8B86AA2E1EDC50C60031793A /* EZCollectionReusableView.m in Sources */,
+				030E14991EF02E490071D9D1 /* EZNextPaymentVC.m in Sources */,
+				035540D11F028D50008428F3 /* InvoiceDetailCell.m in Sources */,
+				03CBF7581EFD263700F6C52D /* EZReviewCellVC.m in Sources */,
+				8B52E1D11EDEE1AD00211D79 /* EZFaqCell.m in Sources */,
+				03D8A64F1F07B6F400713B46 /* FSCalendarWeekdayView.m in Sources */,
+				03CBF7541EFD25F000F6C52D /* EZAboutDetailCellVC.m in Sources */,
+				0315CCC91EE578A300DFE6FC /* HappyCustomerVC.m in Sources */,
+				8B40D06E1EE0437300739CA1 /* EZHomeVC.m in Sources */,
+				03CBF75C1EFD3C3500F6C52D /* EZClientPriceCell.m in Sources */,
+				03D8A6471F07B6F400713B46 /* FSCalendarConstants.m in Sources */,
+				03D8A6441F07B6F400713B46 /* FSCalendarCell.m in Sources */,
+				03D8A64C1F07B6F400713B46 /* FSCalendarScopeHandle.m in Sources */,
+				03014A141EE69C8D00507047 /* EZTermVC.m in Sources */,
+				035540C01F025852008428F3 /* EZOrderCell.m in Sources */,
+				035540B91F024886008428F3 /* EZClientAccountVC.m in Sources */,
+				03D8A6181F07872300713B46 /* MyAvailbilityScheduleVC.m in Sources */,
+				0349500C1EE9604400AA9E6D /* EZPaymentVC.m in Sources */,
+				03C8904E1F0526D3002FC3DC /* EZAssociateAccountVC.m in Sources */,
+				8B86AA471EDC6B730031793A /* EZBottomTabVC.m in Sources */,
+				03D8A6451F07B6F400713B46 /* FSCalendarCollectionView.m in Sources */,
+				035540C51F025AAE008428F3 /* EZInvoicesVC.m in Sources */,
+				03E969091EEEBA08000FD50C /* NetworkManager.m in Sources */,
+				03E969051EEE6F44000FD50C /* TextField.m in Sources */,
+				03D191FD1EEFAB3B0031F65C /* EZAssociateSignup.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8B86AA131EDC45560031793A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B86AA141EDC45560031793A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8B86AA181EDC45560031793A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B86AA191EDC45560031793A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8B86AA1C1EDC45560031793A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mohit Gupta (8J8Y6K57XF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mohit Gupta (8J8Y6K57XF)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 8J8Y6K57XF;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "4c20b6ba-cadb-4293-9129-545dbafe2863";
+				PROVISIONING_PROFILE_SPECIFIER = DonDist;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8B86AA1D1EDC45560031793A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mohit Gupta (8J8Y6K57XF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mohit Gupta (8J8Y6K57XF)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 8J8Y6K57XF;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "4c20b6ba-cadb-4293-9129-545dbafe2863";
+				PROVISIONING_PROFILE_SPECIFIER = DonDist;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8B86AA1F1EDC45560031793A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9AE593DB5E6FCE66A998620 /* Pods-e-zhire.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mohit Gupta (8J8Y6K57XF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 8J8Y6K57XF;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "e-zhire/e-zhirePrefixHeader.pch";
+				INFOPLIST_FILE = "e-zhire/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.e-zhire.app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9dab596f-d091-4076-8e3d-6dc0687ecd2e";
+				PROVISIONING_PROFILE_SPECIFIER = DonDistrubution19June;
+			};
+			name = Debug;
+		};
+		8B86AA201EDC45560031793A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C654540FF5B1EF24FCC869D /* Pods-e-zhire.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mohit Gupta (8J8Y6K57XF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 8J8Y6K57XF;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "e-zhire/e-zhirePrefixHeader.pch";
+				INFOPLIST_FILE = "e-zhire/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.e-zhire.app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9dab596f-d091-4076-8e3d-6dc0687ecd2e";
+				PROVISIONING_PROFILE_SPECIFIER = DonDistrubution19June;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B86AA021EDC45550031793A /* Build configuration list for PBXProject "e-zhire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B86AA1C1EDC45560031793A /* Debug */,
+				8B86AA1D1EDC45560031793A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B86AA1E1EDC45560031793A /* Build configuration list for PBXNativeTarget "e-zhire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B86AA1F1EDC45560031793A /* Debug */,
+				8B86AA201EDC45560031793A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8B86A9FF1EDC45550031793A /* Project object */;
+}
