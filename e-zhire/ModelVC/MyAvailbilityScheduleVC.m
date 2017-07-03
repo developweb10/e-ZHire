@@ -105,10 +105,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
-
-
 #pragma mark- TableView DataSource and Delegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -128,9 +124,12 @@
     
     NSInteger chek=[[checkArray objectAtIndex:indexPath.row] integerValue];
     if (chek==0) {
-        cell.imageView.image=[UIImage imageNamed:@""];
+        cell.checkImgeView.image=[UIImage imageNamed:@""];
+        cell.checkImgeView.backgroundColor=[UIColor whiteColor];
+
     }else{
-        cell.imageView.image=[UIImage imageNamed:@"CheckInRed"];
+        cell.checkImgeView.image=[UIImage imageNamed:@"Check"];
+        cell.checkImgeView.backgroundColor=[UIColor blueColor];
     }
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
     return cell;

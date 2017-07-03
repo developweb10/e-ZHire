@@ -9,6 +9,7 @@
 #import "EZAssociateAccountVC.h"
 #import "AssociateAccountCell.h"
 #import "EZTimeTrackingVC.h"
+#import "EZTodoListVC.h"
 @interface EZAssociateAccountVC ()
 {
     NSArray*profileArr;
@@ -76,6 +77,10 @@
         
     }else if(indexPath.row==6){
         UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"MyAvailbilityScheduleVC"];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    else if(indexPath.row==7){
+        UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZTodoListVC"];
         [self.navigationController pushViewController:controller animated:YES];
     }
 }

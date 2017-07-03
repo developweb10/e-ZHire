@@ -70,6 +70,8 @@
 		03D8A64F1F07B6F400713B46 /* FSCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8A63E1F07B6F400713B46 /* FSCalendarWeekdayView.m */; };
 		03D8A6501F07B6F400713B46 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03D8A63F1F07B6F400713B46 /* Info.plist */; };
 		03DFD7BB1F0A1E1100E452E6 /* EZTimeTrackingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DFD7BA1F0A1E1100E452E6 /* EZTimeTrackingVC.m */; };
+		03E75D591F0A6E99001C5040 /* EZTodoListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E75D581F0A6E99001C5040 /* EZTodoListVC.m */; };
+		03E75D5D1F0A6EDC001C5040 /* TodoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E75D5C1F0A6EDC001C5040 /* TodoListCell.m */; };
 		03E969051EEE6F44000FD50C /* TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E969041EEE6F44000FD50C /* TextField.m */; };
 		03E969091EEEBA08000FD50C /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E969081EEEBA08000FD50C /* NetworkManager.m */; };
 		03E9690D1EEEBCC1000FD50C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E9690C1EEEBCC1000FD50C /* Reachability.m */; };
@@ -228,6 +230,10 @@
 		03D8A63F1F07B6F400713B46 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03DFD7B91F0A1E1100E452E6 /* EZTimeTrackingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZTimeTrackingVC.h; sourceTree = "<group>"; };
 		03DFD7BA1F0A1E1100E452E6 /* EZTimeTrackingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZTimeTrackingVC.m; sourceTree = "<group>"; };
+		03E75D571F0A6E99001C5040 /* EZTodoListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZTodoListVC.h; sourceTree = "<group>"; };
+		03E75D581F0A6E99001C5040 /* EZTodoListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZTodoListVC.m; sourceTree = "<group>"; };
+		03E75D5B1F0A6EDC001C5040 /* TodoListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoListCell.h; sourceTree = "<group>"; };
+		03E75D5C1F0A6EDC001C5040 /* TodoListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoListCell.m; sourceTree = "<group>"; };
 		03E969031EEE6F44000FD50C /* TextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextField.h; sourceTree = "<group>"; };
 		03E969041EEE6F44000FD50C /* TextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextField.m; sourceTree = "<group>"; };
 		03E969071EEEBA08000FD50C /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
@@ -705,6 +711,17 @@
 			name = TimeTrackingVC;
 			sourceTree = "<group>";
 		};
+		03E75D561F0A6E1B001C5040 /* TodoListVC */ = {
+			isa = PBXGroup;
+			children = (
+				03E75D571F0A6E99001C5040 /* EZTodoListVC.h */,
+				03E75D581F0A6E99001C5040 /* EZTodoListVC.m */,
+				03E75D5B1F0A6EDC001C5040 /* TodoListCell.h */,
+				03E75D5C1F0A6EDC001C5040 /* TodoListCell.m */,
+			);
+			name = TodoListVC;
+			sourceTree = "<group>";
+		};
 		03E969021EEE6EF0000FD50C /* Custom Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -927,6 +944,7 @@
 				03D8A6191F07874A00713B46 /* MyAvailbilityScheduleVC  */,
 				03DFD7B81F0A1DBA00E452E6 /* TimeTrackingVC */,
 				030E63481F0A229E00B6CA12 /* AccountingVC */,
+				03E75D561F0A6E1B001C5040 /* TodoListVC */,
 			);
 			path = ModelVC;
 			sourceTree = "<group>";
@@ -1166,6 +1184,7 @@
 			files = (
 				03992B521EE2EDEA00636A47 /* EZServiceProviderVC.m in Sources */,
 				8B86AA121EDC45550031793A /* ViewController.m in Sources */,
+				03E75D591F0A6E99001C5040 /* EZTodoListVC.m in Sources */,
 				030E63511F0A30B500B6CA12 /* HistoryCell.m in Sources */,
 				03C18A661F068FBE00672C3E /* EZAddServiceCell.m in Sources */,
 				03014A1C1EE6EC1F00507047 /* EZSignCreateAccountVC.m in Sources */,
@@ -1174,6 +1193,7 @@
 				03014A181EE6C72800507047 /* EZPrivacyVC.m in Sources */,
 				8B86AA371EDC52910031793A /* CategoryCell.m in Sources */,
 				03CBF74C1EFD048100F6C52D /* EZReviewVC.m in Sources */,
+				03E75D5D1F0A6EDC001C5040 /* TodoListCell.m in Sources */,
 				03C18A601F068F9D00672C3E /* EZAddServiceVC.m in Sources */,
 				8B40D06B1EE0435A00739CA1 /* EZServiceVC.m in Sources */,
 				8B53A2BA1EE17B7800EE6EAA /* imageAnimationCell.m in Sources */,
