@@ -13,6 +13,7 @@
 		030E14921EEFCE9C0071D9D1 /* AvailableServiceJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 030E14911EEFCE9C0071D9D1 /* AvailableServiceJsonModel.m */; };
 		030E14951EEFD01E0071D9D1 /* subCategoriesJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 030E14941EEFD01E0071D9D1 /* subCategoriesJsonModel.m */; };
 		030E14991EF02E490071D9D1 /* EZNextPaymentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 030E14981EF02E490071D9D1 /* EZNextPaymentVC.m */; };
+		030E634B1F0A277500B6CA12 /* EZAccountingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 030E634A1F0A277500B6CA12 /* EZAccountingVC.m */; };
 		0315CCC51EE572BD00DFE6FC /* EZVideoPlayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0315CCC41EE572BD00DFE6FC /* EZVideoPlayVC.m */; };
 		0315CCC91EE578A300DFE6FC /* HappyCustomerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0315CCC81EE578A300DFE6FC /* HappyCustomerVC.m */; };
 		0315CCCB1EE5812E00DFE6FC /* Testimonlial-female.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0315CCCA1EE5812D00DFE6FC /* Testimonlial-female.jpg */; };
@@ -114,6 +115,8 @@
 		030E14941EEFD01E0071D9D1 /* subCategoriesJsonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = subCategoriesJsonModel.m; sourceTree = "<group>"; };
 		030E14971EF02E490071D9D1 /* EZNextPaymentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZNextPaymentVC.h; sourceTree = "<group>"; };
 		030E14981EF02E490071D9D1 /* EZNextPaymentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZNextPaymentVC.m; sourceTree = "<group>"; };
+		030E63491F0A277500B6CA12 /* EZAccountingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZAccountingVC.h; sourceTree = "<group>"; };
+		030E634A1F0A277500B6CA12 /* EZAccountingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZAccountingVC.m; sourceTree = "<group>"; };
 		0315CCC31EE572BD00DFE6FC /* EZVideoPlayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZVideoPlayVC.h; sourceTree = "<group>"; };
 		0315CCC41EE572BD00DFE6FC /* EZVideoPlayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZVideoPlayVC.m; sourceTree = "<group>"; };
 		0315CCC71EE578A300DFE6FC /* HappyCustomerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HappyCustomerVC.h; sourceTree = "<group>"; };
@@ -343,6 +346,15 @@
 			);
 			name = NextPayemtVC;
 			path = FaqVC;
+			sourceTree = "<group>";
+		};
+		030E63481F0A229E00B6CA12 /* AccountingVC */ = {
+			isa = PBXGroup;
+			children = (
+				030E63491F0A277500B6CA12 /* EZAccountingVC.h */,
+				030E634A1F0A277500B6CA12 /* EZAccountingVC.m */,
+			);
+			name = AccountingVC;
 			sourceTree = "<group>";
 		};
 		0315CCC21EE5727900DFE6FC /* VideoVC */ = {
@@ -904,6 +916,7 @@
 				03C8904B1F05268C002FC3DC /* AssociateAccountVC */,
 				03D8A6191F07874A00713B46 /* MyAvailbilityScheduleVC  */,
 				03DFD7B81F0A1DBA00E452E6 /* TimeTrackingVC */,
+				030E63481F0A229E00B6CA12 /* AccountingVC */,
 			);
 			path = ModelVC;
 			sourceTree = "<group>";
@@ -1187,6 +1200,7 @@
 				038A7FCF1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.m in Sources */,
 				03C74B871EE28F7C00684199 /* DetailCell.m in Sources */,
 				03D8A61D1F07962900713B46 /* MonthCell.m in Sources */,
+				030E634B1F0A277500B6CA12 /* EZAccountingVC.m in Sources */,
 				03FA9EB91EFBC12400DAC8CC /* SearchServiceCell.m in Sources */,
 				030E14921EEFCE9C0071D9D1 /* AvailableServiceJsonModel.m in Sources */,
 				03D8A6481F07B6F400713B46 /* FSCalendarDelegationFactory.m in Sources */,

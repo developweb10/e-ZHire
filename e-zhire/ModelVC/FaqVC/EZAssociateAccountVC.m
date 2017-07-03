@@ -8,6 +8,7 @@
 
 #import "EZAssociateAccountVC.h"
 #import "AssociateAccountCell.h"
+#import "EZTimeTrackingVC.h"
 @interface EZAssociateAccountVC ()
 {
     NSArray*profileArr;
@@ -60,11 +61,17 @@
     if (indexPath.row==0) {
         UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"AssociateManagementVC"];
         [self.navigationController pushViewController:controller animated:YES];
-    }else if(indexPath.row==2){
+    }
+    else if(indexPath.row==1){
+        UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZTimeTrackingVC"];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    else if(indexPath.row==2){
         UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZAddServiceVC"];
         [self.navigationController pushViewController:controller animated:YES];
     }else if(indexPath.row==3){
-        UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZAddServiceVC"];
+        
+        UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZAccountingVC"];
         [self.navigationController pushViewController:controller animated:YES];
         
     }else if(indexPath.row==6){
