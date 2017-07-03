@@ -66,6 +66,7 @@
 		03D8A64E1F07B6F400713B46 /* FSCalendarTransitionCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8A63C1F07B6F400713B46 /* FSCalendarTransitionCoordinator.m */; };
 		03D8A64F1F07B6F400713B46 /* FSCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D8A63E1F07B6F400713B46 /* FSCalendarWeekdayView.m */; };
 		03D8A6501F07B6F400713B46 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03D8A63F1F07B6F400713B46 /* Info.plist */; };
+		03DFD7BB1F0A1E1100E452E6 /* EZTimeTrackingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DFD7BA1F0A1E1100E452E6 /* EZTimeTrackingVC.m */; };
 		03E969051EEE6F44000FD50C /* TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E969041EEE6F44000FD50C /* TextField.m */; };
 		03E969091EEEBA08000FD50C /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E969081EEEBA08000FD50C /* NetworkManager.m */; };
 		03E9690D1EEEBCC1000FD50C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E9690C1EEEBCC1000FD50C /* Reachability.m */; };
@@ -216,6 +217,8 @@
 		03D8A63D1F07B6F400713B46 /* FSCalendarWeekdayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarWeekdayView.h; sourceTree = "<group>"; };
 		03D8A63E1F07B6F400713B46 /* FSCalendarWeekdayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarWeekdayView.m; sourceTree = "<group>"; };
 		03D8A63F1F07B6F400713B46 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03DFD7B91F0A1E1100E452E6 /* EZTimeTrackingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZTimeTrackingVC.h; sourceTree = "<group>"; };
+		03DFD7BA1F0A1E1100E452E6 /* EZTimeTrackingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZTimeTrackingVC.m; sourceTree = "<group>"; };
 		03E969031EEE6F44000FD50C /* TextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextField.h; sourceTree = "<group>"; };
 		03E969041EEE6F44000FD50C /* TextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextField.m; sourceTree = "<group>"; };
 		03E969071EEEBA08000FD50C /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
@@ -671,6 +674,15 @@
 			path = FSCalendar;
 			sourceTree = "<group>";
 		};
+		03DFD7B81F0A1DBA00E452E6 /* TimeTrackingVC */ = {
+			isa = PBXGroup;
+			children = (
+				03DFD7B91F0A1E1100E452E6 /* EZTimeTrackingVC.h */,
+				03DFD7BA1F0A1E1100E452E6 /* EZTimeTrackingVC.m */,
+			);
+			name = TimeTrackingVC;
+			sourceTree = "<group>";
+		};
 		03E969021EEE6EF0000FD50C /* Custom Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -891,6 +903,7 @@
 				03C18A4D1F0633B400672C3E /* AssociateManagement */,
 				03C8904B1F05268C002FC3DC /* AssociateAccountVC */,
 				03D8A6191F07874A00713B46 /* MyAvailbilityScheduleVC  */,
+				03DFD7B81F0A1DBA00E452E6 /* TimeTrackingVC */,
 			);
 			path = ModelVC;
 			sourceTree = "<group>";
@@ -1167,6 +1180,7 @@
 				035540BD1F025006008428F3 /* EZworkorderVC.m in Sources */,
 				03EC06611EF1798E008FBE16 /* EZServiceDetailVC.m in Sources */,
 				035540CD1F02787D008428F3 /* EZInvoicesDetail.m in Sources */,
+				03DFD7BB1F0A1E1100E452E6 /* EZTimeTrackingVC.m in Sources */,
 				03FA9EB51EFBBB2100DAC8CC /* EZSearchServiceVC.m in Sources */,
 				03D8A64A1F07B6F400713B46 /* FSCalendarExtensions.m in Sources */,
 				036D05DF1F01380E000633E2 /* headerCell.m in Sources */,
