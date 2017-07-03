@@ -14,6 +14,8 @@
 		030E14951EEFD01E0071D9D1 /* subCategoriesJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 030E14941EEFD01E0071D9D1 /* subCategoriesJsonModel.m */; };
 		030E14991EF02E490071D9D1 /* EZNextPaymentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 030E14981EF02E490071D9D1 /* EZNextPaymentVC.m */; };
 		030E634B1F0A277500B6CA12 /* EZAccountingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 030E634A1F0A277500B6CA12 /* EZAccountingVC.m */; };
+		030E634E1F0A28B200B6CA12 /* EZAccountingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 030E634D1F0A28B200B6CA12 /* EZAccountingCell.m */; };
+		030E63511F0A30B500B6CA12 /* HistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 030E63501F0A30B500B6CA12 /* HistoryCell.m */; };
 		0315CCC51EE572BD00DFE6FC /* EZVideoPlayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0315CCC41EE572BD00DFE6FC /* EZVideoPlayVC.m */; };
 		0315CCC91EE578A300DFE6FC /* HappyCustomerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0315CCC81EE578A300DFE6FC /* HappyCustomerVC.m */; };
 		0315CCCB1EE5812E00DFE6FC /* Testimonlial-female.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0315CCCA1EE5812D00DFE6FC /* Testimonlial-female.jpg */; };
@@ -117,6 +119,10 @@
 		030E14981EF02E490071D9D1 /* EZNextPaymentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZNextPaymentVC.m; sourceTree = "<group>"; };
 		030E63491F0A277500B6CA12 /* EZAccountingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZAccountingVC.h; sourceTree = "<group>"; };
 		030E634A1F0A277500B6CA12 /* EZAccountingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZAccountingVC.m; sourceTree = "<group>"; };
+		030E634C1F0A28B200B6CA12 /* EZAccountingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZAccountingCell.h; sourceTree = "<group>"; };
+		030E634D1F0A28B200B6CA12 /* EZAccountingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZAccountingCell.m; sourceTree = "<group>"; };
+		030E634F1F0A30B500B6CA12 /* HistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryCell.h; sourceTree = "<group>"; };
+		030E63501F0A30B500B6CA12 /* HistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryCell.m; sourceTree = "<group>"; };
 		0315CCC31EE572BD00DFE6FC /* EZVideoPlayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZVideoPlayVC.h; sourceTree = "<group>"; };
 		0315CCC41EE572BD00DFE6FC /* EZVideoPlayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZVideoPlayVC.m; sourceTree = "<group>"; };
 		0315CCC71EE578A300DFE6FC /* HappyCustomerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HappyCustomerVC.h; sourceTree = "<group>"; };
@@ -353,6 +359,10 @@
 			children = (
 				030E63491F0A277500B6CA12 /* EZAccountingVC.h */,
 				030E634A1F0A277500B6CA12 /* EZAccountingVC.m */,
+				030E634C1F0A28B200B6CA12 /* EZAccountingCell.h */,
+				030E634D1F0A28B200B6CA12 /* EZAccountingCell.m */,
+				030E634F1F0A30B500B6CA12 /* HistoryCell.h */,
+				030E63501F0A30B500B6CA12 /* HistoryCell.m */,
 			);
 			name = AccountingVC;
 			sourceTree = "<group>";
@@ -1156,6 +1166,7 @@
 			files = (
 				03992B521EE2EDEA00636A47 /* EZServiceProviderVC.m in Sources */,
 				8B86AA121EDC45550031793A /* ViewController.m in Sources */,
+				030E63511F0A30B500B6CA12 /* HistoryCell.m in Sources */,
 				03C18A661F068FBE00672C3E /* EZAddServiceCell.m in Sources */,
 				03014A1C1EE6EC1F00507047 /* EZSignCreateAccountVC.m in Sources */,
 				8B52E1C91EDEB65500211D79 /* LoginVC.m in Sources */,
@@ -1166,6 +1177,7 @@
 				03C18A601F068F9D00672C3E /* EZAddServiceVC.m in Sources */,
 				8B40D06B1EE0435A00739CA1 /* EZServiceVC.m in Sources */,
 				8B53A2BA1EE17B7800EE6EAA /* imageAnimationCell.m in Sources */,
+				030E634E1F0A28B200B6CA12 /* EZAccountingCell.m in Sources */,
 				03ADF4911F0394CE0045EADD /* EZWorkViewVC.m in Sources */,
 				035540C91F026B7A008428F3 /* InvoicesCell.m in Sources */,
 				03D8A64D1F07B6F400713B46 /* FSCalendarStickyHeader.m in Sources */,

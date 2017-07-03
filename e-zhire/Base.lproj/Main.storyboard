@@ -895,7 +895,7 @@ Suwanee, GA 30024 USA</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YLf-XG-8Qy" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="HOME" image="home" id="Soe-DD-SU7"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="PKF-FH-R9P">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="PKF-FH-R9P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -919,7 +919,7 @@ Suwanee, GA 30024 USA</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="N01-Ry-rq5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="SERVICE" image="service" id="f9h-bc-YhT"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="w5w-S7-KO8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="w5w-S7-KO8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1140,7 +1140,7 @@ Suwanee, GA 30024 USA</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7rs-J0-dea" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="FAQ" image="faq" id="KQ0-w5-rct"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="aqH-y8-JAV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aqH-y8-JAV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.69411764710000001" green="0.1176470588" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1921,7 +1921,7 @@ Suwanee, GA 30024 USA</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OkR-eM-KF5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="More" image="more-icons" id="DAG-tQ-HWC"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="5PI-YA-yiE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5PI-YA-yiE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -4055,17 +4055,17 @@ Suwanee, GA 30024 USA</string>
                                                                 <rect key="frame" x="0.0" y="28" width="355" height="51"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CKI-VL-sgq" id="oE7-B2-DH3">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="355" height="50.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="355" height="51"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHild CARE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ng7-sM-SIy">
-                                                                            <rect key="frame" x="20" y="13" width="76" height="25.5"/>
+                                                                            <rect key="frame" x="20" y="15.5" width="92.5" height="20"/>
                                                                             <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="17"/>
                                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVg-Sr-MCW">
-                                                                            <rect key="frame" x="309" y="12" width="26" height="27"/>
+                                                                            <rect key="frame" x="304.5" y="14" width="30.5" height="21"/>
                                                                             <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="18"/>
                                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
@@ -4631,17 +4631,17 @@ GAC000006</string>
                                                         <rect key="frame" x="0.0" y="28" width="354" height="33"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PpX-d8-I7m" id="eTZ-zd-Eox">
-                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="32.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="33"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Information:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQd-57-VVE">
-                                                                    <rect key="frame" x="10" y="2" width="117" height="28.5"/>
+                                                                    <rect key="frame" x="10" y="2" width="144" height="28.5"/>
                                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="15"/>
                                                                     <color key="textColor" red="0.87314361330000001" green="0.0" blue="0.12828433510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8P-6q-Upo">
-                                                                    <rect key="frame" x="132" y="0.5" width="212" height="32"/>
+                                                                    <rect key="frame" x="159" y="2" width="185" height="29"/>
                                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="14"/>
                                                                     <state key="normal" title="(Edit Payment Accounts)">
                                                                         <color key="titleColor" red="0.49803999999999998" green="0.49803999999999998" blue="0.49803999999999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -4667,7 +4667,7 @@ GAC000006</string>
                                                         <rect key="frame" x="0.0" y="61" width="354" height="33"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W8A-Lm-aBJ" id="bAg-T4-FF0">
-                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="32.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="33"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Visa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hbj-pD-hwC">
@@ -5089,7 +5089,7 @@ Close
                                         <rect key="frame" x="0.0" y="28" width="355" height="270"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8wF-qC-w6K" id="HCh-ov-mhr">
-                                            <rect key="frame" x="0.0" y="0.0" width="355" height="269.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="270"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mxe-i8-nbY">
@@ -6501,29 +6501,29 @@ Close
                                                         <rect key="frame" x="0.0" y="28" width="325" height="195"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sSp-5r-272" id="Fce-dr-4Jc">
-                                                            <rect key="frame" x="0.0" y="0.0" width="325" height="194.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="325" height="195"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShG-PW-ltI">
-                                                                    <rect key="frame" x="10" y="10" width="305" height="19.5"/>
+                                                                    <rect key="frame" x="10" y="10" width="305" height="16.5"/>
                                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="***865" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Os-SK-JDo">
-                                                                    <rect key="frame" x="10" y="34.5" width="305" height="19.5"/>
+                                                                    <rect key="frame" x="10" y="31.5" width="305" height="16.5"/>
                                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="06/29/17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjG-SV-OdW">
-                                                                    <rect key="frame" x="10" y="59" width="305" height="19.5"/>
+                                                                    <rect key="frame" x="10" y="53" width="305" height="16.5"/>
                                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HR3-Tx-UxU">
-                                                                    <rect key="frame" x="10" y="84" width="30" height="25"/>
+                                                                    <rect key="frame" x="10" y="75" width="30" height="25"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="25" id="HAa-q8-Jta"/>
@@ -6534,7 +6534,7 @@ Close
                                                                     </state>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPe-ah-rIP">
-                                                                    <rect key="frame" x="10" y="114" width="33" height="25"/>
+                                                                    <rect key="frame" x="10" y="105" width="40" height="25"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="25" id="Ju0-Tc-CtT"/>
@@ -6545,7 +6545,7 @@ Close
                                                                     </state>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUg-bU-DEz">
-                                                                    <rect key="frame" x="10" y="144" width="305" height="25"/>
+                                                                    <rect key="frame" x="10" y="135" width="305" height="25"/>
                                                                     <color key="backgroundColor" red="0.0" green="0.65246307849884033" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="25" id="zGm-SB-UVf"/>
@@ -6836,7 +6836,7 @@ Close
                                         <rect key="frame" x="0.0" y="28" width="355" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YP6-nN-gJS" id="apl-o0-Ejb">
-                                            <rect key="frame" x="0.0" y="0.0" width="355" height="82.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="83"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bG9-lP-mzc">
@@ -7005,20 +7005,20 @@ Close
                                         <rect key="frame" x="0.0" y="28" width="371" height="304"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FUv-Zt-pUw" id="8Bo-le-GHg">
-                                            <rect key="frame" x="0.0" y="0.0" width="371" height="303.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="371" height="304"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UeK-oP-5jI">
                                                     <rect key="frame" x="0.0" y="0.0" width="371" height="298.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Billing Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIL-mC-TlB">
-                                                            <rect key="frame" x="20" y="32" width="73" height="18"/>
+                                                            <rect key="frame" x="20" y="43" width="90.5" height="15.5"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzJ-qg-Goi">
-                                                            <rect key="frame" x="209" y="5" width="142" height="71"/>
+                                                            <rect key="frame" x="209" y="5" width="142" height="91"/>
                                                             <string key="text">Mtest Online 333 Faux
 Street1,Gggggggggggggg
 Demotropolice, GA, 11111
@@ -7028,13 +7028,13 @@ Demotropolice, GA, 11111
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-ZHire LLC:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxX-bx-lAv">
-                                                            <rect key="frame" x="20" y="99" width="57.5" height="18"/>
+                                                            <rect key="frame" x="20" y="124" width="75.5" height="15.5"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abZ-z5-0TM">
-                                                            <rect key="frame" x="209" y="81" width="142" height="53"/>
+                                                            <rect key="frame" x="209" y="101" width="142" height="61"/>
                                                             <string key="text">848 N.Rainbow Blvd,#732
 Las Vegas,NV 89107
 (800) 514-5234</string>
@@ -7043,13 +7043,13 @@ Las Vegas,NV 89107
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6k4-yh-j5y">
-                                                            <rect key="frame" x="20" y="166.5" width="77.5" height="18"/>
+                                                            <rect key="frame" x="20" y="190.5" width="98.5" height="15.5"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clV-ua-NTX">
-                                                            <rect key="frame" x="209.5" y="139" width="141.5" height="71"/>
+                                                            <rect key="frame" x="209.5" y="167" width="141.5" height="61"/>
                                                             <string key="text">Invoice: # INV-38
 111 Kinderhook Dr,
 Eatonton, GA, 31024
@@ -7059,7 +7059,7 @@ Eatonton, GA, 31024
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGQ-fz-NeE">
-                                                            <rect key="frame" x="209" y="215" width="142" height="53"/>
+                                                            <rect key="frame" x="209" y="233" width="142" height="61"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="142" id="xIC-OW-jmi"/>
                                                             </constraints>
@@ -7069,13 +7069,13 @@ Eatonton, GA, 31024
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INVOICE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxG-HK-d5f">
-                                                            <rect key="frame" x="20" y="233" width="41.5" height="18"/>
+                                                            <rect key="frame" x="20" y="256" width="55" height="15.5"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6E8-xH-IZk">
-                                                            <rect key="frame" x="20" y="260.5" width="143" height="29"/>
+                                                            <rect key="frame" x="20" y="281" width="195" height="26"/>
                                                             <color key="backgroundColor" red="0.87314361330000001" green="0.0" blue="0.12828433510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="12"/>
                                                             <state key="normal" title="SELECT YOUR PAYMENT METHOD">
@@ -7121,50 +7121,50 @@ Eatonton, GA, 31024
                                         <rect key="frame" x="0.0" y="332" width="371" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ffa-28-vvy" id="mHy-IN-hr7">
-                                            <rect key="frame" x="0.0" y="0.0" width="371" height="249.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="371" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xfu-gD-fgT">
                                                     <rect key="frame" x="0.0" y="5" width="371" height="40"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EVENT#" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAa-0g-RV8">
-                                                            <rect key="frame" x="2" y="-0.5" width="48" height="41"/>
+                                                            <rect key="frame" x="2" y="2.5" width="48" height="35"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QV9-Ao-jys">
-                                                            <rect key="frame" x="55" y="-0.5" width="48.5" height="41"/>
+                                                            <rect key="frame" x="55" y="2.5" width="48.5" height="35"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SERVICE DESCRIPTION" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2E-Sc-xvo">
-                                                            <rect key="frame" x="108.5" y="-0.5" width="48" height="41"/>
+                                                            <rect key="frame" x="108.5" y="2.5" width="48" height="35"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASSOCIATE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lX1-dd-Xxj">
-                                                            <rect key="frame" x="161.5" y="-0.5" width="48" height="41"/>
+                                                            <rect key="frame" x="161.5" y="2.5" width="48" height="35"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRICE PER HOUR" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLm-6R-45f">
-                                                            <rect key="frame" x="214.5" y="-0.5" width="48" height="41"/>
+                                                            <rect key="frame" x="214.5" y="2.5" width="48" height="35"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOURS WORKED" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDg-It-DlS">
-                                                            <rect key="frame" x="267.5" y="-0.5" width="48.5" height="41"/>
+                                                            <rect key="frame" x="267.5" y="2.5" width="48.5" height="35"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL COST" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fl4-R0-mTO">
-                                                            <rect key="frame" x="321" y="-0.5" width="48" height="41"/>
+                                                            <rect key="frame" x="321" y="2.5" width="48" height="35"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -7205,49 +7205,49 @@ Eatonton, GA, 31024
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dlZ-CG-9rM">
                                                     <rect key="frame" x="0.0" y="50" width="371" height="35"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="108" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1n-Ct-lml">
-                                                            <rect key="frame" x="0.0" y="10" width="16" height="15"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="108" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1n-Ct-lml">
+                                                            <rect key="frame" x="0.0" y="11" width="16" height="13"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="04/04/16" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVm-t5-x3y">
-                                                            <rect key="frame" x="21" y="10" width="40.5" height="15"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="04/04/16" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVm-t5-x3y">
+                                                            <rect key="frame" x="21" y="11" width="40.5" height="13"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOME CLEANING" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Joq-jv-6my">
-                                                            <rect key="frame" x="66.5" y="10" width="66.5" height="15"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="HOME CLEANING" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Joq-jv-6my">
+                                                            <rect key="frame" x="66.5" y="11" width="66.5" height="13"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daniela morgan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFG-kK-PCJ">
-                                                            <rect key="frame" x="138" y="10" width="62.5" height="15"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Daniela morgan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFG-kK-PCJ">
+                                                            <rect key="frame" x="138" y="11" width="62.5" height="13"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$15" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAU-fz-xoL">
-                                                            <rect key="frame" x="205.5" y="10" width="16" height="15"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="$15" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAU-fz-xoL">
+                                                            <rect key="frame" x="205.5" y="11" width="16" height="13"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:51" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIK-jV-JkH">
-                                                            <rect key="frame" x="226.5" y="10" width="18" height="15"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2:51" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIK-jV-JkH">
+                                                            <rect key="frame" x="226.5" y="11" width="18" height="13"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$42.75" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ia-t4-7Kd">
-                                                            <rect key="frame" x="249.5" y="10" width="28" height="15"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="$42.75" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ia-t4-7Kd">
+                                                            <rect key="frame" x="249.5" y="11" width="28" height="13"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFc-LA-rTE">
+                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFc-LA-rTE">
                                                             <rect key="frame" x="282.5" y="9" width="88.5" height="16.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="16.5" id="68N-Wr-tkm"/>
@@ -7294,57 +7294,57 @@ Eatonton, GA, 31024
                                                     <rect key="frame" x="2" y="97" width="367" height="80"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4g-Be-rNE">
-                                                            <rect key="frame" x="10" y="16" width="83" height="15"/>
+                                                            <rect key="frame" x="10" y="16" width="83" height="13"/>
                                                             <string key="text">Work Order #	</string>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Associate ID #" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xJ-JK-C53">
-                                                            <rect key="frame" x="186" y="16.5" width="83" height="15"/>
+                                                            <rect key="frame" x="186" y="16.5" width="83" height="13"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jih-CI-m3b">
-                                                            <rect key="frame" x="98" y="16.5" width="83" height="15"/>
+                                                            <rect key="frame" x="98" y="16.5" width="83" height="13"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stop" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7j-dB-bty">
-                                                            <rect key="frame" x="274" y="16.5" width="83" height="15"/>
+                                                            <rect key="frame" x="274" y="16.5" width="83" height="13"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16GA000109" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryb-CW-iMb">
-                                                            <rect key="frame" x="10" y="46" width="65.5" height="15"/>
+                                                            <rect key="frame" x="10" y="44" width="65.5" height="13"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GAA000002" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIe-YS-Vb9">
-                                                            <rect key="frame" x="80.5" y="46.5" width="65.5" height="15"/>
+                                                            <rect key="frame" x="80.5" y="44.5" width="65.5" height="13"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05:03 PM" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zka-Vc-Ldf">
-                                                            <rect key="frame" x="151" y="46" width="65" height="15"/>
+                                                            <rect key="frame" x="151" y="44" width="65" height="13"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgp-PW-AWr">
-                                                            <rect key="frame" x="221" y="46.5" width="65.5" height="15"/>
+                                                            <rect key="frame" x="221" y="44.5" width="65.5" height="13"/>
                                                             <string key="text">06:00 PM	</string>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iv-3i-Ics">
-                                                            <rect key="frame" x="291.5" y="46.5" width="65.5" height="16.5"/>
+                                                            <rect key="frame" x="291.5" y="43.5" width="65.5" height="16.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="16.5" id="PeS-17-iW5"/>
                                                             </constraints>
@@ -7395,13 +7395,13 @@ Eatonton, GA, 31024
                                                     <rect key="frame" x="0.0" y="182" width="371" height="26.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Billed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8i-FI-Dtx">
-                                                            <rect key="frame" x="20" y="5" width="45" height="16.5"/>
+                                                            <rect key="frame" x="20" y="5" width="54" height="16.5"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dT2-s4-Len">
-                                                            <rect key="frame" x="327" y="5" width="24" height="16.5"/>
+                                                            <rect key="frame" x="323" y="5" width="28" height="16.5"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -7422,13 +7422,13 @@ Eatonton, GA, 31024
                                                     <rect key="frame" x="0.0" y="210.5" width="371" height="37"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Billed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6c8-xa-af7">
-                                                            <rect key="frame" x="20" y="11.5" width="45" height="15"/>
+                                                            <rect key="frame" x="20" y="12.5" width="54" height="13"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPk-Ir-6sP">
-                                                            <rect key="frame" x="327" y="11.5" width="24" height="15"/>
+                                                            <rect key="frame" x="323" y="12.5" width="28" height="13"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -11082,7 +11082,7 @@ Cg
                                                         <rect key="frame" x="0.0" y="28" width="349" height="78"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pq6-Gm-Xk4" id="V5n-43-p4v">
-                                                            <rect key="frame" x="0.0" y="0.0" width="349" height="77.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="349" height="78"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cDt-YV-6Wr">
@@ -11489,7 +11489,7 @@ Cg
                                     <rect key="frame" x="0.0" y="28" width="300" height="38"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vhE-Hy-uRa" id="eui-ou-bH2">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="37.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7c-ej-WDL">
@@ -12445,9 +12445,13 @@ Cg
                                     <color key="titleColor" red="0.95091259480000001" green="0.95107352730000005" blue="0.95467638970000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.corner.Radius">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="workOrderAction:" destination="ssM-Jz-uGh" eventType="touchUpInside" id="FKQ-q9-84E"/>
@@ -12461,9 +12465,13 @@ Cg
                                     <color key="titleColor" red="0.95091259480000001" green="0.95107352730000005" blue="0.95467638970000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.corner.Radius">
-                                        <integer key="value" value="5"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="returnActiveJobsAction:" destination="ssM-Jz-uGh" eventType="touchUpInside" id="F63-jP-O2C"/>
@@ -12508,20 +12516,21 @@ Cg
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2MS-Xc-pyt">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="328" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2MS-Xc-pyt">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="516"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="56" id="Dx9-7u-oP5">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="56"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EZAccountingCell" rowHeight="328" id="Dx9-7u-oP5" customClass="EZAccountingCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="328"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dx9-7u-oP5" id="oBk-mW-Paj">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="328"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENT PAY HISTORY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAz-4E-z0N">
                                                     <rect key="frame" x="15" y="8" width="345" height="35"/>
-                                                    <color key="backgroundColor" red="0.89206504821777344" green="0.19416423141956329" blue="0.2989966869354248" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="backgroundColor" red="0.89614307880401611" green="0.1928694099187851" blue="0.29903075098991394" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="0MT-KL-Tgj"/>
                                                     </constraints>
@@ -12530,22 +12539,103 @@ Cg
                                                     <nil key="highlightedColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="5"/>
+                                                            <integer key="value" value="10"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                             <integer key="value" value="0"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01/01/2017 through 07/03/2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfu-2o-jiG">
+                                                    <rect key="frame" x="102" y="48" width="170.5" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="aVr-LN-uZ9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5rq-7I-eHR">
+                                                    <rect key="frame" x="0.0" y="68" width="375" height="260"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gOS-iJ-9Bd">
+                                                        <size key="itemSize" width="154" height="85"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HistoryCell" id="1Hw-yk-BaT" customClass="HistoryCell">
+                                                            <rect key="frame" x="0.0" y="0.0" width="154" height="85"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="154" height="85"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBk-4q-g8r">
+                                                                        <rect key="frame" x="5" y="10" width="144" height="25"/>
+                                                                        <color key="backgroundColor" red="0.82101762290000002" green="0.82100236419999995" blue="0.82101142410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="25" id="dQJ-Hw-DUD"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQf-pB-fL8">
+                                                                        <rect key="frame" x="5" y="50" width="144" height="15"/>
+                                                                        <color key="backgroundColor" red="0.95091259480000001" green="0.95107352730000005" blue="0.95467638970000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstItem="DBk-4q-g8r" firstAttribute="top" secondItem="1Hw-yk-BaT" secondAttribute="top" constant="10" id="Cbx-J2-zIu"/>
+                                                                <constraint firstItem="SQf-pB-fL8" firstAttribute="leading" secondItem="1Hw-yk-BaT" secondAttribute="leading" constant="5" id="MYE-eZ-GEL"/>
+                                                                <constraint firstAttribute="trailing" secondItem="DBk-4q-g8r" secondAttribute="trailing" constant="5" id="XHL-80-r3E"/>
+                                                                <constraint firstItem="SQf-pB-fL8" firstAttribute="top" secondItem="DBk-4q-g8r" secondAttribute="bottom" constant="15" id="dFN-e1-kLJ"/>
+                                                                <constraint firstItem="DBk-4q-g8r" firstAttribute="leading" secondItem="1Hw-yk-BaT" secondAttribute="leading" constant="5" id="e3c-Hu-G5z"/>
+                                                                <constraint firstAttribute="trailing" secondItem="SQf-pB-fL8" secondAttribute="trailing" constant="5" id="jZF-iR-CIy"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="eventNameLabel" destination="DBk-4q-g8r" id="cw4-Xk-XQb"/>
+                                                                <outlet property="pricelabel" destination="SQf-pB-fL8" id="YH4-dD-dff"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="Oqf-Wa-5L8" id="9Zj-hF-1iT"/>
+                                                        <outlet property="delegate" destination="Oqf-Wa-5L8" id="HbO-c9-6Ps"/>
+                                                    </connections>
+                                                </collectionView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="Vfu-2o-jiG" firstAttribute="centerX" secondItem="wAz-4E-z0N" secondAttribute="centerX" id="3XF-dy-N54"/>
                                                 <constraint firstItem="wAz-4E-z0N" firstAttribute="leading" secondItem="oBk-mW-Paj" secondAttribute="leading" constant="15" id="DHe-Im-dtv"/>
+                                                <constraint firstItem="5rq-7I-eHR" firstAttribute="leading" secondItem="oBk-mW-Paj" secondAttribute="leading" id="HVp-FG-1sJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="wAz-4E-z0N" secondAttribute="trailing" constant="15" id="NuH-lL-kK8"/>
+                                                <constraint firstAttribute="bottom" secondItem="5rq-7I-eHR" secondAttribute="bottom" id="PTx-hV-zZS"/>
+                                                <constraint firstItem="Vfu-2o-jiG" firstAttribute="top" secondItem="wAz-4E-z0N" secondAttribute="bottom" constant="5" id="SV7-Lu-OSc"/>
+                                                <constraint firstItem="5rq-7I-eHR" firstAttribute="top" secondItem="Vfu-2o-jiG" secondAttribute="bottom" id="TjO-TY-HoR"/>
+                                                <constraint firstAttribute="trailing" secondItem="5rq-7I-eHR" secondAttribute="trailing" id="XwW-6d-piS"/>
                                                 <constraint firstItem="wAz-4E-z0N" firstAttribute="top" secondItem="oBk-mW-Paj" secondAttribute="top" constant="8" id="uSg-Et-wkY"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateConstraintHeight" destination="aVr-LN-uZ9" id="W2k-Ti-F7j"/>
+                                            <outlet property="datelabel" destination="Vfu-2o-jiG" id="QkS-cI-g2Y"/>
+                                            <outlet property="historyCollectionView" destination="5rq-7I-eHR" id="Jww-zo-03f"/>
+                                            <outlet property="nameLabel" destination="wAz-4E-z0N" id="rDf-Iy-k1V"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Oqf-Wa-5L8" id="AfB-W6-mZO"/>
+                                    <outlet property="delegate" destination="Oqf-Wa-5L8" id="OIp-Nt-yw6"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -12560,7 +12650,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fhc-cN-Kv4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7848.8000000000002" y="103.89805097451276"/>
+            <point key="canvasLocation" x="7804" y="108.39580209895054"/>
         </scene>
     </scenes>
     <resources>
