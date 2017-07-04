@@ -83,6 +83,11 @@
         UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZTodoListVC"];
         [self.navigationController pushViewController:controller animated:YES];
     }
+    else if(indexPath.row==9){
+        UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"WorkHistoryVC"];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    
 }
 
 - (IBAction)callAction:(UIButton *)sender

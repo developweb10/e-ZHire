@@ -89,7 +89,6 @@
     
     // For UITest
     self.calendraView.accessibilityIdentifier = @"calendar";
-
     
     // Do any additional setup after loading the view.
 }
@@ -156,6 +155,7 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma mark - Button Action
 
 - (IBAction)MothAvailablebtnAction:(id)sender {
     [UIView transitionWithView:self.monthView

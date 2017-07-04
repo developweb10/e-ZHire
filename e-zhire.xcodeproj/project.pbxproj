@@ -21,6 +21,10 @@
 		0315CCCB1EE5812E00DFE6FC /* Testimonlial-female.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0315CCCA1EE5812D00DFE6FC /* Testimonlial-female.jpg */; };
 		0315CCCE1EE5831600DFE6FC /* CustomerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0315CCCD1EE5831600DFE6FC /* CustomerCell.m */; };
 		0315CCD01EE598E200DFE6FC /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 0315CCCF1EE598E200DFE6FC /* splash.png */; };
+		032F3C121F0B849E00DF3576 /* CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 032F3C0D1F0B849E00DF3576 /* CalendarView.m */; };
+		032F3C131F0B849E00DF3576 /* NSDate+CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 032F3C0F1F0B849E00DF3576 /* NSDate+CalendarView.m */; };
+		032F3C141F0B849E00DF3576 /* NSString+CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 032F3C111F0B849E00DF3576 /* NSString+CalendarView.m */; };
+		032F3C1B1F0B8AD400DF3576 /* WorkHistoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 032F3C1A1F0B8AD400DF3576 /* WorkHistoryVC.m */; };
 		0349500C1EE9604400AA9E6D /* EZPaymentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0349500B1EE9604400AA9E6D /* EZPaymentVC.m */; };
 		035540B91F024886008428F3 /* EZClientAccountVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 035540B81F024886008428F3 /* EZClientAccountVC.m */; };
 		035540BD1F025006008428F3 /* EZworkorderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 035540BC1F025006008428F3 /* EZworkorderVC.m */; };
@@ -133,6 +137,14 @@
 		0315CCCC1EE5831600DFE6FC /* CustomerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerCell.h; sourceTree = "<group>"; };
 		0315CCCD1EE5831600DFE6FC /* CustomerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerCell.m; sourceTree = "<group>"; };
 		0315CCCF1EE598E200DFE6FC /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		032F3C0C1F0B849E00DF3576 /* CalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarView.h; sourceTree = "<group>"; };
+		032F3C0D1F0B849E00DF3576 /* CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarView.m; sourceTree = "<group>"; };
+		032F3C0E1F0B849E00DF3576 /* NSDate+CalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CalendarView.h"; sourceTree = "<group>"; };
+		032F3C0F1F0B849E00DF3576 /* NSDate+CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CalendarView.m"; sourceTree = "<group>"; };
+		032F3C101F0B849E00DF3576 /* NSString+CalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CalendarView.h"; sourceTree = "<group>"; };
+		032F3C111F0B849E00DF3576 /* NSString+CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CalendarView.m"; sourceTree = "<group>"; };
+		032F3C191F0B8AD400DF3576 /* WorkHistoryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkHistoryVC.h; sourceTree = "<group>"; };
+		032F3C1A1F0B8AD400DF3576 /* WorkHistoryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkHistoryVC.m; sourceTree = "<group>"; };
 		0349500A1EE9604400AA9E6D /* EZPaymentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZPaymentVC.h; sourceTree = "<group>"; };
 		0349500B1EE9604400AA9E6D /* EZPaymentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZPaymentVC.m; sourceTree = "<group>"; };
 		035540B71F024885008428F3 /* EZClientAccountVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZClientAccountVC.h; sourceTree = "<group>"; };
@@ -389,6 +401,28 @@
 				0315CCC81EE578A300DFE6FC /* HappyCustomerVC.m */,
 			);
 			path = HappyCustomerVC;
+			sourceTree = "<group>";
+		};
+		032F3C0B1F0B849E00DF3576 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				032F3C0C1F0B849E00DF3576 /* CalendarView.h */,
+				032F3C0D1F0B849E00DF3576 /* CalendarView.m */,
+				032F3C0E1F0B849E00DF3576 /* NSDate+CalendarView.h */,
+				032F3C0F1F0B849E00DF3576 /* NSDate+CalendarView.m */,
+				032F3C101F0B849E00DF3576 /* NSString+CalendarView.h */,
+				032F3C111F0B849E00DF3576 /* NSString+CalendarView.m */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		032F3C151F0B8A3D00DF3576 /* WorkHistoryVC */ = {
+			isa = PBXGroup;
+			children = (
+				032F3C191F0B8AD400DF3576 /* WorkHistoryVC.h */,
+				032F3C1A1F0B8AD400DF3576 /* WorkHistoryVC.m */,
+			);
+			name = WorkHistoryVC;
 			sourceTree = "<group>";
 		};
 		034950091EE9600300AA9E6D /* PaymentVC */ = {
@@ -911,6 +945,7 @@
 		8B86AA211EDC46580031793A /* ModelVC */ = {
 			isa = PBXGroup;
 			children = (
+				032F3C0B1F0B849E00DF3576 /* Sources */,
 				03C18A5D1F068F9000672C3E /* AddServiceVC */,
 				0315CCC61EE5788900DFE6FC /* HappyCustomerVC */,
 				0315CCC21EE5727900DFE6FC /* VideoVC */,
@@ -945,6 +980,7 @@
 				03DFD7B81F0A1DBA00E452E6 /* TimeTrackingVC */,
 				030E63481F0A229E00B6CA12 /* AccountingVC */,
 				03E75D561F0A6E1B001C5040 /* TodoListVC */,
+				032F3C151F0B8A3D00DF3576 /* WorkHistoryVC */,
 			);
 			path = ModelVC;
 			sourceTree = "<group>";
@@ -1087,7 +1123,7 @@
 					8B86AA061EDC45550031793A = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 8J8Y6K57XF;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -1211,6 +1247,7 @@
 				03C8903F1F04E5AD002FC3DC /* EZPaymentinformationCell.m in Sources */,
 				03C890431F04E740002FC3DC /* EZEditPaymentcell.m in Sources */,
 				03C890521F0529A7002FC3DC /* AssociateAccountCell.m in Sources */,
+				032F3C121F0B849E00DF3576 /* CalendarView.m in Sources */,
 				03CBF7501EFD252600F6C52D /* EZPhotoCellVC.m in Sources */,
 				03D8A6461F07B6F400713B46 /* FSCalendarCollectionViewLayout.m in Sources */,
 				030E14951EEFD01E0071D9D1 /* subCategoriesJsonModel.m in Sources */,
@@ -1221,6 +1258,7 @@
 				8B86AA401EDC5D640031793A /* EZCommonMethod.m in Sources */,
 				0315CCC51EE572BD00DFE6FC /* EZVideoPlayVC.m in Sources */,
 				8B52E1CD1EDED97800211D79 /* EZFaqVC.m in Sources */,
+				032F3C141F0B849E00DF3576 /* NSString+CalendarView.m in Sources */,
 				8B86AA0F1EDC45550031793A /* AppDelegate.m in Sources */,
 				035540BD1F025006008428F3 /* EZworkorderVC.m in Sources */,
 				03EC06611EF1798E008FBE16 /* EZServiceDetailVC.m in Sources */,
@@ -1228,6 +1266,7 @@
 				03DFD7BB1F0A1E1100E452E6 /* EZTimeTrackingVC.m in Sources */,
 				03FA9EB51EFBBB2100DAC8CC /* EZSearchServiceVC.m in Sources */,
 				03D8A64A1F07B6F400713B46 /* FSCalendarExtensions.m in Sources */,
+				032F3C1B1F0B8AD400DF3576 /* WorkHistoryVC.m in Sources */,
 				036D05DF1F01380E000633E2 /* headerCell.m in Sources */,
 				038A7FCF1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.m in Sources */,
 				03C74B871EE28F7C00684199 /* DetailCell.m in Sources */,
@@ -1236,6 +1275,7 @@
 				03FA9EB91EFBC12400DAC8CC /* SearchServiceCell.m in Sources */,
 				030E14921EEFCE9C0071D9D1 /* AvailableServiceJsonModel.m in Sources */,
 				03D8A6481F07B6F400713B46 /* FSCalendarDelegationFactory.m in Sources */,
+				032F3C131F0B849E00DF3576 /* NSDate+CalendarView.m in Sources */,
 				03EC06591EF12DB4008FBE16 /* EZForgotPasswordVC.m in Sources */,
 				8BA781751EDF02D10027F75F /* MoreVC.m in Sources */,
 				03C8904A1F0524BC002FC3DC /* EZEditPaymentInformationVc.m in Sources */,
@@ -1395,8 +1435,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Mohit Gupta (8J8Y6K57XF)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = 8J8Y6K57XF;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "e-zhire/e-zhirePrefixHeader.pch";
 				INFOPLIST_FILE = "e-zhire/Info.plist";
@@ -1404,8 +1444,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-zhire.app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9dab596f-d091-4076-8e3d-6dc0687ecd2e";
-				PROVISIONING_PROFILE_SPECIFIER = DonDistrubution19June;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -1415,8 +1455,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Mohit Gupta (8J8Y6K57XF)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = 8J8Y6K57XF;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "e-zhire/e-zhirePrefixHeader.pch";
 				INFOPLIST_FILE = "e-zhire/Info.plist";
@@ -1424,8 +1464,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-zhire.app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9dab596f-d091-4076-8e3d-6dc0687ecd2e";
-				PROVISIONING_PROFILE_SPECIFIER = DonDistrubution19June;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
