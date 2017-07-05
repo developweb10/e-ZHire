@@ -18,9 +18,13 @@
 @property (weak, nonatomic) IBOutlet UIButton *WeekDayHoursBtnAction;
 - (IBAction)closeButtonAction:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIButton *prvButtonAction;
+@property (weak, nonatomic) IBOutlet UIButton *nextButtonAction;
 
 // for DailyAdjutment button Action and UiView
 @property (weak, nonatomic) IBOutlet UIButton *dailyAdjustmentsBtn;
+- (IBAction)nextButtonAction:(id)sender;
+-(IBAction)prvButtonAction:(id)sender;
 
 - (IBAction)closeDailyScheduleViewBtnAction:(id)sender;
 

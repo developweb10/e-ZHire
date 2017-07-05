@@ -642,7 +642,6 @@ static const NSTimeInterval kCalendarViewSwipeMonthFadeOutTime = 0.6;
         [_calendarDelegate didChangeCalendarDate:currentDate withType:type withEvent:event];
     }
 }
-
 #pragma mark - Advance/Rewind Calendar Contents
 
 - (void)advanceCalendarContents

@@ -59,6 +59,7 @@
         NSLog(@"%ld",(long)text1.tag);
     }
 }
+
 - (IBAction)teamAction:(id)sender {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleAlert];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Indivisual" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
@@ -78,6 +79,7 @@
     }]];
     [self presentViewController:alertController animated:YES completion:nil];
 }
+
 - (IBAction)selectSelectserviceAction:(UIButton*)sender {
     [self.view addSubview:self.selectServiceView];
     CGRect size=self.selectServiceView.bounds;
@@ -89,6 +91,9 @@
 
     self.scrollView.userInteractionEnabled=NO;
 }
+
+
+
 - (IBAction)zipCodeLoctionActon:(id)sender {
 }
 
@@ -130,8 +135,8 @@
      }
     return 0;
 }
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     if (tableView==_serviceTableView) {
         UIView *view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, _addServiceTableView.bounds.size.width, 30)];
         view.backgroundColor=[UIColor grayColor];
@@ -185,6 +190,7 @@
          
      }
 }
+
 #pragma mark- select service Api
 
 -(void)getAllCategory{

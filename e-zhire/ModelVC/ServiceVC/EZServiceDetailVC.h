@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "TextField.h"
+#import "CKCalendarView.h"
 
-@interface EZServiceDetailVC : UIViewController<UIActionSheetDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UIPopoverPresentationControllerDelegate>
+@interface EZServiceDetailVC : UIViewController<UIActionSheetDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UIPopoverPresentationControllerDelegate,CKCalendarDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
 @property (weak, nonatomic) IBOutlet UILabel *detailCatLabel;
 @property (weak, nonatomic) IBOutlet TextField *zipcodeServiceTexfield;
@@ -47,6 +48,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *saturdayLabel;
 @property (weak, nonatomic) IBOutlet UILabel *sundayLabel;
 @property (weak, nonatomic) IBOutlet UILabel *serivceNeedLabel;
+
+@property(strong, nonatomic) NSMutableArray *passingArray;
 
 @property (weak, nonatomic) IBOutlet UILabel *wednesdayLabel;
 @property(nonatomic,strong)NSString*sub_id;

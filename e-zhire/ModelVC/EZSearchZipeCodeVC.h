@@ -22,4 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *gotQuestionBtn;
 @property (weak, nonatomic) IBOutlet UIButton *gotQuestionAction;
 @property (weak, nonatomic) IBOutlet UILabel *sorryLabel;
+@property(nonatomic)NSString*passMessage;
+@property(nonatomic)NSString*sendZipCode;
+
 @end

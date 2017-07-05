@@ -84,10 +84,10 @@
         [self.navigationController pushViewController:controller animated:YES];
     }
     else if(indexPath.row==9){
+
         UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"WorkHistoryVC"];
         [self.navigationController pushViewController:controller animated:YES];
     }
-    
 }
 
 - (IBAction)callAction:(UIButton *)sender
@@ -95,6 +95,7 @@
     NSString *phoneNumber = sender.titleLabel.text;
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",phoneNumber]]];
 }
+
 - (IBAction)mailAction:(id)sender
 {
     // Email Subject

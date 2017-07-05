@@ -17,10 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.firstLabel.text=@"Looks like we currently don't have an Amazing Associate available to provide you the service type you are requesting.";
-    self.secondLabel.text =@"You might first want to try searching Other in your requested Service Category. Also, please consider our extensive list of other services offered. You should know that we are continuously adding new Associates in your area, and appreciate your interest in the most innovative E-Service Business on the Planet!";
+    
     self.thirdLabel.text=@"You can encourage us to work even harder, by leaving us your email address, and we will let our Service Recruiters know that you are tired of waiting for E-ZHire's Associates to provide you service. We will also send you a notice of when we recruit an Associate in your area to fulfill your service needs. Don't Worry, we promise your email is safe with us. We will NEVER give away or sell your personal information, we promise ...... and a promise still means something to us";
     [self iPadfontSize];
+    NSLog(@"%@",_passMessage);
+    NSLog(@"zipCode%@",_sendZipCode);
+    if (![_sendZipCode isEqual:@"11111"]) {
+        self.firstLabel.text=_passMessage;
+        
+    }else{
+        self.firstLabel.text=@"Looks like we currently don't have an Amazing Associate available to provide you the service type you are requesting.";
+        self.secondLabel.text =@"You might first want to try searching Other in your requested Service Category. Also, please consider our extensive list of other services offered. You should know that we are continuously adding new Associates in your area, and appreciate your interest in the most innovative E-Service Business on the Planet!";
+    }
+    self.zipeCodeTextFiled.text=_sendZipCode;
 }
 -(void)iPadfontSize{
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
@@ -42,7 +51,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 - (IBAction)submitBtn:(id)sender {
 }
+
 @end

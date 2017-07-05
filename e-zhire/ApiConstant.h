@@ -24,10 +24,7 @@
 #define clientSignUp_Api @"client-signup.php"
 #define contactUs_Api @"contactUs.php"
 #define state_Api @"state.php"
-
-//{"firstName":"Mukesh","MiddleName":"Ram","lastName":"Kumar","email":"mukeshkumar.inext@gmail.com","homephone":"0172765892","cellphone":"9569638436","clientpassword":"12345","retypepass":"45678","carrier":"sprint","streetaddress":"test","streetaddress2":"test1","city":"test1","state":"al","zipcode":"123456","cardtype":"visa","cardnumber":"4012888888881881","cardname":"test1","cvv":"123","state":"al","expmonth":"07","expyear":"2029","hearfromoption":"classfiedAd","refid":"123"}
-//http://www.e-zhire.com/api/client-signup.php
-
+#define search_Api @"search.php"
 
 
 

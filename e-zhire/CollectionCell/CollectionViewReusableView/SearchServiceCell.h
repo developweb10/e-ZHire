@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HCSStarRatingView.h"
 
 @interface SearchServiceCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
@@ -19,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *ageLabel;
 @property (weak, nonatomic) IBOutlet UILabel *idLabel;
 
+@property (weak, nonatomic) IBOutlet HCSStarRatingView *ratingView;
 
 @property (weak, nonatomic) IBOutlet UILabel *ratePerHourLabel;
 @property (weak, nonatomic) IBOutlet UILabel *serviceLabel;

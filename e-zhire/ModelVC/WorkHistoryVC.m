@@ -27,7 +27,6 @@
 
 - (IBAction)selectDateAction:(id)sender {
     self.dateCalenderView.hidden=NO;
-    
     self.dateCalenderView.calendarDelegate = self;
     self.dateCalenderView.shouldShowHeaders = YES;
     self.dateCalenderView.dayCellWidth = 40;
@@ -57,8 +56,8 @@
 }
 - (void)didDoubleTapCalendar:(NSDate *)date withType:(NSInteger)type{
     NSLog(@"didDoubleTapCalendar:%@ withType:%ld", date, (long)type);
-    NSString*dateStr=[NSString stringWithFormat:@"%@",date];
-    self.selectDateText.text=dateStr;
+//    NSString*dateStr=[NSString stringWithFormat:@"%@",date];
+//    self.selectDateText.text=dateStr;
 
 }
 
@@ -69,7 +68,6 @@
     [self.dateCalenderView advanceCalendarContents];
 
 }
-
 - (IBAction)nextAction:(id)sender {
     [self.dateCalenderView rewindCalendarContents];
 

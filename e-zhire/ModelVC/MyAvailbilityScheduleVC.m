@@ -24,6 +24,7 @@
 @property (strong, nonatomic) NSArray *datesWithEvent;
 @property (strong, nonatomic) NSArray *datesWithMultipleEvents;
 
+@property (readonly, nonatomic) NSCalendar *gregorian;
 
 
 
@@ -34,12 +35,15 @@
 
 #pragma mark - Life cycle
 
+
+
     
 - (void)viewDidLoad {
     [super viewDidLoad];
     monthArray = [NSArray arrayWithObjects:@"January",@"February",@"March",@"April",@"May",@"June",@"July",@"August",@"September",@"October",@"November",@"December", nil];
     
     checkArray=[NSMutableArray arrayWithObjects:@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0", nil];
+    
     
     
     self.dateFormatter = [[NSDateFormatter alloc] init];
@@ -294,9 +298,33 @@
 #pragma mark- Segment Controle value change method
 - (IBAction)segmentValuChang:(id)sender {
     if (_segmentControl.selectedSegmentIndex==1) {
+        
         [self.calendraView setScope:FSCalendarScopeWeek animated:YES];
+        
     }else{
+        
+        NSDate *currentMonth = self.calendraView.currentPage;
+        NSDate *previousMonth = [self.gregorian dateByAddingUnit:NSCalendarUnitMonth value:-1 toDate:currentMonth options:0];
+        [self.calendraView setCurrentPage:previousMonth animated:YES];
         [self.calendraView setScope:FSCalendarScopeMonth animated:YES];
     }
 }
+
+-(IBAction)prvButtonAction:(id)sender{
+    NSDate *currentMonth = self.calendraView.currentPage;
+    NSDate *previousMonth = [self.gregorian dateByAddingUnit:NSCalendarUnitMonth value:-1 toDate:currentMonth options:0];
+    [self.calendraView setCurrentPage:previousMonth animated:YES];
+    [self.calendraView setScope:FSCalendarScopeMonth animated:YES];
+
+}
+
+-(IBAction)nextButtonAction:(id)sender{
+    NSDate *currentMonth = self.calendraView.currentPage;
+    NSDate *nextMonth = [self.gregorian dateByAddingUnit:NSCalendarUnitMonth value:1 toDate:currentMonth options:0];
+    [self.calendraView setCurrentPage:nextMonth animated:YES];
+    
+  //  self.calendraView setCurrentPage:
+}
+
+
 @end
