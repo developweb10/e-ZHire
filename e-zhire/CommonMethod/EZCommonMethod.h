@@ -31,5 +31,9 @@
 +(void)showAlert:(NSString*)title message:(NSString*)message;
 +(bool)checkInternetConnection;
 + (BOOL)validateZip:(NSString *)candidate;
++ (NSString *) checkNullString:(NSString *)string;
++(UIFont*)getBoldFont:(CGFloat)fontSize;
++(UIFont*)getRegularFont:(CGFloat)fontSize;
+
 
 @end

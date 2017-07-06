@@ -1455,8 +1455,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Mohit Gupta (8J8Y6K57XF)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 8J8Y6K57XF;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "e-zhire/e-zhirePrefixHeader.pch";
 				INFOPLIST_FILE = "e-zhire/Info.plist";
@@ -1464,8 +1464,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-zhire.app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "3ec3117d-4ae8-4b92-9e27-6e6b437a52f7";
+				PROVISIONING_PROFILE_SPECIFIER = Dondistributed3July;
 			};
 			name = Debug;
 		};

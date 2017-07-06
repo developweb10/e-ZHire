@@ -77,7 +77,7 @@ typedef enum {
 - (BOOL)calendar:(CKCalendarView *)calendar willDeselectDate:(NSDate *)date;
 - (void)calendar:(CKCalendarView *)calendar didDeselectDate:(NSDate *)date;
 
-- (BOOL)calendar:(CKCalendarView *)calendar willChangeToMonth:(NSDate *)date;
+- (BOOL)calendar:(CKCalendarView *)calendar willChangeToMonth:(NSDate *)date andButtonPressed:(NSString*)str;
 - (void)calendar:(CKCalendarView *)calendar didChangeToMonth:(NSDate *)date;
 
 - (void)calendar:(CKCalendarView *)calendar didLayoutInRect:(CGRect)frame;

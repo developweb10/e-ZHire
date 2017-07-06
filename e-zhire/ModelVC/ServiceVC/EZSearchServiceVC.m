@@ -35,11 +35,10 @@
     return self.passingArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView
-         cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     static NSString *MyIdentifier = @"cell";
     SearchResultJsonModel *obj=[self.passingArray objectAtIndex:indexPath.row];
-    
     SearchServiceCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
     cell.rateLabel.text = obj.rate_per_hours;
     cell.nameLabel.text =obj.name;
@@ -47,13 +46,23 @@
     cell.ageLabel.text = obj.age;
     cell.idLabel.text = obj.search_Id;
     NSString*ratValue = [NSString stringWithFormat:@"%@", obj.rating];
-    cell.ratingView.maximumValue=ratValue.floatValue;
+    cell.ratingView.allowsHalfStars=YES;
+    cell.ratingView.minimumValue=0.0;
+    cell.ratingView.maximumValue=5.0;
+    cell.ratingView.emptyStarImage=[UIImage imageNamed:@"heart-empty"];
+    cell.ratingView.filledStarImage=[UIImage imageNamed:@"heart-full"];
+    cell.ratingView.halfStarImage=[UIImage imageNamed:@"heart-half"];
+    CGFloat floatvalue=ratValue.floatValue;
+    cell.ratingView.userInteractionEnabled=NO;
+    cell.ratingView.value=floatvalue;
+
     cell.ratePerHourLabel.text = [@"$" stringByAppendingString:obj.rate_per_hours];
     cell.serviceLabel.text =obj.service;
     cell.availabilityLabel.text = obj.availability;
     cell.dateLabel.text = obj.date;
     cell.startTimeLabel.text =obj.startTime;
     cell.estTimeLabel.text =obj.establish_compilation_time;
+    
     if (obj.recurring_Service==nil) {
           cell.recuringServiceLabel.text=@"0days of";
     }else{
@@ -64,7 +73,6 @@
     cell.reviewProfileBtn.tag = indexPath.row;
     [cell.reviewProfileBtn addTarget:self action:@selector(reviewProfileClicked:) forControlEvents:UIControlEventTouchUpInside];
     cell.reviewDetailLabel.text=@"Professional Summary:Experienced Child Care Provider";
-    
     NSString *string64 =obj.profile_pic;
     NSData *data = [[NSData alloc] initWithBase64EncodedString:string64 options:NSDataBase64DecodingIgnoreUnknownCharacters];
     UIImage *captcha_image = [[UIImage alloc] initWithData:data];

@@ -438,7 +438,23 @@
     NSDateComponents* comps = [[NSDateComponents alloc] init];
     [comps setMonth:1];
     NSDate *newMonth = [self.calendar dateByAddingComponents:comps toDate:self.monthShowing options:0];
-    if ([self.delegate respondsToSelector:@selector(calendar:willChangeToMonth:)] && ![self.delegate calendar:self willChangeToMonth:newMonth]) {
+    if ([self.delegate respondsToSelector:@selector(calendar:willChangeToMonth:andButtonPressed:)] && ![self.delegate calendar:self willChangeToMonth:newMonth andButtonPressed:@"next"]) {
+        return;
+    } else {
+        
+        self.monthShowing = newMonth;
+        if ([self.delegate respondsToSelector:@selector(calendar:didChangeToMonth:)] ) {
+            [self.delegate calendar:self didChangeToMonth:self.monthShowing];
+        }
+    }
+}
+
+
+- (void)_moveCalendarToPreviousMonth {
+    NSDateComponents* comps = [[NSDateComponents alloc] init];
+    [comps setMonth:-1];
+    NSDate *newMonth = [self.calendar dateByAddingComponents:comps toDate:self.monthShowing options:0];
+    if ([self.delegate respondsToSelector:@selector(calendar:willChangeToMonth:andButtonPressed:) ] && ![self.delegate calendar:self willChangeToMonth:newMonth andButtonPressed:@"prev"]) {
         return;
     } else {
         self.monthShowing = newMonth;
@@ -448,19 +464,7 @@
     }
 }
 
-- (void)_moveCalendarToPreviousMonth {
-    NSDateComponents* comps = [[NSDateComponents alloc] init];
-    [comps setMonth:-1];
-    NSDate *newMonth = [self.calendar dateByAddingComponents:comps toDate:self.monthShowing options:0];
-    if ([self.delegate respondsToSelector:@selector(calendar:willChangeToMonth:)] && ![self.delegate calendar:self willChangeToMonth:newMonth]) {
-        return;
-    } else {
-        self.monthShowing = newMonth;
-        if ([self.delegate respondsToSelector:@selector(calendar:didChangeToMonth:)] ) {
-            [self.delegate calendar:self didChangeToMonth:self.monthShowing];
-        }
-    }
-}
+
 
 - (void)_dateButtonPressed:(id)sender {
     DateButton *dateButton = sender;
@@ -474,7 +478,6 @@
     } else if ([self.delegate respondsToSelector:@selector(calendar:willSelectDate:)] && ![self.delegate calendar:self willSelectDate:date]) {
         return;
     }
-
     [self selectDate:date makeVisible:YES];
     [self.delegate calendar:self didSelectDate:date];
     [self setNeedsLayout];

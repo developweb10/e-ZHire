@@ -88,4 +88,19 @@ static NSString*const EZniceName=@"niceName";
     return [pinTest evaluateWithObject:candidate];
 }
 
+
++ (NSString *) checkNullString:(NSString *)string{
+    if (string == nil || string == (id)[NSNull null])
+        string = @"";
+    return string;
+}
+
++(UIFont*)getRegularFont:(CGFloat)fontSize {
+    return [UIFont fontWithName:@"Oswald-Regular" size:fontSize];
+}
+
++(UIFont*)getBoldFont:(CGFloat)fontSize {
+    return [UIFont fontWithName:@"OSWALD-BOLD" size:fontSize];
+}
+
 @end

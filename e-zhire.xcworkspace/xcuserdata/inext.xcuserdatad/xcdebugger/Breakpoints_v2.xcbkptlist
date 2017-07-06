@@ -57,77 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "e-zhire/ModelVC/ServiceVC/EZServiceDetailVC.m"
-            timestampString = "520955513.674093"
+            filePath = "e-zhire/ModelVC/CKCalendarView.m"
+            timestampString = "520969394.464614"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "523"
-            endingLineNumber = "523"
-            landmarkName = "-SearchApiMethod"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "e-zhire/ModelVC/ServiceVC/EZServiceDetailVC.m"
-            timestampString = "520955513.674093"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "534"
-            endingLineNumber = "534"
-            landmarkName = "-SearchApiMethod"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "e-zhire/ModelVC/ServiceVC/EZServiceDetailVC.m"
-            timestampString = "520955513.674093"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "513"
-            endingLineNumber = "513"
-            landmarkName = "-SearchApiMethod"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "e-zhire/ModelVC/ServiceVC/EZServiceDetailVC.m"
-            timestampString = "520956714.580355"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "506"
-            endingLineNumber = "506"
-            landmarkName = "-SearchApiMethod"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "e-zhire/ModelVC/ServiceVC/EZServiceDetailVC.m"
-            timestampString = "520957359.818543"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "509"
-            endingLineNumber = "509"
-            landmarkName = "-SearchApiMethod"
+            startingLineNumber = "629"
+            endingLineNumber = "629"
+            landmarkName = "+_imageNamed:withColor:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
