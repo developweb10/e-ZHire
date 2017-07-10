@@ -39,13 +39,16 @@
 - (IBAction)clickToAddServiceAction:(id)sender {
     self.totalCell+=1;
     [_addServiceTableView reloadData];
-    
 }
+
+
+
 - (IBAction)helpAction:(id)sender {
     
 }
 
 - (IBAction)createServiceAction:(id)sender {
+    
 }
 
 - (IBAction)saveChangesAction:(id)sender {
@@ -59,6 +62,7 @@
         NSLog(@"%ld",(long)text1.tag);
     }
 }
+
 
 - (IBAction)teamAction:(id)sender {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleAlert];
@@ -92,8 +96,6 @@
     self.scrollView.userInteractionEnabled=NO;
 }
 
-
-
 - (IBAction)zipCodeLoctionActon:(id)sender {
 }
 
@@ -123,7 +125,6 @@
          AvailableServiceJsonModel *obj=[self.categoryArr objectAtIndex:section];
         //__weak  NSMutableArray *SubCateGoryArray;
          SubCateGoryArray=obj.subCategoriesArray;
-         
          return  SubCateGoryArray.count;
      }
 }
@@ -209,7 +210,6 @@
                                                              options:kNilOptions
                                                                error:&errorJson];
         NSLog(@"%@",json);
-        
         if ([[json valueForKey:@"success"] boolValue]==1) {
             [MBProgressHUD hideHUDForView:self.view animated:YES];
             self.categoryArr=[AvailableServiceJsonModel arrayOfModelsFromDictionaries:[json valueForKey:@"value"] error:&errorJson];

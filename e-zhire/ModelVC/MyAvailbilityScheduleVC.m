@@ -26,10 +26,7 @@
 
 @property (readonly, nonatomic) NSCalendar *gregorian;
 
-
-
 @end
-
 
 @implementation MyAvailbilityScheduleVC
 

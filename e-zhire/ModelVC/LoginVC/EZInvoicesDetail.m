@@ -88,7 +88,7 @@
     }else{
         self.seletedIndex=sender.tag;
     }
-//    self.seletedIndex=sender.tag;
+//  self.seletedIndex=sender.tag;
     [self.tableView beginUpdates];
     [self.tableView endUpdates];
     

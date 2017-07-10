@@ -83,6 +83,11 @@
         UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZTodoListVC"];
         [self.navigationController pushViewController:controller animated:YES];
     }
+    else if(indexPath.row==8){
+        
+        UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"MaketingPageVC"];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
     else if(indexPath.row==9){
 
         UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"WorkHistoryVC"];

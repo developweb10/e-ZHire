@@ -114,7 +114,7 @@
     AvailableServiceJsonModel *obj=[self.categoryArray objectAtIndex:indexPath.item-1];
     NSLog(@"%@",obj.catName);
     cell.nameLbl.text = obj.catName;
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:obj.catImage] placeholderImage:[UIImage imageNamed:@"placeHolder"]];
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:obj.catImage] placeholderImage:[UIImage imageNamed:@"serivePlaceHolder"]];
     // placeHolder
     
     return cell;
@@ -182,6 +182,7 @@
 //{
 //    return self.didLoadAllProducts ? CGSizeZero : CGSizeMake(self.categoryCollection.frame.size.width, 50.0);
 //}
+
 
 #pragma mark- TableView DataSource and Delegate
 

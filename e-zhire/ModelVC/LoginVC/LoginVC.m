@@ -181,15 +181,15 @@
             
         }else{
             [EZCommonMethod showAlert:nil message:@"Please check your email and password!"];
-            
         }
         
     } onError:^(NSError *Error) {
         NSLog(@"%@:",Error);
         [MBProgressHUD hideHUDForView:self.view animated:YES];
-        
     }];
 }
+
+
 
 -(void)showUIAlertControllerWithTitle:(NSString*)Title{
 

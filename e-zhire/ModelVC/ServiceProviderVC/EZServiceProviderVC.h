@@ -12,7 +12,9 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *serviceCollectionView;
 @property (weak, nonatomic) IBOutlet UILabel *upperLable;
 @property (weak, nonatomic) IBOutlet UILabel *clickLable;
+@property(nonatomic,strong)NSMutableArray*serviceProviderArr;
 @property (nonatomic) NSInteger selectedIndex;
 - (IBAction)slideMenuAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *serviceProviderTitileLabel;
 
 @end

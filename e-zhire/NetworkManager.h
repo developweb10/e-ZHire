@@ -21,7 +21,9 @@ typedef void(^errorBlock)(NSError *Error);
 -(void)postRequestWithUrl:(NSString*)url parameter:(id)parameter onCompletion: (JSonRepresentation)completion onError:(errorBlock)Error;
 
 -(void)putRequestWithUrl:(NSString*)url parameter:(id)parameter onCompletion:(JSonRepresentation)completion onError:(errorBlock)Error;
+
 -(void)postImageWithurl:(NSString*)url image:(UIImage*)image filename:(NSString*)filename parameter:(NSDictionary*)parameter fileurl:(NSURL*)fileurl onCompletion:(JSonRepresentation)completion onError:(errorBlock)Error;
+
 -(void)putImageWithurl:(NSString*)url image:(UIImage*)image filename:(NSString*)filename parameter:(NSDictionary*)parameter fileurl:(NSURL*)fileurl onCompletion:(JSonRepresentation)completion onError:(errorBlock)Error;
 
 -(void)deleteRequestWithUrl:(NSString*)url parameter:(id)parameter onCompletion:(JSonRepresentation)completion onError:(errorBlock)Error;

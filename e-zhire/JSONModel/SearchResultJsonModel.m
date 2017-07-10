@@ -11,7 +11,6 @@
 @implementation SearchResultJsonModel
 +(JSONKeyMapper *)keyMapper
 {
-   
     return [[JSONKeyMapper alloc]initWithModelToJSONDictionary:@{
                                                                  @"Recurring Service": @"Recurring Service",
                                                                  @"age":@"age",

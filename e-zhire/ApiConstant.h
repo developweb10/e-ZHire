@@ -26,6 +26,8 @@
 #define state_Api @"state.php"
 #define search_Api @"search.php"
 
+#define serviceProvider @"serviceProvider.php"
+
 
 
 #endif /* ApiConstant_h */

@@ -9,7 +9,11 @@
 #import "WorkHistoryVC.h"
 
 @interface WorkHistoryVC ()
-
+{
+    UIDatePicker*datePicker;
+    UIAlertView*datePikerAlert;
+    NSString*dateString;
+}
 @end
 
 @implementation WorkHistoryVC
@@ -25,7 +29,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)selectDateAction:(id)sender {
+- (IBAction)selectDateAction:(UIButton*)sender {
+    /*
     self.dateCalenderView.hidden=NO;
     self.dateCalenderView.calendarDelegate = self;
     self.dateCalenderView.shouldShowHeaders = YES;
@@ -37,39 +42,60 @@
     self.dateCalenderView.yearCellHeight = 30;
     
     [self.dateCalenderView refresh];
-}
-#pragma mark -Date DidChangeCalendarDate
+     */
+    [self selectDate];
 
-- (void)didChangeCalendarDate:(NSDate *)date{
-    NSLog(@"didChangeCalendarDate:%@", date);
-       NSString*dateStr=[NSString stringWithFormat:@"%@",date];
-       self.selectDateText.text=dateStr;
-     // self.dateCalenderView.hidden=YES;
+    
+//    if (sender.selected==NO) {
+//        sender.selected=YES;
+//         [self selectDate];
+//        datePikerAlert.hidden=NO;
+//        
+//    }else{
+//       datePikerAlert.hidden=YES;
+//    }
+    
 }
-- (void)didChangeCalendarDate:(NSDate *)date withType:(NSInteger)type withEvent:(NSInteger)event
-{
-    NSLog(@"didChangeCalendarDate:%@ withType:%ld withEvent:%ld", date, (long)type, (long)event);
-//   NSString*dateStr=[NSString stringWithFormat:@"%@",date];
-//   self.selectDateText.text=dateStr;
-    //self.dateCalenderView.hidden=YES;
+-(void)selectDate{
+
+    datePikerAlert = [[UIAlertView alloc] initWithTitle:@"Please Select Date" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    datePikerAlert.tag=101;
+    datePikerAlert.alertViewStyle = UIAlertViewStyleDefault;
+    datePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 0,250, 150)];
+    datePicker.datePickerMode = UIDatePickerModeDate;
+    datePicker.minuteInterval = 30;
+    [datePikerAlert setValue:datePicker forKey:@"accessoryView"];
+    [datePikerAlert show];
 
 }
-- (void)didDoubleTapCalendar:(NSDate *)date withType:(NSInteger)type{
-    NSLog(@"didDoubleTapCalendar:%@ withType:%ld", date, (long)type);
-//    NSString*dateStr=[NSString stringWithFormat:@"%@",date];
-//    self.selectDateText.text=dateStr;
+//- (void)dateIsChanged:(UIDatePicker*)sender{
+//    NSLog(@"Date changed");
+//    NSDateFormatter *dateFormat=[[NSDateFormatter alloc]init];
+//    NSDate *eventDate = sender.date;
+//    [dateFormat setDateFormat:@"MM/dd/yyyy"];
+//    dateString = [dateFormat stringFromDate:eventDate];
+//    [dateFormat setDateFormat:@"hh:mm a"];
+//   self.selectDateText.text = [NSString stringWithFormat:@"%@",dateString];
+//
+//   }
 
+- (void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    NSLog(@"didDISMIS");
+    
+    if(datePikerAlert.tag==101) {
+        NSDateFormatter *dateFormat=[[NSDateFormatter alloc]init];
+        NSDate *eventDate = datePicker.date;
+        [dateFormat setDateFormat:@"MM/dd/yyyy"];
+        dateString = [dateFormat stringFromDate:eventDate];
+        [dateFormat setDateFormat:@"hh:mm a"];
+        self.selectDateText.text = [NSString stringWithFormat:@"%@",dateString];
+  }
 }
+
 
 - (IBAction)searchAction:(id)sender {
     
 }
-- (IBAction)priviousAction:(id)sender {
-    [self.dateCalenderView advanceCalendarContents];
 
-}
-- (IBAction)nextAction:(id)sender {
-    [self.dateCalenderView rewindCalendarContents];
 
-}
 @end

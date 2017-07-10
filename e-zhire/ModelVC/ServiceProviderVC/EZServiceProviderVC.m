@@ -8,9 +8,12 @@
 
 #import "EZServiceProviderVC.h"
 #import "EZServiceProviderCell.h"
+#import "serviceProviderJsonModel.h"
 
 @interface EZServiceProviderVC ()
-
+{
+    NSDictionary* json;
+}
 @end
 
 @implementation EZServiceProviderVC
@@ -18,10 +21,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.selectedIndex=-1;
-    [self updateText];
+   // [self updateText];
     // Do any additional setup after loading the view.
-    
     [self ipadFontsize];
+    [self getServiceProvide];
 }
 -(void)ipadFontsize{
 if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
@@ -48,8 +51,9 @@ if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
        //     [self reloadDataFromNetwork];
     }
 }
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 20;
+    return self.serviceProviderArr.count;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
@@ -57,6 +61,9 @@ if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
     cell.contentView.layer.borderColor=(__bridge CGColorRef _Nullable)([UIColor grayColor]);
     cell.contentView.layer.borderWidth = 1.0f;
     cell.contentView.layer.borderColor = [UIColor colorWithRed:193/255.0 green:193/255.0 blue:193/255.0 alpha:1].CGColor;
+    serviceProviderJsonModel*obj=[self.serviceProviderArr objectAtIndex:indexPath.row];
+     cell.headerLable.text=obj.catName;
+     cell.descriptionLabel.text=obj.catDescription;
     cell.contentView.layer.masksToBounds = YES;
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
         [cell.descriptionLabel setFont:[UIFont fontWithName:@"Oswald-Regular" size:14.0f]];
@@ -64,34 +71,14 @@ if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
     }else{
         
     }
-    
     return cell;
 }
-
--(void)updateText {
-
-    // LINE SPACE
-    NSMutableAttributedString *mutableAttributedString = [[NSMutableAttributedString alloc] initWithString:@"IF YOU HAVE THE SKILLS AND DESIRE TO MAKE MONEY AS AN INDEPENDENT SERVICE PROVIDER, BUT DON'T WANT TO WORRY ABOUT MARKETING, ADVERTISING,SCHEDULING,ACCOUNTIN,OFFICE STAFF OR GOVERNMENT REGULATIONS.......THEN E-ZHIRE IS FOR YOU."];
-    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
-    style.alignment                = NSTextAlignmentCenter;
-    [style setLineSpacing:2];
-    [mutableAttributedString addAttribute:NSParagraphStyleAttributeName
-                                    value:style
-                                    range:NSMakeRange(0, mutableAttributedString.length)];
-    _upperLable.attributedText=mutableAttributedString;
-    
-    //  CHANGE LABLE COLOR
-    self.clickLable.text=@"CLICK HERE TO LEARN MORE!";
-    NSMutableAttributedString * stringAtr = [[NSMutableAttributedString alloc] initWithString:self.clickLable.text];
-    [stringAtr addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:173/255.f green:0/255.f blue:15/255.f alpha:1.0] range:NSMakeRange(0,10)];
-    self.clickLable.attributedText = stringAtr;
-}
-
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
     if (indexPath.item==_selectedIndex) {
         return CGSizeMake([UIScreen mainScreen].bounds.size.width/2-15, 100);
     }
-    return CGSizeMake([UIScreen mainScreen].bounds.size.width/2-15, 50);
+    return CGSizeMake([UIScreen mainScreen].bounds.size.width/2-15, 55);
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -106,7 +93,40 @@ if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
   }
 
 - (IBAction)slideMenuAction:(id)sender {
-    [self.menuContainerViewController toggleLeftSideMenuCompletion:^{}];
+   [self.menuContainerViewController toggleLeftSideMenuCompletion:^{}];
 
 }
+#pragma mark-API
+-(void)getServiceProvide{
+    bool check=[EZCommonMethod checkInternetConnection];
+    if(!check){
+        [EZCommonMethod showAlert:nil message:@"Please check your internet connection"];
+        return;
+    }
+    NSString *urlString=[NSString stringWithFormat:@"%@%@",BaseUrl,serviceProvider];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [[NetworkManager Instance] getRequestWithUrl:urlString parameter:nil onCompletion:^(id dict) {
+        NSError* errorJson=nil;
+         json = [NSJSONSerialization JSONObjectWithData:dict
+                                                             options:kNilOptions
+                                                               error:&errorJson];
+        
+        NSLog(@"%@",json);
+        if ([[json valueForKey:@"success"] boolValue]==1) {
+            self.upperLable.text=[json valueForKey:@"description"];
+        self.serviceProviderTitileLabel.text=[json valueForKey:@"title"];
+        self.serviceProviderArr=[serviceProviderJsonModel arrayOfModelsFromDictionaries:[json valueForKey:@"value"] error:&errorJson];
+            NSLog(@"%@",self.serviceProviderArr);
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+           [self.serviceCollectionView reloadData];
+        }
+        
+    } onError:^(NSError *Error) {
+        NSLog(@"%@",Error);
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        //[EZCommonMethod showAlert:nil message:@"Please try again"];
+        
+    }];
+}
+
 @end

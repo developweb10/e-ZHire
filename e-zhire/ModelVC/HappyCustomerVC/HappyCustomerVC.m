@@ -11,7 +11,6 @@
 #import "MBProgressHUD.h"
 #import "UIImageView+WebCache.h"
 
-
 @interface HappyCustomerVC ()
 
 @end
@@ -84,7 +83,6 @@
         NSDictionary* json = [NSJSONSerialization JSONObjectWithData:dict
                                                              options:kNilOptions
                                                                error:&errorJson];
-        
         NSLog(@"%@",json);
         if ([[json valueForKey:@"success"] boolValue]==1) {
             happyArr=[json valueForKey:@"value"];

@@ -295,8 +295,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(localeDidChange) name:NSCurrentLocaleDidChangeNotification object:nil];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
     } else {
@@ -307,6 +306,7 @@
 - (void)localeDidChange {
     [self.calendar setLocale:[NSLocale currentLocale]];
 }
+
 - (BOOL)dateIsDisabled:(NSDate *)date {
     for (NSDate *disabledDate in self.disabledDates) {
         if ([disabledDate isEqualToDate:date]) {
@@ -315,6 +315,7 @@
     }
     return NO;
 }
+
 #pragma mark - CKCalendarDelegate
 
 - (void)calendar:(CKCalendarView *)calendar configureDateItem:(CKDateItem *)dateItem forDate:(NSDate *)date {
@@ -331,16 +332,14 @@
     NSTimeInterval secondsBetween = [date timeIntervalSinceDate:[NSDate date]];
     int days= (int)secondsBetween/86500;
     if(days<0){
-        [EZCommonMethod showAlert:@"Oops" message:@"Please enter a valid date"];
+        [EZCommonMethod showAlert:@"Oops," message:@"Please enter a valid date"];
         return;
     }else if(days>90){
-        [EZCommonMethod showAlert:@"Oops" message:@"Please select a date within 90 days"];
+        [EZCommonMethod showAlert:@"Oops," message:@"Please select a date within 90 days"];
         return;
     }
-    
     NSLog(@"%d",days);
     if (serviceCheck) {
-        
         self.otherDateServiceTextField.text = [self.dateFormatter stringFromDate:date];
         self.calendar.hidden=YES;
         
@@ -349,21 +348,20 @@
         self.calendar.hidden=YES;
     }
 }
-
 - (BOOL)calendar:(CKCalendarView *)calendar willChangeToMonth:(NSDate *)date andButtonPressed:(NSString *)str {
     
     NSLog(@"%@", [self.calendar datesShowing]);
     NSDate *dddate = [[self.calendar datesShowing] lastObject];
-    
     NSTimeInterval secondsBetween = [dddate timeIntervalSinceDate:[NSDate date]];
     int days= (int)secondsBetween/86500;
     NSLog(@"%d",days);
     
-    if (days>0 && days<91) {
+    if (days>0 && days<90) {
+        
         return YES;
     }
     else {
-        if (days>90) {
+        if (days>91) {
             if ([str isEqualToString:@"prev"]) {
                 return YES;
             }
@@ -375,7 +373,6 @@
         }
         return NO;
     }
-    
     /*if ([date laterDate:self.minimumDate] == date) {
      //  self.calendar.backgroundColor = [UIColor blueColor];
      return YES;
@@ -530,6 +527,7 @@
             NSString *string=[selectedDays componentsJoinedByString:@","];
             [parameter setObject:string forKey:@"wkday"];
         }
+        
         [parameter setObject:@"Closest Availability Match" forKey:@"sortby"];
         [parameter setObject:selectedMonthweakString forKey:@"timespan"];
       //  [parameter setObject:@(selectedDays.count).stringValue forKey:@"fwkday"];

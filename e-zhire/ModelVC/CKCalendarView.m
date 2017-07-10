@@ -464,8 +464,6 @@
     }
 }
 
-
-
 - (void)_dateButtonPressed:(id)sender {
     DateButton *dateButton = sender;
     NSDate *date = dateButton.date;
@@ -595,7 +593,6 @@
     if (date1 == nil || date2 == nil) {
         return NO;
     }
-
     NSDateComponents *day = [self.calendar components:NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:date1];
     NSDateComponents *day2 = [self.calendar components:NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:date2];
     return ([day2 day] == [day day] &&
@@ -603,7 +600,6 @@
             [day2 year] == [day year] &&
             [day2 era] == [day era]);
 }
-
 - (NSInteger)_numberOfWeeksInMonthContainingDate:(NSDate *)date {
     return [self.calendar rangeOfUnit:NSWeekCalendarUnit inUnit:NSMonthCalendarUnit forDate:date].length;
 }

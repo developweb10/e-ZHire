@@ -49,9 +49,9 @@
     cell.ratingView.allowsHalfStars=YES;
     cell.ratingView.minimumValue=0.0;
     cell.ratingView.maximumValue=5.0;
-    cell.ratingView.emptyStarImage=[UIImage imageNamed:@"heart-empty"];
-    cell.ratingView.filledStarImage=[UIImage imageNamed:@"heart-full"];
-    cell.ratingView.halfStarImage=[UIImage imageNamed:@"heart-half"];
+    cell.ratingView.emptyStarImage=[UIImage imageNamed:@"star-fill"];
+    cell.ratingView.filledStarImage=[UIImage imageNamed:@"star-Full"];
+    cell.ratingView.halfStarImage=[UIImage imageNamed:@"star-half"];
     CGFloat floatvalue=ratValue.floatValue;
     cell.ratingView.userInteractionEnabled=NO;
     cell.ratingView.value=floatvalue;
