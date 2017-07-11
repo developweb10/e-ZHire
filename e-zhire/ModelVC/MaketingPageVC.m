@@ -44,13 +44,15 @@
     }
 }
 
-#pragma mark - UICollectionViewDelegate
+#pragma mark - UICollectionView Datasource and Delegate
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
     if(indexPath.row == [collectionView numberOfItemsInSection:indexPath.section] - 1) {
+        
         //     [self reloadDataFromNetwork];
     }
 }
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     
     return 4;
@@ -75,6 +77,7 @@
 #pragma mark- Button Action
 
 - (IBAction)addEditPicAction:(id)sender {
+    
     checkVideo=YES;
     
     UIAlertController *alertController=[UIAlertController alertControllerWithTitle:@"" message:@"Change Profile image" preferredStyle:UIAlertControllerStyleActionSheet];
@@ -83,6 +86,7 @@
         picker.delegate = self;
         picker.allowsEditing = YES;
         if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+            
             picker.sourceType = UIImagePickerControllerSourceTypeCamera;
             [self presentViewController:picker animated:YES completion:NULL];
         }
@@ -102,6 +106,7 @@
         pickerView.delegate = self;
         [self presentViewController:pickerView animated:YES completion:NULL];
         [alertController dismissViewControllerAnimated:YES completion:nil];
+        
     }];
     [alertController addAction:choosePhoto];
     UIAlertAction *actionCancel=[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
@@ -112,66 +117,8 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
-#pragma mark- Profile picker delegate
-
-/*
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    self.profileImgage.image = chosenImage;
-    [picker dismissViewControllerAnimated:YES completion:NULL];
-    if (checkVideo) {
-        UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-        self.profileImgage.image = chosenImage;
-        [picker dismissViewControllerAnimated:YES completion:NULL];
-    }else{
-        NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
-         [self dismissViewControllerAnimated:NO completion:NULL];
-        // Handle a movie capture
-        if (CFStringCompare ((__bridge_retained CFStringRef) mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo) {
-            NSString *moviePath = [[info objectForKey:UIImagePickerControllerMediaURL] path];
-            if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(moviePath)) {
-                UISaveVideoAtPathToSavedPhotosAlbum(moviePath, self, nil, nil);
-            }
-        }
-    }
-}
-*/
-
-
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    NSString *date = [self currentDateandTime];
-   UIImage* SelectedImage = [info valueForKey:UIImagePickerControllerOriginalImage];
-    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@_image.jpg",date]];
-    NSURL *urlimage = [NSURL URLWithString:imagePath];
-    NSLog(@"%@",urlimage);
-    NSURL* videoURL = [info objectForKey:UIImagePickerControllerMediaURL];
-    NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
-    
-    if (CFStringCompare ((__bridge CFStringRef) mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo) {
-        videoURL=(NSURL*)[info objectForKey:UIImagePickerControllerMediaURL];
-    }
- 
-    self.profileImgage.image = SelectedImage;
-    //    _textViewUpperConstait.constant=41;
-    //    _textViewWidthContrait.constant=self.view.bounds.size.width-24;
-    [picker dismissViewControllerAnimated:YES completion:NULL];
-    
-}
-
-- (NSString *)currentDateandTime {
-    NSDate *today = [NSDate date];
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"MMddyyyy_HHmmssSS"];
-    NSString *dateString = [dateFormat stringFromDate:today];
-    return dateString;
-}
-
-
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    
-    [picker dismissViewControllerAnimated:YES completion:NULL];
-}
 - (IBAction)addEditAboutAction:(id)sender {
+    
     CGRect size=self.aboutView.bounds;
     size.origin.y=30;
     size.origin.x=35;
@@ -179,9 +126,11 @@
     [self.view addSubview:self.aboutView];
     self.maketingScrollView.userInteractionEnabled=NO;
     self.aboutView.hidden=NO;
+    
    }
 
 - (IBAction)leftArrowAction:(UIButton*)sender {
+    
     if (currentImage > 0) {
         currentImage = currentImage-1;
         sender.enabled = currentImage == 0?NO:YES;
@@ -192,7 +141,6 @@
     }
 }
 - (IBAction)rightArrowAction:(UIButton*)sender {
-    
     if(currentImage < imageArr.count-1) {
         currentImage = currentImage+1;
         sender.enabled = currentImage == imageArr.count-1?NO:YES;
@@ -202,6 +150,8 @@
         [self.collectionView reloadData];
     }
 }
+
+
 - (IBAction)addEditVideoAction:(id)sender {
     self.videoEditFontLabel.text=@"Video";
     self.videoPopLabel.text=@"This section is where you will want to upload your Promotional videos.  A video is the most effective marketing tool you will have to help you convince a Client to purchase your services. You can upload as many as 10 videos for your Clients to view from your Marketing page.  All videos can be seen on your Marketing page by Client. Just drag-&-drop the video inside the box below. You also have the option to enter the URL of a video you already have uploaded on another service such a YouTube or Vimeo.  A successful upload will create a video thumbnail below. For uploading, most video formats are accepted, but file size may not exceed 200mb per video. Your Mentor can help you compress your videos if larger than 200mb.";
@@ -209,16 +159,17 @@
     [self.addVideoBtn setTitle:@"Add Video" forState:UIControlStateNormal];
     [self.selectVideoButton setTitle:@"Select Video" forState:UIControlStateNormal];
     [self.deleteHighlightedBtn setTitle:@"Delete Hightlighted Video" forState:UIControlStateNormal];
+    
     [self addView];
     
 }
 
 - (IBAction)addEditPhotosAction:(id)sender {
     self.videoEditFontLabel.text=@"Photo";
-    self.videoPopLabel.text=@"This section is for you to upload any photos that may help a Client see and understand how qualified you are to perform the service. You may drag-&-drop a file (or multiple files) inside the  “Drag & Drop” box area.  Another option instead or drag-&-drop is to click “Select Files”, then choose a file from your browser, then select ”Upload” to save.  Items successfully upload will create a photo thumbnail below. You may also delete any item from this list by selecting it and clicking  “Delete Highlighted Photo”.  You may also arrange the order by dragging the thumbnail to the desired location.";
+    self.videoPopLabel.text=@"This section is for you to upload any photos that may help a Client see and understand how qualified you are to perform the service. You may drag-&-drop a file (or multiple files) inside the  “Drag & Drop” box area.  Another option instead or drag-&-drop is to click “Select Files”, then choose a file from your browser, then select ”Upload” to save.  Items successfully upload will create a photo thumbnail below. You may also delete any item from this list by selecting it and clicking  “Delete Highlighted Photo”";
     
-    [self.addVideoBtn setTitle:@"Add photo" forState:UIControlStateNormal];
-    [self.selectVideoButton setTitle:@"Select Photo" forState:UIControlStateNormal];
+    [self.addVideoBtn setTitle:@"Select files" forState:UIControlStateNormal];
+    [self.selectVideoButton setTitle:@"Upload" forState:UIControlStateNormal];
     [self.deleteHighlightedBtn setTitle:@"Delete Hightlighted Photo" forState:UIControlStateNormal];
     
     [self addView];
@@ -230,7 +181,6 @@
 
     [self.aboutView removeFromSuperview];
     self.maketingScrollView.userInteractionEnabled=YES;
-    
 }
 
 - (IBAction)saveAndCloseAction:(id)sender {
@@ -238,24 +188,27 @@
 }
 
 - (IBAction)addVideoAction:(id)sender {
-    
+
     UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+
     [actionSheet addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
         // Cancel button tappped do nothing //
     }]];
-
+    
     [actionSheet addAction:[UIAlertAction actionWithTitle:@"Take video  " style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+        if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
             [EZCommonMethod showAlert:@"Oops," message:@"Device has no camera"];
             return;
         }
         else {
+            
             UIImagePickerController *picker = [[UIImagePickerController alloc] init];
             picker.delegate = self;
             picker.allowsEditing = YES;
             picker.sourceType = UIImagePickerControllerSourceTypeCamera;
             picker.mediaTypes =[[NSArray alloc] initWithObjects: (NSString *) kUTTypeMovie, nil];
             [self presentViewController:picker animated:YES completion:NULL];
+            
         }
     }]];
 
@@ -275,8 +228,11 @@
 }
 
 - (IBAction)videoClosePopupAction:(id)sender {
-    self.editVideoView.hidden = YES;
+    
+   // self.editVideoView.hidden = YES;
+    [self.editVideoView removeFromSuperview];
     self.maketingScrollView.userInteractionEnabled=YES;
+    
 }
 
 - (IBAction)videoSaveAndCloseAction:(id)sender {
@@ -297,6 +253,68 @@
 //    [self presentViewController:videoScreen animated: YES completion:NULL];
 }
 //ImagePickerDelegate
+
+
+
+#pragma mark- Profile picker delegate
+
+/*
+ - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+ UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+ self.profileImgage.image = chosenImage;
+ [picker dismissViewControllerAnimated:YES completion:NULL];
+ if (checkVideo) {
+ UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+ self.profileImgage.image = chosenImage;
+ [picker dismissViewControllerAnimated:YES completion:NULL];
+ }else{
+ NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
+ [self dismissViewControllerAnimated:NO completion:NULL];
+ // Handle a movie capture
+ if (CFStringCompare ((__bridge_retained CFStringRef) mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo) {
+ NSString *moviePath = [[info objectForKey:UIImagePickerControllerMediaURL] path];
+ if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(moviePath)) {
+ UISaveVideoAtPathToSavedPhotosAlbum(moviePath, self, nil, nil);
+ }
+ }
+ }
+ }
+ */
+
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    NSString *date = [self currentDateandTime];
+    UIImage* SelectedImage = [info valueForKey:UIImagePickerControllerOriginalImage];
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@_image.jpg",date]];
+    NSURL *urlimage = [NSURL URLWithString:imagePath];
+    NSLog(@"%@",urlimage);
+    NSURL* videoURL = [info objectForKey:UIImagePickerControllerMediaURL];
+    NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
+    
+    if (CFStringCompare ((__bridge CFStringRef) mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo) {
+        videoURL=(NSURL*)[info objectForKey:UIImagePickerControllerMediaURL];
+    }
+    
+    self.profileImgage.image = SelectedImage;
+    //    _textViewUpperConstait.constant=41;
+    //    _textViewWidthContrait.constant=self.view.bounds.size.width-24;
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+}
+
+- (NSString *)currentDateandTime {
+    NSDate *today = [NSDate date];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"MMddyyyy_HHmmssSS"];
+    NSString *dateString = [dateFormat stringFromDate:today];
+    return dateString;
+}
+
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
 
 -(void) addView {
     
