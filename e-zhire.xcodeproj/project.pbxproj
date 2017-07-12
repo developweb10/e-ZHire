@@ -33,6 +33,7 @@
 		035540C91F026B7A008428F3 /* InvoicesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 035540C81F026B7A008428F3 /* InvoicesCell.m */; };
 		035540CD1F02787D008428F3 /* EZInvoicesDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 035540CC1F02787D008428F3 /* EZInvoicesDetail.m */; };
 		035540D11F028D50008428F3 /* InvoiceDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 035540D01F028D50008428F3 /* InvoiceDetailCell.m */; };
+		035A2E4D1F14C393002ED86F /* PaySetupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 035A2E4C1F14C393002ED86F /* PaySetupVC.m */; };
 		036D05DF1F01380E000633E2 /* headerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 036D05DE1F01380E000633E2 /* headerCell.m */; };
 		038A7FCF1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 038A7FCE1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.m */; };
 		03992B521EE2EDEA00636A47 /* EZServiceProviderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03992B511EE2EDEA00636A47 /* EZServiceProviderVC.m */; };
@@ -166,6 +167,8 @@
 		035540CC1F02787D008428F3 /* EZInvoicesDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZInvoicesDetail.m; sourceTree = "<group>"; };
 		035540CF1F028D50008428F3 /* InvoiceDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvoiceDetailCell.h; sourceTree = "<group>"; };
 		035540D01F028D50008428F3 /* InvoiceDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvoiceDetailCell.m; sourceTree = "<group>"; };
+		035A2E4B1F14C393002ED86F /* PaySetupVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaySetupVC.h; sourceTree = "<group>"; };
+		035A2E4C1F14C393002ED86F /* PaySetupVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaySetupVC.m; sourceTree = "<group>"; };
 		036D05DD1F01380E000633E2 /* headerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = headerCell.h; sourceTree = "<group>"; };
 		036D05DE1F01380E000633E2 /* headerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = headerCell.m; sourceTree = "<group>"; };
 		038A7FCD1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZSearchZipeCodeVC.h; sourceTree = "<group>"; };
@@ -519,6 +522,15 @@
 				035540D01F028D50008428F3 /* InvoiceDetailCell.m */,
 			);
 			name = InvoiceDetailCell;
+			sourceTree = "<group>";
+		};
+		035A2E4A1F14C31F002ED86F /* PaySetupVC */ = {
+			isa = PBXGroup;
+			children = (
+				035A2E4B1F14C393002ED86F /* PaySetupVC.h */,
+				035A2E4C1F14C393002ED86F /* PaySetupVC.m */,
+			);
+			name = PaySetupVC;
 			sourceTree = "<group>";
 		};
 		038A7FCC1EFE5C7D00B4C31E /* SearchZipCodeVC */ = {
@@ -984,6 +996,7 @@
 		8B86AA211EDC46580031793A /* ModelVC */ = {
 			isa = PBXGroup;
 			children = (
+				035A2E4A1F14C31F002ED86F /* PaySetupVC */,
 				03F78B961F0CFFE600AA03FA /* Date Select */,
 				032F3C0B1F0B849E00DF3576 /* Sources */,
 				03C18A5D1F068F9000672C3E /* AddServiceVC */,
@@ -1164,7 +1177,7 @@
 					8B86AA061EDC45550031793A = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 8J8Y6K57XF;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -1286,6 +1299,7 @@
 				03C18A501F06342900672C3E /* AssociateManagementVC.m in Sources */,
 				8B52E1C61EDEA0B700211D79 /* EZContactVC.m in Sources */,
 				03C8903F1F04E5AD002FC3DC /* EZPaymentinformationCell.m in Sources */,
+				035A2E4D1F14C393002ED86F /* PaySetupVC.m in Sources */,
 				03C890431F04E740002FC3DC /* EZEditPaymentcell.m in Sources */,
 				03C890521F0529A7002FC3DC /* AssociateAccountCell.m in Sources */,
 				032F3C121F0B849E00DF3576 /* CalendarView.m in Sources */,
@@ -1481,7 +1495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Mohit Gupta (8J8Y6K57XF)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 8J8Y6K57XF;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "e-zhire/e-zhirePrefixHeader.pch";
@@ -1490,8 +1504,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-zhire.app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "94471fec-3d3f-4eae-a12d-f9c40e9278f4";
+				PROVISIONING_PROFILE_SPECIFIER = DonDistribution11July;
 			};
 			name = Debug;
 		};
@@ -1501,7 +1515,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Mohit Gupta (8J8Y6K57XF)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 8J8Y6K57XF;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "e-zhire/e-zhirePrefixHeader.pch";
@@ -1510,8 +1524,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-zhire.app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "94471fec-3d3f-4eae-a12d-f9c40e9278f4";
+				PROVISIONING_PROFILE_SPECIFIER = DonDistribution11July;
 			};
 			name = Release;
 		};

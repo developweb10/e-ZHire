@@ -281,7 +281,6 @@
  }
  */
 
-
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     NSString *date = [self currentDateandTime];
     UIImage* SelectedImage = [info valueForKey:UIImagePickerControllerOriginalImage];
@@ -301,7 +300,6 @@
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
 }
-
 - (NSString *)currentDateandTime {
     NSDate *today = [NSDate date];
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];

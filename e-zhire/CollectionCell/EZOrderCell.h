@@ -10,5 +10,11 @@
 
 @interface EZOrderCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIButton *viewOrderBtn;
+@property (weak, nonatomic) IBOutlet UILabel *workorderLbl;
+@property (weak, nonatomic) IBOutlet UILabel *serviceTypeLbl;
 
+@property (weak, nonatomic) IBOutlet UILabel *dateSechduleLbl;
+@property (weak, nonatomic) IBOutlet UILabel *statrTimeLbl;
+@property (weak, nonatomic) IBOutlet UILabel *clientNameLbl;
+@property (weak, nonatomic) IBOutlet UILabel *associate;
 @end

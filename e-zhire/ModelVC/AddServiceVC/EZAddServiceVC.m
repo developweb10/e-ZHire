@@ -41,16 +41,12 @@
     [_addServiceTableView reloadData];
 }
 
-
-
 - (IBAction)helpAction:(id)sender {
     
 }
-
 - (IBAction)createServiceAction:(id)sender {
     
 }
-
 - (IBAction)saveChangesAction:(id)sender {
     
     for (int i=0; i < _totalCell; i++){
@@ -83,7 +79,6 @@
     }]];
     [self presentViewController:alertController animated:YES completion:nil];
 }
-
 - (IBAction)selectSelectserviceAction:(UIButton*)sender {
     [self.view addSubview:self.selectServiceView];
     CGRect size=self.selectServiceView.bounds;
@@ -91,14 +86,12 @@
     size.origin.x=37.5;
     self.selectServiceView.frame=size;
     self.selectServiceView.hidden=NO;
-     [self getAllCategory];
-
+    [self getAllCategory];
     self.scrollView.userInteractionEnabled=NO;
+    
 }
-
 - (IBAction)zipCodeLoctionActon:(id)sender {
 }
-
 - (IBAction)closepopupAction:(id)sender {
     self.selectServiceView.hidden=YES;
     self.scrollView.userInteractionEnabled=YES;
@@ -115,7 +108,6 @@
        return self.categoryArr.count;
     }
 }
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
      if (self.addServiceTableView==tableView) {
          
@@ -141,7 +133,8 @@
     if (tableView==_serviceTableView) {
         UIView *view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, _addServiceTableView.bounds.size.width, 30)];
         view.backgroundColor=[UIColor grayColor];
-        UILabel *label=[[UILabel alloc]initWithFrame:view.bounds];
+        UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(15, 0, _addServiceTableView.bounds.size.width, 25)];
+//        UILabel *label=[[UILabel alloc]initWithFrame:view.bounds];
         [label setFont:[UIFont fontWithName:@"Oswald-Regular" size:14.0f]];
         AvailableServiceJsonModel *obj=[self.categoryArr objectAtIndex:section];
         NSLog(@"%@",obj.catName);

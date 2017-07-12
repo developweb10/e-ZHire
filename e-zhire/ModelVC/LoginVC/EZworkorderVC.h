@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface EZworkorderVC : UIViewController
-
+@property (strong, nonatomic) IBOutlet UITextField *workOrderNoTextFiled;
+@property (strong, nonatomic) IBOutlet UIButton *searchBtn;
+- (IBAction)searchAction:(id)sender;
+@property (strong, nonatomic) IBOutlet UITableView *workOrderTableView;
+@property(strong,nonatomic)NSMutableArray*orderDetailArr;
 @end

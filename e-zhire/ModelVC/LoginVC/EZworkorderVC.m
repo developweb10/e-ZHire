@@ -17,8 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSLog(@"%@",_orderDetailArr);
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -31,9 +31,8 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 4;
+    return _orderDetailArr.count;
 }
-
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -41,7 +40,13 @@
     EZOrderCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
     cell.viewOrderBtn.tag=indexPath.row;
     [cell.viewOrderBtn addTarget:self action:@selector(viewOrderClicked:) forControlEvents:UIControlEventTouchUpInside];
-
+     cell.workorderLbl.text=[[_orderDetailArr objectAtIndex:indexPath.row]valueForKey:@"work_order"];
+     cell.serviceTypeLbl.text=[[_orderDetailArr objectAtIndex:indexPath.row]valueForKey:@"service_type"];
+     cell.dateSechduleLbl.text=[[_orderDetailArr objectAtIndex:indexPath.row]valueForKey:@"schedule_service_date"];
+     cell.statrTimeLbl.text=[[_orderDetailArr objectAtIndex:indexPath.row]valueForKey:@"schedule_start_time"];
+     cell.clientNameLbl.text=[[_orderDetailArr objectAtIndex:indexPath.row]valueForKey:@"client"];
+     cell.associate.text=[[_orderDetailArr objectAtIndex:indexPath.row]valueForKey:@"type_value"];
+    
     return cell;
 }
 -(IBAction)viewOrderClicked:(id)sender{
@@ -53,4 +58,6 @@
     
  }
 
+- (IBAction)searchAction:(id)sender {
+}
 @end

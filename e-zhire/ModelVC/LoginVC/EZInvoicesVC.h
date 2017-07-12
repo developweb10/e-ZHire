@@ -10,4 +10,5 @@
 
 @interface EZInvoicesVC : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITableView *invoiceTableVIew;
 @end

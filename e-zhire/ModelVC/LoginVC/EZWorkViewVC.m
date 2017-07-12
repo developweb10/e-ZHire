@@ -44,4 +44,11 @@
     }
 }
 
+- (IBAction)acceptAction:(id)sender {
+}
+
+- (IBAction)cancelACtion:(id)sender {
+}
+- (IBAction)sendAction:(id)sender {
+}
 @end
