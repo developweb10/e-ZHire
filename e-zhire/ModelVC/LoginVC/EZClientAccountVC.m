@@ -15,8 +15,8 @@
 {
     NSDictionary*clientInfo;
     BOOL checkPassword;
-    NSString*userId;
-    NSMutableArray*workOrderArr;
+//    NSString*userId;
+  
 }
 @end
 
@@ -27,14 +27,9 @@
     // Do any additional setup after loading the view.
     self.editInfoView.hidden=YES;
     self.paymentInfo=[[NSMutableArray alloc]init];
-    userId=[EZCommonMethod getUserId];
-    NSLog(@"user id %@",userId);
-//
-//    if (self.addLabel2.text==nil) {
-//        self.add2ConstraintHeight.constant=0;
-//    }else{
-//         self.add2ConstraintHeight.constant=30;
-//    }
+   // userId=[EZCommonMethod getUserId];
+    NSLog(@"user id %@",_getUserId);
+    
     [self PostApiMethod];
 }
 -(void)viewWillAppear:(BOOL)animated{
@@ -44,41 +39,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(void)workOrderApi{
+- (IBAction)workorderAction:(id)sender{
     
-    bool check=[EZCommonMethod checkInternetConnection];
-    if(!check){
-        [EZCommonMethod showAlert:nil message:@"Please check your internet connection"];
-        return;
-    }
-    NSString*urlStr=[NSString stringWithFormat:@"%@%@",BaseUrl,workOrder_Api];
-    NSDictionary*parameter=@{@"user_id":userId};
-
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [[NetworkManager Instance]postRequestWithUrl:urlStr parameter:parameter onCompletion:^(id dict) {
-        NSLog(@"%@",dict);
-        NSError* error;
-        NSDictionary* json = [NSJSONSerialization JSONObjectWithData:dict
-                                                             options:kNilOptions
-                                                               error:&error];
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
-        if ([[json valueForKey:@"success"] boolValue]==1) {
-            workOrderArr=[json valueForKey:@"value"];
-            
-            EZworkorderVC*viewcontroller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZworkorderVC"];
-            viewcontroller.orderDetailArr=workOrderArr;
-            [self.navigationController pushViewController:viewcontroller animated:YES];
-            
-        }
-        else{
-            [EZCommonMethod showAlert:nil message:@"No Work Orders Found!"];
-        }
-        
-    } onError:^(NSError *Error) {
-        NSLog(@"%@:",Error);
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
-    }];
+    EZworkorderVC*viewcontroller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZworkorderVC"];
+    viewcontroller.sendUserId=_getUserId;
+    [self.navigationController pushViewController:viewcontroller animated:YES];
 }
+
 - (IBAction)closePopupAction:(id)sender {
     self.editInfoView.hidden=YES;
     self.scrollView.userInteractionEnabled=YES;
@@ -90,8 +57,10 @@
 - (IBAction)saveChangesAction:(id)sender {
     if (self.currentPassTextFiled.text.length>0) {
              if (self.newpass.text.length>0) {
-                 if (self.reTypeTextFiled.text.length>0) {
+                 if([self isPasswordValid:self.newpass.text]) {
+                   if (self.reTypeTextFiled.text.length>0) {
                       if ([self.newpass.text isEqualToString:self.reTypeTextFiled.text]){
+                         
                            [self PostChangePasswordApi];
                       }
                       else{
@@ -102,6 +71,10 @@
                      [EZCommonMethod showAlert:nil message:@"Please enter retype password"];
                  }
              }
+                 else{
+                     [EZCommonMethod showAlert:nil message:@"Please enter valid password"];
+                 }
+             }
              else{
                  [EZCommonMethod showAlert:nil message:@"Please enter new password"];
              }
@@ -110,6 +83,33 @@
         [EZCommonMethod showAlert:nil message:@"Please enter current password"];
     }
 }
+-(BOOL) isPasswordValid:(NSString *)pwd {
+    
+    NSCharacterSet *upperCaseChars = [NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLKMNOPQRSTUVWXYZ"];
+    NSCharacterSet *lowerCaseChars = [NSCharacterSet characterSetWithCharactersInString:@"abcdefghijklmnopqrstuvwxyz"];
+    NSCharacterSet *numbers = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
+    if ( [pwd length]<10 || [pwd length]>20 )
+        return NO;  // too long or too short
+    NSRange rang;
+    rang = [pwd rangeOfCharacterFromSet:[NSCharacterSet letterCharacterSet]];
+    if ( !rang.length )
+        return NO;  // no letter
+    rang = [pwd rangeOfCharacterFromSet:[NSCharacterSet decimalDigitCharacterSet]];
+    if ( !rang.length )
+        return NO;  // no number;
+    rang = [pwd rangeOfCharacterFromSet:upperCaseChars];
+    if ( !rang.length )
+        return NO;  // no uppercase letter;
+    rang = [pwd rangeOfCharacterFromSet:lowerCaseChars];
+    if ( !rang.length )
+        return NO;  // no lowerCase Chars;
+    rang = [pwd rangeOfCharacterFromSet:numbers];
+    if ( !rang.length )
+        return NO;  // no numbers Chars;
+    
+    return YES;
+}
+
 - (IBAction)suggestnewPaswordAction:(id)sender {
     
 }
@@ -121,7 +121,7 @@
         return;
     }
     NSString*urlStr=[NSString stringWithFormat:@"%@%@",BaseUrl,changePwd_Api];
-    NSDictionary*parameter=@{@"user_id":userId,@"currentPWD":self.currentPassTextFiled.text,@"newPWD1":self.newpass.text};
+    NSDictionary*parameter=@{@"user_id":_getUserId,@"currentPWD":self.currentPassTextFiled.text,@"newPWD1":self.newpass.text};
   
        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [[NetworkManager Instance]postRequestWithUrl:urlStr parameter:parameter onCompletion:^(id dict) {
@@ -217,7 +217,7 @@
         return;
     }
     NSString*urlStr=[NSString stringWithFormat:@"%@%@",BaseUrl,myAccount_Api];
-    NSDictionary*parameter=@{@"user_id":userId};
+    NSDictionary*parameter=@{@"user_id":_getUserId};
      [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [[NetworkManager Instance]postRequestWithUrl:urlStr parameter:parameter onCompletion:^(id dict) {
         NSLog(@"%@",dict);
@@ -232,12 +232,7 @@
                     self.nameLabel.text=[clientInfo valueForKey:@"name"];
                      self.address1Label.text=[clientInfo valueForKey:@"street_address1"];
                     self.addLabel2.text=[clientInfo valueForKey:@""];
-                      self.add2ConstraintHeight.constant=0;
-//                   if (!self.address1Label.text==nil) {
-//                       self.add2ConstraintHeight.constant=0;
-//                   }else{
-//                     self.add2ConstraintHeight.constant=30;
-//                   }
+                    self.add2ConstraintHeight.constant=0;
                     self.ZipCodeLabel.text=[clientInfo valueForKey:@"city"];
                     self.clientIdLabel.text=[clientInfo valueForKey:@"client_id"];
                     self.clienySinceLabel.text=[clientInfo valueForKey:@"client_since"];

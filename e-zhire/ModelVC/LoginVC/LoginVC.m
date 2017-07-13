@@ -116,14 +116,14 @@
         }
     }
     else{
-       //  [self showUIAlertControllerWithTitle:@"Successful Client login!"];
-       
+         [self showUIAlertControllerWithTitle:@"Successful Client login!"];
+     /*
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"Please enter username and password" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
         [alertController addAction:ok];
         [self presentViewController:alertController animated:YES completion:nil];
       
-        
+      */
     }
     
 }
@@ -207,8 +207,9 @@
                                  [self.navigationController pushViewController:viewController animated:YES];
                                  [alert dismissViewControllerAnimated:YES completion:nil];
                              }else{
-                                 
+                                  NSString*userId=[EZCommonMethod getUserId];
                                  EZClientAccountVC*viewController=[self.storyboard instantiateViewControllerWithIdentifier:@"EZClientAccountVC"];
+                                 viewController.getUserId=userId;
                                  [self.navigationController pushViewController:viewController animated:YES];
                                  [alert dismissViewControllerAnimated:YES completion:nil];
                              }

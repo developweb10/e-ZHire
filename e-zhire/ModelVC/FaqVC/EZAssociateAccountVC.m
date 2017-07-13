@@ -80,7 +80,6 @@
         
         UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZAddServiceVC"];
         [self.navigationController pushViewController:controller animated:YES];
-        
     }
     else if(indexPath.row==6){
         UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"MyAvailbilityScheduleVC"];
@@ -105,6 +104,17 @@
         UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"PaySetupVC"];
         [self.navigationController pushViewController:controller animated:YES];
     }
+    else if(indexPath.row==11){
+        
+        UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"LearningCenterVC"];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    else if(indexPath.row==12){
+        
+        UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"ManageTeamVC"];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+
 }
 
 - (IBAction)callAction:(UIButton *)sender

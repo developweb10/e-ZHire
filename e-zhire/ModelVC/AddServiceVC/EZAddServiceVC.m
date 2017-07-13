@@ -177,7 +177,6 @@
         SubCateGoryArray=obj.subCategoriesArray;
         subCategoriesJsonModel *subCatObj=[SubCateGoryArray objectAtIndex:indexPath.row];
         _selectServiceLabel.text=subCatObj.subcatName;
-        
       self.selectServiceView.hidden=YES;
       self.scrollView.userInteractionEnabled=YES;
     }else{

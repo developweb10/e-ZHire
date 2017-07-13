@@ -22,8 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-      dictClient = [NSMutableDictionary dictionary];
-
+     dictClient = [NSMutableDictionary dictionary];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.translucent = NO;
     carrerArr=[NSArray arrayWithObjects:@"AT&T",@"Boost",@"C Spire Wireless",@"Cellular One",@"Cricket",@"Metro PCS",@"Sprint",@"Straight Talk",@"T Mobile",@"U.S. Cellular",@"Verizon",@"Virgin Mobile",@"Not Provided", nil];
@@ -44,7 +43,6 @@
     }else{
         
     }
-
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -106,7 +104,6 @@
     else{
         [EZCommonMethod showAlert:nil message:@"Please enter first name"];
     }
-    
 }
 - (IBAction)forgotPasswordBtnAction:(id)sender {
     UIViewController *contorller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZForgotPasswordVC"];

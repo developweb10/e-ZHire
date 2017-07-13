@@ -13,5 +13,5 @@
 @property (strong, nonatomic) IBOutlet UIButton *searchBtn;
 - (IBAction)searchAction:(id)sender;
 @property (strong, nonatomic) IBOutlet UITableView *workOrderTableView;
-@property(strong,nonatomic)NSMutableArray*orderDetailArr;
+@property(strong,nonatomic)NSString*sendUserId;
 @end

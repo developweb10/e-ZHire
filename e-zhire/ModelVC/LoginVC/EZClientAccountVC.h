@@ -62,4 +62,5 @@
 - (IBAction)updateAction:(id)sender;
 @property (strong, nonatomic) IBOutlet UITextField *homePhoneTextFiled;
 @property(strong,nonatomic)NSMutableArray*paymentInfo;
+@property(strong,nonatomic)NSString*getUserId;
 @end
