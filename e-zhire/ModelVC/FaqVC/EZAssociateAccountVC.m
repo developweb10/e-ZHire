@@ -14,6 +14,7 @@
 {
     NSArray*profileArr;
     NSInteger selectindex;
+  
 }
 
 @end
@@ -68,14 +69,19 @@
         [self.navigationController pushViewController:controller animated:YES];
     }
     else if(indexPath.row==2){
-        UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZAddServiceVC"];
+        UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"AssociateManagementVC"];
         [self.navigationController pushViewController:controller animated:YES];
     }else if(indexPath.row==3){
         
         UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZAccountingVC"];
         [self.navigationController pushViewController:controller animated:YES];
         
-    }else if(indexPath.row==6){
+    }else if(indexPath.row==4){
+        
+        UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZAddServiceVC"];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    else if(indexPath.row==6){
         UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"MyAvailbilityScheduleVC"];
         [self.navigationController pushViewController:controller animated:YES];
     }
@@ -93,6 +99,22 @@
         UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"WorkHistoryVC"];
         [self.navigationController pushViewController:controller animated:YES];
     }
+    else if(indexPath.row==10){
+        
+        UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"PaySetupVC"];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    else if(indexPath.row==11){
+        
+        UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"LearningCenterVC"];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    else if(indexPath.row==12){
+        
+        UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"ManageTeamVC"];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+
 }
 
 - (IBAction)callAction:(UIButton *)sender

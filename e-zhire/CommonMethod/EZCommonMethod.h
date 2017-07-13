@@ -34,6 +34,6 @@
 + (NSString *) checkNullString:(NSString *)string;
 +(UIFont*)getBoldFont:(CGFloat)fontSize;
 +(UIFont*)getRegularFont:(CGFloat)fontSize;
-
++(NSString*)getUserId;
 
 @end

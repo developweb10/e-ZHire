@@ -25,6 +25,9 @@
 #define contactUs_Api @"contactUs.php"
 #define state_Api @"state.php"
 #define search_Api @"search.php"
+#define myAccount_Api @"myAccount.php"
+#define changePwd_Api @"changePwd.php"
+#define workOrder_Api @"workOrder.php"
 
 #define serviceProvider @"serviceProvider.php"
 

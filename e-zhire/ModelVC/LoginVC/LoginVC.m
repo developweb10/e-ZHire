@@ -12,7 +12,9 @@
 #import "EZAssociateAccountVC.h"
 
 @interface LoginVC ()
-
+{
+    NSDictionary *getResponseFormDict;
+}
 @end
 
 @implementation LoginVC
@@ -37,7 +39,6 @@
         
     }
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -45,7 +46,6 @@
 #pragma mark- Button Action
 - (IBAction)slideMenuAction:(id)sender {
     [self.menuContainerViewController toggleLeftSideMenuCompletion:^{}];
-    
 }
 - (IBAction)clientFaqAction:(id)sender{
     
@@ -116,14 +116,14 @@
         }
     }
     else{
-     [self showUIAlertControllerWithTitle:@"Successful Client login!"];
-        /*
+         [self showUIAlertControllerWithTitle:@"Successful Client login!"];
+     /*
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"Please enter username and password" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
         [alertController addAction:ok];
         [self presentViewController:alertController animated:YES completion:nil];
-         */
-        
+      
+      */
     }
     
 }
@@ -158,11 +158,11 @@
         if ([[json valueForKey:@"success"] boolValue]==1) {
             if(checkAssociate){
                 NSArray* associateArr = [json objectForKey:@"data"];
-                NSDictionary *getResponseFormDict=[associateArr objectAtIndex:0];
-                [[NSUserDefaults standardUserDefaults] setValue:[getResponseFormDict valueForKey:@"userEmail"] forKey:associateUserEmail];
-                [[NSUserDefaults standardUserDefaults] setValue:[getResponseFormDict valueForKey:@"userId"] forKey:associateUserId];
-                [[NSUserDefaults standardUserDefaults] setValue:[getResponseFormDict valueForKey:@"username"] forKey:associateUserName];
-                [[NSUserDefaults standardUserDefaults] setValue:[getResponseFormDict valueForKey:@"niceName"] forKey:associateNiceName];
+                NSDictionary *AssgetResponseFormDict=[associateArr objectAtIndex:0];
+                [[NSUserDefaults standardUserDefaults] setValue:[AssgetResponseFormDict valueForKey:@"userEmail"] forKey:associateUserEmail];
+                [[NSUserDefaults standardUserDefaults] setValue:[AssgetResponseFormDict valueForKey:@"userId"] forKey:associateUserId];
+                [[NSUserDefaults standardUserDefaults] setValue:[AssgetResponseFormDict valueForKey:@"username"] forKey:associateUserName];
+                [[NSUserDefaults standardUserDefaults] setValue:[AssgetResponseFormDict valueForKey:@"niceName"] forKey:associateNiceName];
                 NSLog(@"Save Success");
                 [[NSUserDefaults standardUserDefaults] synchronize];
                 [self showUIAlertControllerWithTitle:@"Successful Associate login!"];
@@ -170,13 +170,14 @@
             else{
                 
                 NSArray* clientArr = [json objectForKey:@"data"];
-                NSDictionary *getResponseFormDict=[clientArr objectAtIndex:0];
+                 getResponseFormDict=[clientArr objectAtIndex:0];
                 [EZCommonMethod saveUserEmail:[getResponseFormDict valueForKey:@"userEmail"]];
                 [EZCommonMethod saveUserName:[getResponseFormDict valueForKey:@"username"]];
                 [EZCommonMethod saveUserNiceName:[getResponseFormDict valueForKey:@"niceName"]];
                 [EZCommonMethod saveUserId:[getResponseFormDict valueForKey:@"userId"]];
-                NSLog(@"latestLoans: %@", clientArr);
                 [self showUIAlertControllerWithTitle:@"Successful Client login!"];
+                NSLog(@"latestLoans: %@", clientArr);
+
             }
             
         }else{
@@ -188,8 +189,6 @@
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
 }
-
-
 
 -(void)showUIAlertControllerWithTitle:(NSString*)Title{
 
@@ -206,13 +205,12 @@
                                  
                                  UIViewController*viewController=[self.storyboard instantiateViewControllerWithIdentifier:@"EZAssociateAccountVC"];
                                  [self.navigationController pushViewController:viewController animated:YES];
-                                 
                                  [alert dismissViewControllerAnimated:YES completion:nil];
                              }else{
-                                 
+                                  NSString*userId=[EZCommonMethod getUserId];
                                  EZClientAccountVC*viewController=[self.storyboard instantiateViewControllerWithIdentifier:@"EZClientAccountVC"];
+                                 viewController.getUserId=userId;
                                  [self.navigationController pushViewController:viewController animated:YES];
-                                 
                                  [alert dismissViewControllerAnimated:YES completion:nil];
                              }
                             

@@ -11,6 +11,9 @@
 @interface EZTodoListVC : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *addListTextFiled;
 - (IBAction)addListAction:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *addBtn;
+@property (strong, nonatomic) IBOutlet UILabel *getDoneLabel;
 
+@property (strong, nonatomic) IBOutlet UILabel *completedLbl;
 @property (weak, nonatomic) IBOutlet UITableView *addListTableView;
 @end

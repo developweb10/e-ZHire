@@ -167,7 +167,6 @@
 - (IBAction)addEditPhotosAction:(id)sender {
     self.videoEditFontLabel.text=@"Photo";
     self.videoPopLabel.text=@"This section is for you to upload any photos that may help a Client see and understand how qualified you are to perform the service. You may drag-&-drop a file (or multiple files) inside the  “Drag & Drop” box area.  Another option instead or drag-&-drop is to click “Select Files”, then choose a file from your browser, then select ”Upload” to save.  Items successfully upload will create a photo thumbnail below. You may also delete any item from this list by selecting it and clicking  “Delete Highlighted Photo”";
-    
     [self.addVideoBtn setTitle:@"Select files" forState:UIControlStateNormal];
     [self.selectVideoButton setTitle:@"Upload" forState:UIControlStateNormal];
     [self.deleteHighlightedBtn setTitle:@"Delete Hightlighted Photo" forState:UIControlStateNormal];
@@ -186,8 +185,11 @@
 - (IBAction)saveAndCloseAction:(id)sender {
 
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ea07b9837b9e12cf9a85463578ac3282713532f5
 - (IBAction)addVideoAction:(id)sender {
 
     UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
@@ -240,22 +242,9 @@
     
 }
 
-
 - (IBAction)selectVideoFileAction:(id)sender {
-//    checkVideo=NO;
-//    UIImagePickerController *videoScreen = [[UIImagePickerController alloc] init];
-//    videoScreen.sourceType = UIImagePickerControllerSourceTypeCamera;
-//    // Displays movie capture control
-//    videoScreen.mediaTypes = [[NSArray alloc] initWithObjects:(NSString *)kUTTypeMovie, nil];
-//    
-//    videoScreen.allowsEditing = NO;
-//    videoScreen.delegate = self;
-//    
-//    [self presentViewController:videoScreen animated: YES completion:NULL];
+
 }
-//ImagePickerDelegate
-
-
 
 #pragma mark- Profile picker delegate
 
@@ -282,7 +271,6 @@
  }
  */
 
-
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     NSString *date = [self currentDateandTime];
     UIImage* SelectedImage = [info valueForKey:UIImagePickerControllerOriginalImage];
@@ -302,7 +290,6 @@
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
 }
-
 - (NSString *)currentDateandTime {
     NSDate *today = [NSDate date];
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
@@ -311,14 +298,12 @@
     return dateString;
 }
 
-
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 
 -(void) addView {
-    
     CGRect size=self.editVideoView.bounds;
     size.origin.y=10;
     size.origin.x=35;

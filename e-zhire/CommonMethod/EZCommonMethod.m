@@ -51,6 +51,10 @@ static NSString*const EZniceName=@"niceName";
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
++(NSString*)getUserId { 
+    NSString*str=[[NSUserDefaults standardUserDefaults] valueForKey:EZUserID];
+     return str;
+}
 
 + (BOOL)validateEmailWithString:(NSString*)email
 {
