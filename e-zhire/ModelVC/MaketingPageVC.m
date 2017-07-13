@@ -176,16 +176,17 @@
 
 }
 
-
 - (IBAction)closeViewAction:(id)sender {
 
     [self.aboutView removeFromSuperview];
     self.maketingScrollView.userInteractionEnabled=YES;
 }
 
+
 - (IBAction)saveAndCloseAction:(id)sender {
-    
+
 }
+
 
 - (IBAction)addVideoAction:(id)sender {
 
