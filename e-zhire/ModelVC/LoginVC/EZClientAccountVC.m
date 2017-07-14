@@ -250,6 +250,8 @@
         
     } onError:^(NSError *Error) {
         NSLog(@"%@:",Error);
+        [EZCommonMethod showAlert:nil message:@"try again"];
+
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
 }

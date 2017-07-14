@@ -156,6 +156,8 @@
     self.createTeamView.hidden=NO;
     [self.view addSubview:self.createTeamView];
     self.cretaeTeamTableView.hidden=YES;
+    self.manageTableView.userInteractionEnabled=NO;
+    
 }
 - (IBAction)helpAction:(id)sender {
 }
@@ -201,6 +203,7 @@
         self.addSeriveBtn.selected=NO;
         self.createTeamView.hidden=YES;
         self.cretaeTeamTableView.hidden=NO;
+        self.manageTableView.userInteractionEnabled=YES;
     }
 
 }

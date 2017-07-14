@@ -8,9 +8,12 @@
 
 #import "EZworkorderVC.h"
 #import "EZOrderCell.h"
+#import "EZWorkViewVC.h"
 @interface EZworkorderVC ()
 {
-      NSMutableArray*workOrderArr;
+    NSMutableArray*workOrderArr;
+    NSString*workOrderId;
+    BOOL CheckSearch;
 }
 @end
 
@@ -34,9 +37,17 @@
         [EZCommonMethod showAlert:nil message:@"Please check your internet connection"];
         return;
     }
-    NSString*urlStr=[NSString stringWithFormat:@"%@%@",BaseUrl,workOrder_Api];
-    NSDictionary*parameter=@{@"user_id":_sendUserId};
+    NSString*urlStr;
+    NSDictionary*parameter;
     
+    if (CheckSearch) {
+        urlStr=[NSString stringWithFormat:@"%@%@",BaseUrl,workOrderSearchApi];
+       parameter=@{@"workOrder":self.workOrderNoTextFiled.text,@"userId":_sendUserId,};
+    }
+    else{
+        urlStr=[NSString stringWithFormat:@"%@%@",BaseUrl,workOrder_Api];
+        parameter=@{@"user_id":_sendUserId};
+    }
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [[NetworkManager Instance]postRequestWithUrl:urlStr parameter:parameter onCompletion:^(id dict) {
         NSLog(@"%@",dict);
@@ -47,12 +58,15 @@
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         if ([[json valueForKey:@"success"] boolValue]==1) {
              workOrderArr=[json valueForKey:@"value"];
+            NSDictionary*orderId=[workOrderArr objectAtIndex:0];
+            workOrderId=[orderId valueForKey:@"work_order_id"];
+
              if ([workOrderArr count] > 0) {
                   [self.workOrderTableView reloadData];
+                 
             }
         }
         else{
-          //  [EZCommonMethod showAlert:nil message:@"No Work Orders Found!"];
             [self showUIAlertControllerWithTitle:@"No Work Orders Found!"];
         }
         
@@ -80,8 +94,7 @@
     [self presentViewController:alert animated:YES completion:nil];
     
 }
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -105,13 +118,16 @@
     return cell;
 }
 -(IBAction)viewOrderClicked:(id)sender{
-    
-    UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZWorkViewVC"];
+    EZWorkViewVC*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZWorkViewVC"];
+    controller.work_ordeId=workOrderId;
     [self.navigationController pushViewController:controller animated:YES];
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
  }
 - (IBAction)searchAction:(id)sender {
+    CheckSearch=YES;
+    [self workOrderApi];
 }
+
 @end

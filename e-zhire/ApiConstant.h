@@ -28,9 +28,9 @@
 #define myAccount_Api @"myAccount.php"
 #define changePwd_Api @"changePwd.php"
 #define workOrder_Api @"workOrder.php"
-
 #define serviceProvider @"serviceProvider.php"
-
+#define clientViewWorkOrderApi @"client_work_order.php"
+#define workOrderSearchApi @"search_work_order.php"
 
 
 #endif /* ApiConstant_h */

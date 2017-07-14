@@ -27,7 +27,7 @@
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     profileArr=[NSArray arrayWithObjects:@"Set-up Your Account",@"Time Tracking",@"Account Info",@"Accountting",@"Add Service",@"Event Calender",@"Set My Schedule",@"To-do-List",@"My Marketing Page",@"Work History",@"My Pay Setup",@"Learning center",@"Manage Team", nil];
     self.managementHeightConstant.constant = profileArr.count*50;
-}
+   }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -41,7 +41,6 @@
     
     return 1;
 }
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return profileArr.count;

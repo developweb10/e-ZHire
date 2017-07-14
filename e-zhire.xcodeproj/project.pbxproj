@@ -36,6 +36,8 @@
 		035A2E4D1F14C393002ED86F /* PaySetupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 035A2E4C1F14C393002ED86F /* PaySetupVC.m */; };
 		036D05DF1F01380E000633E2 /* headerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 036D05DE1F01380E000633E2 /* headerCell.m */; };
 		0381559F1F174901003A8193 /* CreateTeamCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0381559E1F174901003A8193 /* CreateTeamCell.m */; };
+		038155A31F1769CD003A8193 /* ManageAssociateBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 038155A21F1769CD003A8193 /* ManageAssociateBusiness.m */; };
+		038155A61F177744003A8193 /* AssociateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 038155A51F177744003A8193 /* AssociateCell.m */; };
 		038A7FCF1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 038A7FCE1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.m */; };
 		03992B521EE2EDEA00636A47 /* EZServiceProviderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03992B511EE2EDEA00636A47 /* EZServiceProviderVC.m */; };
 		03ADF4911F0394CE0045EADD /* EZWorkViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03ADF4901F0394CE0045EADD /* EZWorkViewVC.m */; };
@@ -178,6 +180,10 @@
 		036D05DE1F01380E000633E2 /* headerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = headerCell.m; sourceTree = "<group>"; };
 		0381559D1F174901003A8193 /* CreateTeamCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateTeamCell.h; sourceTree = "<group>"; };
 		0381559E1F174901003A8193 /* CreateTeamCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateTeamCell.m; sourceTree = "<group>"; };
+		038155A11F1769CD003A8193 /* ManageAssociateBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageAssociateBusiness.h; sourceTree = "<group>"; };
+		038155A21F1769CD003A8193 /* ManageAssociateBusiness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageAssociateBusiness.m; sourceTree = "<group>"; };
+		038155A41F177744003A8193 /* AssociateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssociateCell.h; sourceTree = "<group>"; };
+		038155A51F177744003A8193 /* AssociateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssociateCell.m; sourceTree = "<group>"; };
 		038A7FCD1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZSearchZipeCodeVC.h; sourceTree = "<group>"; };
 		038A7FCE1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZSearchZipeCodeVC.m; sourceTree = "<group>"; };
 		03992B501EE2EDEA00636A47 /* EZServiceProviderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZServiceProviderVC.h; sourceTree = "<group>"; };
@@ -546,6 +552,17 @@
 				035A2E4C1F14C393002ED86F /* PaySetupVC.m */,
 			);
 			name = PaySetupVC;
+			sourceTree = "<group>";
+		};
+		038155A01F17696A003A8193 /* AssociateBusinessCenter */ = {
+			isa = PBXGroup;
+			children = (
+				038155A11F1769CD003A8193 /* ManageAssociateBusiness.h */,
+				038155A21F1769CD003A8193 /* ManageAssociateBusiness.m */,
+				038155A41F177744003A8193 /* AssociateCell.h */,
+				038155A51F177744003A8193 /* AssociateCell.m */,
+			);
+			name = AssociateBusinessCenter;
 			sourceTree = "<group>";
 		};
 		038A7FCC1EFE5C7D00B4C31E /* SearchZipCodeVC */ = {
@@ -1035,6 +1052,7 @@
 		8B86AA211EDC46580031793A /* ModelVC */ = {
 			isa = PBXGroup;
 			children = (
+				038155A01F17696A003A8193 /* AssociateBusinessCenter */,
 				03DE87B41F1652660060D2D5 /* ManageTeamVC */,
 				03DE87AD1F163BDD0060D2D5 /* LearningCenterVC */,
 				035A2E4A1F14C31F002ED86F /* PaySetupVC */,
@@ -1387,6 +1405,7 @@
 				030E14991EF02E490071D9D1 /* EZNextPaymentVC.m in Sources */,
 				035540D11F028D50008428F3 /* InvoiceDetailCell.m in Sources */,
 				03CBF7581EFD263700F6C52D /* EZReviewCellVC.m in Sources */,
+				038155A61F177744003A8193 /* AssociateCell.m in Sources */,
 				8B52E1D11EDEE1AD00211D79 /* EZFaqCell.m in Sources */,
 				03D8A64F1F07B6F400713B46 /* FSCalendarWeekdayView.m in Sources */,
 				03CBF7541EFD25F000F6C52D /* EZAboutDetailCellVC.m in Sources */,
@@ -1402,6 +1421,7 @@
 				03FFF54B1F0C450000EDBB99 /* SearchResultJsonModel.m in Sources */,
 				035540C01F025852008428F3 /* EZOrderCell.m in Sources */,
 				035540B91F024886008428F3 /* EZClientAccountVC.m in Sources */,
+				038155A31F1769CD003A8193 /* ManageAssociateBusiness.m in Sources */,
 				03D8A6181F07872300713B46 /* MyAvailbilityScheduleVC.m in Sources */,
 				0349500C1EE9604400AA9E6D /* EZPaymentVC.m in Sources */,
 				03C8904E1F0526D3002FC3DC /* EZAssociateAccountVC.m in Sources */,
