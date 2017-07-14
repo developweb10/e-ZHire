@@ -45,18 +45,21 @@
 @property (strong, nonatomic) IBOutlet UILabel *teamNameFont;
 @property (strong, nonatomic) IBOutlet UILabel *priceLabel;
 @property (strong, nonatomic) IBOutlet UILabel *priceFont;
-@property (strong, nonatomic) IBOutlet UILabel *teamLeaderLabel;
 @property (strong, nonatomic) IBOutlet UILabel *teamEmailLabel;
 @property (strong, nonatomic) IBOutlet UILabel *emailTextFont;
-@property (strong, nonatomic) IBOutlet UILabel *teamLeaderTextFont;
 @property (strong, nonatomic) IBOutlet UILabel *cellPhoneLabel;
 @property (strong, nonatomic) IBOutlet UILabel *cellPhoneTextFont;
 @property (strong, nonatomic) IBOutlet UIButton *reviewAssociateBtn;
+- (IBAction)ratinViewCloseAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UITableView *associateTableView;
+
 @property (strong, nonatomic) IBOutlet UIButton *acceptedAction;
 @property (strong, nonatomic) IBOutlet UIButton *cancelBtn;
 - (IBAction)acceptAction:(id)sender;
 - (IBAction)cancelACtion:(id)sender;
+@property (weak, nonatomic) IBOutlet UIScrollView *workViewScroll;
 @property (strong, nonatomic) IBOutlet UILabel *clientJobTextFont;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewheightConstraint;
 @property (strong, nonatomic) IBOutlet UILabel *clientstartTimeLabel;
 @property (strong, nonatomic) IBOutlet UILabel *estimateHourLabel;
 @property (strong, nonatomic) IBOutlet UILabel *startTimeTextFont;

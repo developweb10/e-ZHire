@@ -75,6 +75,16 @@
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
 }
+
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    if (textField == self.workOrderNoTextFiled)
+    {
+        return NO;
+    }
+    else
+        return YES;
+}
 -(void)showUIAlertControllerWithTitle:(NSString*)Title{
     
     UIAlertController * alert=   [UIAlertController

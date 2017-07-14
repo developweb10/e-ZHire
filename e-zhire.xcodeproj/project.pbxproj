@@ -38,6 +38,7 @@
 		0381559F1F174901003A8193 /* CreateTeamCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0381559E1F174901003A8193 /* CreateTeamCell.m */; };
 		038155A31F1769CD003A8193 /* ManageAssociateBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 038155A21F1769CD003A8193 /* ManageAssociateBusiness.m */; };
 		038155A61F177744003A8193 /* AssociateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 038155A51F177744003A8193 /* AssociateCell.m */; };
+		038497E41F18BA4900BF06E7 /* WorkViewDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 038497E31F18BA4800BF06E7 /* WorkViewDetailCell.m */; };
 		038A7FCF1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 038A7FCE1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.m */; };
 		03992B521EE2EDEA00636A47 /* EZServiceProviderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03992B511EE2EDEA00636A47 /* EZServiceProviderVC.m */; };
 		03ADF4911F0394CE0045EADD /* EZWorkViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03ADF4901F0394CE0045EADD /* EZWorkViewVC.m */; };
@@ -184,6 +185,8 @@
 		038155A21F1769CD003A8193 /* ManageAssociateBusiness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageAssociateBusiness.m; sourceTree = "<group>"; };
 		038155A41F177744003A8193 /* AssociateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssociateCell.h; sourceTree = "<group>"; };
 		038155A51F177744003A8193 /* AssociateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssociateCell.m; sourceTree = "<group>"; };
+		038497E21F18BA4800BF06E7 /* WorkViewDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkViewDetailCell.h; sourceTree = "<group>"; };
+		038497E31F18BA4800BF06E7 /* WorkViewDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkViewDetailCell.m; sourceTree = "<group>"; };
 		038A7FCD1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZSearchZipeCodeVC.h; sourceTree = "<group>"; };
 		038A7FCE1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZSearchZipeCodeVC.m; sourceTree = "<group>"; };
 		03992B501EE2EDEA00636A47 /* EZServiceProviderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZServiceProviderVC.h; sourceTree = "<group>"; };
@@ -588,6 +591,8 @@
 			children = (
 				03ADF48F1F0394CE0045EADD /* EZWorkViewVC.h */,
 				03ADF4901F0394CE0045EADD /* EZWorkViewVC.m */,
+				038497E21F18BA4800BF06E7 /* WorkViewDetailCell.h */,
+				038497E31F18BA4800BF06E7 /* WorkViewDetailCell.m */,
 			);
 			name = WorkViewVC;
 			path = LoginVC;
@@ -1355,6 +1360,7 @@
 				8B86AA0C1EDC45550031793A /* main.m in Sources */,
 				03C74B911EE2E9FB00684199 /* EZServiceProviderCell.m in Sources */,
 				03DE87B01F163C580060D2D5 /* LearningCenterVC.m in Sources */,
+				038497E41F18BA4900BF06E7 /* WorkViewDetailCell.m in Sources */,
 				0315CCCE1EE5831600DFE6FC /* CustomerCell.m in Sources */,
 				03C18A501F06342900672C3E /* AssociateManagementVC.m in Sources */,
 				8B52E1C61EDEA0B700211D79 /* EZContactVC.m in Sources */,

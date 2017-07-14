@@ -7,8 +7,11 @@
 //
 
 #import "EZWorkViewVC.h"
+#import "WorkViewDetailCell.h"
 
 @interface EZWorkViewVC ()
+
+@property (nonatomic) NSInteger totalCell;
 
 @end
 
@@ -20,14 +23,26 @@
     self.ratingView.hidden=YES;
     NSLog(@"%@",self.work_ordeId);
     [self viewWorkOrderPostApi];
-    
+    self.totalCell=0;
 }
 
 - (IBAction)cancelACtion:(id)sender {
 }
-- (IBAction)sendAction:(id)sender {
+
+- (IBAction)reviewAssociateAction:(id)sender{
+    
+    CGRect size=self.ratingView.bounds;
+    size.origin.x= 35;
+    size.origin.y= 10;
+    self.ratingView.frame=size;
+    [self.view addSubview:self.ratingView];
+    self.ratingView.hidden=NO;
+    self.workViewScroll.userInteractionEnabled=NO;
+}
+- (IBAction)acceptAction:(id)sender{
     
 }
+
 -(void)viewWorkOrderPostApi{
     bool check=[EZCommonMethod checkInternetConnection];
     if(!check){
@@ -58,7 +73,6 @@
             serviceaddress=[valueDict valueForKey:@"service_address"];
             accountAddress=[valueDict valueForKey:@"account_address"];
             associateInformation=[valueDict valueForKey:@"associate_Information"];
-            
             self.accountLabel.text=[clientInfomationDict valueForKey:@"account"];
             self.accountEmailLabel.text=[clientInfomationDict valueForKey:@"email"];
             self.phoneNoLabel.text=[clientInfomationDict valueForKey:@"mobile_phone"];
@@ -91,13 +105,53 @@
             self.clientDateLabel.text=[recurringService_dates valueForKey:@"Date"];
             self.clientstartTimeLabel.text=[recurringService_dates valueForKey:@"StartTime"];
             self.estimateHourLabel.text=[recurringService_dates valueForKey:@"EstimatedHourNeeded"];
-
             [MBProgressHUD hideHUDForView:self.view animated:YES];
         }
       
     } onError:^(NSError *Error) {
         NSLog(@"%@:",Error);
+        [EZCommonMethod showAlert:nil message:@"please try agin"];
+        [self viewWorkOrderPostApi];
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
 }
+- (IBAction)ratinViewCloseAction:(id)sender {
+    self.ratingView.hidden=YES;
+    self.workViewScroll.userInteractionEnabled=YES;
+}
+
+- (IBAction)sendAction:(id)sender {
+    for (int i=0; i < _totalCell; i++){
+        WorkViewDetailCell *theCell = (id)[self.associateTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+
+    }
+    self.totalCell+=1;
+    [_associateTableView reloadData];
+    
+}
+#pragma mark- TableView DataSource and Delegate
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+
+   return _totalCell;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *MyIdentifier = @"WorkViewDetailCell";
+    WorkViewDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+    cell.dateTimeLbl.text=self.discriptionTextView.text;
+    
+    return cell;
+    
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 40;
+}
+
 @end

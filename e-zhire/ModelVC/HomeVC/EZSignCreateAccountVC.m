@@ -115,7 +115,7 @@
     pikerAlert.alertViewStyle = UIAlertViewStyleDefault;
     pikerAlert.tag=102;
     //countryCodePickedView
-    UIPickerView *pickedView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 0,250, 150)];
+    UIPickerView *pickedView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 0,200, 100)];
     [pickedView setDataSource: self];
     [pickedView setDelegate: self];
     pickedView.showsSelectionIndicator = YES;

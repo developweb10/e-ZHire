@@ -10,6 +10,7 @@
 #import "EZPaymentinformationCell.h"
 #import "EZEditPaymentcell.h"
 #import "EZworkorderVC.h"
+#import "EZInvoicesVC.h"
 
 @interface EZClientAccountVC ()
 {
@@ -51,7 +52,8 @@
     self.scrollView.userInteractionEnabled=YES;
 }
 - (IBAction)invoiceAction:(id)sender {
-    UIViewController*viewcontroller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZInvoicesVC"];
+    EZInvoicesVC*viewcontroller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZInvoicesVC"];
+    viewcontroller.userId=_getUserId;
     [self.navigationController pushViewController:viewcontroller animated:YES];
 }
 - (IBAction)saveChangesAction:(id)sender {
@@ -175,18 +177,12 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.paymentInfo.count;
-}
--(void) tableView:(UITableView *)tableView willDisplayCell:(EZEditPaymentcell *) cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if(indexPath.row == [tableView numberOfRowsInSection:indexPath.section] - 1) {
-        
-    }
+    return self.paymentInfo.count+1;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    EZEditPaymentcell *cell=[tableView dequeueReusableCellWithIdentifier:@"EZEditPaymentcell"];
-    if (cell==nil) {
+    if (indexPath.row==0) {
         EZEditPaymentcell *cell=[tableView dequeueReusableCellWithIdentifier:@"EZEditPaymentcell"];
         cell.editPayment.tag=indexPath.row;
         [cell.editPayment addTarget:self action:@selector(editPaymentActionCell:) forControlEvents:UIControlEventTouchUpInside];
@@ -194,13 +190,12 @@
     }
     static NSString *MyIdentifier = @"EZPaymentinformationCell";
     EZPaymentinformationCell *infoCell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
-    infoCell.accountDetailLabel.text=[self.paymentInfo objectAtIndex:indexPath.item];
+    infoCell.accountDetailLabel.text=[self.paymentInfo objectAtIndex:indexPath.item-1];
     
     return infoCell;
 }
-
 -(IBAction)editPaymentActionCell:(id)sender{
-  UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZEditPaymentInformationVc"];
+   UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZEditPaymentInformationVc"];
     
     [self.navigationController pushViewController:controller animated:YES];
 }
@@ -251,7 +246,7 @@
     } onError:^(NSError *Error) {
         NSLog(@"%@:",Error);
         [EZCommonMethod showAlert:nil message:@"try again"];
-
+        [self PostApiMethod];
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
 }
