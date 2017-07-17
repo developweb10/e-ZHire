@@ -10,7 +10,9 @@
 #import "WorkViewDetailCell.h"
 
 @interface EZWorkViewVC ()
-
+{
+    NSMutableArray*discriptionArr;
+}
 @property (nonatomic) NSInteger totalCell;
 
 @end
@@ -24,24 +26,17 @@
     NSLog(@"%@",self.work_ordeId);
     [self viewWorkOrderPostApi];
     self.totalCell=0;
+    discriptionArr=[[NSMutableArray alloc]init];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.translucent = NO;
+
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
 }
 
-- (IBAction)cancelACtion:(id)sender {
-}
-
-- (IBAction)reviewAssociateAction:(id)sender{
-    
-    CGRect size=self.ratingView.bounds;
-    size.origin.x= 35;
-    size.origin.y= 10;
-    self.ratingView.frame=size;
-    [self.view addSubview:self.ratingView];
-    self.ratingView.hidden=NO;
-    self.workViewScroll.userInteractionEnabled=NO;
-}
-- (IBAction)acceptAction:(id)sender{
-    
-}
+#pragma mark- View Work Order APi Method
 
 -(void)viewWorkOrderPostApi{
     bool check=[EZCommonMethod checkInternetConnection];
@@ -81,7 +76,6 @@
             // Account address//
             self.addStreet1.text=[accountAddress valueForKey:@"address"];
             self.accountAddCity.text=[accountAddress valueForKey:@"city"];
-            
             // Service address//
             self.seriveAddName.text=[serviceaddress valueForKey:@"address"];
             self.seriveAddCity.text=[serviceaddress valueForKey:@"city"];
@@ -110,24 +104,43 @@
       
     } onError:^(NSError *Error) {
         NSLog(@"%@:",Error);
-        [EZCommonMethod showAlert:nil message:@"please try agin"];
+        [EZCommonMethod showAlert:nil message:@"please try again"];
         [self viewWorkOrderPostApi];
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
 }
+#pragma mark- Button Action
+
 - (IBAction)ratinViewCloseAction:(id)sender {
     self.ratingView.hidden=YES;
-    self.workViewScroll.userInteractionEnabled=YES;
+    self.scrollView.userInteractionEnabled=YES;
+}
+- (IBAction)cancelACtion:(id)sender {
 }
 
+- (IBAction)reviewAssociateAction:(id)sender{
+    
+    CGRect size=self.ratingView.bounds;
+    size.origin.x= 35;
+    size.origin.y= 10;
+    self.ratingView.frame=size;
+    [self.view addSubview:self.ratingView];
+    self.ratingView.hidden=NO;
+    self.scrollView.userInteractionEnabled=NO;
+}
+- (IBAction)acceptAction:(id)sender{
+    
+}
 - (IBAction)sendAction:(id)sender {
+    NSString*textStr=self.discriptionTextView.text;
+    [discriptionArr addObject:textStr];
     for (int i=0; i < _totalCell; i++){
         WorkViewDetailCell *theCell = (id)[self.associateTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
 
     }
     self.totalCell+=1;
+//  self.tableViewheightConstraint.constant = discriptionArr.count*self.totalCell;
     [_associateTableView reloadData];
-    
 }
 #pragma mark- TableView DataSource and Delegate
 
@@ -144,14 +157,16 @@
 {
     static NSString *MyIdentifier = @"WorkViewDetailCell";
     WorkViewDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
-    cell.dateTimeLbl.text=self.discriptionTextView.text;
-    
+//    cell.serviceDetailLbl.text=[discriptionArr objectAtIndex:indexPath.row];
+    cell.dateTimeLbl.text=@"14/07/2017";
+    cell.clienNameLbl.text=@"Mtest wrote";
     return cell;
-    
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 40;
 }
 
+- (IBAction)postReviewAction:(id)sender {
+}
 @end

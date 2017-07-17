@@ -39,6 +39,7 @@
 		038155A31F1769CD003A8193 /* ManageAssociateBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 038155A21F1769CD003A8193 /* ManageAssociateBusiness.m */; };
 		038155A61F177744003A8193 /* AssociateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 038155A51F177744003A8193 /* AssociateCell.m */; };
 		038497E41F18BA4900BF06E7 /* WorkViewDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 038497E31F18BA4800BF06E7 /* WorkViewDetailCell.m */; };
+		038497E71F18EFE700BF06E7 /* EditPaymentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 038497E61F18EFE700BF06E7 /* EditPaymentCell.m */; };
 		038A7FCF1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 038A7FCE1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.m */; };
 		03992B521EE2EDEA00636A47 /* EZServiceProviderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03992B511EE2EDEA00636A47 /* EZServiceProviderVC.m */; };
 		03ADF4911F0394CE0045EADD /* EZWorkViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03ADF4901F0394CE0045EADD /* EZWorkViewVC.m */; };
@@ -187,6 +188,8 @@
 		038155A51F177744003A8193 /* AssociateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssociateCell.m; sourceTree = "<group>"; };
 		038497E21F18BA4800BF06E7 /* WorkViewDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkViewDetailCell.h; sourceTree = "<group>"; };
 		038497E31F18BA4800BF06E7 /* WorkViewDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkViewDetailCell.m; sourceTree = "<group>"; };
+		038497E51F18EFE700BF06E7 /* EditPaymentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPaymentCell.h; sourceTree = "<group>"; };
+		038497E61F18EFE700BF06E7 /* EditPaymentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPaymentCell.m; sourceTree = "<group>"; };
 		038A7FCD1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZSearchZipeCodeVC.h; sourceTree = "<group>"; };
 		038A7FCE1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZSearchZipeCodeVC.m; sourceTree = "<group>"; };
 		03992B501EE2EDEA00636A47 /* EZServiceProviderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZServiceProviderVC.h; sourceTree = "<group>"; };
@@ -662,6 +665,8 @@
 			children = (
 				03C890481F0524BC002FC3DC /* EZEditPaymentInformationVc.h */,
 				03C890491F0524BC002FC3DC /* EZEditPaymentInformationVc.m */,
+				038497E51F18EFE700BF06E7 /* EditPaymentCell.h */,
+				038497E61F18EFE700BF06E7 /* EditPaymentCell.m */,
 			);
 			name = PyamentInformatioVC;
 			path = FaqVC;
@@ -1382,6 +1387,7 @@
 				03DE87BA1F1652EF0060D2D5 /* ManageServiceCell.m in Sources */,
 				8B52E1CD1EDED97800211D79 /* EZFaqVC.m in Sources */,
 				032F3C141F0B849E00DF3576 /* NSString+CalendarView.m in Sources */,
+				038497E71F18EFE700BF06E7 /* EditPaymentCell.m in Sources */,
 				8B86AA0F1EDC45550031793A /* AppDelegate.m in Sources */,
 				035540BD1F025006008428F3 /* EZworkorderVC.m in Sources */,
 				03EC06611EF1798E008FBE16 /* EZServiceDetailVC.m in Sources */,

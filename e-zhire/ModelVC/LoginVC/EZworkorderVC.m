@@ -22,12 +22,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.translucent = NO;
     [self workOrderApi];
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
 #pragma mark- TableView DataSource and Delegate
 
 -(void)workOrderApi{
@@ -72,6 +78,8 @@
         
     } onError:^(NSError *Error) {
         NSLog(@"%@:",Error);
+        [EZCommonMethod showAlert:nil message:@"please try again"];
+        [self workOrderApi];
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
 }

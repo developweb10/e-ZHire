@@ -32,6 +32,6 @@
 #define clientViewWorkOrderApi @"client_work_order.php"
 #define workOrderSearchApi @"search_work_order.php"
 #define inVoice_Api @"myInvoices.php"
-
+#define editclient_Api @"editclient.php"
 
 #endif /* ApiConstant_h */

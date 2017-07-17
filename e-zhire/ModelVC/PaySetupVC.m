@@ -54,7 +54,6 @@
     else{
         return [monthArr count];
     }
-    
 }
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     

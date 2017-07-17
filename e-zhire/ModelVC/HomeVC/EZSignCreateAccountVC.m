@@ -109,13 +109,16 @@
     UIViewController *contorller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZForgotPasswordVC"];
     [self.navigationController pushViewController:contorller animated:YES];
 }
+
 - (IBAction)cellPhoneCarrerAction:(id)sender {
     
     pikerAlert= [[UIAlertView alloc] initWithTitle:@"Please Select" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    NSLog(@"%@",pikerAlert);
+    
     pikerAlert.alertViewStyle = UIAlertViewStyleDefault;
     pikerAlert.tag=102;
     //countryCodePickedView
-    UIPickerView *pickedView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 0,200, 100)];
+    UIPickerView *pickedView = [[UIPickerView alloc]init];
     [pickedView setDataSource: self];
     [pickedView setDelegate: self];
     pickedView.showsSelectionIndicator = YES;

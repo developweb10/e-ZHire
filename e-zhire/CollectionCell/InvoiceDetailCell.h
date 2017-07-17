@@ -33,5 +33,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *cellAssociateId;
 @property (strong, nonatomic) IBOutlet UILabel *startTime;
 @property (strong, nonatomic) IBOutlet UILabel *cellStopTime;
+@property (weak, nonatomic) IBOutlet UILabel *totalBilled;
 
 @end

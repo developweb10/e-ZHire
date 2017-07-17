@@ -11,12 +11,16 @@
 #import "EZEditPaymentcell.h"
 #import "EZworkorderVC.h"
 #import "EZInvoicesVC.h"
+#import "EZEditPaymentInformationVc.h"
 
 @interface EZClientAccountVC ()
 {
     NSDictionary*clientInfo;
     BOOL checkPassword;
 //    NSString*userId;
+    
+    BOOL editClient;
+
   
 }
 @end
@@ -30,18 +34,19 @@
     self.paymentInfo=[[NSMutableArray alloc]init];
    // userId=[EZCommonMethod getUserId];
     NSLog(@"user id %@",_getUserId);
-    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.translucent = NO;
     [self PostApiMethod];
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)workorderAction:(id)sender{
-    
     EZworkorderVC*viewcontroller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZworkorderVC"];
     viewcontroller.sendUserId=_getUserId;
     [self.navigationController pushViewController:viewcontroller animated:YES];
@@ -122,11 +127,11 @@
         [EZCommonMethod showAlert:nil message:@"Please check your internet connection"];
         return;
     }
-    NSString*urlStr=[NSString stringWithFormat:@"%@%@",BaseUrl,changePwd_Api];
+       NSString*urlStr=[NSString stringWithFormat:@"%@%@",BaseUrl,changePwd_Api];
     NSDictionary*parameter=@{@"user_id":_getUserId,@"currentPWD":self.currentPassTextFiled.text,@"newPWD1":self.newpass.text};
-  
+    
        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [[NetworkManager Instance]postRequestWithUrl:urlStr parameter:parameter onCompletion:^(id dict) {
+       [[NetworkManager Instance]postRequestWithUrl:urlStr parameter:parameter onCompletion:^(id dict) {
         NSLog(@"%@",dict);
         NSError* error;
         NSDictionary* json = [NSJSONSerialization JSONObjectWithData:dict
@@ -135,7 +140,6 @@
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         if([[json valueForKey:@"success"] boolValue]==0)
         {
-
             [EZCommonMethod showAlert:nil message:@"Password Updated Successfully!"];
             self.loginPasswordLabel.text=self.reTypeTextFiled.text;
             self.currentPassTextFiled.text=nil;
@@ -153,6 +157,7 @@
 
 }
 - (IBAction)editClinetInfoACtion:(UIButton*)sender {
+    
     [self.view addSubview:self.editInfoView];
     CGRect size=self.editInfoView.bounds;
     size.origin.y=50;
@@ -161,6 +166,8 @@
     if (sender.selected==NO) {
         sender.selected=YES;
          self.editInfoView.hidden=NO;
+      //  editClient=YES;
+      // [self PostApiMethod];
         self.scrollView.userInteractionEnabled=NO;
     }else{
         sender.selected=NO;
@@ -172,7 +179,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -184,24 +190,23 @@
 {
     if (indexPath.row==0) {
         EZEditPaymentcell *cell=[tableView dequeueReusableCellWithIdentifier:@"EZEditPaymentcell"];
-        cell.editPayment.tag=indexPath.row;
-        [cell.editPayment addTarget:self action:@selector(editPaymentActionCell:) forControlEvents:UIControlEventTouchUpInside];
+     cell.editPayment.tag=indexPath.row;
+    [cell.editPayment addTarget:self action:@selector(editPaymentAction:) forControlEvents:UIControlEventTouchUpInside];
         return cell;
     }
     static NSString *MyIdentifier = @"EZPaymentinformationCell";
     EZPaymentinformationCell *infoCell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
     infoCell.accountDetailLabel.text=[self.paymentInfo objectAtIndex:indexPath.item-1];
-    
+
     return infoCell;
 }
--(IBAction)editPaymentActionCell:(id)sender{
-   UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZEditPaymentInformationVc"];
+- (IBAction)editPaymentAction:(id)sender {
+    EZEditPaymentInformationVc*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZEditPaymentInformationVc"];
     
     [self.navigationController pushViewController:controller animated:YES];
 }
-- (IBAction)editClientInfoAction:(id)sender {
-}
 - (IBAction)updateAction:(id)sender {
+    
 }
 #pragma mark- API implementation
 
@@ -211,8 +216,23 @@
         [EZCommonMethod showAlert:nil message:@"Please check your internet connection"];
         return;
     }
-    NSString*urlStr=[NSString stringWithFormat:@"%@%@",BaseUrl,myAccount_Api];
-    NSDictionary*parameter=@{@"user_id":_getUserId};
+    NSString*urlStr;
+    NSDictionary*parameter;
+    
+    if (editClient) {
+        urlStr=[NSString stringWithFormat:@"%@%@",BaseUrl,clientInfo];
+        parameter=@{@"user_id":_getUserId,@"streetaddr1":self.currentStreetAddTextFiled.text,@"streetaddr2":self.streetAdd2TextField,@"city":self.cityTextFiled.text,@"state":self.stateTextFiled.text,@"zipcode":self.zipCodeTextField.text,@"homePhone":self.homePhoneTextFiled.text,@"cellPhone":self.cellPhoneTextField.text,@"email":self.personalEmailFont.text,@"cellPhoneCarrier":self.cellPhoneCarrierTextFiled.text};
+      
+        
+        
+        
+//        {"user_id":"1178","streetaddr1":"333 Faux Street1", "streetaddr2":"Gggggggggggggg","city":"Demotropolice","state":"GA","zipcode":"11111", "homePhone":"976554544","cellPhone":"9454567556756","email":"rajinderarora.inext@gmail.com", "cellPhoneCarrier":"@cspire1.com"}
+
+    }else{
+        urlStr=[NSString stringWithFormat:@"%@%@",BaseUrl,myAccount_Api];
+        parameter=@{@"user_id":_getUserId};
+    }
+    
      [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [[NetworkManager Instance]postRequestWithUrl:urlStr parameter:parameter onCompletion:^(id dict) {
         NSLog(@"%@",dict);
@@ -220,7 +240,6 @@
         NSDictionary* json = [NSJSONSerialization JSONObjectWithData:dict
                                                              options:kNilOptions
                                                                error:&error];
-        
         if ([[json valueForKey:@"success"] boolValue]==1) {
                     clientInfo = [json objectForKey:@"client_info"];
                     self.paymentInfo = [json objectForKey:@"payment_info"];
@@ -250,7 +269,5 @@
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
 }
-
-
 
 @end

@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "HCSStarRatingView.h"
 @interface EZWorkViewVC : UIViewController
 @property (strong, nonatomic) IBOutlet UIView *ratingView;
 - (IBAction)reviewAssociateAction:(id)sender;
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UILabel *clientInformationLbl;
 @property (strong, nonatomic) IBOutlet UILabel *accountLabel;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UITableView *associateTableView;
 @property (strong, nonatomic) IBOutlet UILabel *nameFont;
 @property (strong, nonatomic) IBOutlet UILabel *accountEmailLabel;
 @property (strong, nonatomic) IBOutlet UILabel *accEmailFont;
@@ -37,7 +37,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *serviceTypeFont;
 @property (strong, nonatomic) IBOutlet UILabel *orderSubmittedFont;
 @property (strong, nonatomic) IBOutlet UILabel *clientDiscriptionLabel;
-@property (strong, nonatomic) IBOutlet UILabel *teamInformationFont;
 @property (strong, nonatomic) IBOutlet UIImageView *clientPfofileImg;
 @property (strong, nonatomic) IBOutlet UILabel *teamLabel;
 @property (strong, nonatomic) IBOutlet UILabel *teamFont;
@@ -50,16 +49,12 @@
 @property (strong, nonatomic) IBOutlet UILabel *cellPhoneLabel;
 @property (strong, nonatomic) IBOutlet UILabel *cellPhoneTextFont;
 @property (strong, nonatomic) IBOutlet UIButton *reviewAssociateBtn;
-- (IBAction)ratinViewCloseAction:(id)sender;
-@property (weak, nonatomic) IBOutlet UITableView *associateTableView;
 
 @property (strong, nonatomic) IBOutlet UIButton *acceptedAction;
 @property (strong, nonatomic) IBOutlet UIButton *cancelBtn;
 - (IBAction)acceptAction:(id)sender;
 - (IBAction)cancelACtion:(id)sender;
-@property (weak, nonatomic) IBOutlet UIScrollView *workViewScroll;
 @property (strong, nonatomic) IBOutlet UILabel *clientJobTextFont;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewheightConstraint;
 @property (strong, nonatomic) IBOutlet UILabel *clientstartTimeLabel;
 @property (strong, nonatomic) IBOutlet UILabel *estimateHourLabel;
 @property (strong, nonatomic) IBOutlet UILabel *startTimeTextFont;
@@ -70,5 +65,19 @@
 @property (strong, nonatomic) IBOutlet UILabel *clientDateLabel;
 @property (strong, nonatomic) IBOutlet UILabel *accountTextFont;
 @property (weak, nonatomic) IBOutlet UILabel *recuringSeriveDateLbl;
+@property (weak, nonatomic) IBOutlet UILabel *selectRatingViewLbl;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property(nonatomic,strong)NSString*work_ordeId;
+@property (weak, nonatomic) IBOutlet HCSStarRatingView *preparedRatiView;
+@property (weak, nonatomic) IBOutlet UILabel *reviewingNameLbl;
+@property (weak, nonatomic) IBOutlet HCSStarRatingView *onTimeRatView;
+@property (weak, nonatomic) IBOutlet HCSStarRatingView *appropriateRatView;
+@property (weak, nonatomic) IBOutlet HCSStarRatingView *workwellRatView;
+@property (weak, nonatomic) IBOutlet HCSStarRatingView *demonstratesRatView;
+@property (weak, nonatomic) IBOutlet UILabel *reviewWorkOrderId;
+@property (weak, nonatomic) IBOutlet UIButton *postReviewBtn;
+@property (weak, nonatomic) IBOutlet HCSStarRatingView *politeRatView;
+@property (weak, nonatomic) IBOutlet UITextView *reviewTextView;
+- (IBAction)postReviewAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *noteLbl;
 @end

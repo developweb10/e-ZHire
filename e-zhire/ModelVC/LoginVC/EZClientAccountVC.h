@@ -48,6 +48,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *manageAccountDetailFont;
 @property (strong, nonatomic) IBOutlet UILabel *EditNameLabel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *add2ConstraintHeight;
+@property (weak, nonatomic) IBOutlet UILabel *accountNameLbl;
 
 @property (strong, nonatomic) IBOutlet UILabel *ZipCodeLabel;
 @property (strong, nonatomic) IBOutlet UITextField *currentStreetAddTextFiled;

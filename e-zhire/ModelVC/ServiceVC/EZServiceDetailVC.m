@@ -200,9 +200,6 @@
 
 
 - (IBAction)recurringServiceAction:(UIButton*)sender {
-    //    [self.checkRecuring addObject:@"1"];
-    //     chek=[[self.checkRecuring objectAtIndex:sender.tag] integerValue];
-    
     if (sender.selected==NO) {
         sender.selected=YES;
         recuringBtnCheck=YES;

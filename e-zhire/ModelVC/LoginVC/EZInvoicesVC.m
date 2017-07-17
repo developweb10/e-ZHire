@@ -11,7 +11,7 @@
 
 @interface EZInvoicesVC ()
 {
-    NSMutableArray*inVoiceArr;
+   NSMutableArray*inVoiceArr;
 }
 @end
 
@@ -48,18 +48,17 @@
         cell.cellDateLbl.text=@"DUE DATE";
         cell.disputLbl.text=@"STATUS";
         cell.cellViewInvoiceLbl.text=@"";
-       [cell contentView].backgroundColor=[UIColor lightGrayColor];
+        [cell contentView].backgroundColor=[UIColor lightGrayColor];
     }
     else{
-    cell.cellViewInvoiceLbl.text=@"View Invoice";
-    cell.disputLbl.text=[[inVoiceArr objectAtIndex:indexPath.row-1]valueForKey:@"status"];
-    cell.cellDateLbl.text=[[inVoiceArr objectAtIndex:indexPath.row-1]valueForKey:@"due_date"];
-    cell.cellPricelbl.text=[[inVoiceArr objectAtIndex:indexPath.row-1]valueForKey:@"total_billed"];
-    cell.inVoiceIdLbl.text=[[inVoiceArr objectAtIndex:indexPath.row-1]valueForKey:@"invoice_id"];
-    [cell contentView].backgroundColor=[UIColor whiteColor];
+      cell.cellViewInvoiceLbl.text=@"View Invoice";
+      cell.disputLbl.text=[[inVoiceArr objectAtIndex:indexPath.row-1]valueForKey:@"status"];
+      cell.cellDateLbl.text=[[inVoiceArr objectAtIndex:indexPath.row-1]valueForKey:@"due_date"];
+      cell.cellPricelbl.text=[[inVoiceArr objectAtIndex:indexPath.row-1]valueForKey:@"total_billed"];
+      cell.inVoiceIdLbl.text=[[inVoiceArr objectAtIndex:indexPath.row-1]valueForKey:@"invoice_id"];
+      [cell contentView].backgroundColor=[UIColor whiteColor];
   }
     return cell;
-
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -102,11 +101,10 @@
         
     } onError:^(NSError *Error) {
         NSLog(@"%@:",Error);
-        [EZCommonMethod showAlert:nil message:@"please try agin"];
+        [EZCommonMethod showAlert:nil message:@"please try again"];
         [self invoiceApi];
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
-    
 }
 
 @end

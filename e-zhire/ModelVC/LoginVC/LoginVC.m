@@ -21,7 +21,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     // Do any additional setup after loading the view.
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
         self.loginViewHeightConstraint.constant=400;
@@ -116,12 +115,13 @@
         }
     }
     else{
-         //[self showUIAlertControllerWithTitle:@"Successful Client login!"];
+          [self showUIAlertControllerWithTitle:@"Successful Client login!"];
+     /*
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"Please enter username and password" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
         [alertController addAction:ok];
         [self presentViewController:alertController animated:YES completion:nil];
-        
+      */
     }
     
 }
