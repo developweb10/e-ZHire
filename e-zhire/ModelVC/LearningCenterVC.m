@@ -28,6 +28,11 @@ imageArr=[NSArray arrayWithObjects:@"clean",@"banner1",@"banner2",@"banner3",@"b
      self.thumnilImg.image=[UIImage imageNamed:[imageArr objectAtIndex:currentImage]];
      self.chooseServiceView.hidden=YES;
 }
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.menuContainerViewController setPanMode:MFSideMenuPanModeNone];
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

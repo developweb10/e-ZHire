@@ -69,6 +69,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     [self.menuContainerViewController setPanMode:MFSideMenuPanModeNone];
     monthArray = [NSArray arrayWithObjects:@"January",@"February",@"March",@"April",@"May",@"June",@"July",@"August",@"September",@"October",@"November",@"December", nil];
     
     checkArray=[NSMutableArray arrayWithObjects:@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0", nil];
@@ -119,20 +120,17 @@
     self.dailyAdjustmentView.backgroundColor=[UIColor whiteColor];
     [self.calendraView addObserver:self forKeyPath:@"scope" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:_KVOContext];
     self.calendraView.scope = FSCalendarScopeMonth;
-    
     // For UITest
     self.calendraView.accessibilityIdentifier = @"calendar";
-    [self textFiledDelegate];
+   // [self textFiledDelegate];
     // Do any additional setup after loading the view.
    
 }
-
 - (void)dealloc
 {
     [self.calendraView removeObserver:self forKeyPath:@"scope" context:_KVOContext];
     NSLog(@"%s",__FUNCTION__);
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -154,7 +152,6 @@
     static NSString *MyIdentifier = @"MonthCell";
     MonthCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
     cell.monthTitle.text=[monthArray objectAtIndex:indexPath.row];
-    
     NSInteger chek=[[checkArray objectAtIndex:indexPath.row] integerValue];
     if (chek==0) {
         cell.checkImgeView.image=[UIImage imageNamed:@""];
@@ -200,14 +197,12 @@
                     }
                     completion:NULL];
 }
-
 - (IBAction)closeButtonAction:(id)sender {
     [UIView transitionWithView:self.monthView
                       duration:0.5
                        options:UIViewAnimationOptionTransitionCurlUp
                     animations:^{
                         self.view.backgroundColor=[UIColor whiteColor];
-
                         self.monthView.hidden=YES;
                     }
                     completion:NULL];
@@ -218,9 +213,8 @@
                       duration:0.5
                        options:UIViewAnimationOptionTransitionCurlUp
                     animations:^{
-                        self.view.backgroundColor=[UIColor whiteColor];
-
-                        self.dailyAdjustmentView.hidden=YES;
+                    self.view.backgroundColor=[UIColor whiteColor];
+                    self.dailyAdjustmentView.hidden=YES;
                     }
                     completion:NULL];
 }
@@ -249,7 +243,6 @@
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
 }
-
 #pragma mark - <UIGestureRecognizerDelegate>
 
 // Whether scope gesture should begin
@@ -309,7 +302,6 @@
 {
         return [UIColor lightGrayColor];
 }
-
 - (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance fillSelectionColorForDate:(NSDate *)date
 {
         return [UIColor redColor];
@@ -354,27 +346,27 @@
 }
 - (IBAction)dayHourCloseAction:(id)sender {
     self.weekView.hidden=YES;
-
+    
 }
 - (IBAction)dateHourDayCheckAction:(UIButton*)sender {
     if (sender.selected==NO) {
         sender.selected=YES;
         [sender setImage:[UIImage imageNamed:@"Check"] forState:UIControlStateNormal];
         [sender setBackgroundColor:EZblueColor];
-//        [selectedDays addObject:sender.titleLabel.text];
-         sender.layer.borderWidth=0;
+//      [selectedDays addObject:sender.titleLabel.text];
+        sender.layer.borderWidth=0;
         
     }else
     {
         sender.selected=NO;
-     //   __weak NSMutableArray *temp=selectedDays;
-     //        for (int i=0;i<temp.count;i++) {
-    //            NSString *tempString=[temp objectAtIndex:i];
-    //            if ([sender.titleLabel.text isEqualToString:tempString]) {
-   //                [selectedDays removeObjectAtIndex:i];
-   //                break;
-//            }
-//        }
+     //  __weak NSMutableArray *temp=selectedDays;
+     //      for (int i=0;i<temp.count;i++) {
+    //          NSString *tempString=[temp objectAtIndex:i];
+    //          if ([sender.titleLabel.text isEqualToString:tempString]) {
+   //            [selectedDays removeObjectAtIndex:i];
+   //            break;
+//          }
+//       }
       //  temp=nil;
         [sender setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
         sender.layer.borderWidth=0.5;
@@ -431,7 +423,6 @@
         monOptToCheck=NO;
         self.monOptionalToTxt.text=[timeArr objectAtIndex:row];
     }
-    
     ////
     
     if (tusFromCheck) {
@@ -447,7 +438,7 @@
     }
     else if (tusOptToCheck){
         tusOptToCheck=NO;
-        self.tuesOptionalToTxt.text=[timeArr objectAtIndex:row];
+        self.tuesOptionalToTextField.text=[timeArr objectAtIndex:row];
     }
     else if (wedFromCheck) {
         wedFromCheck=NO;
@@ -530,7 +521,7 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
     if (textField.tag ==100 ) {
         sundayFromCheck=YES;
-     [self timePickerView];
+        [self timePickerView];
     }else if (textField.tag ==101){
         sundayToCheck=YES;
         [self timePickerView];
@@ -540,7 +531,7 @@
         [self timePickerView];
     }
     else if (textField.tag ==103){
-         sundayOptToCheck=YES;
+        sundayOptToCheck=YES;
         [self timePickerView];
     }
     ///////
@@ -559,7 +550,6 @@
         monOptToCheck=YES;
         [self timePickerView];
     }
-
     //////
     else if (textField.tag ==300 ) {
         tusFromCheck=YES;
@@ -572,7 +562,7 @@
         tusOptFoCheck=YES;
         [self timePickerView];
     }
-    else if(textField.tag ==3000){
+    else if(textField.tag ==303){
         tusOptToCheck=YES;
         [self timePickerView];
     }
@@ -591,7 +581,6 @@
     else if (textField.tag ==403){
         wedOptToCheck=YES;
         [self timePickerView];
-        
     }
     //////
     else if (textField.tag ==500 ) {
@@ -660,7 +649,7 @@
     self.tuesdayFromTimeTxt.delegate=self;
     self.tuesToTimeTxt.delegate=self;
     self.tuesOptionalTimeTxt.delegate=self;
-    self.tuesToTimeTxt.delegate=self;
+    self.tuesOptionalToTextField.delegate=self;
 
     self.wedFromTimeTxt.delegate=self;
     self.wedToTimeTxt.delegate=self;

@@ -17,6 +17,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *associateLeaderLbl;
 @property (weak, nonatomic) IBOutlet UIImageView *teamLeadImg;
 - (IBAction)phoneAction:(id)sender;
-
 - (IBAction)emailAction:(id)sender;
 @end

@@ -45,7 +45,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *monOptionalToTxt;
 @property (weak, nonatomic) IBOutlet UITextField *tuesdayFromTimeTxt;
 @property (weak, nonatomic) IBOutlet UITextField *tuesOptionalTimeTxt;
-@property (weak, nonatomic) IBOutlet UITextField *tuesOptionalToTxt;
+
+@property (weak, nonatomic) IBOutlet UITextField *tuesOptionalToTextField;
 
 @property (weak, nonatomic) IBOutlet UITextField *tuesToTimeTxt;
 @property (weak, nonatomic) IBOutlet UITextField *wedFromTimeTxt;

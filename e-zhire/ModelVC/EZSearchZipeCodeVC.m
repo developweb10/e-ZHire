@@ -31,6 +31,10 @@
     }
     self.zipeCodeTextFiled.text=_sendZipCode;
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    [self.menuContainerViewController setPanMode:MFSideMenuPanModeNone];
+}
 -(void)iPadfontSize{
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
         [self.sorryLabel setFont:[UIFont fontWithName:@"OSWALD-BOLD" size:24.0f]];

@@ -21,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+     [self.menuContainerViewController setPanMode:MFSideMenuPanModeNone];
     imageArr=[NSArray arrayWithObjects:@"clean",@"banner1",@"banner2",@"banner3",@"banner4",@"banner5",@"banner6", nil];
     self.photosImageView.image=[UIImage imageNamed:[imageArr objectAtIndex:currentImage]];
     self.aboutLabel.text=@"This is where you will upload your Profile photo. This photo will be seen by Clients, and should be framed with only your head and shoulders, plain background and no other person in the frame. You can drag & drop your photo  in the box below, or click  and then select the photo you will use from your browser. Then click  You may also rotate your photo if needed.This is where you will upload your Profile photo. This photo will be seen by Clients, and should be framed with only your head and shoulders, plain background and no other person in the frame. You can drag & drop your photo  in the box below, or click Browse and then select the photo you will use from your browser. Then click  You may also rotate your photo if needed.This is where you will upload your Profile photo. This photo will be seen by Clients, and should be framed with only your head and shoulders, plain background and no other person in the frame. You can drag & drop your photo  in the box below, or click and then select the photo you will use from your browser. Then click . You may also rotate your photo if needed.This is where you will upload your Profile photo. This photo will be seen by Clients, and should be framed with only your head and shoulders, plain background and no other person in the frame. You can drag & drop your photo  in the box below, or click  and then select the photo you will use from your browser. Then click  You may also rotate your photo if needed.";
@@ -34,11 +35,11 @@
 
 -(void)ipadFontSize{
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
-//        [self.videoPhotoLabel setFont:[UIFont fontWithName:@"OSWALD-BOLD" size:22.0f]];
-//        [self.reviewLabel setFont:[UIFont fontWithName:@"OSWALD-BOLD" size:22.0f]];
-//        [self.commentLabel setFont:[UIFont fontWithName:@"OSWALD-BOLD" size:20.0f]];
-//        [self.ratingLabel setFont:[UIFont fontWithName:@"OSWALD-BOLD" size:20.0f]];
-//        [self.aboutTextLabel setFont:[UIFont fontWithName:@"Oswald-Regular" size:18.0f]];
+//      [self.videoPhotoLabel setFont:[UIFont fontWithName:@"OSWALD-BOLD" size:22.0f]];
+//      [self.reviewLabel setFont:[UIFont fontWithName:@"OSWALD-BOLD" size:22.0f]];
+//      [self.commentLabel setFont:[UIFont fontWithName:@"OSWALD-BOLD" size:20.0f]];
+//      [self.ratingLabel setFont:[UIFont fontWithName:@"OSWALD-BOLD" size:20.0f]];
+//      [self.aboutTextLabel setFont:[UIFont fontWithName:@"Oswald-Regular" size:18.0f]];
     }else{
         
     }
@@ -49,10 +50,9 @@
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
     if(indexPath.row == [collectionView numberOfItemsInSection:indexPath.section] - 1) {
         
-        //     [self reloadDataFromNetwork];
+     //[self reloadDataFromNetwork];
     }
 }
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     
     return 4;

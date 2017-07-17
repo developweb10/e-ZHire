@@ -32,6 +32,10 @@
     self.aboutTextLabel.text=textStr;
     [self ipadFontSize];
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    [self.menuContainerViewController setPanMode:MFSideMenuPanModeNone];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

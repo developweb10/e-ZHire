@@ -32,6 +32,10 @@
 #define clientViewWorkOrderApi @"client_work_order.php"
 #define workOrderSearchApi @"search_work_order.php"
 #define inVoice_Api @"myInvoices.php"
-#define editclient_Api @"editclient.php"
+#define editUpdateclient_Api @"editclient.php"
+#define selectCarrier_Api @"selectCarrier.php"
+#define send_Api @"send.php"
+
+//https://www.e-zhire.com/api/editclient.php
 
 #endif /* ApiConstant_h */

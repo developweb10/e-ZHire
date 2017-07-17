@@ -75,6 +75,12 @@
     self.serviceStartTimeLabel.text = @"09:00AM";
     [self iPadfontSize];
 }
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    [self.menuContainerViewController setPanMode:MFSideMenuPanModeNone];
+    
+}
 -(void)iPadfontSize{
     
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
@@ -124,11 +130,7 @@
     self.estimatehoursLabel.text=[timeArr objectAtIndex:row];
 }
 
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
-    
-}
+
 -(void)borerLayer{
     self.serviceShowPopupBtn.layer.borderColor=[UIColor grayColor].CGColor;
     self.serviceShowPopupBtn.layer.cornerRadius=2;

@@ -23,9 +23,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-- (IBAction)addTeamMemberACtion:(id)sender {
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.menuContainerViewController setPanMode:MFSideMenuPanModeNone];
+    
 }
 - (IBAction)helpAction:(id)sender {
 }

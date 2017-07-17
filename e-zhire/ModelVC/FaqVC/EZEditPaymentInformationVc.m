@@ -29,6 +29,7 @@
     monthArr=[NSArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12", nil];
     yearArr=[NSArray arrayWithObjects:@"2017",@"2018",@"2019",@"2020",@"2021",@"2022",@"2023",@"2024",@"2025",@"2026",@"2027" ,@"2028" ,@"2029",@"2030",@"2031",@"2032",nil];
     cardTypeArr=[NSArray arrayWithObjects:@"Visa",@"Master Card",@"Discover",@"American Express", nil];
+     [self.menuContainerViewController setPanMode:MFSideMenuPanModeNone];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -77,11 +78,16 @@
 }
 - (IBAction)changeDefaultAction:(id)sender {
     
+    CGRect size=self.changeDefaultView.bounds;
+    size.origin.x=45;
+    size.origin.y=100;
+    self.changeDefaultView.frame=size;
+    [self.view addSubview:self.changeDefaultView];
+       self.changeDefaultView.hidden=NO;
 }
 - (IBAction)saveDetailAction:(id)sender {
     
 }
-
 - (IBAction)selectCardTypeAction:(id)sender {
     checkcardType=YES;
     checkMonth=NO;
@@ -106,7 +112,6 @@
     }
 }
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    
     if (checkMonth) {
         return [yearArr objectAtIndex: row];
     }
@@ -122,7 +127,6 @@
     if (checkMonth) {
         self.selectYearLbl.text=[yearArr objectAtIndex:row];
     }
-    
     else if (checkcardType) {
         self.cardTypeLbl.text=[cardTypeArr objectAtIndex:row];
     }
@@ -138,12 +142,21 @@
     pikerAlert.tag=102;
     //countryCodePickedView
     pickedView=[[UIPickerView alloc]init];
-//    pickedView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 0,250, 150)];
+//  pickedView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 0,250, 150)];
     [pickedView setDataSource: self];
     [pickedView setDelegate: self];
     pickedView.showsSelectionIndicator = YES;
     [pikerAlert setValue:pickedView forKey:@"accessoryView"];
     [pikerAlert show];
     [pickedView reloadAllComponents];
+}
+- (IBAction)changeDefaultCloseAction:(id)sender {
+    self.changeDefaultView.hidden=YES;
+}
+- (IBAction)selectDefaultCardAction:(id)sender {
+    
+}
+- (IBAction)changeDefaultCardAction:(id)sender {
+    
 }
 @end

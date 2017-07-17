@@ -12,15 +12,15 @@
 #import "EZworkorderVC.h"
 #import "EZInvoicesVC.h"
 #import "EZEditPaymentInformationVc.h"
-
 @interface EZClientAccountVC ()
 {
     NSDictionary*clientInfo;
     BOOL checkPassword;
-//    NSString*userId;
-    
-    BOOL editClient;
-
+//  NSString*userId;
+    NSMutableArray*carrerArr;
+    UIAlertView *pikerAlert;
+    BOOL editClientCheck;
+    UIPickerView *pickedView;
   
 }
 @end
@@ -37,7 +37,11 @@
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.translucent = NO;
     [self PostApiMethod];
+    carrerArr=[[NSMutableArray alloc]init];
+    [self.menuContainerViewController setPanMode:MFSideMenuPanModeNone];
+
 }
+
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
 
@@ -116,7 +120,6 @@
     
     return YES;
 }
-
 - (IBAction)suggestnewPaswordAction:(id)sender {
     
 }
@@ -154,27 +157,8 @@
         NSLog(@"%@:",Error);
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
+}
 
-}
-- (IBAction)editClinetInfoACtion:(UIButton*)sender {
-    
-    [self.view addSubview:self.editInfoView];
-    CGRect size=self.editInfoView.bounds;
-    size.origin.y=50;
-    size.origin.x=35;
-    self.editInfoView.frame=size;
-    if (sender.selected==NO) {
-        sender.selected=YES;
-         self.editInfoView.hidden=NO;
-      //  editClient=YES;
-      // [self PostApiMethod];
-        self.scrollView.userInteractionEnabled=NO;
-    }else{
-        sender.selected=NO;
-        self.editInfoView.hidden=YES;
-        self.scrollView.userInteractionEnabled=YES;
-    }
-}
 #pragma mark- TableView DataSource and Delegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -202,15 +186,12 @@
 }
 - (IBAction)editPaymentAction:(id)sender {
     EZEditPaymentInformationVc*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZEditPaymentInformationVc"];
-    
     [self.navigationController pushViewController:controller animated:YES];
 }
-- (IBAction)updateAction:(id)sender {
-    
-}
-#pragma mark- API implementation
 
+#pragma mark- API implementation
 -(void)PostApiMethod{
+    
     bool check=[EZCommonMethod checkInternetConnection];
     if(!check){
         [EZCommonMethod showAlert:nil message:@"Please check your internet connection"];
@@ -218,50 +199,76 @@
     }
     NSString*urlStr;
     NSDictionary*parameter;
+    if (editClientCheck) {
+        urlStr=[NSString stringWithFormat:@"%@%@",BaseUrl,editUpdateclient_Api];
+        parameter=@{@"user_id":_getUserId,@"streetaddr1":self.currentStreetAddTextFiled.text,@"streetaddr2":self.streetAdd2TextField.text,@"city":self.cityTextFiled.text,@"state":self.stateTextFiled.text,@"zipcode":self.zipCodeTextField.text,@"homePhone":self.homePhoneTextFiled.text,@"cellPhone":self.cellPhoneTextField.text,@"email":self.personalEmailTextFiled.text,@"cellPhoneCarrier":self.cellPhoneCarrierTextFiled.text};
     
-    if (editClient) {
-        urlStr=[NSString stringWithFormat:@"%@%@",BaseUrl,clientInfo];
-        parameter=@{@"user_id":_getUserId,@"streetaddr1":self.currentStreetAddTextFiled.text,@"streetaddr2":self.streetAdd2TextField,@"city":self.cityTextFiled.text,@"state":self.stateTextFiled.text,@"zipcode":self.zipCodeTextField.text,@"homePhone":self.homePhoneTextFiled.text,@"cellPhone":self.cellPhoneTextField.text,@"email":self.personalEmailFont.text,@"cellPhoneCarrier":self.cellPhoneCarrierTextFiled.text};
-      
-        
-        
-        
-//        {"user_id":"1178","streetaddr1":"333 Faux Street1", "streetaddr2":"Gggggggggggggg","city":"Demotropolice","state":"GA","zipcode":"11111", "homePhone":"976554544","cellPhone":"9454567556756","email":"rajinderarora.inext@gmail.com", "cellPhoneCarrier":"@cspire1.com"}
-
     }else{
         urlStr=[NSString stringWithFormat:@"%@%@",BaseUrl,myAccount_Api];
         parameter=@{@"user_id":_getUserId};
     }
-    
      [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [[NetworkManager Instance]postRequestWithUrl:urlStr parameter:parameter onCompletion:^(id dict) {
+     [[NetworkManager Instance]postRequestWithUrl:urlStr parameter:parameter onCompletion:^(id dict) {
         NSLog(@"%@",dict);
         NSError* error;
         NSDictionary* json = [NSJSONSerialization JSONObjectWithData:dict
                                                              options:kNilOptions
                                                                error:&error];
-        if ([[json valueForKey:@"success"] boolValue]==1) {
-                    clientInfo = [json objectForKey:@"client_info"];
-                    self.paymentInfo = [json objectForKey:@"payment_info"];
-                    self.nameLabel.text=[clientInfo valueForKey:@"name"];
-                     self.address1Label.text=[clientInfo valueForKey:@"street_address1"];
-                    self.addLabel2.text=[clientInfo valueForKey:@""];
-                    self.add2ConstraintHeight.constant=0;
-                    self.ZipCodeLabel.text=[clientInfo valueForKey:@"city"];
-                    self.clientIdLabel.text=[clientInfo valueForKey:@"client_id"];
-                    self.clienySinceLabel.text=[clientInfo valueForKey:@"client_since"];
-                    self.mobilePhoneLabel.text=[clientInfo valueForKey:@"mobile"];
-                    self.otherPhoneLabel.text=[clientInfo valueForKey:@"other_phone"];
-                    self.personalEmailLabel.text=[clientInfo valueForKey:@"personal_email_id"];
-                    self.userNameLabel.text=[clientInfo valueForKey:@"login_user_name"];
-                    self.loginPasswordLabel.text=[clientInfo valueForKey:@"password"];
-                    [self.detailTableView reloadData];
+         
+         if (editClientCheck) {
+             [MBProgressHUD hideHUDForView:self.view animated:YES];
+              if ([[json valueForKey:@"success"] boolValue]==1) {
+                                    self.address1Label.text=self.currentStreetAddTextFiled.text;
+                  self.addLabel2.text=self.streetAdd2TextField.text;
+                  //self.add2ConstraintHeight.constant=0;
+                  NSString*cityStr=self.cityTextFiled.text;
+                  NSString*stateStr=self.stateTextFiled.text;
+                  NSString*zipStr=self.zipCodeTextField.text;
+                  NSMutableArray *myStrings = [[NSMutableArray alloc] initWithObjects:cityStr, stateStr, zipStr,nil];
+                  NSString *joinedString = [myStrings componentsJoinedByString:@","];
+                  self.ZipCodeLabel.text=joinedString;
+                  self.mobilePhoneLabel.text=self.homePhoneTextFiled.text;
+                  self.otherPhoneLabel.text=self.cellPhoneTextField.text;
+                  self.personalEmailLabel.text=self.personalEmailTextFiled.text;
+                  [EZCommonMethod showAlert:nil message:@"Information Updated Successfully!"];
                   [MBProgressHUD hideHUDForView:self.view animated:YES];
-                }
-            else{
-            [EZCommonMethod showAlert:nil message:@"Please check your email and password!"];
-        }
-        
+                  self.scrollView.userInteractionEnabled=YES;
+                  self.editInfoView.hidden=YES;
+                  
+              }
+              else{
+                  [EZCommonMethod showAlert:nil message:@"please check your email"];
+   
+              }
+         }else{
+             if ([[json valueForKey:@"success"] boolValue]==1) {
+                 clientInfo = [json objectForKey:@"client_info"];
+                 self.paymentInfo = [json objectForKey:@"payment_info"];
+                 self.nameLabel.text=[clientInfo valueForKey:@"name"];
+                 self.address1Label.text=[clientInfo valueForKey:@"street_address1"];
+                 self.addLabel2.text=[clientInfo valueForKey:@"street_address2"];
+                 //self.add2ConstraintHeight.constant=0;
+                 NSString*cityStr=[clientInfo valueForKey:@"city"];
+                 NSString*stateStr=[clientInfo valueForKey:@"state"];
+                 NSString*zipStr=[clientInfo valueForKey:@"zip"];
+                 NSMutableArray *myStrings = [[NSMutableArray alloc] initWithObjects:cityStr, stateStr, zipStr,nil];
+                 NSString *joinedString = [myStrings componentsJoinedByString:@","];
+                 self.ZipCodeLabel.text=joinedString;
+                 self.clientIdLabel.text=[clientInfo valueForKey:@"client_id"];
+                 self.clienySinceLabel.text=[clientInfo valueForKey:@"client_since"];
+                 self.mobilePhoneLabel.text=[clientInfo valueForKey:@"mobile"];
+                 self.otherPhoneLabel.text=[clientInfo valueForKey:@"other_phone"];
+                 self.personalEmailLabel.text=[clientInfo valueForKey:@"personal_email_id"];
+                 self.userNameLabel.text=[clientInfo valueForKey:@"login_user_name"];
+                 self.loginPasswordLabel.text=[clientInfo valueForKey:@"password"];
+                 [self.detailTableView reloadData];
+                 [MBProgressHUD hideHUDForView:self.view animated:YES];
+             }
+             else{
+                 [EZCommonMethod showAlert:nil message:@"Please check your email and password!"];
+             }
+         }
+      
     } onError:^(NSError *Error) {
         NSLog(@"%@:",Error);
         [EZCommonMethod showAlert:nil message:@"try again"];
@@ -269,5 +276,95 @@
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
 }
+- (IBAction)cellCarrierAction:(id)sender {
+    [self selectCarrierApiMethod];
+    pikerAlert= [[UIAlertView alloc] initWithTitle:@"Please Select" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    NSLog(@"%@",pikerAlert);
+    pikerAlert.alertViewStyle = UIAlertViewStyleDefault;
+    pikerAlert.tag=102;
+    pickedView = [[UIPickerView alloc]init];
+    [pickedView setDataSource: self];
+    [pickedView setDelegate: self];
+    pickedView.showsSelectionIndicator = YES;
+    [pikerAlert setValue:pickedView forKey:@"accessoryView"];
+    [pikerAlert show];
+    [pickedView reloadAllComponents];
+}
+-(void)selectCarrierApiMethod{
+        bool statecheck=[EZCommonMethod checkInternetConnection];
+        if(!statecheck){
+            [EZCommonMethod showAlert:nil message:@"Please check your internet connection"];
+            return;
+        }
+        NSString *urlString=[NSString stringWithFormat:@"%@%@",BaseUrl,selectCarrier_Api];
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        [[NetworkManager Instance] getRequestWithUrl:urlString parameter:nil onCompletion:^(id dict) {
+          NSError* errorJson=nil;
+          NSDictionary* json = [NSJSONSerialization JSONObjectWithData:dict
+                                                                 options:kNilOptions
+                                                                   error:&errorJson];
+          NSLog(@"%@",json);
+            if([[json valueForKey:@"success"] boolValue]==1)
+            {
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
+                carrerArr=[json valueForKey:@"value"];
+                [pickedView reloadAllComponents];
+            }
+            else{
+                [EZCommonMethod showAlert:nil message:@"Please check try again"];
+            }
+            
+        }onError:^(NSError *Error) {
+            NSLog(@"%@:",Error);
+            [EZCommonMethod showAlert:nil message:@"Please check try again"];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        }];
 
+}
+#pragma mark- PickerView delegate
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    
+    return 1;
+}
+// tell the picker how many rows are available for a given component
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    
+    return [carrerArr count];
+}
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    
+    return [[carrerArr objectAtIndex: row]valueForKey:@"name"];
+}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow: (NSInteger)row inComponent:(NSInteger)component {
+    
+    self.cellPhoneCarrierTextFiled.text=[[carrerArr objectAtIndex:row]valueForKey:@"name"];
+}
+- (IBAction)updateAction:(id)sender {
+    editClientCheck=YES;
+    [self PostApiMethod];
+}
+
+- (IBAction)editClientInfoAction:(UIButton*)sender {
+    [self.view addSubview:self.editInfoView];
+    CGRect size=self.editInfoView.bounds;
+    size.origin.y=50;
+    size.origin.x=35;
+    self.editInfoView.frame=size;
+    self.editInfoView.hidden=NO;
+    self.scrollView.userInteractionEnabled=NO;
+    self.accountNameLbl.text=[clientInfo valueForKey:@"name"];
+    self.currentStreetAddTextFiled.text=[clientInfo valueForKey:@"street_address1"];
+    self.streetAdd2TextField.text=[clientInfo valueForKey:@"street_address2"];
+    //self.add2ConstraintHeight.constant=0;
+    self.cellPhoneCarrierTextFiled.text=[clientInfo valueForKey:@"cellCarrier"];
+    self.cityTextFiled.text=[clientInfo valueForKey:@"city"];
+    self.stateTextFiled.text=[clientInfo valueForKey:@"state"];
+    self.zipCodeTextField.text=[clientInfo valueForKey:@"zip"];
+    self.homePhoneTextFiled.text=[clientInfo valueForKey:@"mobile"];
+    self.cellPhoneTextField.text=[clientInfo valueForKey:@"other_phone"];
+    self.personalEmailTextFiled.text=[clientInfo valueForKey:@"personal_email_id"];
+
+}
 @end

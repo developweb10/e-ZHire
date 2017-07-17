@@ -22,9 +22,9 @@
 //     [self.tableView addSubview:self.adddresView];
 //
     seletedIndex = -1;
-
     self.tableView.tableHeaderView=self.adddresView;
-  self.disputView.hidden=YES;
+    self.disputView.hidden=YES;
+    [self.menuContainerViewController setPanMode:MFSideMenuPanModeNone];
 }
 
 - (void)didReceiveMemoryWarning {

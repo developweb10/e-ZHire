@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EZClientAccountVC : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface EZClientAccountVC : UIViewController<UITableViewDataSource,UITableViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
 - (IBAction)workorderAction:(id)sender;
 - (IBAction)saveChangesAction:(id)sender;
 - (IBAction)suggestnewPaswordAction:(id)sender;
@@ -39,7 +39,8 @@
 @property (strong, nonatomic) IBOutlet UITextField *reTypeTextFiled;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *passwordConditionLabel;
-@property (strong, nonatomic) IBOutlet UIButton *editClintInfoBtn;
+
+- (IBAction)editClientInfoAction:(id)sender;
 @property (strong, nonatomic) IBOutlet UIButton *savePassChangeBtn;
 @property (strong, nonatomic) IBOutlet UIButton *workOrderBtn;
 @property (strong, nonatomic) IBOutlet UIButton *invoicesBtn;
@@ -64,4 +65,8 @@
 @property (strong, nonatomic) IBOutlet UITextField *homePhoneTextFiled;
 @property(strong,nonatomic)NSMutableArray*paymentInfo;
 @property(strong,nonatomic)NSString*getUserId;
+- (IBAction)cellCarrierAction:(id)sender;
+
+
+
 @end

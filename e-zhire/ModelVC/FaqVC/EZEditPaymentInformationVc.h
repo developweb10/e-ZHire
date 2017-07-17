@@ -29,7 +29,14 @@
 @property (weak, nonatomic) IBOutlet UITextField *cvvTextField;
 @property (weak, nonatomic) IBOutlet UIButton *selctMonthBtn;
 - (IBAction)saveDetailAction:(id)sender;
-
 - (IBAction)selectCardTypeAction:(id)sender;
+@property (strong, nonatomic) IBOutlet UIView *changeDefaultView;
+- (IBAction)changeDefaultCloseAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *defaultcardLabel;
+- (IBAction)selectDefaultCardAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *selectDefaultCradLabel;
+
+- (IBAction)changeDefaultCardAction:(id)sender;
+
 
 @end
