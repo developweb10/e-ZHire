@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EZReviewVC : UIViewController
+@interface EZReviewVC : UIViewController<UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *firstCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *secondCollectionView;

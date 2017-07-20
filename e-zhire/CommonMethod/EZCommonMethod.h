@@ -33,6 +33,8 @@
 +(UIFont*)getBoldFont:(CGFloat)fontSize;
 +(UIFont*)getRegularFont:(CGFloat)fontSize;
 +(NSString*)getUserId;
-+(NSString*)getAssociateUserId;
++(NSString*)getUserName;
++(NSString*)getUserNiceName;
++(NSString*)getUserEmail;
 
 @end

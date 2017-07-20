@@ -23,7 +23,6 @@
     [self invoiceApi];
      [self.menuContainerViewController setPanMode:MFSideMenuPanModeNone];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -82,8 +81,8 @@
     }
     NSString*urlStr=[NSString stringWithFormat:@"%@%@",BaseUrl,inVoice_Api];
     NSDictionary*parameter=@{@"userId":_userId};
-    
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
     [[NetworkManager Instance]postRequestWithUrl:urlStr parameter:parameter onCompletion:^(id dict) {
         NSLog(@"%@",dict);
         NSError* error;
@@ -97,7 +96,7 @@
             [self.invoiceTableVIew reloadData];
         }
         else{
-            [EZCommonMethod showAlert:nil message:@"Please check your password!"];
+            [EZCommonMethod showAlert:nil message:@"No invoice found"];
         }
         
     } onError:^(NSError *Error) {

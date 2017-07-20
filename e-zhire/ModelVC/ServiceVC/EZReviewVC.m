@@ -32,10 +32,9 @@
     ImageArr=[[NSMutableArray alloc]init];
     reviewRatingArr=[[NSMutableArray alloc]init];
     priceBox=[[NSMutableArray alloc]init];
-    self.previousIndex=-1;
-
+    self.previousIndex=-2;
+    self.webView.delegate=self;
  //imageArr=[NSArray arrayWithObjects:@"clean",@"banner1",@"banner2",@"banner3",@"banner4",@"banner5",@"banner6", nil];
-
     [self ipadFontSize];
     NSLog(@"%@",_searchId);
     NSLog(@"%@",_dateId);
@@ -76,8 +75,10 @@
             NSString*thumbnailImage=[json valueForKey:@"thumbnail"];
             ImageArr=[json valueForKey:@"image"];
             NSString *getImagePath = [ImageArr objectAtIndex:0];
+            [self.photoImgage sd_setImageWithURL:[NSURL URLWithString:getImagePath] placeholderImage:[UIImage imageNamed:@"serivePlaceHolder"]];
+            
+            [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[json valueForKey:@"video"]]]];
 
-             [self.photoImgage sd_setImageWithURL:[NSURL URLWithString:getImagePath] placeholderImage:[UIImage imageNamed:@"serivePlaceHolder"]];
             reviewRatingArr=[json valueForKey:@"Review_rating"];
             priceBox=[json valueForKey:@"price-box"];
             [self.tableView reloadData];
@@ -172,11 +173,10 @@
      }else{
         return priceBox.count;
      }
-   
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-
+    
     if (tableView==self.tableView) {
         static NSString *MyIdentifier = @"EZReviewCellVC";
         EZReviewCellVC *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
@@ -219,58 +219,36 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     if (tableView==self.tableView) {
-//        if (self.seletedIndex==indexPath.row) {
-//            if (self.previousIndex==self.seletedIndex) {
-//                self.previousIndex=-1;
-//                return 70;
-//            }
-//            self.previousIndex=self.seletedIndex;
-//            NSString *textString;
-//             textString = [[reviewRatingArr objectAtIndex:indexPath.row]valueForKey:@"rating-view"];
-//            CGSize labelSize=CGSizeMake([UIScreen mainScreen].bounds.size.width-70,0.0);
-//            CGRect labelRect = [textString boundingRectWithSize:labelSize
-//                                                        options:NSStringDrawingUsesLineFragmentOrigin
-//                                                     attributes:@{
-//                                                                  NSFontAttributeName : [UIFont systemFontOfSize:13.0]
-//                                                                  }
-//            context:nil];
-//           return labelRect.size.height+70+20;
-            
-//            return 140;
-//
-//        }
-//        else{
-//            return  70;
-//        }
-            return  140;
+        if (self.seletedIndex==indexPath.row) {
+            if (self.previousIndex==self.seletedIndex) {
+                self.previousIndex=-1;
+                return 70;
+            }
+            self.previousIndex=self.seletedIndex;
+            NSString *textString = [[reviewRatingArr objectAtIndex:indexPath.row]valueForKey:@"rating-view"];
+            CGSize labelSize=CGSizeMake([UIScreen mainScreen].bounds.size.width-70,0.0);
+            CGRect labelRect = [textString boundingRectWithSize:labelSize
+                                                        options:NSStringDrawingUsesLineFragmentOrigin
+                                                     attributes:@{
+                                                                  NSFontAttributeName : [UIFont systemFontOfSize:13.0]
+                                                                  }
+                                                        context:nil];
+            return labelRect.size.height+70+20;
+        }
+        else
+            return  70;
     }else{
         return  50;
     }
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     self.seletedIndex=indexPath.row;
     if (tableView==self.tableView) {
-    for (EZReviewCellVC *cell in tableView.visibleCells) {
-        if ([cell isKindOfClass:[UITableViewCell class]]) {
-            if (_previousIndex==_seletedIndex) {
-                cell.arrow_iconImg.image=[UIImage imageNamed:@"downArrow"];
-            }
-            else {
-                if (cell.arrow_iconImg.tag == self.seletedIndex) {
-                   cell.arrow_iconImg.image=[UIImage imageNamed:@"upperArrow"];
-                
-                }else{
-                 cell.arrow_iconImg.image=[UIImage imageNamed:@"downArrow"];
-            }
-        }
+        [self.tableView beginUpdates];
+        [self.tableView endUpdates];
     }
-    [self.tableView beginUpdates];
-    [self.tableView endUpdates];
-}
-    }else{
-          
-}
+    else{
+    }
 }
 #pragma mark- Button Arrow Action
 - (IBAction)rightActionArrow:(UIButton*)sender {

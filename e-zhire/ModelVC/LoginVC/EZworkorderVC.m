@@ -75,7 +75,8 @@
             }
         }
         else{
-            [self showUIAlertControllerWithTitle:@"No Work Orders Found!"];
+//            [self showUIAlertControllerWithTitle:@"No Work Orders Found!"];
+            [EZCommonMethod showAlert:nil message:@"No Work Orders Found!"];
         }
         
     } onError:^(NSError *Error) {
@@ -95,6 +96,7 @@
     else
         return YES;
 }
+/*
 -(void)showUIAlertControllerWithTitle:(NSString*)Title{
     
     UIAlertController * alert=   [UIAlertController
@@ -114,6 +116,7 @@
     [self presentViewController:alert animated:YES completion:nil];
     
 }
+  */
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }

@@ -7,8 +7,8 @@
 //
 
 #import "EZCommonMethod.h"
-#define userEmail @"userEmail"
-#define userName  @"username"
+//#define userEmail @"userEmail"
+//#define userName  @"username"
 static NSString*const EZUseremail=@"userEmail";
 static NSString*const EZUserID=@"userId";
 static NSString*const EZUsername=@"username";
@@ -50,17 +50,41 @@ static NSString*const EZniceName=@"niceName";
     [[NSUserDefaults standardUserDefaults] setValue:UserNicename forKey:EZniceName];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
+//Associate save//
++(void)saveAssuserEmail:(NSString *)AssUserEmail{
+    [[NSUserDefaults standardUserDefaults] setValue:AssUserEmail forKey:associateUserEmail];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
++(void)saveAssuserId:(NSString *)assUserId{
+    [[NSUserDefaults standardUserDefaults] setValue:assUserId forKey:associateUserId];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
++(void)saveAssusername:(NSString *)assUsername{
+    [[NSUserDefaults standardUserDefaults] setValue:assUsername forKey:associateUserName];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
++(void)saveAssniceName:(NSString *)assUniceName{
+    [[NSUserDefaults standardUserDefaults] setValue:assUniceName forKey:associateNiceName];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+//client get//
 
-+(NSString*)getUserId { 
++(NSString*)getUserId {
     NSString*str=[[NSUserDefaults standardUserDefaults] valueForKey:EZUserID];
      return str;
 }
-
-+(NSString*)getAssociteUserId {
-    NSString*str=[[NSUserDefaults standardUserDefaults] valueForKey:EZUserID];
++(NSString*)getUserName {
+    NSString*str=[[NSUserDefaults standardUserDefaults] valueForKey:EZUsername];
     return str;
 }
-
++(NSString*)getUserNiceName {
+    NSString*str=[[NSUserDefaults standardUserDefaults] valueForKey:EZniceName];
+    return str;
+}
++(NSString*)getUserEmail {
+    NSString*str=[[NSUserDefaults standardUserDefaults] valueForKey:EZUseremail];
+    return str;
+}
 + (BOOL)validateEmailWithString:(NSString*)email
 {
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";

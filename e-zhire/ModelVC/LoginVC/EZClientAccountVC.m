@@ -49,6 +49,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
+    [self PostApiMethod];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -198,6 +199,7 @@
     return infoCell;
 }
 - (IBAction)editPaymentAction:(id)sender {
+
     EZEditPaymentInformationVc*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZEditPaymentInformationVc"];
     controller.userIdStr=_getUserId;
     controller.getPaymentArr=payemntInfoArr;
@@ -216,7 +218,7 @@
     if (editClientCheck) {
         urlStr=[NSString stringWithFormat:@"%@%@",BaseUrl,editUpdateclient_Api];
         parameter=@{@"user_id":_getUserId,@"streetaddr1":self.currentStreetAddTextFiled.text,@"streetaddr2":self.streetAdd2TextField.text,@"city":self.cityTextFiled.text,@"state":self.stateTextFiled.text,@"zipcode":self.zipCodeTextField.text,@"homePhone":self.homePhoneTextFiled.text,@"cellPhone":self.cellPhoneTextField.text,@"email":self.personalEmailTextFiled.text,@"cellPhoneCarrier":self.cellPhoneCarrierTextFiled.text};
-    
+
     }else{
         urlStr=[NSString stringWithFormat:@"%@%@",BaseUrl,myAccount_Api];
         parameter=@{@"user_id":_getUserId};
@@ -230,12 +232,17 @@
                                                              options:kNilOptions
                                                                error:&error];
          
+         [MBProgressHUD hideHUDForView:self.view animated:YES];
          if (editClientCheck) {
              [MBProgressHUD hideHUDForView:self.view animated:YES];
               if ([[json valueForKey:@"success"] boolValue]==1) {
                   self.address1Label.text=self.currentStreetAddTextFiled.text;
                   self.addLabel2.text=self.streetAdd2TextField.text;
-                  //self.add2ConstraintHeight.constant=0;
+                  if (self.streetAdd2TextField.text==nil) {
+                    self.add2ConstraintHeight.constant=0;
+                  }else{
+                      self.add2ConstraintHeight.constant=30;
+                  }
                   cityStr=self.cityTextFiled.text;
                   stateStr=self.stateTextFiled.text;
                   zipStr=self.zipCodeTextField.text;
@@ -249,7 +256,6 @@
                   [MBProgressHUD hideHUDForView:self.view animated:YES];
                   self.scrollView.userInteractionEnabled=YES;
                   self.editInfoView.hidden=YES;
-                  
               }
               else{
                   [EZCommonMethod showAlert:nil message:@"please check your email"];
@@ -261,6 +267,12 @@
                  self.nameLabel.text=[clientInfo valueForKey:@"name"];
                  self.address1Label.text=[clientInfo valueForKey:@"street_address1"];
                  self.addLabel2.text=[clientInfo valueForKey:@"street_address2"];
+                 if (self.addLabel2.text==nil) {
+                     self.add2ConstraintHeight.constant=0;
+                 }else{
+                     self.add2ConstraintHeight.constant=30;
+                 }
+
                  cityStr=[clientInfo valueForKey:@"city"];
                  stateStr=[clientInfo valueForKey:@"state"];
                  zipStr=[clientInfo valueForKey:@"zip"];
