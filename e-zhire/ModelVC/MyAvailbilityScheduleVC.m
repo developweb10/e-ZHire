@@ -346,7 +346,6 @@
 }
 - (IBAction)dayHourCloseAction:(id)sender {
     self.weekView.hidden=YES;
-    
 }
 - (IBAction)dateHourDayCheckAction:(UIButton*)sender {
     if (sender.selected==NO) {
@@ -374,10 +373,10 @@
     }
 
 }
-
 #pragma mark- PickerView delegate
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    
     return 1;
 }
 // tell the picker how many rows are available for a given component
@@ -392,7 +391,7 @@
     return [timeArr objectAtIndex: row];
 }
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow: (NSInteger)row inComponent:(NSInteger)component {
-
+    
     if (sundayFromCheck) {
         sundayFromCheck=NO;
        self.sundayFromTimeText.text=[timeArr objectAtIndex:row];
@@ -632,46 +631,8 @@
         [self timePickerView];
     }
     
-    
-    
-    
-}
--(void)textFiledDelegate{
-     self.sundayFromTimeText.delegate=self;
-     self.sunTimeToText.delegate=self;
-     self.sundayOptionFromTxt.delegate=self;
-    self.sundayOptionalToTxt.delegate=self;
-    self.monTimeFromTxt.delegate=self;
-    self.monDayTimeToText.delegate=self;
-    self.monOptionalToTxt.delegate=self;
-    self.monOptionalFromTimeTxt.delegate=self;
-
-    self.tuesdayFromTimeTxt.delegate=self;
-    self.tuesToTimeTxt.delegate=self;
-    self.tuesOptionalTimeTxt.delegate=self;
-    self.tuesOptionalToTextField.delegate=self;
-
-    self.wedFromTimeTxt.delegate=self;
-    self.wedToTimeTxt.delegate=self;
-    self.wedOptionalFromTime.delegate=self;
-    self.wedOptionalTotime.delegate=self;
-    
-    self.thuFromTimeTxt.delegate=self;
-    self.thuToTimeTxt.delegate=self;
-    self.thuoptionalFromTime.delegate=self;
-    self.thursdayOptionalToTime.delegate=self;
-    
-    self.fridayFromTime.delegate=self;
-    self.fridayToTime.delegate=self;
-    self.fridayOptionalFromTime.delegate=self;
-    self.fridayOptionalToTime.delegate=self;
-    
-    self.saturdayFromTimeTxt.delegate=self;
-    self.saturdayToTimeTxt.delegate=self;
-    self.saturdayOptionalFromTime.delegate=self;
-    self.satOptionalToTimeTxt.delegate=self;
-
-   
 }
 
+- (IBAction)helpAction:(id)sender {
+}
 @end

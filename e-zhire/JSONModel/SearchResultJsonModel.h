@@ -23,5 +23,5 @@
 @property (nonatomic) NSString<Optional> *service;
 @property (nonatomic) NSString<Optional> *startTime;
 @property (nonatomic) NSString<Optional> *rating;
-
+@property (nonatomic) NSString<Optional> *dataid;
 @end

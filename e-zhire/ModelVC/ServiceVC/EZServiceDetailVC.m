@@ -236,7 +236,7 @@
     }
 }
 - (IBAction)searchBtnAction:(UIButton*)sender {
-    
+
     if (self.zipcodeServiceTexfield.text.length>0) {
         if (self.dateserviceTextFiled.text.length>0) {
             if ([EZCommonMethod validateZip:self.zipcodeServiceTexfield.text]) {
@@ -260,7 +260,6 @@
                 else{
                     [self SearchApiMethod];
                 }
-                
             }
             else{
                 [EZCommonMethod showAlert:nil message:@"Please enter valid zipCode"];
@@ -301,11 +300,9 @@
         return YES;
     }
 }
-
 - (void)localeDidChange {
     [self.calendar setLocale:[NSLocale currentLocale]];
 }
-
 - (BOOL)dateIsDisabled:(NSDate *)date {
     for (NSDate *disabledDate in self.disabledDates) {
         if ([disabledDate isEqualToDate:date]) {
@@ -314,7 +311,6 @@
     }
     return NO;
 }
-
 #pragma mark - CKCalendarDelegate
 
 - (void)calendar:(CKCalendarView *)calendar configureDateItem:(CKDateItem *)dateItem forDate:(NSDate *)date {
@@ -539,29 +535,25 @@
         [parameter setObject:self.zipcodeServiceTexfield.text forKey:@"zipcode"];
         [parameter setObject:self.serviceStartTimeLabel.text forKey:@"tosfrom"];
     }
-    
-     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
      [[NetworkManager Instance]postRequestWithUrl:urlStr parameter:parameter onCompletion:^(id dict) {
         NSError* error;
         NSDictionary* json = [NSJSONSerialization JSONObjectWithData:dict
                                                              options:kNilOptions
                                                                error:&error];
         
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
-        NSLog(@"%@",json);
+         [MBProgressHUD hideHUDForView:self.view animated:YES];
         if ([[json valueForKey:@"success"] boolValue]==1) {
-            NSLog(@"json%@",json);
             NSMutableArray *result=[NSMutableArray new];
             result =[SearchResultJsonModel arrayOfModelsFromDictionaries:[json valueForKey:@"value"] error:&error];
             EZSearchServiceVC *object=[self.storyboard instantiateViewControllerWithIdentifier:@"EZSearchServiceVC"];
             object.passingArray=[NSMutableArray new];
             object.passingArray=result;
             [self.navigationController pushViewController:object animated:YES];
-            NSLog(@"%@",result);
             
         }
         else{
-            
             NSString*zipCode=self.zipcodeServiceTexfield.text;
             NSString*message=[json valueForKey:@"message"];
             EZSearchZipeCodeVC *contorller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZSearchZipeCodeVC"];
@@ -570,13 +562,9 @@
             [self.navigationController pushViewController:contorller animated:YES];
         }
     }onError:^(NSError *Error) {
-        NSLog(@"%@:",Error);
         [MBProgressHUD hideHUDForView:self.view animated:YES];
-        //[EZCommonMethod showAlert:nil message:@"Please try again"];
+        [EZCommonMethod showAlert:nil message:@"Please try again"];
     }];
-    
-    
-    
 }
 
 @end

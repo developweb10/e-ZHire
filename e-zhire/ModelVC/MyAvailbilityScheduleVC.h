@@ -45,9 +45,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *monOptionalToTxt;
 @property (weak, nonatomic) IBOutlet UITextField *tuesdayFromTimeTxt;
 @property (weak, nonatomic) IBOutlet UITextField *tuesOptionalTimeTxt;
-
 @property (weak, nonatomic) IBOutlet UITextField *tuesOptionalToTextField;
-
 @property (weak, nonatomic) IBOutlet UITextField *tuesToTimeTxt;
 @property (weak, nonatomic) IBOutlet UITextField *wedFromTimeTxt;
 @property (weak, nonatomic) IBOutlet UITextField *wedToTimeTxt;
@@ -65,5 +63,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *saturdayToTimeTxt;
 @property (weak, nonatomic) IBOutlet UITextField *saturdayOptionalFromTime;
 @property (weak, nonatomic) IBOutlet UITextField *satOptionalToTimeTxt;
+@property (weak, nonatomic) IBOutlet UITextField *selectDateTxt;
+@property (weak, nonatomic) IBOutlet UITextField *minimumTimeTxt;
+- (IBAction)helpAction:(id)sender;
 
 @end

@@ -35,7 +35,8 @@
 #define editUpdateclient_Api @"editclient.php"
 #define selectCarrier_Api @"selectCarrier.php"
 #define send_Api @"send.php"
-
-//https://www.e-zhire.com/api/editclient.php
+#define editPaymentAcc_Api @"editpayment.php"
+#define delete_Api @"deleteCardinfo.php"
+#define reviewmyProfile_Api @"reviewmyProfile.php"
 
 #endif /* ApiConstant_h */

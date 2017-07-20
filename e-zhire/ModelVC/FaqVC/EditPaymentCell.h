@@ -10,7 +10,6 @@
 
 @interface EditPaymentCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *visaCradNameLbl;
-
 @property (weak, nonatomic) IBOutlet UILabel *cardNumberLbl;
 @property (weak, nonatomic) IBOutlet UILabel *expireDateLbl;
 @property (weak, nonatomic) IBOutlet UIButton *editBtn;

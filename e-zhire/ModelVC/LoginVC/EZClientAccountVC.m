@@ -12,16 +12,22 @@
 #import "EZworkorderVC.h"
 #import "EZInvoicesVC.h"
 #import "EZEditPaymentInformationVc.h"
-@interface EZClientAccountVC ()
+#import "EditpaymentJsonModel.h"
+
+@interface EZClientAccountVC ()<EditPaymenetDelegate>
 {
     NSDictionary*clientInfo;
-    BOOL checkPassword;
+    BOOL checkEditPayment;
 //  NSString*userId;
     NSMutableArray*carrerArr;
     UIAlertView *pikerAlert;
     BOOL editClientCheck;
     UIPickerView *pickedView;
-  
+    NSString*cityStr;
+    NSString*stateStr;
+    NSString*zipStr;
+    NSMutableArray*payemntInfoArr;
+    NSString*paymentId;
 }
 @end
 
@@ -31,7 +37,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.editInfoView.hidden=YES;
-    self.paymentInfo=[[NSMutableArray alloc]init];
    // userId=[EZCommonMethod getUserId];
     NSLog(@"user id %@",_getUserId);
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
@@ -39,12 +44,11 @@
     [self PostApiMethod];
     carrerArr=[[NSMutableArray alloc]init];
     [self.menuContainerViewController setPanMode:MFSideMenuPanModeNone];
-
+    payemntInfoArr=[[NSMutableArray alloc]init];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
-
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -55,7 +59,10 @@
     viewcontroller.sendUserId=_getUserId;
     [self.navigationController pushViewController:viewcontroller animated:YES];
 }
-
+-(void)reloadDataWithArray:(NSMutableArray*)Array{
+    payemntInfoArr=Array;
+    [self.detailTableView reloadData];
+}
 - (IBAction)closePopupAction:(id)sender {
     self.editInfoView.hidden=YES;
     self.scrollView.userInteractionEnabled=YES;
@@ -167,7 +174,7 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.paymentInfo.count+1;
+    return payemntInfoArr.count+1;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -180,18 +187,25 @@
     }
     static NSString *MyIdentifier = @"EZPaymentinformationCell";
     EZPaymentinformationCell *infoCell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
-    infoCell.accountDetailLabel.text=[self.paymentInfo objectAtIndex:indexPath.item-1];
+    EditpaymentJsonModel*obj=[payemntInfoArr objectAtIndex:indexPath.row-1];
+    NSString*name=obj.name;
+    NSString*accountNo=obj.account;
+    NSString*expirDate=obj.expiry;
+    NSMutableArray *myStrings = [[NSMutableArray alloc] initWithObjects:name, accountNo,expirDate,nil];
+    NSString *joinedString = [myStrings componentsJoinedByString:@""];    
+    infoCell.accountDetailLabel.text=joinedString;
 
     return infoCell;
 }
 - (IBAction)editPaymentAction:(id)sender {
     EZEditPaymentInformationVc*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZEditPaymentInformationVc"];
+    controller.userIdStr=_getUserId;
+    controller.getPaymentArr=payemntInfoArr;
+    controller.delegate=self;
     [self.navigationController pushViewController:controller animated:YES];
 }
-
 #pragma mark- API implementation
 -(void)PostApiMethod{
-    
     bool check=[EZCommonMethod checkInternetConnection];
     if(!check){
         [EZCommonMethod showAlert:nil message:@"Please check your internet connection"];
@@ -211,6 +225,7 @@
      [[NetworkManager Instance]postRequestWithUrl:urlStr parameter:parameter onCompletion:^(id dict) {
         NSLog(@"%@",dict);
         NSError* error;
+
         NSDictionary* json = [NSJSONSerialization JSONObjectWithData:dict
                                                              options:kNilOptions
                                                                error:&error];
@@ -218,12 +233,12 @@
          if (editClientCheck) {
              [MBProgressHUD hideHUDForView:self.view animated:YES];
               if ([[json valueForKey:@"success"] boolValue]==1) {
-                                    self.address1Label.text=self.currentStreetAddTextFiled.text;
+                  self.address1Label.text=self.currentStreetAddTextFiled.text;
                   self.addLabel2.text=self.streetAdd2TextField.text;
                   //self.add2ConstraintHeight.constant=0;
-                  NSString*cityStr=self.cityTextFiled.text;
-                  NSString*stateStr=self.stateTextFiled.text;
-                  NSString*zipStr=self.zipCodeTextField.text;
+                  cityStr=self.cityTextFiled.text;
+                  stateStr=self.stateTextFiled.text;
+                  zipStr=self.zipCodeTextField.text;
                   NSMutableArray *myStrings = [[NSMutableArray alloc] initWithObjects:cityStr, stateStr, zipStr,nil];
                   NSString *joinedString = [myStrings componentsJoinedByString:@","];
                   self.ZipCodeLabel.text=joinedString;
@@ -238,19 +253,17 @@
               }
               else{
                   [EZCommonMethod showAlert:nil message:@"please check your email"];
-   
               }
          }else{
              if ([[json valueForKey:@"success"] boolValue]==1) {
                  clientInfo = [json objectForKey:@"client_info"];
-                 self.paymentInfo = [json objectForKey:@"payment_info"];
+                payemntInfoArr=[EditpaymentJsonModel arrayOfModelsFromDictionaries:[json valueForKey:@"payment_info"] error:&error];
                  self.nameLabel.text=[clientInfo valueForKey:@"name"];
                  self.address1Label.text=[clientInfo valueForKey:@"street_address1"];
                  self.addLabel2.text=[clientInfo valueForKey:@"street_address2"];
-                 //self.add2ConstraintHeight.constant=0;
-                 NSString*cityStr=[clientInfo valueForKey:@"city"];
-                 NSString*stateStr=[clientInfo valueForKey:@"state"];
-                 NSString*zipStr=[clientInfo valueForKey:@"zip"];
+                 cityStr=[clientInfo valueForKey:@"city"];
+                 stateStr=[clientInfo valueForKey:@"state"];
+                 zipStr=[clientInfo valueForKey:@"zip"];
                  NSMutableArray *myStrings = [[NSMutableArray alloc] initWithObjects:cityStr, stateStr, zipStr,nil];
                  NSString *joinedString = [myStrings componentsJoinedByString:@","];
                  self.ZipCodeLabel.text=joinedString;
@@ -271,7 +284,7 @@
       
     } onError:^(NSError *Error) {
         NSLog(@"%@:",Error);
-        [EZCommonMethod showAlert:nil message:@"try again"];
+        [EZCommonMethod showAlert:nil message:@"please wait"];
         [self PostApiMethod];
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
@@ -333,19 +346,17 @@
     
     return [carrerArr count];
 }
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     return [[carrerArr objectAtIndex: row]valueForKey:@"name"];
 }
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow: (NSInteger)row inComponent:(NSInteger)component {
     
-    self.cellPhoneCarrierTextFiled.text=[[carrerArr objectAtIndex:row]valueForKey:@"name"];
+  self.cellPhoneCarrierTextFiled.text=[[carrerArr objectAtIndex:row]valueForKey:@"name"];
 }
 - (IBAction)updateAction:(id)sender {
     editClientCheck=YES;
     [self PostApiMethod];
 }
-
 - (IBAction)editClientInfoAction:(UIButton*)sender {
     [self.view addSubview:self.editInfoView];
     CGRect size=self.editInfoView.bounds;
@@ -355,16 +366,17 @@
     self.editInfoView.hidden=NO;
     self.scrollView.userInteractionEnabled=NO;
     self.accountNameLbl.text=[clientInfo valueForKey:@"name"];
-    self.currentStreetAddTextFiled.text=[clientInfo valueForKey:@"street_address1"];
-    self.streetAdd2TextField.text=[clientInfo valueForKey:@"street_address2"];
-    //self.add2ConstraintHeight.constant=0;
+    self.currentStreetAddTextFiled.text=self.address1Label.text;
+    self.streetAdd2TextField.text=self.addLabel2.text;
     self.cellPhoneCarrierTextFiled.text=[clientInfo valueForKey:@"cellCarrier"];
-    self.cityTextFiled.text=[clientInfo valueForKey:@"city"];
-    self.stateTextFiled.text=[clientInfo valueForKey:@"state"];
-    self.zipCodeTextField.text=[clientInfo valueForKey:@"zip"];
-    self.homePhoneTextFiled.text=[clientInfo valueForKey:@"mobile"];
-    self.cellPhoneTextField.text=[clientInfo valueForKey:@"other_phone"];
-    self.personalEmailTextFiled.text=[clientInfo valueForKey:@"personal_email_id"];
+    self.cityTextFiled.text=cityStr;
+    self.stateTextFiled.text=stateStr;
+    self.zipCodeTextField.text=zipStr;
+    self.homePhoneTextFiled.text= self.mobilePhoneLabel.text;
+    self.cellPhoneTextField.text= self.otherPhoneLabel.text;
+    self.personalEmailTextFiled.text=self.personalEmailLabel.text;
+    self.otherPhoneLabel.text=self.cellPhoneTextField.text;
+    self.personalEmailLabel.text=self.personalEmailTextFiled.text;
 
 }
 @end

@@ -8,7 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol EditPaymenetDelegate <NSObject>
+
+-(void)reloadDataWithArray:(NSMutableArray*)Array;
+
+
+@end
+
 @interface EZEditPaymentInformationVc : UIViewController<UIActionSheetDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UIPopoverPresentationControllerDelegate>
+
+@property(weak,nonatomic)id <EditPaymenetDelegate> delegate;
+
+@property (weak, nonatomic) IBOutlet UIView *creditView;
 @property (weak, nonatomic) IBOutlet UILabel *paymentInfoLbl;
 @property (weak, nonatomic) IBOutlet UILabel *activeAccountLbl;
 - (IBAction)selectMonthAction:(id)sender;
@@ -35,7 +46,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *defaultcardLabel;
 - (IBAction)selectDefaultCardAction:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *selectDefaultCradLabel;
-
+@property(strong)NSString*paymentIdStr;
+@property(strong)NSString*userIdStr;
+@property(strong,nonatomic)NSMutableArray*getPaymentArr;
 - (IBAction)changeDefaultCardAction:(id)sender;
 
 
