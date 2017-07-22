@@ -38,7 +38,8 @@
 #define editPaymentAcc_Api @"editpayment.php"
 #define delete_Api @"deleteCardinfo.php"
 #define reviewmyProfile_Api @"reviewmyProfile.php"
-
 #define saveCreditdetails_Api @"saveCreditdetails.php"
+#define sendRequest_Api @"sendRequest.php"
+
 
 #endif /* ApiConstant_h */

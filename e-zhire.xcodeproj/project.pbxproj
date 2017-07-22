@@ -42,6 +42,7 @@
 		038497E71F18EFE700BF06E7 /* EditPaymentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 038497E61F18EFE700BF06E7 /* EditPaymentCell.m */; };
 		038A7FCF1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 038A7FCE1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.m */; };
 		03992B521EE2EDEA00636A47 /* EZServiceProviderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03992B511EE2EDEA00636A47 /* EZServiceProviderVC.m */; };
+		03AB64751F21DF720079083D /* ReviewCellVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AB64741F21DF720079083D /* ReviewCellVideo.m */; };
 		03ADF4911F0394CE0045EADD /* EZWorkViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03ADF4901F0394CE0045EADD /* EZWorkViewVC.m */; };
 		03AE46611F1E3C5900DB5083 /* EditpaymentJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AE46601F1E3C5900DB5083 /* EditpaymentJsonModel.m */; };
 		03C18A501F06342900672C3E /* AssociateManagementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C18A4F1F06342900672C3E /* AssociateManagementVC.m */; };
@@ -195,6 +196,8 @@
 		038A7FCE1EFE5CDA00B4C31E /* EZSearchZipeCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZSearchZipeCodeVC.m; sourceTree = "<group>"; };
 		03992B501EE2EDEA00636A47 /* EZServiceProviderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZServiceProviderVC.h; sourceTree = "<group>"; };
 		03992B511EE2EDEA00636A47 /* EZServiceProviderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZServiceProviderVC.m; sourceTree = "<group>"; };
+		03AB64731F21DF710079083D /* ReviewCellVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewCellVideo.h; sourceTree = "<group>"; };
+		03AB64741F21DF720079083D /* ReviewCellVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewCellVideo.m; sourceTree = "<group>"; };
 		03ADF48F1F0394CE0045EADD /* EZWorkViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZWorkViewVC.h; sourceTree = "<group>"; };
 		03ADF4901F0394CE0045EADD /* EZWorkViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZWorkViewVC.m; sourceTree = "<group>"; };
 		03AE465F1F1E3C5800DB5083 /* EditpaymentJsonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditpaymentJsonModel.h; sourceTree = "<group>"; };
@@ -218,7 +221,7 @@
 		03C890481F0524BC002FC3DC /* EZEditPaymentInformationVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZEditPaymentInformationVc.h; sourceTree = "<group>"; };
 		03C890491F0524BC002FC3DC /* EZEditPaymentInformationVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZEditPaymentInformationVc.m; sourceTree = "<group>"; };
 		03C8904C1F0526D3002FC3DC /* EZAssociateAccountVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZAssociateAccountVC.h; sourceTree = "<group>"; };
-		03C8904D1F0526D3002FC3DC /* EZAssociateAccountVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZAssociateAccountVC.m; sourceTree = "<group>"; };
+		03C8904D1F0526D3002FC3DC /* EZAssociateAccountVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZAssociateAccountVC.m; sourceTree = "<group>"; usesTabs = 0; };
 		03C890501F0529A7002FC3DC /* AssociateAccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssociateAccountCell.h; sourceTree = "<group>"; };
 		03C890511F0529A7002FC3DC /* AssociateAccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssociateAccountCell.m; sourceTree = "<group>"; };
 		03CBF74A1EFD048100F6C52D /* EZReviewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZReviewVC.h; sourceTree = "<group>"; };
@@ -599,8 +602,8 @@
 			children = (
 				03ADF48F1F0394CE0045EADD /* EZWorkViewVC.h */,
 				03ADF4901F0394CE0045EADD /* EZWorkViewVC.m */,
-				038497E21F18BA4800BF06E7 /* WorkViewDetailCell.h */,
 				038497E31F18BA4800BF06E7 /* WorkViewDetailCell.m */,
+				038497E21F18BA4800BF06E7 /* WorkViewDetailCell.h */,
 			);
 			name = WorkViewVC;
 			path = LoginVC;
@@ -701,6 +704,8 @@
 			children = (
 				03CBF74A1EFD048100F6C52D /* EZReviewVC.h */,
 				03CBF74B1EFD048100F6C52D /* EZReviewVC.m */,
+				03AB64731F21DF710079083D /* ReviewCellVideo.h */,
+				03AB64741F21DF720079083D /* ReviewCellVideo.m */,
 			);
 			name = ReviewVC;
 			path = ServiceVC;
@@ -1410,6 +1415,7 @@
 				03FA9EB91EFBC12400DAC8CC /* SearchServiceCell.m in Sources */,
 				030E14921EEFCE9C0071D9D1 /* AvailableServiceJsonModel.m in Sources */,
 				03D8A6481F07B6F400713B46 /* FSCalendarDelegationFactory.m in Sources */,
+				03AB64751F21DF720079083D /* ReviewCellVideo.m in Sources */,
 				03AE46611F1E3C5900DB5083 /* EditpaymentJsonModel.m in Sources */,
 				032F3C131F0B849E00DF3576 /* NSDate+CalendarView.m in Sources */,
 				03EC06591EF12DB4008FBE16 /* EZForgotPasswordVC.m in Sources */,

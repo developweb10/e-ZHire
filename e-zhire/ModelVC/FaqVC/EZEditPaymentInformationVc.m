@@ -150,7 +150,11 @@
     cell.editBtn.tag=indexPath.row;
     [cell.deleteBtn addTarget:self action:@selector(deleteBtn:) forControlEvents:UIControlEventTouchUpInside];
     [cell.editBtn addTarget:self action:@selector(editAction:) forControlEvents:UIControlEventTouchUpInside];
-    
+    if (checkAdd) {
+        cell.defaultBtn.hidden=YES;
+    }else{
+         cell.defaultBtn.hidden=NO;
+    }
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -159,18 +163,18 @@
 -(IBAction)deleteBtn:(UIButton*)sender{
     deleteTag=sender.tag;
     objDelete=[self.getPaymentArr objectAtIndex:deleteTag];
-    //  NSString*selectId=[NSString stringWithFormat:@"_%lu", (unsigned long)indx];
+    //NSString*selectId=[NSString stringWithFormat:@"_%lu", (unsigned long)indx];
     deleteId=objDelete.id;
     [self deleteApi];
 }
 -(IBAction)editAction:(UIButton*)sender{
-    checkAdd=NO;
+   // checkAdd=NO;
     selectedTag=sender.tag;
     [UIView transitionWithView:self.creditView
                       duration:0.5
                        options:UIViewAnimationOptionTransitionCrossDissolve
                     animations:^{
-                        // self.view.backgroundColor=[UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.2];
+                    // self.view.backgroundColor=[UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.2];
                         self.creditView.hidden=NO;
                         objEdit=[_getPaymentArr objectAtIndex:selectedTag];
                         self.cardTypeLbl.text=objEdit.name;
@@ -204,7 +208,6 @@
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         if([[json valueForKey:@"success"] boolValue]==1)
         {
-            
             [_getPaymentArr removeObjectAtIndex:deleteTag];
             [self.editPaymentTableView reloadData];
             [self.delegate reloadDataWithArray:_getPaymentArr];

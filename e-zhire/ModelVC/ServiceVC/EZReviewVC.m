@@ -11,6 +11,7 @@
 #import "EZAboutDetailCellVC.h"
 #import "EZReviewCellVC.h"
 #import "EZClientPriceCell.h"
+#import "ReviewCellVideo.h"
 
 @interface EZReviewVC ()
 {
@@ -19,6 +20,7 @@
     NSMutableArray*ImageArr;
     NSMutableArray*reviewRatingArr;
     NSMutableArray*priceBox;
+    NSMutableArray*videoArr;
  
 }
 @end
@@ -32,6 +34,7 @@
     ImageArr=[[NSMutableArray alloc]init];
     reviewRatingArr=[[NSMutableArray alloc]init];
     priceBox=[[NSMutableArray alloc]init];
+    videoArr=[[NSMutableArray alloc]init];
     self.previousIndex=-2;
     self.webView.delegate=self;
  //imageArr=[NSArray arrayWithObjects:@"clean",@"banner1",@"banner2",@"banner3",@"banner4",@"banner5",@"banner6", nil];
@@ -57,8 +60,7 @@
         return;
     }
     NSString*urlStr=[NSString stringWithFormat:@"%@%@",BaseUrl,reviewmyProfile_Api];
-    NSDictionary*parameter=@{@"dataid":_dateId,@"data_id":_searchId};
-   // {"dataid":"2105","data_id":"reqassoc-GAA000410"}
+    NSDictionary*parameter=@{@"dataid":_dateId,@"data_id":_searchId,@"userId":@""};
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [[NetworkManager Instance]postRequestWithUrl:urlStr parameter:parameter onCompletion:^(id dict) {
         NSLog(@"%@",dict);
@@ -66,27 +68,25 @@
         NSDictionary* json = [NSJSONSerialization JSONObjectWithData:dict
                                                              options:kNilOptions
                                                                error:&error];
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        
         if([json valueForKey:@"aboutme"]){
             self.aboutTextLabel.text=[json valueForKey:@"aboutme"];
             serviceArr=[json valueForKey:@"services"];
-            NSString*videoUrl=[json valueForKey:@"video"];
-//          [self.webView loadRequest:[NSURLRequest requestWithURL:videoUrl]];
-            NSString*thumbnailImage=[json valueForKey:@"thumbnail"];
-            ImageArr=[json valueForKey:@"image"];
+            videoArr=[json valueForKey:@"video"];
+            ImageArr=[json valueForKey:@"thumbnail"];
             NSString *getImagePath = [ImageArr objectAtIndex:0];
             [self.photoImgage sd_setImageWithURL:[NSURL URLWithString:getImagePath] placeholderImage:[UIImage imageNamed:@"serivePlaceHolder"]];
-            
-            [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[json valueForKey:@"video"]]]];
-
             reviewRatingArr=[json valueForKey:@"Review_rating"];
             priceBox=[json valueForKey:@"price-box"];
             [self.tableView reloadData];
             [self.serviceTableView reloadData];
             [self.firstCollectionView reloadData];
             [self.secondCollectionView reloadData];
+            [self.videoCollectionView reloadData];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
         }
         else{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
             [EZCommonMethod showAlert:nil message:@"There is some problem to proceed"];
         }
         
@@ -116,8 +116,11 @@
      if (collectionView==self.firstCollectionView) {
       return serviceArr.count;
          
-     }else{
-         
+     }
+     else if(collectionView==self.videoCollectionView){
+         return videoArr.count;
+     }
+     else{
        return ImageArr.count;
      }
 }
@@ -132,14 +135,22 @@
         }else{
         }
         return cell;
-        
-    }else{
+    }
+    else if(collectionView==self.videoCollectionView){
+        ReviewCellVideo *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"ReviewCellVideo" forIndexPath:indexPath];
+        NSString*cellVideo=[videoArr objectAtIndex:indexPath.row];
+//      NSString *stringurl=[NSString stringWithFormat:@"%@",cellVideo];
+        NSString *trimmed = [cellVideo stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        NSURLRequest*request=[NSURLRequest requestWithURL:[NSURL URLWithString:trimmed]];
+        [cell.videoWebView loadRequest:request];
+     // [cell.videoWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:cellVideo]]];
+ 
+       return cell;
+    }
+    else{
         EZPhotoCellVC *secCell=[collectionView dequeueReusableCellWithReuseIdentifier:@"EZPhotoCellVC" forIndexPath:indexPath];
         NSString*ImgStr=[ImageArr objectAtIndex:indexPath.row];
         [secCell.clientProfileImage sd_setImageWithURL:[NSURL URLWithString:ImgStr] placeholderImage:[UIImage imageNamed:@"serivePlaceHolder"]];
-        
-    
-//        secCell.clientProfileImage.image=[UIImage imageNamed:[ImageArr objectAtIndex:indexPath.row]];
         
         return secCell;
     }
@@ -149,13 +160,15 @@
   if (collectionView ==self.firstCollectionView){
         
   }
+  else if (collectionView ==self.videoCollectionView){
+      
+   }
   else{
         currentImage=indexPath.item;
         self.leftArrowBtn.enabled = YES;
         self.rightArrowBtn.enabled = YES;
         NSString *getImagePath = [ImageArr objectAtIndex:indexPath.row];
         [self.photoImgage sd_setImageWithURL:[NSURL URLWithString:getImagePath] placeholderImage:[UIImage imageNamed:@"serivePlaceHolder"]];
-//       [self.photoImgage setImage:[UIImage imageNamed:getImagePath]];
         [self.secondCollectionView reloadData];
   }
 }
@@ -246,7 +259,7 @@
     if (tableView==self.tableView) {
         [self.tableView beginUpdates];
         [self.tableView endUpdates];
-    }
+ ..........,,,,,,,,,,,,,,,,zzz...,,,,,,,,   }
     else{
     }
 }
@@ -257,8 +270,7 @@
         sender.enabled = currentImage == ImageArr.count-1?NO:YES;
         self.leftArrowBtn.enabled = YES;
         NSString *getImagePath = [ImageArr objectAtIndex:currentImage];
-//        [self.photoImgage setImage:[UIImage imageNamed:getImagePath]];
-          [self.photoImgage sd_setImageWithURL:[NSURL URLWithString:getImagePath] placeholderImage:[UIImage imageNamed:@"serivePlaceHolder"]];
+        [self.photoImgage sd_setImageWithURL:[NSURL URLWithString:getImagePath] placeholderImage:[UIImage imageNamed:@"serivePlaceHolder"]];
         [self.secondCollectionView reloadData];
     }
 }
@@ -271,8 +283,6 @@
         NSString *getImagePath = [ImageArr objectAtIndex:currentImage];
         
         [self.photoImgage sd_setImageWithURL:[NSURL URLWithString:getImagePath] placeholderImage:[UIImage imageNamed:@"serivePlaceHolder"]];
-
-//        [self.photoImgage setImage:[UIImage imageNamed:getImagePath]];
         [self.secondCollectionView reloadData];
     }
 

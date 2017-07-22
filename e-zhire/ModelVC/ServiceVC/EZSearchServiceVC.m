@@ -90,7 +90,6 @@
 }
 -(IBAction)reviewProfileClicked:(UIButton*)sender{
     SearchResultJsonModel*objData=[self.passingArray objectAtIndex:sender.tag];
-
     EZReviewVC *contorller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZReviewVC"];
     contorller.dateId=objData.dataid;
     contorller.searchId=objData.search_Id;

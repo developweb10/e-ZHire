@@ -16,7 +16,7 @@
 @property (nonatomic) NSString<Optional> *availability;
 @property (nonatomic) NSString<Optional> *date;
 @property (nonatomic) NSString<Optional> *establish_compilation_time;
-@property (nonatomic) NSString<Optional> * search_Id;
+@property (nonatomic) NSString<Optional> *search_Id;
 @property (nonatomic) NSString<Optional> *name;
 @property (nonatomic) NSString<Optional> *profile_pic;
 @property (nonatomic) NSString<Optional> *rate_per_hours;

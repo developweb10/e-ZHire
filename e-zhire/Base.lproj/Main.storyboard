@@ -658,13 +658,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions@e-zhire.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teo-6F-JCF">
-                                                <rect key="frame" x="126" y="41.5" width="104" height="16.5"/>
+                                                <rect key="frame" x="125.5" y="41.5" width="104" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="12"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(800) 514-5234 toll free" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nh-qw-0jM">
-                                                <rect key="frame" x="123.5" y="60" width="108.5" height="16.5"/>
+                                                <rect key="frame" x="124" y="60" width="108.5" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="12"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -701,7 +701,7 @@ Suwanee, GA 30024 USA</string>
                                         <rect key="frame" x="10" y="413" width="355" height="234"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEND US A MESAGE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8H-Wi-Nn6">
-                                                <rect key="frame" x="121" y="0.0" width="114" height="21"/>
+                                                <rect key="frame" x="120.5" y="0.0" width="114" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="xg0-uo-3zB"/>
                                                 </constraints>
@@ -710,7 +710,7 @@ Suwanee, GA 30024 USA</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCt-Mc-dpr">
-                                                <rect key="frame" x="121" y="18" width="114" height="2"/>
+                                                <rect key="frame" x="120.5" y="18" width="114" height="2"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="Wds-gu-dZY"/>
@@ -2275,7 +2275,7 @@ Suwanee, GA 30024 USA</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW IT WORKS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOr-QU-USX">
-                                <rect key="frame" x="128" y="124" width="119.5" height="16"/>
+                                <rect key="frame" x="128.5" y="124" width="119.5" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="Rbh-Wb-DWh"/>
                                 </constraints>
@@ -3582,6 +3582,9 @@ Suwanee, GA 30024 USA</string>
                                                         <state key="normal" title="Got a Question?...Email Us">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="gotqusetionAction:" destination="dMU-G6-hK1" eventType="touchUpInside" id="4Qg-C8-rmP"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.88097727299999995" green="0.88096094130000002" blue="0.88097065689999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -3677,14 +3680,14 @@ Suwanee, GA 30024 USA</string>
                         <viewControllerLayoutGuide type="bottom" id="3f3-7e-Nve"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ofs-JX-Ag5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="980"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1140"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QZl-Ay-Nke">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="980"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1140"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fjj-re-fbf">
-                                        <rect key="frame" x="5" y="0.0" width="365" height="956.5"/>
+                                        <rect key="frame" x="5" y="0.0" width="365" height="1125"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyT-Hw-I3p">
                                                 <rect key="frame" x="8" y="35" width="349" height="0.0"/>
@@ -3693,30 +3696,30 @@ Suwanee, GA 30024 USA</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0zN-Qi-IqI">
-                                                <rect key="frame" x="0.0" y="40" width="365" height="133"/>
+                                                <rect key="frame" x="0.0" y="40" width="365" height="100"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="133" id="lg2-dr-63P"/>
+                                                    <constraint firstAttribute="height" constant="100" id="lg2-dr-63P"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GqV-yp-eTI">
-                                                    <size key="itemSize" width="144" height="120"/>
+                                                    <size key="itemSize" width="144" height="100"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EZAboutDetailCellVC" id="5CI-dK-Ie5" customClass="EZAboutDetailCellVC">
-                                                        <rect key="frame" x="0.0" y="6.5" width="144" height="120"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="144" height="100"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                            <rect key="frame" x="0.0" y="0.0" width="144" height="120"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="144" height="100"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hgi-k6-Ry6">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="144" height="100"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="144" height="80"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FULL OR PART TIME" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vh2-GE-60h">
-                                                                            <rect key="frame" x="26" y="15" width="116" height="16.5"/>
+                                                                            <rect key="frame" x="26" y="14.5" width="116" height="16.5"/>
                                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="12"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -3739,7 +3742,7 @@ Suwanee, GA 30024 USA</string>
                                                                     </constraints>
                                                                 </view>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="triangle" translatesAutoresizingMaskIntoConstraints="NO" id="mm3-by-vWc">
-                                                                    <rect key="frame" x="124" y="100" width="15" height="15"/>
+                                                                    <rect key="frame" x="124" y="80" width="15" height="15"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="15" id="n0Z-hK-gdc"/>
                                                                         <constraint firstAttribute="width" constant="15" id="wat-Xs-mVw"/>
@@ -3765,13 +3768,69 @@ Suwanee, GA 30024 USA</string>
                                                     <outlet property="delegate" destination="l2C-Q3-xFm" id="WB5-2c-BkS"/>
                                                 </connections>
                                             </collectionView>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kGe-f4-pml">
+                                                <rect key="frame" x="10" y="150" width="345" height="160"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="160" id="Dds-2q-1Mg"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZM5-Mk-Atv">
+                                                    <size key="itemSize" width="351" height="158"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ReviewCellVideo" id="Tv6-6J-mfs" customClass="ReviewCellVideo">
+                                                        <rect key="frame" x="0.0" y="1" width="351" height="158"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                            <rect key="frame" x="0.0" y="0.0" width="351" height="158"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xz9-Yl-r3f">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="351" height="158"/>
+                                                                    <subviews>
+                                                                        <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2e2-Pn-FBp">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="351" height="158"/>
+                                                                            <color key="backgroundColor" red="0.36078431372549019" green="0.38823529411764707" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </webView>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="2e2-Pn-FBp" firstAttribute="top" secondItem="xz9-Yl-r3f" secondAttribute="top" id="2pr-H9-4tw"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="2e2-Pn-FBp" secondAttribute="bottom" id="5tM-Fi-fmV"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="2e2-Pn-FBp" secondAttribute="trailing" id="N2L-tb-i3A"/>
+                                                                        <constraint firstItem="2e2-Pn-FBp" firstAttribute="leading" secondItem="xz9-Yl-r3f" secondAttribute="leading" id="iA5-ai-ac6"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </view>
+                                                        <constraints>
+                                                            <constraint firstItem="xz9-Yl-r3f" firstAttribute="top" secondItem="Tv6-6J-mfs" secondAttribute="top" id="4Ld-Ui-ni4"/>
+                                                            <constraint firstAttribute="trailing" secondItem="xz9-Yl-r3f" secondAttribute="trailing" id="4MT-2Y-hs6"/>
+                                                            <constraint firstAttribute="bottom" secondItem="xz9-Yl-r3f" secondAttribute="bottom" id="UA5-rX-b99"/>
+                                                            <constraint firstItem="xz9-Yl-r3f" firstAttribute="leading" secondItem="Tv6-6J-mfs" secondAttribute="leading" id="o9x-Ue-cYk"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <outlet property="videoWebView" destination="2e2-Pn-FBp" id="XUe-QG-v7u"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="l2C-Q3-xFm" id="hs9-3f-Vds"/>
+                                                    <outlet property="delegate" destination="l2C-Q3-xFm" id="R4q-hy-nQg"/>
+                                                </connections>
+                                            </collectionView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Videos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ar8-JQ-gE3">
+                                                <rect key="frame" x="163.5" y="320" width="37" height="21"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yeV-m3-97w">
-                                                <rect key="frame" x="57" y="178" width="250" height="150"/>
+                                                <rect key="frame" x="57" y="351" width="250" height="150"/>
                                                 <subviews>
-                                                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0zG-Uq-ltC">
-                                                        <rect key="frame" x="5" y="5" width="240" height="140"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    </webView>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolder" translatesAutoresizingMaskIntoConstraints="NO" id="dhp-PN-6BK">
                                                         <rect key="frame" x="5" y="5" width="240" height="140"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -3779,23 +3838,19 @@ Suwanee, GA 30024 USA</string>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.91379678249999996" green="0.90883970260000002" blue="0.90908950570000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="0zG-Uq-ltC" secondAttribute="trailing" constant="5" id="5aF-hF-fqR"/>
-                                                    <constraint firstAttribute="trailing" secondItem="dhp-PN-6BK" secondAttribute="trailing" constant="5" id="5ki-TS-4i5"/>
-                                                    <constraint firstAttribute="bottom" secondItem="dhp-PN-6BK" secondAttribute="bottom" constant="5" id="TbY-yK-qz8"/>
-                                                    <constraint firstItem="0zG-Uq-ltC" firstAttribute="leading" secondItem="yeV-m3-97w" secondAttribute="leading" constant="5" id="UvH-sc-tbU"/>
-                                                    <constraint firstItem="dhp-PN-6BK" firstAttribute="leading" secondItem="yeV-m3-97w" secondAttribute="leading" constant="5" id="Vgp-bb-hCn"/>
-                                                    <constraint firstItem="0zG-Uq-ltC" firstAttribute="top" secondItem="yeV-m3-97w" secondAttribute="top" constant="5" id="cCU-e6-ENV"/>
+                                                    <constraint firstAttribute="bottom" secondItem="dhp-PN-6BK" secondAttribute="bottom" constant="5" id="C4Y-W8-7c7"/>
+                                                    <constraint firstAttribute="trailing" secondItem="dhp-PN-6BK" secondAttribute="trailing" constant="5" id="F9r-bo-dwZ"/>
                                                     <constraint firstAttribute="height" constant="150" id="cni-p0-L5P"/>
-                                                    <constraint firstAttribute="bottom" secondItem="0zG-Uq-ltC" secondAttribute="bottom" constant="5" id="dBJ-iS-wqQ"/>
+                                                    <constraint firstItem="dhp-PN-6BK" firstAttribute="top" secondItem="yeV-m3-97w" secondAttribute="top" constant="5" id="dOm-Ba-kee"/>
                                                     <constraint firstAttribute="width" constant="250" id="kQ0-7M-EqA"/>
-                                                    <constraint firstItem="dhp-PN-6BK" firstAttribute="top" secondItem="yeV-m3-97w" secondAttribute="top" constant="5" id="s41-dJ-Pdp"/>
+                                                    <constraint firstItem="dhp-PN-6BK" firstAttribute="leading" secondItem="yeV-m3-97w" secondAttribute="leading" constant="5" id="qUB-Sd-3On"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7P-O0-WXT">
-                                                <rect key="frame" x="342" y="241" width="15" height="25"/>
+                                                <rect key="frame" x="332" y="406" width="25" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="15" id="h2T-k0-Je5"/>
-                                                    <constraint firstAttribute="height" constant="25" id="tt1-Ap-hBs"/>
+                                                    <constraint firstAttribute="width" constant="25" id="h2T-k0-Je5"/>
+                                                    <constraint firstAttribute="height" constant="40" id="tt1-Ap-hBs"/>
                                                 </constraints>
                                                 <state key="normal" image="right--Arrow"/>
                                                 <connections>
@@ -3803,24 +3858,24 @@ Suwanee, GA 30024 USA</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syI-ua-9xz">
-                                                <rect key="frame" x="8" y="240.5" width="15" height="25"/>
+                                                <rect key="frame" x="8" y="406" width="25" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="15" id="0cS-1J-Rc1"/>
-                                                    <constraint firstAttribute="height" constant="25" id="6q2-XC-fhI"/>
+                                                    <constraint firstAttribute="width" constant="25" id="0cS-1J-Rc1"/>
+                                                    <constraint firstAttribute="height" constant="40" id="6q2-XC-fhI"/>
                                                 </constraints>
                                                 <state key="normal" image="left_Arrow"/>
                                                 <connections>
                                                     <action selector="leftActionArrow:" destination="l2C-Q3-xFm" eventType="touchUpInside" id="xYj-Zq-9K8"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video &amp; Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIm-Z9-Jbt">
-                                                <rect key="frame" x="129" y="342.5" width="106" height="27"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIm-Z9-Jbt">
+                                                <rect key="frame" x="158" y="516" width="48.5" height="27"/>
                                                 <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRC-Al-dYN">
-                                                <rect key="frame" x="145" y="369.5" width="78" height="3"/>
+                                                <rect key="frame" x="145.5" y="545" width="78" height="3"/>
                                                 <color key="backgroundColor" red="0.67843137249999996" green="0.0" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="3" id="VB7-bD-L6Q"/>
@@ -3831,7 +3886,7 @@ Suwanee, GA 30024 USA</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="o4r-xD-Fha">
-                                                <rect key="frame" x="2" y="385" width="361" height="80"/>
+                                                <rect key="frame" x="2" y="558" width="361" height="80"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="AbY-tY-e2K"/>
@@ -3876,7 +3931,7 @@ Suwanee, GA 30024 USA</string>
                                                 </connections>
                                             </collectionView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rgh-Cw-ExR">
-                                                <rect key="frame" x="2" y="475" width="361" height="250"/>
+                                                <rect key="frame" x="2" y="648" width="361" height="250"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2t-ip-OJx">
                                                         <rect key="frame" x="0.0" y="0.0" width="361" height="40"/>
@@ -4037,7 +4092,7 @@ Suwanee, GA 30024 USA</string>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5d-l4-7dE">
-                                                <rect key="frame" x="10" y="730.5" width="248" height="25"/>
+                                                <rect key="frame" x="10" y="903.5" width="248" height="25"/>
                                                 <color key="backgroundColor" red="0.7784959078" green="0.77848136430000003" blue="0.77849000690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="TQX-I2-IZl"/>
@@ -4062,7 +4117,7 @@ Suwanee, GA 30024 USA</string>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iyb-Hq-BfT">
-                                                <rect key="frame" x="0.0" y="761.5" width="365" height="190"/>
+                                                <rect key="frame" x="0.0" y="934.5" width="365" height="190"/>
                                                 <subviews>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="51" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qdx-hX-NHp">
                                                         <rect key="frame" x="5" y="5" width="355" height="180"/>
@@ -4121,18 +4176,22 @@ Suwanee, GA 30024 USA</string>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="kGe-f4-pml" firstAttribute="centerX" secondItem="Fjj-re-fbf" secondAttribute="centerX" id="0Yc-Uw-QMQ"/>
                                             <constraint firstItem="syI-ua-9xz" firstAttribute="leading" secondItem="Fjj-re-fbf" secondAttribute="leading" constant="8" id="29i-SV-FRq"/>
                                             <constraint firstItem="a5d-l4-7dE" firstAttribute="top" secondItem="Rgh-Cw-ExR" secondAttribute="bottom" constant="5.5" id="2Ne-n0-DIp"/>
-                                            <constraint firstItem="KRC-Al-dYN" firstAttribute="top" secondItem="AIm-Z9-Jbt" secondAttribute="bottom" id="4Gq-Z0-Hqo"/>
+                                            <constraint firstItem="KRC-Al-dYN" firstAttribute="top" secondItem="AIm-Z9-Jbt" secondAttribute="bottom" constant="2" id="4dZ-G9-vHb"/>
                                             <constraint firstItem="Rgh-Cw-ExR" firstAttribute="top" secondItem="o4r-xD-Fha" secondAttribute="bottom" constant="10" id="5Lo-zh-fkK"/>
+                                            <constraint firstItem="Ar8-JQ-gE3" firstAttribute="centerX" secondItem="Fjj-re-fbf" secondAttribute="centerX" id="9kK-Ab-mVB"/>
                                             <constraint firstAttribute="trailing" secondItem="Iyb-Hq-BfT" secondAttribute="trailing" id="Aan-ob-v3V"/>
                                             <constraint firstItem="syI-ua-9xz" firstAttribute="centerY" secondItem="yeV-m3-97w" secondAttribute="centerY" id="CLo-EE-PRd"/>
                                             <constraint firstItem="Iyb-Hq-BfT" firstAttribute="leading" secondItem="Fjj-re-fbf" secondAttribute="leading" id="DIn-8u-gyN"/>
                                             <constraint firstAttribute="trailing" secondItem="Rgh-Cw-ExR" secondAttribute="trailing" constant="2" id="HWK-UI-qW3"/>
-                                            <constraint firstItem="yeV-m3-97w" firstAttribute="top" secondItem="0zN-Qi-IqI" secondAttribute="bottom" constant="5" id="Kpg-gI-36g"/>
+                                            <constraint firstItem="kGe-f4-pml" firstAttribute="top" secondItem="0zN-Qi-IqI" secondAttribute="bottom" constant="10" id="J7y-XJ-CJv"/>
+                                            <constraint firstAttribute="trailing" secondItem="kGe-f4-pml" secondAttribute="trailing" constant="10" id="JfG-rA-b55"/>
                                             <constraint firstAttribute="trailing" secondItem="FyT-Hw-I3p" secondAttribute="trailing" constant="8" id="LKI-fy-OtZ"/>
                                             <constraint firstItem="KRC-Al-dYN" firstAttribute="centerX" secondItem="AIm-Z9-Jbt" secondAttribute="centerX" constant="2" id="LYh-mM-9zE"/>
                                             <constraint firstAttribute="trailing" secondItem="o4r-xD-Fha" secondAttribute="trailing" constant="2" id="Q2V-pn-JyG"/>
+                                            <constraint firstItem="Ar8-JQ-gE3" firstAttribute="top" secondItem="kGe-f4-pml" secondAttribute="bottom" constant="10" id="Sev-t1-fwi"/>
                                             <constraint firstItem="Rgh-Cw-ExR" firstAttribute="leading" secondItem="Fjj-re-fbf" secondAttribute="leading" constant="2" id="Uif-2D-gAJ"/>
                                             <constraint firstItem="o4r-xD-Fha" firstAttribute="leading" secondItem="Fjj-re-fbf" secondAttribute="leading" constant="2" id="VTU-Ny-Wnf"/>
                                             <constraint firstItem="FyT-Hw-I3p" firstAttribute="leading" secondItem="Fjj-re-fbf" secondAttribute="leading" constant="8" id="W9u-7V-pSQ"/>
@@ -4141,9 +4200,11 @@ Suwanee, GA 30024 USA</string>
                                             <constraint firstItem="FyT-Hw-I3p" firstAttribute="top" secondItem="Fjj-re-fbf" secondAttribute="top" constant="35" id="Y3c-MD-XG3"/>
                                             <constraint firstItem="a5d-l4-7dE" firstAttribute="leading" secondItem="Fjj-re-fbf" secondAttribute="leading" constant="10" id="ZRa-uG-4ca"/>
                                             <constraint firstItem="AIm-Z9-Jbt" firstAttribute="top" secondItem="yeV-m3-97w" secondAttribute="bottom" constant="15" id="Znz-zE-hdY"/>
-                                            <constraint firstAttribute="bottom" secondItem="Iyb-Hq-BfT" secondAttribute="bottom" constant="5" id="Zrp-OT-tD7"/>
                                             <constraint firstAttribute="trailing" secondItem="j7P-O0-WXT" secondAttribute="trailing" constant="8" id="cE3-O7-6ap"/>
                                             <constraint firstItem="o4r-xD-Fha" firstAttribute="centerX" secondItem="yeV-m3-97w" secondAttribute="centerX" id="fuw-ry-PW9"/>
+                                            <constraint firstAttribute="bottom" secondItem="Iyb-Hq-BfT" secondAttribute="bottom" constant="0.5" id="hot-jN-dzC"/>
+                                            <constraint firstItem="yeV-m3-97w" firstAttribute="top" secondItem="Ar8-JQ-gE3" secondAttribute="bottom" constant="10" id="jgM-wd-HLj"/>
+                                            <constraint firstItem="kGe-f4-pml" firstAttribute="leading" secondItem="Fjj-re-fbf" secondAttribute="leading" constant="10" id="kTH-mg-pAp"/>
                                             <constraint firstAttribute="trailing" secondItem="0zN-Qi-IqI" secondAttribute="trailing" id="pUO-Dp-z6p"/>
                                             <constraint firstItem="0zN-Qi-IqI" firstAttribute="leading" secondItem="Fjj-re-fbf" secondAttribute="leading" id="rCt-bl-72e"/>
                                             <constraint firstItem="Iyb-Hq-BfT" firstAttribute="top" secondItem="a5d-l4-7dE" secondAttribute="bottom" constant="6" id="sDX-w4-rbS"/>
@@ -4154,10 +4215,10 @@ Suwanee, GA 30024 USA</string>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Fjj-re-fbf" firstAttribute="top" secondItem="QZl-Ay-Nke" secondAttribute="top" id="3aT-aO-1TQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Fjj-re-fbf" secondAttribute="bottom" constant="10" id="DEw-ku-8IL"/>
                                     <constraint firstAttribute="trailing" secondItem="Fjj-re-fbf" secondAttribute="trailing" constant="5" id="Grc-AH-9GU"/>
                                     <constraint firstItem="Fjj-re-fbf" firstAttribute="leading" secondItem="QZl-Ay-Nke" secondAttribute="leading" constant="5" id="dmt-Cm-3N2"/>
                                     <constraint firstItem="Fjj-re-fbf" firstAttribute="centerX" secondItem="QZl-Ay-Nke" secondAttribute="centerX" id="gtN-lA-VWZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="Fjj-re-fbf" secondAttribute="bottom" constant="133" id="y7i-Kx-pDi"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -4165,12 +4226,12 @@ Suwanee, GA 30024 USA</string>
                         <constraints>
                             <constraint firstItem="QZl-Ay-Nke" firstAttribute="leading" secondItem="ofs-JX-Ag5" secondAttribute="leading" id="IPI-Mx-f5y"/>
                             <constraint firstAttribute="trailing" secondItem="QZl-Ay-Nke" secondAttribute="trailing" id="JMb-xi-g5U"/>
-                            <constraint firstItem="3f3-7e-Nve" firstAttribute="top" secondItem="QZl-Ay-Nke" secondAttribute="bottom" id="LXt-JD-Ycf"/>
+                            <constraint firstItem="3f3-7e-Nve" firstAttribute="top" secondItem="QZl-Ay-Nke" secondAttribute="bottom" id="kg5-9Y-lH3"/>
                             <constraint firstItem="QZl-Ay-Nke" firstAttribute="top" secondItem="ofs-JX-Ag5" secondAttribute="top" id="rQa-7c-Kot"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="980"/>
+                    <size key="freeformSize" width="375" height="1140"/>
                     <connections>
                         <outlet property="aboutTextLabel" destination="FyT-Hw-I3p" id="5QO-JD-8FT"/>
                         <outlet property="commentLabel" destination="cgL-yl-Vmd" id="5UV-Dh-Xad"/>
@@ -4183,13 +4244,14 @@ Suwanee, GA 30024 USA</string>
                         <outlet property="secondCollectionView" destination="o4r-xD-Fha" id="UnY-xi-UOc"/>
                         <outlet property="serviceTableView" destination="qdx-hX-NHp" id="kHu-GY-Kew"/>
                         <outlet property="tableView" destination="bQg-wi-jGL" id="e17-lp-aqY"/>
+                        <outlet property="videoCollectionHeight" destination="Dds-2q-1Mg" id="aLS-gU-xN1"/>
+                        <outlet property="videoCollectionView" destination="kGe-f4-pml" id="FBZ-fm-ixv"/>
                         <outlet property="videoPhotoLabel" destination="AIm-Z9-Jbt" id="XEr-U3-pbX"/>
-                        <outlet property="webView" destination="0zG-Uq-ltC" id="IaI-kM-r1V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qjK-It-YIy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3602" y="-1486"/>
+            <point key="canvasLocation" x="3628" y="-1400.5997001499252"/>
         </scene>
         <!--Client AccountVC-->
         <scene sceneID="4gS-9Q-VB5">
@@ -5129,7 +5191,7 @@ Close
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="4236" y="-1387"/>
+            <point key="canvasLocation" x="4383" y="-1400"/>
         </scene>
         <!--ZworkorderVC-->
         <scene sceneID="ely-dP-GuZ">
@@ -6429,7 +6491,7 @@ Close
                                             <rect key="frame" x="15" y="20" width="250" height="130"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REVIEWING:Swag" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ek1-mT-cNj">
-                                                    <rect key="frame" x="75" y="20" width="100.5" height="25"/>
+                                                    <rect key="frame" x="75.5" y="20" width="100.5" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="tDl-jX-cX9"/>
                                                     </constraints>
@@ -6470,7 +6532,7 @@ Close
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5LE-hU-MMb">
-                                            <rect key="frame" x="120" y="155" width="41.5" height="19.5"/>
+                                            <rect key="frame" x="119.5" y="155" width="41.5" height="19.5"/>
                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -6492,7 +6554,7 @@ Close
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prepared" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgh-Jt-5RJ">
-                                            <rect key="frame" x="117.5" y="209.5" width="46" height="19.5"/>
+                                            <rect key="frame" x="117" y="209.5" width="46" height="19.5"/>
                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -6536,7 +6598,7 @@ Close
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Works Well" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpQ-CC-UEi">
-                                            <rect key="frame" x="112" y="318.5" width="57.5" height="19.5"/>
+                                            <rect key="frame" x="111.5" y="318.5" width="57.5" height="19.5"/>
                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -6558,7 +6620,7 @@ Close
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demonstrates Acceptable Skills" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsR-J2-KqV">
-                                            <rect key="frame" x="60" y="373" width="160.5" height="19.5"/>
+                                            <rect key="frame" x="60.5" y="373" width="160.5" height="19.5"/>
                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -6580,7 +6642,7 @@ Close
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Polite &amp; Respectful" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lb-ow-QuJ">
-                                            <rect key="frame" x="91.5" y="427.5" width="98.5" height="19.5"/>
+                                            <rect key="frame" x="91" y="427.5" width="98.5" height="19.5"/>
                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -6743,13 +6805,13 @@ Close
                                         <rect key="frame" x="10" y="10" width="355" height="745"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAYMENT INFORMATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lJ-dj-cnl">
-                                                <rect key="frame" x="112.5" y="5" width="130.5" height="20.5"/>
+                                                <rect key="frame" x="113" y="5" width="130.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You must maintain at least one Active Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0m9-QY-e6i">
-                                                <rect key="frame" x="51.5" y="30.5" width="253" height="20.5"/>
+                                                <rect key="frame" x="52" y="30.5" width="253" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -7202,7 +7264,7 @@ Close
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change default card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1a-Zq-DjF">
-                            <rect key="frame" x="65" y="20" width="111" height="21"/>
+                            <rect key="frame" x="64.5" y="20" width="111" height="21"/>
                             <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="14"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -7221,13 +7283,13 @@ Close
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We'll use this card for invoice payments by default." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWc-bJ-u8k">
-                            <rect key="frame" x="8.5" y="50" width="223.5" height="16.5"/>
+                            <rect key="frame" x="7.5" y="50" width="223.5" height="16.5"/>
                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="12"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oI7-rO-LFy">
-                            <rect key="frame" x="69.5" y="76.5" width="102" height="16.5"/>
+                            <rect key="frame" x="69" y="76.5" width="102" height="16.5"/>
                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="12"/>
                             <color key="textColor" red="0.8425462842" green="0.0" blue="0.098179489369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
@@ -7332,7 +7394,7 @@ Close
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY INVOICES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJM-h7-Amu">
-                                <rect key="frame" x="144" y="20" width="87" height="32"/>
+                                <rect key="frame" x="144.5" y="20" width="87" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="w3N-jE-SDc"/>
                                 </constraints>
@@ -7489,7 +7551,7 @@ Close
                                                     <rect key="frame" x="0.0" y="0.0" width="371" height="298.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Billing Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIL-mC-TlB">
-                                                            <rect key="frame" x="20" y="32.5" width="73" height="18"/>
+                                                            <rect key="frame" x="20" y="32" width="73" height="18"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -7505,7 +7567,7 @@ Demotropolice, GA, 11111
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-ZHire LLC:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxX-bx-lAv">
-                                                            <rect key="frame" x="20" y="99.5" width="57.5" height="18"/>
+                                                            <rect key="frame" x="20" y="99" width="57.5" height="18"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -7520,7 +7582,7 @@ Las Vegas,NV 89107
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6k4-yh-j5y">
-                                                            <rect key="frame" x="20" y="166" width="77.5" height="18"/>
+                                                            <rect key="frame" x="20" y="166.5" width="77.5" height="18"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -7546,13 +7608,13 @@ Eatonton, GA, 31024
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INVOICE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxG-HK-d5f">
-                                                            <rect key="frame" x="20" y="233.5" width="41.5" height="18"/>
+                                                            <rect key="frame" x="20" y="233" width="41.5" height="18"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6E8-xH-IZk">
-                                                            <rect key="frame" x="20" y="261" width="143" height="29"/>
+                                                            <rect key="frame" x="20" y="260.5" width="143" height="29"/>
                                                             <color key="backgroundColor" red="0.87314361330000001" green="0.0" blue="0.12828433510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="12"/>
                                                             <state key="normal" title="SELECT YOUR PAYMENT METHOD">
@@ -9886,7 +9948,7 @@ Eatonton, GA, 31024
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="999"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTC-Bf-mdY">
-                                                <rect key="frame" x="167" y="10" width="42" height="30"/>
+                                                <rect key="frame" x="166.5" y="10" width="42" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="c1O-OL-7w1"/>
                                                 </constraints>
@@ -10238,7 +10300,7 @@ Eatonton, GA, 31024
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASSOCIATE BUSINESS CENTER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kr9-lE-K6M">
-                                    <rect key="frame" x="-8" y="6.5" width="166" height="21"/>
+                                    <rect key="frame" x="-8" y="6" width="166" height="21"/>
                                     <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -10304,7 +10366,7 @@ Eatonton, GA, 31024
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gu-5z-A6W">
-                                                <rect key="frame" x="335" y="36" width="30" height="20"/>
+                                                <rect key="frame" x="335" y="35.5" width="30" height="20"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="7lU-mD-wwm"/>
@@ -10897,7 +10959,7 @@ Eatonton, GA, 31024
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQC-O1-rti">
-                                                <rect key="frame" x="335" y="1448.5" width="30" height="20"/>
+                                                <rect key="frame" x="335" y="1448" width="30" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="wAt-PO-7gY"/>
                                                 </constraints>
@@ -11486,7 +11548,7 @@ Cg
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASSOCIATE'S MANAGEMENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxI-4S-P44">
-                                    <rect key="frame" x="-1.5" y="6" width="153" height="21"/>
+                                    <rect key="frame" x="-1.5" y="6.5" width="153" height="21"/>
                                     <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -11743,7 +11805,7 @@ Cg
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nmk-Tq-6xv">
-                                                        <rect key="frame" x="145" y="54" width="164" height="18"/>
+                                                        <rect key="frame" x="145" y="53.5" width="164" height="18"/>
                                                         <color key="backgroundColor" red="0.95112788680000004" green="0.95111036299999996" blue="0.95112085339999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="164" id="1V5-1W-aj5"/>
@@ -11775,7 +11837,7 @@ Cg
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Please select service type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fT-G9-Fhi">
-                                                        <rect key="frame" x="145" y="96" width="164" height="18"/>
+                                                        <rect key="frame" x="145" y="95.5" width="164" height="18"/>
                                                         <color key="backgroundColor" red="0.95112788680000004" green="0.95111036299999996" blue="0.95112085339999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="164" id="SpA-jh-ieL"/>
@@ -12588,7 +12650,7 @@ Cg
                                             <rect key="frame" x="5" y="0.0" width="112" height="270"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JpG-Fh-MQO">
-                                                    <rect key="frame" x="17" y="14.5" width="95" height="16.5"/>
+                                                    <rect key="frame" x="17" y="15" width="95" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -12699,7 +12761,7 @@ Cg
                                             <rect key="frame" x="118" y="0.5" width="112" height="270"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgr-kG-q3X">
-                                                    <rect key="frame" x="17" y="15" width="95" height="16.5"/>
+                                                    <rect key="frame" x="17" y="14.5" width="95" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -12828,7 +12890,7 @@ Cg
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDd-MQ-iCu">
-                                                    <rect key="frame" x="17" y="14" width="95" height="16.5"/>
+                                                    <rect key="frame" x="17" y="14.5" width="95" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -12922,7 +12984,7 @@ Cg
                                             <rect key="frame" x="344" y="0.5" width="112" height="270"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRp-x6-OMz">
-                                                    <rect key="frame" x="17" y="14.5" width="95" height="16.5"/>
+                                                    <rect key="frame" x="17" y="15" width="95" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -13144,7 +13206,7 @@ Cg
                                             <rect key="frame" x="570" y="0.0" width="112" height="270"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Fri" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnA-IL-MRZ">
-                                                    <rect key="frame" x="17" y="14.5" width="95" height="16.5"/>
+                                                    <rect key="frame" x="17" y="15" width="95" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -13708,7 +13770,7 @@ Cg
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose A Service Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DS-Uo-S6W">
-                                <rect key="frame" x="131.5" y="151.5" width="113.5" height="19.5"/>
+                                <rect key="frame" x="131" y="151.5" width="113.5" height="19.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="19.5" id="6KK-97-kIF"/>
                                 </constraints>
@@ -14792,7 +14854,7 @@ Cg
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKR-7I-pwJ">
-                                                <rect key="frame" x="139" y="512.5" width="76" height="49"/>
+                                                <rect key="frame" x="139.5" y="512.5" width="76" height="49"/>
                                                 <string key="text">Associate Leader 
 (UTA000008)
 $0.00</string>
@@ -14808,19 +14870,19 @@ $0.00</string>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USA Mentor Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxl-sF-VbA">
-                                                <rect key="frame" x="129" y="751.5" width="98" height="21"/>
+                                                <rect key="frame" x="128.5" y="751.5" width="98" height="21"/>
                                                 <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Mentor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VR0-qm-9Cn">
-                                                <rect key="frame" x="144.5" y="778" width="67" height="20.5"/>
+                                                <rect key="frame" x="143.5" y="778" width="67" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7kt-34-Cb5">
-                                                <rect key="frame" x="114" y="803.5" width="128" height="20"/>
+                                                <rect key="frame" x="113" y="803.5" width="128" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="xIW-KU-luS"/>
                                                 </constraints>
@@ -14833,7 +14895,7 @@ $0.00</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9db-FT-GWg">
-                                                <rect key="frame" x="114" y="828.5" width="128" height="20"/>
+                                                <rect key="frame" x="113" y="828.5" width="128" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="z8Q-kc-HOr"/>
                                                 </constraints>
@@ -15260,7 +15322,7 @@ $0.00</string>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY WORK HISTORY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kax-SN-wsi">
-                                    <rect key="frame" x="23" y="6" width="105.5" height="21"/>
+                                    <rect key="frame" x="23" y="6.5" width="105.5" height="21"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -16041,7 +16103,7 @@ $0.00</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" agree as detailed and stated above." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="he8-IG-93i">
-                                                        <rect key="frame" x="55" y="250" width="169" height="18"/>
+                                                        <rect key="frame" x="55" y="249.5" width="169" height="18"/>
                                                         <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -16279,13 +16341,13 @@ $0.00</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Demo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8V-It-2lt">
-                                                <rect key="frame" x="145.5" y="240.5" width="65" height="24"/>
+                                                <rect key="frame" x="146" y="240.5" width="65" height="24"/>
                                                 <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASSOCIATE # UTA000008" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERo-Mg-3kQ">
-                                                <rect key="frame" x="103" y="269.5" width="149.5" height="22"/>
+                                                <rect key="frame" x="103.5" y="269.5" width="149.5" height="22"/>
                                                 <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -16308,13 +16370,13 @@ $0.00</string>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABOUT ME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7y-ZW-4eW">
-                                                <rect key="frame" x="146.5" y="455" width="62" height="22.5"/>
+                                                <rect key="frame" x="147" y="455" width="62" height="22.5"/>
                                                 <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mob-kq-2Hd">
-                                                <rect key="frame" x="162" y="479.5" width="30" height="2"/>
+                                                <rect key="frame" x="163" y="479.5" width="30" height="2"/>
                                                 <color key="backgroundColor" red="0.89206504819999999" green="0.1941642314" blue="0.29899668689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="TvW-Cc-crq"/>
@@ -16325,7 +16387,7 @@ $0.00</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4X-4t-Czx">
-                                                <rect key="frame" x="95" y="486.5" width="165" height="30"/>
+                                                <rect key="frame" x="96" y="486.5" width="165" height="30"/>
                                                 <color key="backgroundColor" red="0.82101762290000002" green="0.82100236419999995" blue="0.82101142410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="13"/>
                                                 <state key="normal" title="Add/Edit About Me (Required field)">
@@ -16403,13 +16465,13 @@ $0.00</string>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video &amp; Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mii-uf-gBQ">
-                                                <rect key="frame" x="134" y="777.5" width="88" height="22.5"/>
+                                                <rect key="frame" x="133.5" y="777.5" width="88" height="22.5"/>
                                                 <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Js8-Aw-BLL">
-                                                <rect key="frame" x="163" y="802" width="30" height="2"/>
+                                                <rect key="frame" x="162" y="802" width="30" height="2"/>
                                                 <color key="backgroundColor" red="0.89206504819999999" green="0.1941642314" blue="0.29899668689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="Aqv-go-hXQ"/>
@@ -16420,7 +16482,7 @@ $0.00</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQg-Mj-tbm">
-                                                <rect key="frame" x="116" y="809" width="125" height="30"/>
+                                                <rect key="frame" x="115" y="809" width="125" height="30"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="13"/>
                                                 <state key="normal" title="Add/Edit Videos (Optional)">
@@ -16431,7 +16493,7 @@ $0.00</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWI-ZE-sWG">
-                                                <rect key="frame" x="115.5" y="844" width="126" height="30"/>
+                                                <rect key="frame" x="114.5" y="844" width="126" height="30"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="13"/>
                                                 <state key="normal" title="Add/Edit Photos (Optional)">
@@ -16646,7 +16708,7 @@ $0.00</string>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABOUT ME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGc-kF-KOu">
-                            <rect key="frame" x="122" y="20" width="57" height="20.5"/>
+                            <rect key="frame" x="121.5" y="20" width="57" height="20.5"/>
                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="15"/>
                             <color key="textColor" red="0.89206504819999999" green="0.1941642314" blue="0.29899668689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
@@ -16715,7 +16777,7 @@ $0.00</string>
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="900"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIDEOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bij-UT-akf">
-                                            <rect key="frame" x="130" y="20" width="40.5" height="20.5"/>
+                                            <rect key="frame" x="130.5" y="20" width="40.5" height="20.5"/>
                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="15"/>
                                             <color key="textColor" red="0.89206504819999999" green="0.1941642314" blue="0.29899668689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface EZReviewVC : UIViewController<UIWebViewDelegate>
+@property (weak, nonatomic) IBOutlet UICollectionView *videoCollectionView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *videoCollectionHeight;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *firstCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *secondCollectionView;
@@ -31,5 +33,5 @@
 
 @property(strong)NSString*dateId;
 @property(strong)NSString*searchId;
-
+@property(strong)NSString*userId;
 @end

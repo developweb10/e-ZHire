@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface EZSearchZipeCodeVC : UIViewController
+@interface EZSearchZipeCodeVC : UIViewController<MFMailComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *firstLabel;
 @property (weak, nonatomic) IBOutlet UILabel *secondLabel;
 @property (weak, nonatomic) IBOutlet UILabel *thirdLabel;
@@ -24,5 +25,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *sorryLabel;
 @property(nonatomic)NSString*passMessage;
 @property(nonatomic)NSString*sendZipCode;
+- (IBAction)gotqusetionAction:(id)sender;
 
 @end

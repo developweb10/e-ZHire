@@ -203,7 +203,6 @@
                                  [self.navigationController pushViewController:controller animated:YES];
                                  [alert dismissViewControllerAnimated:YES completion:nil];
                              }else{
-                                 
                                  NSString*userId=[EZCommonMethod getUserId];
                                  if (userId!=nil) {
                                      EZClientAccountVC*viewController=[self.storyboard instantiateViewControllerWithIdentifier:@"EZClientAccountVC"];
@@ -214,14 +213,11 @@
                                  }else{
                                      [EZCommonMethod showAlert:nil message:@"Please login Client email"];
                                  }
-                                 
-                             
                              }
                             
                          }];
     [alert addAction:ok];
     [self presentViewController:alert animated:YES completion:nil];
-
+    
 }
-
 @end

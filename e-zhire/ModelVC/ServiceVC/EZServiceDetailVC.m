@@ -287,7 +287,7 @@
     [self.dateFormatter setDateFormat:@"MM/dd/yyyy"];
     calendar.onlyShowCurrentMonth = NO;
     calendar.adaptHeightToNumberOfWeeksInMonth = YES;
-    calendar.frame = CGRectMake(40, 50, 300, 320);
+    calendar.frame = CGRectMake((self.view.frame.size.width-300)/2,50, 300, 320);
     [self.view addSubview:calendar];
     self.view.backgroundColor = [UIColor whiteColor];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(localeDidChange) name:NSCurrentLocaleDidChangeNotification object:nil];
@@ -344,7 +344,6 @@
     }
 }
 - (BOOL)calendar:(CKCalendarView *)calendar willChangeToMonth:(NSDate *)date andButtonPressed:(NSString *)str {
-    
     NSLog(@"%@", [self.calendar datesShowing]);
     NSDate *dddate = [[self.calendar datesShowing] lastObject];
     NSTimeInterval secondsBetween = [dddate timeIntervalSinceDate:[NSDate date]];
@@ -377,7 +376,6 @@
      }
      */
 }
-
 - (void)calendar:(CKCalendarView *)calendar didLayoutInRect:(CGRect)frame {
     NSLog(@"calendar layout: %@", NSStringFromCGRect(frame));
 }

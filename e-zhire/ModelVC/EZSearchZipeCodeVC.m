@@ -56,6 +56,83 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)submitBtn:(id)sender {
+    [self requestpostApi];
+}
+#pragma mark-submit request api
+
+-(void)requestpostApi{
+    bool checkNet=[EZCommonMethod checkInternetConnection];
+    if(!checkNet){
+        [EZCommonMethod showAlert:nil message:@"Please check your internet connection"];
+        return;
+    }
+    NSString*urlStr=[NSString stringWithFormat:@"%@%@",BaseUrl,sendRequest_Api];
+    NSDictionary*parameter=@{@"name":self.nameTextFiled.text,@"email":self.emailTextFiled.text,@"zip":self.zipeCodeTextFiled.text,@"service":self.serviceRequiredTextFiled.text};
+   // {"name":"ABC","email":"developer.inext@gmail.com","zip":"160022","service":"Hello test email"}
+
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [[NetworkManager Instance]postRequestWithUrl:urlStr parameter:parameter onCompletion:^(id dict) {
+        NSLog(@"%@",dict);
+        NSError* error;
+        NSDictionary* json = [NSJSONSerialization JSONObjectWithData:dict
+                                                             options:kNilOptions
+                                                               error:&error];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        if([[json valueForKey:@"success"] boolValue]==1){
+            
+            [EZCommonMethod showAlert:@"Your request has been sent successfully." message:@"Thank You!"];
+            self.nameTextFiled.text=nil;
+            self.emailTextFiled.text=nil;
+            self.zipeCodeTextFiled.text=nil;
+            self.serviceRequiredTextFiled.text=nil;
+        }
+        else{
+            [EZCommonMethod showAlert:nil message:@"please check email"];
+        }
+    } onError:^(NSError *Error) {
+        NSLog(@"%@:",Error);
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    }];
+}
+#pragma mark-got reuest mail
+- (IBAction)gotqusetionAction:(id)sender {
+    
+    if ([MFMailComposeViewController canSendMail])
+    {
+        MFMailComposeViewController *mail = [[MFMailComposeViewController alloc] init];
+        mail.mailComposeDelegate = self;
+        [mail setSubject:@"Sample Subject"];
+        [mail setMessageBody:@"Here is some main text in the email!" isHTML:NO];
+        [mail setToRecipients:@[@"USA@e-zhire.com"]];
+        
+        [self presentViewController:mail animated:YES completion:NULL];
+    }
+    else
+    {
+        [EZCommonMethod showAlert:nil message:@"This device cannot send email"];
+    }
+}
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Mail cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Mail saved");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Mail sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 @end

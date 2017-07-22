@@ -45,6 +45,7 @@
     carrerArr=[[NSMutableArray alloc]init];
     [self.menuContainerViewController setPanMode:MFSideMenuPanModeNone];
     payemntInfoArr=[[NSMutableArray alloc]init];
+  
 }
 
 -(void)viewWillAppear:(BOOL)animated{

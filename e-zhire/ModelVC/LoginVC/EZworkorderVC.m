@@ -25,6 +25,7 @@
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.translucent = NO;
     [self workOrderApi];
+    self.workOrderNoTextFiled.delegate=self;
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
@@ -75,8 +76,8 @@
             }
         }
         else{
-//            [self showUIAlertControllerWithTitle:@"No Work Orders Found!"];
-            [EZCommonMethod showAlert:nil message:@"No Work Orders Found!"];
+//         [self showUIAlertControllerWithTitle:@"No Work Orders Found!"];
+           [EZCommonMethod showAlert:nil message:@"No Work Orders Found!"];
         }
         
     } onError:^(NSError *Error) {
@@ -87,15 +88,12 @@
     }];
 }
 
--(BOOL)textFieldShouldBeginEditing:(UITextField *)textField
-{
-    if (textField == self.workOrderNoTextFiled)
-    {
-        return NO;
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    if (textField==nil||textField.text.length<=0) {
+        [self workOrderApi];
     }
-    else
-        return YES;
 }
+
 /*
 -(void)showUIAlertControllerWithTitle:(NSString*)Title{
     

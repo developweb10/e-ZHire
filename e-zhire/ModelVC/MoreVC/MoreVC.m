@@ -183,48 +183,55 @@
         [self.menuContainerViewController setMenuState:MFSideMenuStateClosed];
     }
     else if(indexPath.row==10){
+        NSString*userIdUsed=[EZCommonMethod getUserId];
+        NSUserDefaults *dataStr = [NSUserDefaults standardUserDefaults];
+        NSString *myStringUrl = [dataStr objectForKey:associateUserId];
         
-        UIAlertController * alert = [UIAlertController
-                                     alertControllerWithTitle:@"Are you sure you want to logout?"
-                                     message:nil
-                                     preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction*logout = [UIAlertAction
+        if (userIdUsed||myStringUrl) {
+            
+            UIAlertController * alert = [UIAlertController
+                                         alertControllerWithTitle:@"Are you sure you want to logout?"
+                                         message:nil
+                                         preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction*logout = [UIAlertAction
                                     actionWithTitle:@"Logout"
                                     style:UIAlertActionStyleDefault
                                     handler:^(UIAlertAction * action) {
-                
+                                        if (userIdUsed) {
+                                            [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"userId"];
+                                            [[NSUserDefaults standardUserDefaults] synchronize];
+                                            [EZCommonMethod showAlert:nil message:@"client logout successfully"];
+                                        }
+                                        else if(myStringUrl){
+                                            [[NSUserDefaults standardUserDefaults] removeObjectForKey:associateUserId];
+                                            [[NSUserDefaults standardUserDefaults] synchronize];
+                                            [EZCommonMethod showAlert:nil message:@"associate logout successfully"];
+                                     }
+                                        LoginVC *contorller=[self.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
+                                        /// contorller.clientLoginType = @"client Login";
+                                        NSMutableArray *array=[nav.viewControllers mutableCopy];
+                                        contorller.hidesBottomBarWhenPushed=NO;
+                                        [array addObject:contorller];
+                                        [nav setViewControllers:array];
+                                        [self.menuContainerViewController setMenuState:MFSideMenuStateClosed];
+
+                                    }];
+            
+            UIAlertAction*cancel = [UIAlertAction
+                                    actionWithTitle:@"Cancel"
+                                    style:UIAlertActionStyleDefault
+                                    handler:^(UIAlertAction * action) {
                                         
-                        NSString*userIdUsed=[EZCommonMethod getUserId];
-                            if (userIdUsed) {
-                            [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"userId"];
-                            [[NSUserDefaults standardUserDefaults] synchronize];
-                            [EZCommonMethod showAlert:nil message:@"client logout successfully"];
-                            }else{
-                            [[NSUserDefaults standardUserDefaults] removeObjectForKey:associateUserId];
-                            [[NSUserDefaults standardUserDefaults] synchronize];
-                            [EZCommonMethod showAlert:nil message:@"associate logout successfully"];
-                        }
-                         LoginVC *contorller=[self.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
-                        /// contorller.clientLoginType = @"client Login";
-                        NSMutableArray *array=[nav.viewControllers mutableCopy];
-                        contorller.hidesBottomBarWhenPushed=NO;
-                        [array addObject:contorller];
-                        [nav setViewControllers:array];
-                        [self.menuContainerViewController setMenuState:MFSideMenuStateClosed];
-                              }];
-        
-              UIAlertAction*cancel = [UIAlertAction
-                                   actionWithTitle:@"Cancel"
-                                   style:UIAlertActionStyleDefault
-                                   handler:^(UIAlertAction * action) {
-                                       
-                                   }];
-        
-        [alert addAction:logout];
-        [alert addAction:cancel];
-        [self presentViewController:alert animated:YES completion:nil];
-    }
+                                    }];
+            
+            [alert addAction:logout];
+            [alert addAction:cancel];
+            [self presentViewController:alert animated:YES completion:nil];
+        }else{
+            [EZCommonMethod showAlert:nil message:@"Please login Client/Associate"];
+        }
+        }
     else{
         UIViewController *contorller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZContactVC"];
         NSMutableArray *array=[nav.viewControllers mutableCopy];
