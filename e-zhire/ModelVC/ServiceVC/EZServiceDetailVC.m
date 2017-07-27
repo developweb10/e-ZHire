@@ -520,11 +520,10 @@
             NSString *string=[selectedDays componentsJoinedByString:@","];
             [parameter setObject:string forKey:@"wkday"];
         }
-        
         [parameter setObject:@"Closest Availability Match" forKey:@"sortby"];
         [parameter setObject:selectedMonthweakString forKey:@"timespan"];
       //  [parameter setObject:@(selectedDays.count).stringValue forKey:@"fwkday"];
-       // [parameter setObject:@"1" forKey:@"fwkday"];
+      // [parameter setObject:@"1" forKey:@"fwkday"];
     }
     else{
         [parameter setObject:self.dateserviceTextFiled.text forKey:@"dateofservice"];

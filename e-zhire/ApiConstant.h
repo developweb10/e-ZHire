@@ -40,6 +40,8 @@
 #define reviewmyProfile_Api @"reviewmyProfile.php"
 #define saveCreditdetails_Api @"saveCreditdetails.php"
 #define sendRequest_Api @"sendRequest.php"
+#define viewInvoice_Api @"viewInvoice.php"
+#define addDispute_Api @"addDispute.php"
 
 
 #endif /* ApiConstant_h */

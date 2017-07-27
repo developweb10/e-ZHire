@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Oswald-Regular.ttf">
+            <string>Oswald-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="View">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHe-ep-DKg">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zv1-70-VNa">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EVENT#" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q89-xv-Ayp">
+                                    <rect key="frame" x="2" y="-0.5" width="51.5" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="n9l-KA-X6D"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVz-Ha-Nf9">
+                                    <rect key="frame" x="55.5" y="0.0" width="51.5" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="EJe-ng-iRR"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SERVICE DESCRIPTION" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCA-M5-FT3">
+                                    <rect key="frame" x="109" y="-0.5" width="51.5" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="KKU-Hu-SvN"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASSOCIATE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qr-ph-XO1">
+                                    <rect key="frame" x="162.5" y="0.0" width="51" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="pgR-XP-yWg"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRICE PER HOUR" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaT-M5-473">
+                                    <rect key="frame" x="215.5" y="-0.5" width="51" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="1fc-jt-5xJ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOURS WORKED" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77q-3j-rdT">
+                                    <rect key="frame" x="268.5" y="-0.5" width="51.5" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="Cae-6D-nNe"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL COST" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9J-ge-5Vh">
+                                    <rect key="frame" x="322" y="-0.5" width="51" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="fuU-VM-l3U"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="11"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.82101762290000002" green="0.82100236419999995" blue="0.82101142410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstItem="77q-3j-rdT" firstAttribute="width" secondItem="q89-xv-Ayp" secondAttribute="width" id="3eD-nl-591"/>
+                                <constraint firstItem="QVz-Ha-Nf9" firstAttribute="width" secondItem="q89-xv-Ayp" secondAttribute="width" id="5Oi-L1-aRg"/>
+                                <constraint firstItem="QVz-Ha-Nf9" firstAttribute="centerY" secondItem="q89-xv-Ayp" secondAttribute="centerY" id="5sP-ra-0vB"/>
+                                <constraint firstItem="eCA-M5-FT3" firstAttribute="leading" secondItem="QVz-Ha-Nf9" secondAttribute="trailing" constant="2" id="A2z-lA-hLu"/>
+                                <constraint firstItem="M9J-ge-5Vh" firstAttribute="leading" secondItem="77q-3j-rdT" secondAttribute="trailing" constant="2" id="A32-da-lhE"/>
+                                <constraint firstAttribute="bottom" secondItem="q89-xv-Ayp" secondAttribute="bottom" id="Cut-i8-jbw"/>
+                                <constraint firstItem="M9J-ge-5Vh" firstAttribute="height" secondItem="q89-xv-Ayp" secondAttribute="height" id="DIY-Ql-fKS"/>
+                                <constraint firstItem="0Qr-ph-XO1" firstAttribute="leading" secondItem="eCA-M5-FT3" secondAttribute="trailing" constant="2" id="EEp-5G-P71"/>
+                                <constraint firstItem="GaT-M5-473" firstAttribute="width" secondItem="q89-xv-Ayp" secondAttribute="width" id="JxZ-HE-Sjk"/>
+                                <constraint firstItem="QVz-Ha-Nf9" firstAttribute="leading" secondItem="q89-xv-Ayp" secondAttribute="trailing" constant="2" id="KGk-5b-0pk"/>
+                                <constraint firstItem="0Qr-ph-XO1" firstAttribute="centerY" secondItem="eCA-M5-FT3" secondAttribute="centerY" id="La7-5t-VF6"/>
+                                <constraint firstItem="GaT-M5-473" firstAttribute="height" secondItem="q89-xv-Ayp" secondAttribute="height" id="N5O-89-kYp"/>
+                                <constraint firstItem="77q-3j-rdT" firstAttribute="height" secondItem="q89-xv-Ayp" secondAttribute="height" id="RJD-oC-c5J"/>
+                                <constraint firstItem="77q-3j-rdT" firstAttribute="leading" secondItem="GaT-M5-473" secondAttribute="trailing" constant="2" id="RTw-eP-GMt"/>
+                                <constraint firstAttribute="trailing" secondItem="M9J-ge-5Vh" secondAttribute="trailing" constant="2" id="RnM-IP-DpR"/>
+                                <constraint firstItem="0Qr-ph-XO1" firstAttribute="height" secondItem="q89-xv-Ayp" secondAttribute="height" id="UvL-SH-Ysm"/>
+                                <constraint firstItem="M9J-ge-5Vh" firstAttribute="width" secondItem="q89-xv-Ayp" secondAttribute="width" id="ZtO-mu-ank"/>
+                                <constraint firstItem="q89-xv-Ayp" firstAttribute="top" secondItem="Zv1-70-VNa" secondAttribute="top" id="cBZ-oM-7bQ"/>
+                                <constraint firstItem="eCA-M5-FT3" firstAttribute="width" secondItem="q89-xv-Ayp" secondAttribute="width" id="cRB-1c-CBl"/>
+                                <constraint firstItem="0Qr-ph-XO1" firstAttribute="width" secondItem="q89-xv-Ayp" secondAttribute="width" id="d83-iS-qS9"/>
+                                <constraint firstItem="GaT-M5-473" firstAttribute="centerY" secondItem="0Qr-ph-XO1" secondAttribute="centerY" id="eFv-Mr-siw"/>
+                                <constraint firstItem="77q-3j-rdT" firstAttribute="centerY" secondItem="GaT-M5-473" secondAttribute="centerY" id="fFm-J2-08Z"/>
+                                <constraint firstItem="77q-3j-rdT" firstAttribute="centerY" secondItem="M9J-ge-5Vh" secondAttribute="centerY" id="hKe-z9-JNc"/>
+                                <constraint firstItem="M9J-ge-5Vh" firstAttribute="centerY" secondItem="GaT-M5-473" secondAttribute="centerY" id="nAW-vC-3Hc"/>
+                                <constraint firstItem="GaT-M5-473" firstAttribute="leading" secondItem="0Qr-ph-XO1" secondAttribute="trailing" constant="2" id="nHU-3S-Ou6"/>
+                                <constraint firstItem="QVz-Ha-Nf9" firstAttribute="height" secondItem="q89-xv-Ayp" secondAttribute="height" id="nQi-Cb-12j"/>
+                                <constraint firstItem="eCA-M5-FT3" firstAttribute="height" secondItem="q89-xv-Ayp" secondAttribute="height" id="sfU-2d-Dcj"/>
+                                <constraint firstAttribute="height" constant="40" id="uUR-IW-scm"/>
+                                <constraint firstItem="q89-xv-Ayp" firstAttribute="leading" secondItem="Zv1-70-VNa" secondAttribute="leading" constant="2" id="uy1-s2-HEZ"/>
+                                <constraint firstItem="eCA-M5-FT3" firstAttribute="centerY" secondItem="QVz-Ha-Nf9" secondAttribute="centerY" id="zzb-3k-Fgf"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ama-aN-2fN">
+                            <rect key="frame" x="2" y="42" width="371" height="31"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="event" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjc-7i-uel">
+                                    <rect key="frame" x="5" y="6.5" width="50.5" height="18"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="18" id="o9Z-gj-dOr"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="10"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t85-mJ-akB">
+                                    <rect key="frame" x="57.5" y="6.5" width="51" height="18"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="18" id="pdu-4b-8Rk"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="10"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="service" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aal-4b-FgX">
+                                    <rect key="frame" x="110.5" y="6.5" width="50" height="18"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="18" id="FJn-W1-imk"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="10"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="associate" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVR-OX-YFE">
+                                    <rect key="frame" x="162.5" y="6.5" width="51" height="18"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="18" id="bHN-Iz-B6v"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="10"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price per hour" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVl-hh-785">
+                                    <rect key="frame" x="215.5" y="6.5" width="50" height="18"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="18" id="oip-3A-ZCF"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="10"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hour work" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWl-Cy-bZN">
+                                    <rect key="frame" x="267.5" y="6.5" width="51" height="18"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="18" id="vSL-1V-eWa"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="10"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="total cost" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uag-0y-WbI">
+                                    <rect key="frame" x="321" y="6" width="50" height="18"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="18" id="vrx-Sh-ffV"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="10"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="aVR-OX-YFE" firstAttribute="centerY" secondItem="Aal-4b-FgX" secondAttribute="centerY" id="0yZ-Xz-fhh"/>
+                                <constraint firstItem="tjc-7i-uel" firstAttribute="leading" secondItem="Ama-aN-2fN" secondAttribute="leading" constant="5" id="1Q1-C2-B7l"/>
+                                <constraint firstItem="uag-0y-WbI" firstAttribute="height" secondItem="tjc-7i-uel" secondAttribute="height" id="4yx-JA-g8o"/>
+                                <constraint firstItem="t85-mJ-akB" firstAttribute="centerY" secondItem="tjc-7i-uel" secondAttribute="centerY" id="5v6-G1-xAB"/>
+                                <constraint firstItem="EVl-hh-785" firstAttribute="centerY" secondItem="aVR-OX-YFE" secondAttribute="centerY" id="8wH-7c-MTf"/>
+                                <constraint firstItem="uag-0y-WbI" firstAttribute="leading" secondItem="yWl-Cy-bZN" secondAttribute="trailing" constant="2" id="Acs-Oh-9Bc"/>
+                                <constraint firstItem="aVR-OX-YFE" firstAttribute="width" secondItem="tjc-7i-uel" secondAttribute="width" id="D5B-la-xJj"/>
+                                <constraint firstItem="EVl-hh-785" firstAttribute="height" secondItem="tjc-7i-uel" secondAttribute="height" id="DWq-js-haP"/>
+                                <constraint firstItem="yWl-Cy-bZN" firstAttribute="centerY" secondItem="EVl-hh-785" secondAttribute="centerY" id="Fwp-Uw-nd0"/>
+                                <constraint firstItem="Aal-4b-FgX" firstAttribute="height" secondItem="tjc-7i-uel" secondAttribute="height" id="KcZ-eC-Lr5"/>
+                                <constraint firstItem="aVR-OX-YFE" firstAttribute="height" secondItem="tjc-7i-uel" secondAttribute="height" id="O6j-jO-aOS"/>
+                                <constraint firstItem="aVR-OX-YFE" firstAttribute="leading" secondItem="Aal-4b-FgX" secondAttribute="trailing" constant="2" id="Ojt-bs-oJ0"/>
+                                <constraint firstItem="Aal-4b-FgX" firstAttribute="centerY" secondItem="t85-mJ-akB" secondAttribute="centerY" id="TO5-g5-uJx"/>
+                                <constraint firstItem="yWl-Cy-bZN" firstAttribute="leading" secondItem="EVl-hh-785" secondAttribute="trailing" constant="2" id="YYd-9m-eQB"/>
+                                <constraint firstItem="uag-0y-WbI" firstAttribute="centerY" secondItem="yWl-Cy-bZN" secondAttribute="centerY" id="aZw-ni-Vg3"/>
+                                <constraint firstItem="yWl-Cy-bZN" firstAttribute="width" secondItem="tjc-7i-uel" secondAttribute="width" id="bXf-km-jdy"/>
+                                <constraint firstItem="t85-mJ-akB" firstAttribute="height" secondItem="tjc-7i-uel" secondAttribute="height" id="cD4-z9-Td6"/>
+                                <constraint firstItem="Aal-4b-FgX" firstAttribute="leading" secondItem="t85-mJ-akB" secondAttribute="trailing" constant="2" id="dro-KR-S1A"/>
+                                <constraint firstItem="t85-mJ-akB" firstAttribute="width" secondItem="tjc-7i-uel" secondAttribute="width" id="i8Z-9Z-c3g"/>
+                                <constraint firstItem="EVl-hh-785" firstAttribute="leading" secondItem="aVR-OX-YFE" secondAttribute="trailing" constant="2" id="iAc-hc-al9"/>
+                                <constraint firstItem="Aal-4b-FgX" firstAttribute="width" secondItem="tjc-7i-uel" secondAttribute="width" id="iPP-hR-3Ff"/>
+                                <constraint firstItem="yWl-Cy-bZN" firstAttribute="height" secondItem="tjc-7i-uel" secondAttribute="height" id="lkz-gG-Hg7"/>
+                                <constraint firstItem="t85-mJ-akB" firstAttribute="leading" secondItem="tjc-7i-uel" secondAttribute="trailing" constant="2" id="nKG-ot-cac"/>
+                                <constraint firstAttribute="trailing" secondItem="uag-0y-WbI" secondAttribute="trailing" id="rQF-AM-zDv"/>
+                                <constraint firstItem="uag-0y-WbI" firstAttribute="width" secondItem="tjc-7i-uel" secondAttribute="width" id="rT2-Ky-IWh"/>
+                                <constraint firstItem="EVl-hh-785" firstAttribute="width" secondItem="tjc-7i-uel" secondAttribute="width" id="uE0-cR-hlp"/>
+                                <constraint firstItem="tjc-7i-uel" firstAttribute="centerY" secondItem="Ama-aN-2fN" secondAttribute="centerY" id="vln-Wh-NMg"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Ama-aN-2fN" secondAttribute="trailing" constant="2" id="4aZ-o8-xlA"/>
+                        <constraint firstAttribute="bottom" secondItem="Ama-aN-2fN" secondAttribute="bottom" constant="2" id="6LO-fQ-Cv3"/>
+                        <constraint firstItem="Zv1-70-VNa" firstAttribute="top" secondItem="IHe-ep-DKg" secondAttribute="top" id="ClT-Cu-Tha"/>
+                        <constraint firstItem="Ama-aN-2fN" firstAttribute="top" secondItem="Zv1-70-VNa" secondAttribute="bottom" constant="2" id="GGP-y4-UpW"/>
+                        <constraint firstAttribute="height" constant="75" id="TXI-Cy-yu4"/>
+                        <constraint firstAttribute="trailing" secondItem="Zv1-70-VNa" secondAttribute="trailing" id="fKS-5q-qhf"/>
+                        <constraint firstItem="Zv1-70-VNa" firstAttribute="leading" secondItem="IHe-ep-DKg" secondAttribute="leading" id="i8p-JZ-HIo"/>
+                        <constraint firstItem="Ama-aN-2fN" firstAttribute="leading" secondItem="IHe-ep-DKg" secondAttribute="leading" constant="2" id="pdW-gG-bDA"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="IHe-ep-DKg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="E9U-qq-cYe"/>
+                <constraint firstItem="IHe-ep-DKg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Tkk-xw-qfP"/>
+                <constraint firstAttribute="trailing" secondItem="IHe-ep-DKg" secondAttribute="trailing" id="odk-fe-geN"/>
+            </constraints>
+            <connections>
+                <outlet property="associateLbl" destination="aVR-OX-YFE" id="Lgd-3r-Lzu"/>
+                <outlet property="dateLbl" destination="t85-mJ-akB" id="hHy-Fb-xgn"/>
+                <outlet property="eventLbl" destination="tjc-7i-uel" id="5Ur-cP-1ww"/>
+                <outlet property="hourWorkLbl" destination="yWl-Cy-bZN" id="Gkh-US-d2W"/>
+                <outlet property="pricePerHoreLbl" destination="EVl-hh-785" id="HvJ-tI-spR"/>
+                <outlet property="serviceLbl" destination="Aal-4b-FgX" id="HYK-Nz-dsp"/>
+                <outlet property="totalCostLbl" destination="uag-0y-WbI" id="i9G-Gq-kME"/>
+            </connections>
+            <point key="canvasLocation" x="210" y="33.5"/>
+        </view>
+    </objects>
+</document>

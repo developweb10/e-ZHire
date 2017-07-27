@@ -12,6 +12,8 @@
 #import "EZReviewCellVC.h"
 #import "EZClientPriceCell.h"
 #import "ReviewCellVideo.h"
+#import <AVFoundation/AVFoundation.h>
+#import <AVKit/AVKit.h>
 
 @interface EZReviewVC ()
 {
@@ -21,7 +23,9 @@
     NSMutableArray*reviewRatingArr;
     NSMutableArray*priceBox;
     NSMutableArray*videoArr;
- 
+    AVPlayer*player;
+    NSString *videoStr;
+    
 }
 @end
 
@@ -29,7 +33,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view.
     serviceArr=[[NSMutableArray alloc]init];
     ImageArr=[[NSMutableArray alloc]init];
     reviewRatingArr=[[NSMutableArray alloc]init];
@@ -37,11 +41,13 @@
     videoArr=[[NSMutableArray alloc]init];
     self.previousIndex=-2;
     self.webView.delegate=self;
- //imageArr=[NSArray arrayWithObjects:@"clean",@"banner1",@"banner2",@"banner3",@"banner4",@"banner5",@"banner6", nil];
+    //imageArr=[NSArray arrayWithObjects:@"clean",@"banner1",@"banner2",@"banner3",@"banner4",@"banner5",@"banner6", nil];
     [self ipadFontSize];
     NSLog(@"%@",_searchId);
     NSLog(@"%@",_dateId);
     [self reviewPostApi];
+    
+    
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
@@ -69,27 +75,27 @@
                                                              options:kNilOptions
                                                                error:&error];
         
-        if([json valueForKey:@"aboutme"]){
-            self.aboutTextLabel.text=[json valueForKey:@"aboutme"];
-            serviceArr=[json valueForKey:@"services"];
-            videoArr=[json valueForKey:@"video"];
-            ImageArr=[json valueForKey:@"thumbnail"];
+        if([[json valueForKey:@"success"] boolValue]==1){
+           NSDictionary*reviewDetails=[json valueForKey:@"value"];
+           self.aboutTextLabel.text=[reviewDetails valueForKey:@"aboutme"];
+            serviceArr=[reviewDetails valueForKey:@"services"];
+            videoArr=[reviewDetails valueForKey:@"video"];
+            ImageArr=[reviewDetails valueForKey:@"thumbnail"];
             NSString *getImagePath = [ImageArr objectAtIndex:0];
             [self.photoImgage sd_setImageWithURL:[NSURL URLWithString:getImagePath] placeholderImage:[UIImage imageNamed:@"serivePlaceHolder"]];
-            reviewRatingArr=[json valueForKey:@"Review_rating"];
-            priceBox=[json valueForKey:@"price-box"];
+            reviewRatingArr=[reviewDetails valueForKey:@"Review_rating"];
+            priceBox=[reviewDetails valueForKey:@"price-box"];
+            [self.secondCollectionView reloadData];
+            [self.videoCollectionView reloadData];
             [self.tableView reloadData];
             [self.serviceTableView reloadData];
             [self.firstCollectionView reloadData];
-            [self.secondCollectionView reloadData];
-            [self.videoCollectionView reloadData];
             [MBProgressHUD hideHUDForView:self.view animated:YES];
         }
         else{
             [MBProgressHUD hideHUDForView:self.view animated:YES];
             [EZCommonMethod showAlert:nil message:@"There is some problem to proceed"];
         }
-        
     } onError:^(NSError *Error) {
         NSLog(@"%@:",Error);
         [MBProgressHUD hideHUDForView:self.view animated:YES];
@@ -101,9 +107,9 @@
         [self.reviewLabel setFont:[UIFont fontWithName:@"OSWALD-BOLD" size:22.0f]];
         [self.commentLabel setFont:[UIFont fontWithName:@"OSWALD-BOLD" size:20.0f]];
         [self.ratingLabel setFont:[UIFont fontWithName:@"OSWALD-BOLD" size:20.0f]];
-         [self.aboutTextLabel setFont:[UIFont fontWithName:@"Oswald-Regular" size:18.0f]];
+        [self.aboutTextLabel setFont:[UIFont fontWithName:@"Oswald-Regular" size:18.0f]];
     }else{
-  }
+    }
 }
 #pragma mark - UICollectionViewDelegate
 
@@ -113,16 +119,16 @@
     }
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-     if (collectionView==self.firstCollectionView) {
-      return serviceArr.count;
-         
-     }
-     else if(collectionView==self.videoCollectionView){
-         return videoArr.count;
-     }
-     else{
-       return ImageArr.count;
-     }
+    if (collectionView==self.firstCollectionView) {
+        return serviceArr.count;
+        
+    }
+    else if(collectionView==self.videoCollectionView){
+        return videoArr.count;
+    }
+    else{
+        return ImageArr.count;
+    }
 }
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -139,13 +145,27 @@
     else if(collectionView==self.videoCollectionView){
         ReviewCellVideo *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"ReviewCellVideo" forIndexPath:indexPath];
         NSString*cellVideo=[videoArr objectAtIndex:indexPath.row];
-//      NSString *stringurl=[NSString stringWithFormat:@"%@",cellVideo];
-        NSString *trimmed = [cellVideo stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-        NSURLRequest*request=[NSURLRequest requestWithURL:[NSURL URLWithString:trimmed]];
-        [cell.videoWebView loadRequest:request];
-     // [cell.videoWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:cellVideo]]];
- 
-       return cell;
+        //NSString *stringurl=[NSString stringWithFormat:@"%@",cellVideo];
+        
+        videoStr = [cellVideo stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        NSURLRequest*request=[NSURLRequest requestWithURL:[NSURL URLWithString:videoStr]];
+        dispatch_queue_t workerQueue = dispatch_queue_create("QueueIdentifier", NULL);
+        dispatch_async(workerQueue, ^ {
+            [cell.videoWebView loadRequest:request];
+        });
+        
+//        CGRect rect = [[UIScreen mainScreen] bounds];
+//        CGSize screenSize = rect.size;
+//        UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0,0,screenSize.width,screenSize.height)];
+//        webView.autoresizesSubviews = YES;
+//        webView.autoresizingMask=(UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth);
+//        NSString *htmlString = [NSString stringWithFormat:@"<html><head><meta name = \"viewport\" content = \"initial-scale = 1.0, user-scalable = no, width = 212\"/></head><body style=\"background:#F00;margin-top:0px;margin-left:0px\"><div><object width=\"320\" height=\"480\"><param name=\"movie\" value=\"%@\"></param><param name=\"wmode\" value=\"transparent\"></param><embed src=\"%@\" type=\"application/x-shockwave-flash\" wmode=\"transparent\" width=\"320\" height=\"480\"></embed></object></div></body></html>",videoStr,videoStr]    ;
+//        
+//        [webView loadHTMLString:htmlString baseURL:[NSURL URLWithString:@"http://www.youtube.com"]];
+//
+//        [self.tableView addSubview:webView];
+
+        return cell;
     }
     else{
         EZPhotoCellVC *secCell=[collectionView dequeueReusableCellWithReuseIdentifier:@"EZPhotoCellVC" forIndexPath:indexPath];
@@ -157,22 +177,21 @@
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath  {
     
-  if (collectionView ==self.firstCollectionView){
+    if (collectionView ==self.firstCollectionView){
         
-  }
-  else if (collectionView ==self.videoCollectionView){
-      
-   }
-  else{
+    }
+    else if (collectionView ==self.videoCollectionView){
+        
+    }
+    else{
         currentImage=indexPath.item;
         self.leftArrowBtn.enabled = YES;
         self.rightArrowBtn.enabled = YES;
         NSString *getImagePath = [ImageArr objectAtIndex:indexPath.row];
         [self.photoImgage sd_setImageWithURL:[NSURL URLWithString:getImagePath] placeholderImage:[UIImage imageNamed:@"serivePlaceHolder"]];
         [self.secondCollectionView reloadData];
-  }
+    }
 }
-
 #pragma mark- TableView DataSource and Delegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -180,16 +199,15 @@
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-     if (tableView==self.tableView) {
-          return reviewRatingArr.count;
-         
-     }else{
+    if (tableView==self.tableView) {
+        return reviewRatingArr.count;
+        
+    }else{
         return priceBox.count;
-     }
+    }
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     if (tableView==self.tableView) {
         static NSString *MyIdentifier = @"EZReviewCellVC";
         EZReviewCellVC *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
@@ -206,14 +224,14 @@
         CGFloat floatvalue=ratValue.floatValue;
         cell.starView.userInteractionEnabled=NO;
         cell.starView.value=floatvalue;
-    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
             [cell.nameLabel setFont:[UIFont fontWithName:@"Oswald-Regular" size:16.0f]];
             [cell.detailTextLabel setFont:[UIFont fontWithName:@"Oswald-Regular" size:16.0f]];
             
-    }else{
+        }else{
             
-     }
-       return cell;
+        }
+        return cell;
         
     }else{
         static NSString *cellId = @"EZClientPriceCell";
@@ -259,7 +277,7 @@
     if (tableView==self.tableView) {
         [self.tableView beginUpdates];
         [self.tableView endUpdates];
- ..........,,,,,,,,,,,,,,,,zzz...,,,,,,,,   }
+    }
     else{
     }
 }
@@ -275,19 +293,18 @@
     }
 }
 - (IBAction)leftActionArrow:(UIButton*)sender {
-    
     if (currentImage > 0) {
         currentImage = currentImage-1;
-       sender.enabled = currentImage == 0?NO:YES;
-       self.rightArrowBtn.enabled = YES;
+        sender.enabled = currentImage == 0?NO:YES;
+        self.rightArrowBtn.enabled = YES;
         NSString *getImagePath = [ImageArr objectAtIndex:currentImage];
-        
         [self.photoImgage sd_setImageWithURL:[NSURL URLWithString:getImagePath] placeholderImage:[UIImage imageNamed:@"serivePlaceHolder"]];
         [self.secondCollectionView reloadData];
     }
-
 }
 - (IBAction)howReviewAction:(id)sender {
+ 
+
 }
 
 @end

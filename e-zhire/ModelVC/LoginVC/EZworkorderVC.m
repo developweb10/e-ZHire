@@ -72,7 +72,6 @@
 
              if ([workOrderArr count] > 0) {
                   [self.workOrderTableView reloadData];
-                 
             }
         }
         else{
@@ -87,13 +86,11 @@
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
 }
-
 - (void)textFieldDidEndEditing:(UITextField *)textField{
     if (textField==nil||textField.text.length<=0) {
         [self workOrderApi];
     }
 }
-
 /*
 -(void)showUIAlertControllerWithTitle:(NSString*)Title{
     
@@ -134,7 +131,7 @@
      cell.dateSechduleLbl.text=[[workOrderArr objectAtIndex:indexPath.row]valueForKey:@"schedule_service_date"];
      cell.statrTimeLbl.text=[[workOrderArr objectAtIndex:indexPath.row]valueForKey:@"schedule_start_time"];
      cell.clientNameLbl.text=[[workOrderArr objectAtIndex:indexPath.row]valueForKey:@"client"];
-     cell.associate.text=[[workOrderArr objectAtIndex:indexPath.row]valueForKey:@"type_value"];
+     cell.associate.text=[[workOrderArr objectAtIndex:indexPath.row]valueForKey:@"service_type"];
     
     return cell;
 }

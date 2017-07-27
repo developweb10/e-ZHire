@@ -72,6 +72,7 @@
 - (IBAction)invoiceAction:(id)sender {
     EZInvoicesVC*viewcontroller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZInvoicesVC"];
     viewcontroller.userId=_getUserId;
+    viewcontroller.getPaymentArr=payemntInfoArr;
     [self.navigationController pushViewController:viewcontroller animated:YES];
 }
 - (IBAction)saveChangesAction:(id)sender {

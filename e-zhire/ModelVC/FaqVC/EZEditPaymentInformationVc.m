@@ -68,7 +68,7 @@
     NSString *selectExpir = [myStrings componentsJoinedByString:@"/"];
     if (checkAdd) {
         urlStr=[NSString stringWithFormat:@"%@%@",BaseUrl,saveCreditdetails_Api];
-        parameter=@{@"cardname":self.cardNameTextField.text,@"cardtype":self.cardTypeLbl.text,@"expiry":selectExpir,@"cvv":self.cvvTextField.text,@"clientid":_userIdStr,@"cardno":self.cardNumberTextField.text};
+    parameter=@{@"cardname":self.cardNameTextField.text,@"cardtype":self.cardTypeLbl.text,@"expiry":selectExpir,@"cvv":self.cvvTextField.text,@"clientid":_userIdStr,@"cardno":self.cardNumberTextField.text};
         
         //        {"cardname":"Test Again","cardtype":"visa","expiry":"8/2019","cvv":"123","clientid":"1178","cardno":"4929000000014"}
         
@@ -129,8 +129,7 @@
 }
 #pragma mark- TableView DataSource and Delegate
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

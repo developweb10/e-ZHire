@@ -25,7 +25,12 @@
 		032F3C131F0B849E00DF3576 /* NSDate+CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 032F3C0F1F0B849E00DF3576 /* NSDate+CalendarView.m */; };
 		032F3C141F0B849E00DF3576 /* NSString+CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 032F3C111F0B849E00DF3576 /* NSString+CalendarView.m */; };
 		032F3C1B1F0B8AD400DF3576 /* WorkHistoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 032F3C1A1F0B8AD400DF3576 /* WorkHistoryVC.m */; };
+		0345560B1F25D0AF00893762 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0345560A1F25D0AF00893762 /* AVFoundation.framework */; };
+		0345560E1F25EAF800893762 /* InvoiceAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0345560D1F25EAF800893762 /* InvoiceAddressCell.m */; };
 		0349500C1EE9604400AA9E6D /* EZPaymentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0349500B1EE9604400AA9E6D /* EZPaymentVC.m */; };
+		034FB0771F2867B00010ECF8 /* viewDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 034FB0761F2867B00010ECF8 /* viewDetailModel.m */; };
+		034FB0791F2898D00010ECF8 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034FB0781F2898D00010ECF8 /* View.xib */; };
+		034FB07C1F2899420010ECF8 /* View.m in Sources */ = {isa = PBXBuildFile; fileRef = 034FB07B1F2899420010ECF8 /* View.m */; };
 		035540B91F024886008428F3 /* EZClientAccountVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 035540B81F024886008428F3 /* EZClientAccountVC.m */; };
 		035540BD1F025006008428F3 /* EZworkorderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 035540BC1F025006008428F3 /* EZworkorderVC.m */; };
 		035540C01F025852008428F3 /* EZOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 035540BF1F025852008428F3 /* EZOrderCell.m */; };
@@ -34,6 +39,7 @@
 		035540CD1F02787D008428F3 /* EZInvoicesDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 035540CC1F02787D008428F3 /* EZInvoicesDetail.m */; };
 		035540D11F028D50008428F3 /* InvoiceDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 035540D01F028D50008428F3 /* InvoiceDetailCell.m */; };
 		035A2E4D1F14C393002ED86F /* PaySetupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 035A2E4C1F14C393002ED86F /* PaySetupVC.m */; };
+		03676C0E1F277B8D00C58262 /* ViewDetailcell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03676C0D1F277B8D00C58262 /* ViewDetailcell.m */; };
 		036D05DF1F01380E000633E2 /* headerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 036D05DE1F01380E000633E2 /* headerCell.m */; };
 		0381559F1F174901003A8193 /* CreateTeamCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0381559E1F174901003A8193 /* CreateTeamCell.m */; };
 		038155A31F1769CD003A8193 /* ManageAssociateBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 038155A21F1769CD003A8193 /* ManageAssociateBusiness.m */; };
@@ -162,8 +168,16 @@
 		032F3C111F0B849E00DF3576 /* NSString+CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CalendarView.m"; sourceTree = "<group>"; };
 		032F3C191F0B8AD400DF3576 /* WorkHistoryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkHistoryVC.h; sourceTree = "<group>"; };
 		032F3C1A1F0B8AD400DF3576 /* WorkHistoryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkHistoryVC.m; sourceTree = "<group>"; };
+		0345560A1F25D0AF00893762 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0345560C1F25EAF800893762 /* InvoiceAddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvoiceAddressCell.h; sourceTree = "<group>"; };
+		0345560D1F25EAF800893762 /* InvoiceAddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvoiceAddressCell.m; sourceTree = "<group>"; };
 		0349500A1EE9604400AA9E6D /* EZPaymentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZPaymentVC.h; sourceTree = "<group>"; };
 		0349500B1EE9604400AA9E6D /* EZPaymentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZPaymentVC.m; sourceTree = "<group>"; };
+		034FB0751F2867B00010ECF8 /* viewDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = viewDetailModel.h; sourceTree = "<group>"; };
+		034FB0761F2867B00010ECF8 /* viewDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = viewDetailModel.m; sourceTree = "<group>"; };
+		034FB0781F2898D00010ECF8 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		034FB07A1F2899420010ECF8 /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
+		034FB07B1F2899420010ECF8 /* View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = View.m; sourceTree = "<group>"; };
 		035540B71F024885008428F3 /* EZClientAccountVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZClientAccountVC.h; sourceTree = "<group>"; };
 		035540B81F024886008428F3 /* EZClientAccountVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZClientAccountVC.m; sourceTree = "<group>"; };
 		035540BB1F025006008428F3 /* EZworkorderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZworkorderVC.h; sourceTree = "<group>"; };
@@ -180,6 +194,8 @@
 		035540D01F028D50008428F3 /* InvoiceDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvoiceDetailCell.m; sourceTree = "<group>"; };
 		035A2E4B1F14C393002ED86F /* PaySetupVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaySetupVC.h; sourceTree = "<group>"; };
 		035A2E4C1F14C393002ED86F /* PaySetupVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaySetupVC.m; sourceTree = "<group>"; };
+		03676C0C1F277B8D00C58262 /* ViewDetailcell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewDetailcell.h; sourceTree = "<group>"; };
+		03676C0D1F277B8D00C58262 /* ViewDetailcell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewDetailcell.m; sourceTree = "<group>"; };
 		036D05DD1F01380E000633E2 /* headerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = headerCell.h; sourceTree = "<group>"; };
 		036D05DE1F01380E000633E2 /* headerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = headerCell.m; sourceTree = "<group>"; };
 		0381559D1F174901003A8193 /* CreateTeamCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateTeamCell.h; sourceTree = "<group>"; };
@@ -363,6 +379,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0345560B1F25D0AF00893762 /* AVFoundation.framework in Frameworks */,
 				8B873C441F065FF9009428A2 /* MessageUI.framework in Frameworks */,
 				8B86AA331EDC52120031793A /* Foundation.framework in Frameworks */,
 				A8A4DF963DB0F603457F95C8 /* Pods_e_zhire.framework in Frameworks */,
@@ -415,6 +432,8 @@
 				03F6AAB51F0E39E000234B1D /* serviceProviderJsonModel.m */,
 				03AE465F1F1E3C5800DB5083 /* EditpaymentJsonModel.h */,
 				03AE46601F1E3C5900DB5083 /* EditpaymentJsonModel.m */,
+				034FB0751F2867B00010ECF8 /* viewDetailModel.h */,
+				034FB0761F2867B00010ECF8 /* viewDetailModel.m */,
 			);
 			path = JSONModel;
 			sourceTree = "<group>";
@@ -545,6 +564,11 @@
 			children = (
 				035540CB1F02787D008428F3 /* EZInvoicesDetail.h */,
 				035540CC1F02787D008428F3 /* EZInvoicesDetail.m */,
+				03676C0C1F277B8D00C58262 /* ViewDetailcell.h */,
+				03676C0D1F277B8D00C58262 /* ViewDetailcell.m */,
+				034FB0781F2898D00010ECF8 /* View.xib */,
+				034FB07A1F2899420010ECF8 /* View.h */,
+				034FB07B1F2899420010ECF8 /* View.m */,
 			);
 			name = InvoiceDetailVC;
 			path = LoginVC;
@@ -555,6 +579,8 @@
 			children = (
 				035540CF1F028D50008428F3 /* InvoiceDetailCell.h */,
 				035540D01F028D50008428F3 /* InvoiceDetailCell.m */,
+				0345560C1F25EAF800893762 /* InvoiceAddressCell.h */,
+				0345560D1F25EAF800893762 /* InvoiceAddressCell.m */,
 			);
 			name = InvoiceDetailCell;
 			sourceTree = "<group>";
@@ -1167,6 +1193,7 @@
 		8B86AA311EDC52120031793A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0345560A1F25D0AF00893762 /* AVFoundation.framework */,
 				8B873C431F065FF9009428A2 /* MessageUI.framework */,
 				8B86AA321EDC52120031793A /* Foundation.framework */,
 				2D91A524DA00F2199F38858D /* Pods_e_zhire.framework */,
@@ -1283,6 +1310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				034FB0791F2898D00010ECF8 /* View.xib in Resources */,
 				8B86AA1A1EDC45560031793A /* LaunchScreen.storyboard in Resources */,
 				0315CCD01EE598E200DFE6FC /* splash.png in Resources */,
 				8B86AA171EDC45560031793A /* Assets.xcassets in Resources */,
@@ -1382,7 +1410,9 @@
 				03C8903F1F04E5AD002FC3DC /* EZPaymentinformationCell.m in Sources */,
 				035A2E4D1F14C393002ED86F /* PaySetupVC.m in Sources */,
 				03C890431F04E740002FC3DC /* EZEditPaymentcell.m in Sources */,
+				034FB0771F2867B00010ECF8 /* viewDetailModel.m in Sources */,
 				03C890521F0529A7002FC3DC /* AssociateAccountCell.m in Sources */,
+				03676C0E1F277B8D00C58262 /* ViewDetailcell.m in Sources */,
 				032F3C121F0B849E00DF3576 /* CalendarView.m in Sources */,
 				03CBF7501EFD252600F6C52D /* EZPhotoCellVC.m in Sources */,
 				03D8A6461F07B6F400713B46 /* FSCalendarCollectionViewLayout.m in Sources */,
@@ -1396,6 +1426,7 @@
 				0315CCC51EE572BD00DFE6FC /* EZVideoPlayVC.m in Sources */,
 				03DE87BA1F1652EF0060D2D5 /* ManageServiceCell.m in Sources */,
 				8B52E1CD1EDED97800211D79 /* EZFaqVC.m in Sources */,
+				034FB07C1F2899420010ECF8 /* View.m in Sources */,
 				032F3C141F0B849E00DF3576 /* NSString+CalendarView.m in Sources */,
 				038497E71F18EFE700BF06E7 /* EditPaymentCell.m in Sources */,
 				8B86AA0F1EDC45550031793A /* AppDelegate.m in Sources */,
@@ -1449,6 +1480,7 @@
 				03D8A6181F07872300713B46 /* MyAvailbilityScheduleVC.m in Sources */,
 				0349500C1EE9604400AA9E6D /* EZPaymentVC.m in Sources */,
 				03C8904E1F0526D3002FC3DC /* EZAssociateAccountVC.m in Sources */,
+				0345560E1F25EAF800893762 /* InvoiceAddressCell.m in Sources */,
 				03DE87B31F163C890060D2D5 /* LearningCell.m in Sources */,
 				8B86AA471EDC6B730031793A /* EZBottomTabVC.m in Sources */,
 				03D8A6451F07B6F400713B46 /* FSCalendarCollectionView.m in Sources */,

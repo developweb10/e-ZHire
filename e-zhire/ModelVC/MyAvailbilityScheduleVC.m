@@ -73,7 +73,7 @@
     monthArray = [NSArray arrayWithObjects:@"January",@"February",@"March",@"April",@"May",@"June",@"July",@"August",@"September",@"October",@"November",@"December", nil];
     
     checkArray=[NSMutableArray arrayWithObjects:@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0", nil];
-
+    
     timeArr=[NSMutableArray arrayWithObjects:@"None",@"12:00AM",@"12:30AM",@"1:00AM",@"1:30AM",@"2:00AM",@"2:30AM",@"3:00AM",@"3:30AM",@"4:00AM",@"4:30AM",@"5:00AM",@"5:30AM",@"6:00AM",@"6:30AM",@"7:00AM",@"7:30AM",@"8:00AM",@"9:00AM",@"9:30AM",@"10:00AM",@"10:30AM",@"11:00AM",@"11:30AM",@"12:00PM",@"12:30PM",@"1:00PM",@"1:30PM",@"2:00PM",@"2:30PM",@"3:00PM",@"3:30PM",@"4:00PM",@"4:30PM",@"5:00PM",@"5:30PM",@"6:00PM",@"6:30PM",@"7:00PM",@"7:30PM",@"8:00PM",@"8:30PM",@"9:00PM",@"9:30PM",@"10:00PM",@"10:30PM",@"11:00PM",@"11:30PM",nil];
     
     self.dateFormatter = [[NSDateFormatter alloc] init];
@@ -98,7 +98,6 @@
     self.dailyAdjustmentView.hidden=YES;
     [self.view addSubview:self.dailyAdjustmentView];
     
-    
     CGRect frame3=self.weekView.bounds;
     frame3.size.height=400;
     frame3.origin.x=40;
@@ -107,7 +106,6 @@
     self.weekView.frame=frame3;
     self.weekView.hidden=YES;
     [self.view addSubview:self.weekView];
-    
     [self.calendraView selectDate:[NSDate date] scrollToDate:YES];
     self.calendraView.allowsMultipleSelection = YES;
 
@@ -135,20 +133,18 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 #pragma mark- TableView DataSource and Delegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     
     return 1;
 }
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return monthArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-  
+    
     static NSString *MyIdentifier = @"MonthCell";
     MonthCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
     cell.monthTitle.text=[monthArray objectAtIndex:indexPath.row];
@@ -176,54 +172,42 @@
     }
     [_monthShowTableview reloadData];
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 #pragma mark - Button Action
 
 - (IBAction)MothAvailablebtnAction:(id)sender {
     [UIView transitionWithView:self.monthView
                       duration:0.5
-                       options:UIViewAnimationOptionTransitionCurlDown
+                       options:UIViewAnimationOptionTransitionCrossDissolve
                     animations:^{
-                        self.view.backgroundColor=[UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.2];
-                        self.monthView.hidden=NO;
+                    self.view.backgroundColor=[UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.2];
+                    self.monthView.hidden=NO;
                     }
-                    completion:NULL];
+                completion:NULL];
 }
 - (IBAction)closeButtonAction:(id)sender {
     [UIView transitionWithView:self.monthView
                       duration:0.5
-                       options:UIViewAnimationOptionTransitionCurlUp
+                       options:UIViewAnimationOptionTransitionCrossDissolve
                     animations:^{
                         self.view.backgroundColor=[UIColor whiteColor];
                         self.monthView.hidden=YES;
                     }
-                    completion:NULL];
+             completion:NULL];
 }
-
 - (IBAction)closeDailyScheduleViewBtnAction:(id)sender {
     [UIView transitionWithView:self.dailyAdjustmentView
                       duration:0.5
-                       options:UIViewAnimationOptionTransitionCurlUp
+                       options:UIViewAnimationOptionTransitionCrossDissolve
                     animations:^{
                     self.view.backgroundColor=[UIColor whiteColor];
                     self.dailyAdjustmentView.hidden=YES;
                     }
                     completion:NULL];
 }
-
 - (IBAction)showCalendar_Btn_Action:(id)sender {
-
     [UIView transitionWithView:self.dailyAdjustmentView
                       duration:0.5
-                       options:UIViewAnimationOptionTransitionCurlDown
+                       options:UIViewAnimationOptionTransitionCrossDissolve
                     animations:^{
                         self.view.backgroundColor=[UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.2];
                         self.dailyAdjustmentView.hidden=NO;
@@ -234,7 +218,6 @@
 #pragma mark - KVO
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    
     if (context == _KVOContext) {
         FSCalendarScope oldScope = [change[NSKeyValueChangeOldKey] unsignedIntegerValue];
         FSCalendarScope newScope = [change[NSKeyValueChangeNewKey] unsignedIntegerValue];
@@ -249,7 +232,6 @@
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
 {/*
     BOOL shouldBegin = self.tableView.contentOffset.y <= -self.tableView.contentInset.top;
-    
     if (shouldBegin) {
         CGPoint velocity = [self.scopeGesture velocityInView:self.view];
         switch (self.calendraView.scope) {
@@ -262,9 +244,7 @@
     return shouldBegin;
   */
     return nil;
-    
 }
-
 #pragma mark - <FSCalendarDelegate>
 
 - (NSInteger)calendar:(FSCalendar *)calendar numberOfEventsForDate:(NSDate *)date {
@@ -283,11 +263,8 @@
     _calendarHeightConstraint.constant = CGRectGetHeight(bounds);
     [self.view layoutIfNeeded];
 }
-
-- (void)calendar:(FSCalendar *)calendar didSelectDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)monthPosition
-{
+- (void)calendar:(FSCalendar *)calendar didSelectDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)monthPosition{
     NSLog(@"did select date %@",[self.dateFormatter stringFromDate:date]);
-    
     NSMutableArray *selectedDates = [NSMutableArray arrayWithCapacity:calendar.selectedDates.count];
     [calendar.selectedDates enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         [selectedDates addObject:[self.dateFormatter stringFromDate:obj]];
@@ -297,15 +274,12 @@
         [calendar setCurrentPage:date animated:YES];
     }
 }
-
-- (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance fillDefaultColorForDate:(NSDate *)date
-{
+- (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance fillDefaultColorForDate:(NSDate *)date{
         return [UIColor lightGrayColor];
 }
-- (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance fillSelectionColorForDate:(NSDate *)date
-{
+- (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance fillSelectionColorForDate:(NSDate *)date{
+    
         return [UIColor redColor];
-  
 }
 - (void)calendarCurrentPageDidChange:(FSCalendar *)calendar
 {
@@ -315,7 +289,7 @@
 - (IBAction)segmentValuChang:(id)sender {
     if (_segmentControl.selectedSegmentIndex==1) {
         [self.calendraView setScope:FSCalendarScopeWeek animated:YES];
-        
+
     }else{
         NSDate *currentMonth = self.calendraView.currentPage;
         NSDate *previousMonth = [self.gregorian dateByAddingUnit:NSCalendarUnitMonth value:-1 toDate:currentMonth options:0];
@@ -342,7 +316,6 @@
     frame.size.width=self.view.bounds.size.width;
     self.weekView.frame=frame;
     [self.view addSubview:self.weekView];
-    
 }
 - (IBAction)dayHourCloseAction:(id)sender {
     self.weekView.hidden=YES;
@@ -352,9 +325,8 @@
         sender.selected=YES;
         [sender setImage:[UIImage imageNamed:@"Check"] forState:UIControlStateNormal];
         [sender setBackgroundColor:EZblueColor];
-//      [selectedDays addObject:sender.titleLabel.text];
+        //[selectedDays addObject:sender.titleLabel.text];
         sender.layer.borderWidth=0;
-        
     }else
     {
         sender.selected=NO;
@@ -366,12 +338,11 @@
    //            break;
 //          }
 //       }
-      //  temp=nil;
+      //temp=nil;
         [sender setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
         sender.layer.borderWidth=0.5;
         [sender setBackgroundColor:[UIColor whiteColor]];
     }
-
 }
 #pragma mark- PickerView delegate
 
@@ -384,7 +355,6 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
    
     return [timeArr count];
-    
 }
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
 
@@ -423,7 +393,6 @@
         self.monOptionalToTxt.text=[timeArr objectAtIndex:row];
     }
     ////
-    
     if (tusFromCheck) {
         tusFromCheck=NO;
         self.tuesdayFromTimeTxt.text=[timeArr objectAtIndex:row];
@@ -500,7 +469,6 @@
         satOptToCheck=NO;
         self.satOptionalToTimeTxt.text=[timeArr objectAtIndex:row];
     }
-
 }
 
 #pragma make Select time picker  Method
@@ -597,7 +565,6 @@
         thOptToCheck=YES;
         [self timePickerView];
     }
-  
     //////
     else if (textField.tag ==600 ) {
         friFromCheck=YES;
@@ -630,9 +597,8 @@
         satOptToCheck=YES;
         [self timePickerView];
     }
-    
 }
-
 - (IBAction)helpAction:(id)sender {
 }
+
 @end

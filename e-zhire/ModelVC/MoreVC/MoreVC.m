@@ -159,7 +159,6 @@
             [array addObject:contorller];
             [nav setViewControllers:array];
             [self.menuContainerViewController setMenuState:MFSideMenuStateClosed];
- 
         }
 
     }

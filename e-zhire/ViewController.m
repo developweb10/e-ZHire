@@ -16,16 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    //*[@id="clinvoice1"]/table/tbody/tr[15]/td/table/tbody/tr/td[1]/img
+    
 }
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    
-    
     // Dispose of any resources that can be recreated.
 }
-
 
 @end

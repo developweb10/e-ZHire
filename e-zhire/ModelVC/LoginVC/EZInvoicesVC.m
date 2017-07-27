@@ -8,10 +8,12 @@
 
 #import "EZInvoicesVC.h"
 #import "InvoicesCell.h"
+#import "EZInvoicesDetail.h"
 
 @interface EZInvoicesVC ()
 {
    NSMutableArray*inVoiceArr;
+    NSString*invoceId;
 }
 @end
 
@@ -22,6 +24,8 @@
     // Do any additional setup after loading the view.
     [self invoiceApi];
      [self.menuContainerViewController setPanMode:MFSideMenuPanModeNone];
+    NSLog(@"%@",_getPaymentArr);
+    NSLog(@"%@",_userId);
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -55,7 +59,8 @@
       cell.disputLbl.text=[[inVoiceArr objectAtIndex:indexPath.row-1]valueForKey:@"status"];
       cell.cellDateLbl.text=[[inVoiceArr objectAtIndex:indexPath.row-1]valueForKey:@"due_date"];
       cell.cellPricelbl.text=[[inVoiceArr objectAtIndex:indexPath.row-1]valueForKey:@"total_billed"];
-      cell.inVoiceIdLbl.text=[[inVoiceArr objectAtIndex:indexPath.row-1]valueForKey:@"invoice_id"];
+        invoceId=[[inVoiceArr objectAtIndex:indexPath.row-1]valueForKey:@"invoice_id"];
+        cell.inVoiceIdLbl.text=invoceId;
       [cell contentView].backgroundColor=[UIColor whiteColor];
   }
     return cell;
@@ -68,8 +73,15 @@
     if (indexPath.row==0) {
         return;
     }
-    UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZInvoicesDetail"];
+    EZInvoicesDetail*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZInvoicesDetail"];
+    
+    NSString*invoceIdDet =[[inVoiceArr objectAtIndex:indexPath.row-1]valueForKey:@"invoice_id"];
+    NSString*codeId=[invoceIdDet substringFromIndex:[invoceId length]-2];
+    controller.detailInvoiceId=codeId;
+    controller.invoiceUserId=_userId;
+    controller.invoicePaymentArr=_getPaymentArr;
     [self.navigationController pushViewController:controller animated:YES];
+    
 }
 #pragma mark-invoice Api
 -(void)invoiceApi{

@@ -10,6 +10,7 @@
 #import "ManageServiceCell.h"
 #import "CreateTeamCell.h"
 #import "AvailableServiceJsonModel.h"
+#import "ManageAssociateBusiness.h"
 @interface ManageTeamVC ()
 {
     __weak  NSMutableArray *SubCateGoryArray;
@@ -94,6 +95,10 @@
         static NSString *MyIdentifier = @"ManageServiceCell";
         ManageServiceCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
 
+        
+        cell.manageBtn.tag=indexPath.row;
+        [cell.manageBtn addTarget:self action:@selector(manageBtnAction:) forControlEvents:UIControlEventTouchUpInside];
+
         return cell;
         
     }else{
@@ -104,10 +109,14 @@
         SubCateGoryArray=obj.subCategoriesArray;
         subCategoriesJsonModel *subCatObj=[SubCateGoryArray objectAtIndex:indexPath.row];
         cell.serviceNameLbl.text=subCatObj.subcatName;
-        
+    
         return cell;
     }
  }
+-(IBAction)manageBtnAction:(id)sender{    
+    ManageAssociateBusiness*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"ManageAssociateBusiness"];
+    [self.navigationController pushViewController:controller animated:YES];
+}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (self.cretaeTeamTableView==tableView) {
