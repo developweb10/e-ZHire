@@ -185,11 +185,7 @@
 - (IBAction)saveAndCloseAction:(id)sender {
 
 }
-<<<<<<< HEAD
 
-
-=======
->>>>>>> ea07b9837b9e12cf9a85463578ac3282713532f5
 - (IBAction)addVideoAction:(id)sender {
 
     UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
