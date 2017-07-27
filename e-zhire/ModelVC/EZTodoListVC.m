@@ -24,6 +24,7 @@
     // Do any additional setup after loading the view.
      self.AddListArr=[NSMutableArray new];
      self.checkArray=[NSMutableArray new];
+     [self.menuContainerViewController setPanMode:MFSideMenuPanModeNone];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

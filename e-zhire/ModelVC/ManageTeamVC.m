@@ -10,6 +10,7 @@
 #import "ManageServiceCell.h"
 #import "CreateTeamCell.h"
 #import "AvailableServiceJsonModel.h"
+#import "ManageAssociateBusiness.h"
 @interface ManageTeamVC ()
 {
     __weak  NSMutableArray *SubCateGoryArray;
@@ -25,7 +26,11 @@
     // Do any additional setup after loading the view.
      self.cretaeTeamTableView.hidden=YES;
 }
-
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.menuContainerViewController setPanMode:MFSideMenuPanModeNone];
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -90,6 +95,10 @@
         static NSString *MyIdentifier = @"ManageServiceCell";
         ManageServiceCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
 
+        
+        cell.manageBtn.tag=indexPath.row;
+        [cell.manageBtn addTarget:self action:@selector(manageBtnAction:) forControlEvents:UIControlEventTouchUpInside];
+
         return cell;
         
     }else{
@@ -100,10 +109,14 @@
         SubCateGoryArray=obj.subCategoriesArray;
         subCategoriesJsonModel *subCatObj=[SubCateGoryArray objectAtIndex:indexPath.row];
         cell.serviceNameLbl.text=subCatObj.subcatName;
-        
+    
         return cell;
     }
  }
+-(IBAction)manageBtnAction:(id)sender{    
+    ManageAssociateBusiness*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"ManageAssociateBusiness"];
+    [self.navigationController pushViewController:controller animated:YES];
+}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (self.cretaeTeamTableView==tableView) {
@@ -156,6 +169,8 @@
     self.createTeamView.hidden=NO;
     [self.view addSubview:self.createTeamView];
     self.cretaeTeamTableView.hidden=YES;
+    self.manageTableView.userInteractionEnabled=NO;
+    
 }
 - (IBAction)helpAction:(id)sender {
 }
@@ -201,6 +216,7 @@
         self.addSeriveBtn.selected=NO;
         self.createTeamView.hidden=YES;
         self.cretaeTeamTableView.hidden=NO;
+        self.manageTableView.userInteractionEnabled=YES;
     }
 
 }

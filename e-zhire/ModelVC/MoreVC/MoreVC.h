@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MoreVC : UIViewController
+@interface MoreVC : UIViewController<UIActionSheetDelegate>
 {
     NSArray *menuArray,*menuImgArray;
 }

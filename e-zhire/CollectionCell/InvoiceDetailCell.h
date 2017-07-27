@@ -8,30 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InvoiceDetailCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIButton *viewDetailAction;
+@interface InvoiceDetailCell : UITableViewCell<UITableViewDelegate,UITableViewDataSource>
+
 @property (weak, nonatomic) IBOutlet UIButton *disputBtn;
-@property (strong, nonatomic) IBOutlet UILabel *eventLbl;
-@property (strong, nonatomic) IBOutlet UILabel *dateLbl;
 @property (strong, nonatomic) IBOutlet UILabel *seriveDiscriptionLbl;
-@property (strong, nonatomic) IBOutlet UILabel *associateLbl;
-@property (strong, nonatomic) IBOutlet UILabel *priceHourLbl;
-@property (strong, nonatomic) IBOutlet UILabel *hoursWorkLbl;
-@property (strong, nonatomic) IBOutlet UILabel *totalCostLbl;
-@property (strong, nonatomic) IBOutlet UILabel *cellEventName;
-@property (strong, nonatomic) IBOutlet UILabel *cellDateLbl;
-@property (strong, nonatomic) IBOutlet UILabel *cellSeriveNameLabel;
-@property (strong, nonatomic) IBOutlet UILabel *cellAssociateLbl;
-@property (strong, nonatomic) IBOutlet UILabel *cellPricePerHours;
-@property (strong, nonatomic) IBOutlet UILabel *cellHourswokedLbl;
-@property (strong, nonatomic) IBOutlet UILabel *cellTotalCostLbl;
-@property (strong, nonatomic) IBOutlet UILabel *detailworkOrder;
-@property (strong, nonatomic) IBOutlet UILabel *detailStartLbl;
-@property (strong, nonatomic) IBOutlet UILabel *detailAssociateIdLbl;
-@property (strong, nonatomic) IBOutlet UILabel *stopLbl;
-@property (strong, nonatomic) IBOutlet UILabel *cellwokOrderId;
-@property (strong, nonatomic) IBOutlet UILabel *cellAssociateId;
-@property (strong, nonatomic) IBOutlet UILabel *startTime;
-@property (strong, nonatomic) IBOutlet UILabel *cellStopTime;
+@property (weak, nonatomic) IBOutlet UILabel *totalBilled;
+@property (weak, nonatomic) IBOutlet UILabel *dueDateLbl;
+@property (weak, nonatomic) IBOutlet UILabel *cellWorkOrderId;
+@property (weak, nonatomic) IBOutlet UILabel *cellAssociateId;
+@property (weak, nonatomic) IBOutlet UILabel *startTime;
+@property (weak, nonatomic) IBOutlet UILabel *endTime;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewDetailConstraintHeight;
 
 @end

@@ -9,6 +9,7 @@
 #import "EZSearchServiceVC.h"
 #import "SearchServiceCell.h"
 #import "SearchResultJsonModel.h"
+#import "EZReviewVC.h"
 
 @interface EZSearchServiceVC ()
 
@@ -18,13 +19,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%@",_passingArray);
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    [self.menuContainerViewController setPanMode:MFSideMenuPanModeNone];
 }
 #pragma mark- TableView DataSource and Delegate
 
@@ -38,7 +42,7 @@
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *MyIdentifier = @"cell";
-    SearchResultJsonModel *obj=[self.passingArray objectAtIndex:indexPath.row];
+    SearchResultJsonModel*obj=[self.passingArray objectAtIndex:indexPath.row];
     SearchServiceCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
     cell.rateLabel.text = obj.rate_per_hours;
     cell.nameLabel.text =obj.name;
@@ -84,9 +88,11 @@
     UIViewController *contorller=[self.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
     [self.navigationController pushViewController:contorller animated:YES];
 }
--(void)reviewProfileClicked:(UIButton*)sender{
-    
-    UIViewController *contorller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZReviewVC"];
+-(IBAction)reviewProfileClicked:(UIButton*)sender{
+    SearchResultJsonModel*objData=[self.passingArray objectAtIndex:sender.tag];
+    EZReviewVC *contorller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZReviewVC"];
+    contorller.dateId=objData.dataid;
+    contorller.searchId=objData.search_Id;
     [self.navigationController pushViewController:contorller animated:YES];
 }
 

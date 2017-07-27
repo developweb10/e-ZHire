@@ -42,6 +42,10 @@
     [self ipadFrontSize];
 
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    [self.menuContainerViewController setPanMode:MFSideMenuPanModeNone];
+}
 -(void)ipadFrontSize{
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
         [self.firstNameTextField setFont:[UIFont fontWithName:@"Oswald-Regular" size:14.0f]];
@@ -231,13 +235,10 @@
                                                              options:kNilOptions
                                                                error:&errorJson];
         NSLog(@"%@",json);
-        
         if ([[json valueForKey:@"success"] boolValue]==1) {
             [MBProgressHUD hideHUDForView:self.view animated:YES];
-            
             stateArr=[json valueForKey:@"value"];
             NSLog(@"%@",stateArr);
-
           //  NSLog(@"%@",self.categoryArray);
              [pickedView reloadAllComponents];
         }
@@ -245,7 +246,7 @@
     } onError:^(NSError *Error) {
         NSLog(@"%@",Error);
         [MBProgressHUD hideHUDForView:self.view animated:YES];
-       // [EZCommonMethod showAlert:nil message:@"Please try again"];
+       [EZCommonMethod showAlert:nil message:@"Please try again"];
         
     }];
 

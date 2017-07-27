@@ -11,4 +11,7 @@
 @interface EZInvoicesVC : UIViewController
 
 @property (strong, nonatomic) IBOutlet UITableView *invoiceTableVIew;
+@property(strong,nonatomic)NSString*userId;
+@property(strong,nonatomic)NSMutableArray*getPaymentArr;
+
 @end

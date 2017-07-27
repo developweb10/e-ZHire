@@ -13,6 +13,6 @@
 @property (strong, nonatomic) UIWindow *window;
 
 +(AppDelegate*)appDelegate;
-
+@property(strong)UIViewController*login;
 @end
 

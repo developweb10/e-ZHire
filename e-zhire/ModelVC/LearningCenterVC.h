@@ -18,5 +18,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *learningCenterFontLbl;
 @property (weak, nonatomic) IBOutlet UILabel *serviecTypeFontLbl;
 @property (weak, nonatomic) IBOutlet UIImageView *thumnilImg;
+@property (weak, nonatomic) IBOutlet UIView *chooseServiceView;
+- (IBAction)closePopupAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UITableView *seriveTableView;
+@property (weak, nonatomic) IBOutlet UILabel *seriveTypeLbl;
 
 @end

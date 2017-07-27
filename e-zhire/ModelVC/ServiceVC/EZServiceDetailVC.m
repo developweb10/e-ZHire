@@ -75,6 +75,12 @@
     self.serviceStartTimeLabel.text = @"09:00AM";
     [self iPadfontSize];
 }
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    [self.menuContainerViewController setPanMode:MFSideMenuPanModeNone];
+    
+}
 -(void)iPadfontSize{
     
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
@@ -124,11 +130,7 @@
     self.estimatehoursLabel.text=[timeArr objectAtIndex:row];
 }
 
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
-    
-}
+
 -(void)borerLayer{
     self.serviceShowPopupBtn.layer.borderColor=[UIColor grayColor].CGColor;
     self.serviceShowPopupBtn.layer.cornerRadius=2;
@@ -200,9 +202,6 @@
 
 
 - (IBAction)recurringServiceAction:(UIButton*)sender {
-    //    [self.checkRecuring addObject:@"1"];
-    //     chek=[[self.checkRecuring objectAtIndex:sender.tag] integerValue];
-    
     if (sender.selected==NO) {
         sender.selected=YES;
         recuringBtnCheck=YES;
@@ -237,7 +236,7 @@
     }
 }
 - (IBAction)searchBtnAction:(UIButton*)sender {
-    
+
     if (self.zipcodeServiceTexfield.text.length>0) {
         if (self.dateserviceTextFiled.text.length>0) {
             if ([EZCommonMethod validateZip:self.zipcodeServiceTexfield.text]) {
@@ -261,7 +260,6 @@
                 else{
                     [self SearchApiMethod];
                 }
-                
             }
             else{
                 [EZCommonMethod showAlert:nil message:@"Please enter valid zipCode"];
@@ -289,7 +287,7 @@
     [self.dateFormatter setDateFormat:@"MM/dd/yyyy"];
     calendar.onlyShowCurrentMonth = NO;
     calendar.adaptHeightToNumberOfWeeksInMonth = YES;
-    calendar.frame = CGRectMake(40, 50, 300, 320);
+    calendar.frame = CGRectMake((self.view.frame.size.width-300)/2,50, 300, 320);
     [self.view addSubview:calendar];
     self.view.backgroundColor = [UIColor whiteColor];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(localeDidChange) name:NSCurrentLocaleDidChangeNotification object:nil];
@@ -302,11 +300,9 @@
         return YES;
     }
 }
-
 - (void)localeDidChange {
     [self.calendar setLocale:[NSLocale currentLocale]];
 }
-
 - (BOOL)dateIsDisabled:(NSDate *)date {
     for (NSDate *disabledDate in self.disabledDates) {
         if ([disabledDate isEqualToDate:date]) {
@@ -315,7 +311,6 @@
     }
     return NO;
 }
-
 #pragma mark - CKCalendarDelegate
 
 - (void)calendar:(CKCalendarView *)calendar configureDateItem:(CKDateItem *)dateItem forDate:(NSDate *)date {
@@ -349,7 +344,6 @@
     }
 }
 - (BOOL)calendar:(CKCalendarView *)calendar willChangeToMonth:(NSDate *)date andButtonPressed:(NSString *)str {
-    
     NSLog(@"%@", [self.calendar datesShowing]);
     NSDate *dddate = [[self.calendar datesShowing] lastObject];
     NSTimeInterval secondsBetween = [dddate timeIntervalSinceDate:[NSDate date]];
@@ -382,7 +376,6 @@
      }
      */
 }
-
 - (void)calendar:(CKCalendarView *)calendar didLayoutInRect:(CGRect)frame {
     NSLog(@"calendar layout: %@", NSStringFromCGRect(frame));
 }
@@ -527,11 +520,10 @@
             NSString *string=[selectedDays componentsJoinedByString:@","];
             [parameter setObject:string forKey:@"wkday"];
         }
-        
         [parameter setObject:@"Closest Availability Match" forKey:@"sortby"];
         [parameter setObject:selectedMonthweakString forKey:@"timespan"];
       //  [parameter setObject:@(selectedDays.count).stringValue forKey:@"fwkday"];
-       // [parameter setObject:@"1" forKey:@"fwkday"];
+      // [parameter setObject:@"1" forKey:@"fwkday"];
     }
     else{
         [parameter setObject:self.dateserviceTextFiled.text forKey:@"dateofservice"];
@@ -540,29 +532,25 @@
         [parameter setObject:self.zipcodeServiceTexfield.text forKey:@"zipcode"];
         [parameter setObject:self.serviceStartTimeLabel.text forKey:@"tosfrom"];
     }
-    
-     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
      [[NetworkManager Instance]postRequestWithUrl:urlStr parameter:parameter onCompletion:^(id dict) {
         NSError* error;
         NSDictionary* json = [NSJSONSerialization JSONObjectWithData:dict
                                                              options:kNilOptions
                                                                error:&error];
         
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
-        NSLog(@"%@",json);
+         [MBProgressHUD hideHUDForView:self.view animated:YES];
         if ([[json valueForKey:@"success"] boolValue]==1) {
-            NSLog(@"json%@",json);
             NSMutableArray *result=[NSMutableArray new];
             result =[SearchResultJsonModel arrayOfModelsFromDictionaries:[json valueForKey:@"value"] error:&error];
             EZSearchServiceVC *object=[self.storyboard instantiateViewControllerWithIdentifier:@"EZSearchServiceVC"];
             object.passingArray=[NSMutableArray new];
             object.passingArray=result;
             [self.navigationController pushViewController:object animated:YES];
-            NSLog(@"%@",result);
             
         }
         else{
-            
             NSString*zipCode=self.zipcodeServiceTexfield.text;
             NSString*message=[json valueForKey:@"message"];
             EZSearchZipeCodeVC *contorller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZSearchZipeCodeVC"];
@@ -571,13 +559,9 @@
             [self.navigationController pushViewController:contorller animated:YES];
         }
     }onError:^(NSError *Error) {
-        NSLog(@"%@:",Error);
         [MBProgressHUD hideHUDForView:self.view animated:YES];
-        //[EZCommonMethod showAlert:nil message:@"Please try again"];
+        [EZCommonMethod showAlert:nil message:@"Please try again"];
     }];
-    
-    
-    
 }
 
 @end

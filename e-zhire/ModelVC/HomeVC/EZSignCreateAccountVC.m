@@ -11,9 +11,10 @@
 
 @interface EZSignCreateAccountVC ()
 {
-    NSArray*carrerArr;
+    NSMutableArray*carrerArr;
     UIAlertView *pikerAlert;
     NSMutableDictionary *dictClient;
+    UIPickerView *pickedView;
 }
 @end
 
@@ -21,11 +22,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+      carrerArr=[[NSMutableArray alloc]init];
     // Do any additional setup after loading the view.
      dictClient = [NSMutableDictionary dictionary];
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    self.navigationController.navigationBar.translucent = NO;
-    carrerArr=[NSArray arrayWithObjects:@"AT&T",@"Boost",@"C Spire Wireless",@"Cellular One",@"Cricket",@"Metro PCS",@"Sprint",@"Straight Talk",@"T Mobile",@"U.S. Cellular",@"Verizon",@"Virgin Mobile",@"Not Provided", nil];
+     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+     self.navigationController.navigationBar.translucent = NO;
+   
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
         self.topViewHeightConstraint.constant=700;
         [self.firstNameTextField setFont:[UIFont fontWithName:@"Oswald-Regular" size:14.0f]];
@@ -43,6 +45,10 @@
     }else{
         
     }
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    [self.menuContainerViewController setPanMode:MFSideMenuPanModeNone];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -109,19 +115,56 @@
     UIViewController *contorller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZForgotPasswordVC"];
     [self.navigationController pushViewController:contorller animated:YES];
 }
+
 - (IBAction)cellPhoneCarrerAction:(id)sender {
-    
+    [self selectCarrierApiMethod];
     pikerAlert= [[UIAlertView alloc] initWithTitle:@"Please Select" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    NSLog(@"%@",pikerAlert);
+    
     pikerAlert.alertViewStyle = UIAlertViewStyleDefault;
     pikerAlert.tag=102;
     //countryCodePickedView
-    UIPickerView *pickedView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 0,250, 150)];
+     pickedView = [[UIPickerView alloc]init];
     [pickedView setDataSource: self];
     [pickedView setDelegate: self];
     pickedView.showsSelectionIndicator = YES;
     [pikerAlert setValue:pickedView forKey:@"accessoryView"];
     [pikerAlert show];
     [pickedView reloadAllComponents];
+}
+
+-(void)selectCarrierApiMethod{
+    bool statecheck=[EZCommonMethod checkInternetConnection];
+    if(!statecheck){
+        [EZCommonMethod showAlert:nil message:@"Please check your internet connection"];
+        return;
+    }
+    NSString *urlString=[NSString stringWithFormat:@"%@%@",BaseUrl,selectCarrier_Api];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [[NetworkManager Instance] getRequestWithUrl:urlString parameter:nil onCompletion:^(id dict) {
+        
+        NSError* errorJson=nil;
+        NSDictionary* json = [NSJSONSerialization JSONObjectWithData:dict
+                                                             options:kNilOptions
+                                                               error:&errorJson];
+        NSLog(@"%@",json);
+        
+        if([[json valueForKey:@"success"] boolValue]==1)
+        {
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            carrerArr=[json valueForKey:@"value"];
+            [pickedView reloadAllComponents];
+        }
+        else{
+            [EZCommonMethod showAlert:nil message:@"Please check try again"];
+        }
+        
+    } onError:^(NSError *Error) {
+        NSLog(@"%@:",Error);
+        [EZCommonMethod showAlert:nil message:@"Please check try again"];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    }];
+    
 }
 #pragma mark- PickerView delegate
 
@@ -138,11 +181,11 @@
 }
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     
-    return [carrerArr objectAtIndex: row];
+    return [[carrerArr objectAtIndex: row]valueForKey:@"name"];
 }
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow: (NSInteger)row inComponent:(NSInteger)component {
     
-    self.cellPhoneCarrierTextFiled.text=[carrerArr objectAtIndex:row];
+    self.cellPhoneCarrierTextFiled.text=[[carrerArr objectAtIndex:row]valueForKey:@"name"];
 }
 
 @end

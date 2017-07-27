@@ -27,7 +27,7 @@
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     profileArr=[NSArray arrayWithObjects:@"Set-up Your Account",@"Time Tracking",@"Account Info",@"Accountting",@"Add Service",@"Event Calender",@"Set My Schedule",@"To-do-List",@"My Marketing Page",@"Work History",@"My Pay Setup",@"Learning center",@"Manage Team", nil];
     self.managementHeightConstant.constant = profileArr.count*50;
-}
+   }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -41,7 +41,6 @@
     
     return 1;
 }
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return profileArr.count;
@@ -52,7 +51,6 @@
 {
     static NSString *MyIdentifier = @"cell";
     AssociateAccountCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
-    
     cell.titileNameLabel.text=[profileArr objectAtIndex:indexPath.row];
 
     return cell;
@@ -114,7 +112,6 @@
         UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"ManageTeamVC"];
         [self.navigationController pushViewController:controller animated:YES];
     }
-
 }
 
 - (IBAction)callAction:(UIButton *)sender
@@ -126,23 +123,20 @@
 - (IBAction)mailAction:(id)sender
 {
     // Email Subject
-    NSString *emailTitle = @"Test Email";
-    // Email Content
-    NSString *messageBody = @"iOS programming is so fun!";
-    // To address
-    NSArray *toRecipents = [NSArray arrayWithObject:@"USA@e-zhire.com"];
-    
-    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
-    mc.mailComposeDelegate = self;
-    [mc setSubject:emailTitle];
-    [mc setMessageBody:messageBody isHTML:NO];
-    [mc setToRecipients:toRecipents];
-    
-    // Present mail view controller on screen
-    [self presentViewController:mc animated:YES completion:NULL];
+    if ([MFMailComposeViewController canSendMail])
+    {
+        MFMailComposeViewController *mail = [[MFMailComposeViewController alloc] init];
+        mail.mailComposeDelegate = self;
+        [mail setSubject:@"Sample Subject"];
+        [mail setMessageBody:@"Here is some main text in the email!" isHTML:NO];
+        [mail setToRecipients:@[@"USA@e-zhire.com"]];
+        [self presentViewController:mail animated:YES completion:NULL];
+    }
+    else
+    {
+        [EZCommonMethod showAlert:nil message:@"This device cannot send email"];
+    }
 }
-
-
 - (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
 {
     switch (result)
@@ -162,11 +156,9 @@
         default:
             break;
     }
-    
     // Close the Mail Interface
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
-
 - (IBAction)menuAction:(id)sender
 {
    [self.menuContainerViewController toggleLeftSideMenuCompletion:^{}];

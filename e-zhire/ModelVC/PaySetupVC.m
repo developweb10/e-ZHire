@@ -33,6 +33,11 @@
     yearArr=[NSArray arrayWithObjects:@"2017",@"2018",@"2019",@"2020",@"2021",@"2022",@"2023",@"2024",@"2025",@"2026",@"2027" ,@"2028" ,@"2029",@"2030",@"2031",@"2032",nil];
     cardTypeArr=[NSArray arrayWithObjects:@"Visa",@"Master Card",@"Discover",@"American Express", nil];
 }
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.menuContainerViewController setPanMode:MFSideMenuPanModeNone];
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -54,7 +59,6 @@
     else{
         return [monthArr count];
     }
-    
 }
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     

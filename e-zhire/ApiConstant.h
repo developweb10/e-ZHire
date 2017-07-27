@@ -28,9 +28,20 @@
 #define myAccount_Api @"myAccount.php"
 #define changePwd_Api @"changePwd.php"
 #define workOrder_Api @"workOrder.php"
-
 #define serviceProvider @"serviceProvider.php"
-
+#define clientViewWorkOrderApi @"client_work_order.php"
+#define workOrderSearchApi @"search_work_order.php"
+#define inVoice_Api @"myInvoices.php"
+#define editUpdateclient_Api @"editclient.php"
+#define selectCarrier_Api @"selectCarrier.php"
+#define send_Api @"send.php"
+#define editPaymentAcc_Api @"editpayment.php"
+#define delete_Api @"deleteCardinfo.php"
+#define reviewmyProfile_Api @"reviewmyProfile.php"
+#define saveCreditdetails_Api @"saveCreditdetails.php"
+#define sendRequest_Api @"sendRequest.php"
+#define viewInvoice_Api @"viewInvoice.php"
+#define addDispute_Api @"addDispute.php"
 
 
 #endif /* ApiConstant_h */

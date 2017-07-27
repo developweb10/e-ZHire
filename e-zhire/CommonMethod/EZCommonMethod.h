@@ -17,8 +17,6 @@
 #define associateUserId @"associateUserId"
 #define associateNiceName  @"associateNiceName"
 
-
-
 @interface EZCommonMethod : NSObject
 
 + (void) addShadowOnImage:(UIImageView *)imageView;
@@ -35,5 +33,8 @@
 +(UIFont*)getBoldFont:(CGFloat)fontSize;
 +(UIFont*)getRegularFont:(CGFloat)fontSize;
 +(NSString*)getUserId;
++(NSString*)getUserName;
++(NSString*)getUserNiceName;
++(NSString*)getUserEmail;
 
 @end

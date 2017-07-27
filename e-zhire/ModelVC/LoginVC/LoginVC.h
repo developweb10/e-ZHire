@@ -24,5 +24,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *submitBtn;
 @property (weak, nonatomic) IBOutlet UIButton *forgotPasswordBtn;
 - (IBAction)slideMenuAction:(id)sender;
+@property (strong, nonatomic) NSString *clientLoginType;
 
 @end

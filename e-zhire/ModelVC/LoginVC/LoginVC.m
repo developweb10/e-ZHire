@@ -14,6 +14,7 @@
 @interface LoginVC ()
 {
     NSDictionary *getResponseFormDict;
+    NSString*assUserId;
 }
 @end
 
@@ -21,7 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     // Do any additional setup after loading the view.
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
         self.loginViewHeightConstraint.constant=400;
@@ -34,14 +34,17 @@
         [self.clickRegBtn.titleLabel setFont:[UIFont fontWithName:@"OSWALD-BOLD" size:20]];
         [self.submitBtn.titleLabel setFont:[UIFont fontWithName:@"OSWALD-BOLD" size:20]];
         [self.forgotPasswordBtn.titleLabel setFont:[UIFont fontWithName:@"Oswald-Regular" size:14]];
-        
     }else{
         
     }
-}
+   }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    
 }
 #pragma mark- Button Action
 - (IBAction)slideMenuAction:(id)sender {
@@ -106,26 +109,24 @@
     [self.navigationController pushViewController:contorller animated:YES];
 }
 - (IBAction)submitACtion:(id)sender {
-    
-    if (self.userNameTextField.text.length>0 && self.passwordTextfield.text.length>0) {
-        if ([EZCommonMethod validateEmailWithString:self.userNameTextField.text]) {
-             [self loginPostApi];
+        if (self.userNameTextField.text.length>0 && self.passwordTextfield.text.length>0) {
+            if ([EZCommonMethod validateEmailWithString:self.userNameTextField.text]) {
+                [self loginPostApi];
+            }
+            else{
+                [EZCommonMethod showAlert:nil message:@"Please enter valid email id"];
+            }
         }
         else{
-            [EZCommonMethod showAlert:nil message:@"Please enter valid email id"];
-        }
-    }
-    else{
-         [self showUIAlertControllerWithTitle:@"Successful Client login!"];
-     /*
+        // [self showUIAlertControllerWithTitle:@"Successful Client login!"];
+
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"Please enter username and password" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
         [alertController addAction:ok];
         [self presentViewController:alertController animated:YES completion:nil];
-      
-      */
-    }
-    
+ 
+            
+        }
 }
 #pragma mark- API implementation
 
@@ -148,7 +149,7 @@
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSDictionary*parameter=@{@"username":self.userNameTextField.text,@"password":self.passwordTextfield.text };
     [[NetworkManager Instance]postRequestWithUrl:urlStr parameter:parameter onCompletion:^(id dict) {
-        
+
         NSLog(@"%@",dict);
         NSError* error;
         NSDictionary* json = [NSJSONSerialization JSONObjectWithData:dict
@@ -189,7 +190,6 @@
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
 }
-
 -(void)showUIAlertControllerWithTitle:(NSString*)Title{
 
     UIAlertController * alert=   [UIAlertController
@@ -202,22 +202,25 @@
                          handler:^(UIAlertAction * action)
                          {
                              if(checkAssociate){
-                                 
-                                 UIViewController*viewController=[self.storyboard instantiateViewControllerWithIdentifier:@"EZAssociateAccountVC"];
-                                 [self.navigationController pushViewController:viewController animated:YES];
+                                 UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZAssociateAccountVC"];
+                                 [self.navigationController pushViewController:controller animated:YES];
                                  [alert dismissViewControllerAnimated:YES completion:nil];
                              }else{
-                                  NSString*userId=[EZCommonMethod getUserId];
-                                 EZClientAccountVC*viewController=[self.storyboard instantiateViewControllerWithIdentifier:@"EZClientAccountVC"];
-                                 viewController.getUserId=userId;
-                                 [self.navigationController pushViewController:viewController animated:YES];
-                                 [alert dismissViewControllerAnimated:YES completion:nil];
+                                 NSString*userId=[EZCommonMethod getUserId];
+                                 if (userId!=nil) {
+                                     EZClientAccountVC*viewController=[self.storyboard instantiateViewControllerWithIdentifier:@"EZClientAccountVC"];
+                                     viewController.getUserId=userId;
+                                     [self.navigationController pushViewController:viewController animated:YES];
+                                     [alert dismissViewControllerAnimated:YES completion:nil];
+   
+                                 }else{
+                                     [EZCommonMethod showAlert:nil message:@"Please login Client email"];
+                                 }
                              }
                             
                          }];
     [alert addAction:ok];
     [self presentViewController:alert animated:YES completion:nil];
-
+    
 }
-
 @end

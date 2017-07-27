@@ -24,6 +24,7 @@
     // Do any additional setup after loading the view.
     accountingArr  =[NSArray arrayWithObjects:@"CURRENT PAY HISTORY",@"REVIEW & APPROVE EVENTS",@"EVENTS BEING PROCESSED",@"PAID EVENTS", nil];
        selectIndex=-1;
+     [self.menuContainerViewController setPanMode:MFSideMenuPanModeNone];
 
 }
 - (void)didReceiveMemoryWarning {

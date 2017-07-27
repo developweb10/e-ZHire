@@ -19,12 +19,13 @@
                                                                  @"date":@"date",
                                                             @"establish_compilation_time":@"establish_compilation_time",
                                                                  @"search_Id":@"id",
-                                                                  @"rating":@"rating",
+                                                                 @"rating":@"rating",
                                                                  @"name":@"name",
                                                                  @"profile_pic":@"profile_pic",
                                                                  @"rate_per_hours":@"rate_per_hours",
                                                                  @"service":@"service",
                                                                  @"startTime":@"startTime",
+                                                                 @"dataid":@"dataid",
 
                                                                  } ];
 }

@@ -20,6 +20,9 @@
 #import "EZVideoPlayVC.h"
 #import "HappyCustomerVC.h"
 #import "EZFaqVC.h"
+#import "LoginVC.h"
+#import "EZClientAccountVC.h"
+
 @interface MoreVC ()
 
 @end
@@ -29,8 +32,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    menuArray = [NSArray arrayWithObjects:@"HOW IT WORKS",@"WHAT WE DO",@"HAPPY CUSTOMERS",@"FAQ",@"CONTACT",@"TERMS OF USE",@"PRIVACY POLICY",@"LOGIN",@"SERVICE PROVIDER INFO",@"ASSOCIATE FAQ'S", nil];
-    menuImgArray = [NSArray arrayWithObjects:@"one",@"two",@"three",@"four",@"five",@"six",@"seven",@"eight",@"six", @"six",nil];
+    menuArray = [NSArray arrayWithObjects:@"HOW IT WORKS",@"WHAT WE DO",@"HAPPY CUSTOMERS",@"FAQ",@"CONTACT",@"TERMS OF USE",@"PRIVACY POLICY",@"LOGIN",@"SERVICE PROVIDER INFO",@"ASSOCIATE FAQ'S",@"LOGOUT", nil];
+    menuImgArray = [NSArray arrayWithObjects:@"one",@"two",@"three",@"four",@"five",@"six",@"seven",@"eight",@"six", @"six",@"eight",nil];
     // Do any additional setup after loading the view.
 }
 - (void)didReceiveMemoryWarning {
@@ -87,7 +90,6 @@
         [array addObject:contorller];
         [nav setViewControllers:array];
         [self.menuContainerViewController setMenuState:MFSideMenuStateClosed];
-        
     }
     else if(indexPath.row==2) {
        UIViewController *contorller=[self.storyboard instantiateViewControllerWithIdentifier:@"HappyCustomerVC"];
@@ -128,12 +130,36 @@
     }
     else if(indexPath.row==7){
         
-        UIViewController *contorller=[self.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
-        NSMutableArray *array=[nav.viewControllers mutableCopy];
-        contorller.hidesBottomBarWhenPushed=NO;
-        [array addObject:contorller];
-        [nav setViewControllers:array];
-        [self.menuContainerViewController setMenuState:MFSideMenuStateClosed];
+        NSString*userId=[EZCommonMethod getUserId];
+        NSUserDefaults *data = [NSUserDefaults standardUserDefaults];
+        NSString *myString = [data objectForKey:associateUserId];
+        if (userId) {
+            EZClientAccountVC*viewController=[self.storyboard instantiateViewControllerWithIdentifier:@"EZClientAccountVC"];
+            viewController.getUserId=userId;
+            [self.navigationController pushViewController:viewController animated:YES];
+            NSMutableArray *array=[nav.viewControllers mutableCopy];
+            viewController.hidesBottomBarWhenPushed=NO;
+            [array addObject:viewController];
+            [nav setViewControllers:array];
+            [self.menuContainerViewController setMenuState:MFSideMenuStateClosed];
+        }
+        else if (myString){
+            UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZAssociateAccountVC"];
+            [self.navigationController pushViewController:controller animated:YES];
+            NSMutableArray *array=[nav.viewControllers mutableCopy];
+            controller.hidesBottomBarWhenPushed=NO;
+            [array addObject:controller];
+            [nav setViewControllers:array];
+            [self.menuContainerViewController setMenuState:MFSideMenuStateClosed];
+        }
+        else{
+            UIViewController *contorller=[self.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
+            NSMutableArray *array=[nav.viewControllers mutableCopy];
+            contorller.hidesBottomBarWhenPushed=NO;
+            [array addObject:contorller];
+            [nav setViewControllers:array];
+            [self.menuContainerViewController setMenuState:MFSideMenuStateClosed];
+        }
 
     }
     else if(indexPath.row==8){
@@ -144,7 +170,7 @@
         [array addObject:contorller];
         [nav setViewControllers:array];
         [self.menuContainerViewController setMenuState:MFSideMenuStateClosed];
-
+        
     }
     else if(indexPath.row==9){
         EZFaqVC *contorller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZFaqVC"];
@@ -154,8 +180,57 @@
         [array addObject:contorller];
         [nav setViewControllers:array];
         [self.menuContainerViewController setMenuState:MFSideMenuStateClosed];
-        
     }
+    else if(indexPath.row==10){
+        NSString*userIdUsed=[EZCommonMethod getUserId];
+        NSUserDefaults *dataStr = [NSUserDefaults standardUserDefaults];
+        NSString *myStringUrl = [dataStr objectForKey:associateUserId];
+        
+        if (userIdUsed||myStringUrl) {
+            
+            UIAlertController * alert = [UIAlertController
+                                         alertControllerWithTitle:@"Are you sure you want to logout?"
+                                         message:nil
+                                         preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction*logout = [UIAlertAction
+                                    actionWithTitle:@"Logout"
+                                    style:UIAlertActionStyleDefault
+                                    handler:^(UIAlertAction * action) {
+                                        if (userIdUsed) {
+                                            [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"userId"];
+                                            [[NSUserDefaults standardUserDefaults] synchronize];
+                                            [EZCommonMethod showAlert:nil message:@"client logout successfully"];
+                                        }
+                                        else if(myStringUrl){
+                                            [[NSUserDefaults standardUserDefaults] removeObjectForKey:associateUserId];
+                                            [[NSUserDefaults standardUserDefaults] synchronize];
+                                            [EZCommonMethod showAlert:nil message:@"associate logout successfully"];
+                                     }
+                                        LoginVC *contorller=[self.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
+                                        /// contorller.clientLoginType = @"client Login";
+                                        NSMutableArray *array=[nav.viewControllers mutableCopy];
+                                        contorller.hidesBottomBarWhenPushed=NO;
+                                        [array addObject:contorller];
+                                        [nav setViewControllers:array];
+                                        [self.menuContainerViewController setMenuState:MFSideMenuStateClosed];
+
+                                    }];
+            
+            UIAlertAction*cancel = [UIAlertAction
+                                    actionWithTitle:@"Cancel"
+                                    style:UIAlertActionStyleDefault
+                                    handler:^(UIAlertAction * action) {
+                                        
+                                    }];
+            
+            [alert addAction:logout];
+            [alert addAction:cancel];
+            [self presentViewController:alert animated:YES completion:nil];
+        }else{
+            [EZCommonMethod showAlert:nil message:@"Please login Client/Associate"];
+        }
+        }
     else{
         UIViewController *contorller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZContactVC"];
         NSMutableArray *array=[nav.viewControllers mutableCopy];
@@ -164,8 +239,6 @@
         [nav setViewControllers:array];
         [self.menuContainerViewController setMenuState:MFSideMenuStateClosed];
  }
-    
-    
 }
 
 +(void)movewithStoryBourdID:(UINavigationController*)navigationcontroler Id:(NSString*)strID animation:(bool)yes{

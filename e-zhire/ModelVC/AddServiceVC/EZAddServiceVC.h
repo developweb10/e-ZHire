@@ -22,8 +22,22 @@
 @property (strong, nonatomic) IBOutlet UIView *selectServiceView;
 @property (weak, nonatomic) IBOutlet UITableView *serviceTableView;
 - (IBAction)zipCodeLoctionActon:(id)sender;
-
+@property (weak, nonatomic) IBOutlet UILabel *lessMerchantCardLbl;
+@property (weak, nonatomic) IBOutlet UILabel *lessSeriveFeeLbl;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 - (IBAction)closepopupAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *grosPayHoursLbl;
+@property (weak, nonatomic) IBOutlet UILabel *withoutHoldingLbl;
+@property (weak, nonatomic) IBOutlet UITextField *hourRateChangetextField;
+@property (weak, nonatomic) IBOutlet UILabel *takeHomePayHourLbl;
+@property (weak, nonatomic) IBOutlet UILabel *setHourlyFontLbl;
+@property (weak, nonatomic) IBOutlet UILabel *hourlyRateChargeFontLbl;
+@property (weak, nonatomic) IBOutlet UILabel *lessMerchantFontLbl;
+@property (weak, nonatomic) IBOutlet UILabel *lessServiceFeeFontLbl;
+@property (weak, nonatomic) IBOutlet UILabel *YourGrossPayFontLbl;
+@property (weak, nonatomic) IBOutlet UILabel *lessEmploymentFontLbl;
+@property (weak, nonatomic) IBOutlet UIButton *createServiceBtn;
+@property (weak, nonatomic) IBOutlet UILabel *yourTakeHomeLbl;
+
 
 @end

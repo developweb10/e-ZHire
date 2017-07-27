@@ -16,12 +16,12 @@
 @property (nonatomic) NSString<Optional> *availability;
 @property (nonatomic) NSString<Optional> *date;
 @property (nonatomic) NSString<Optional> *establish_compilation_time;
-@property (nonatomic) NSString<Optional> * search_Id;
+@property (nonatomic) NSString<Optional> *search_Id;
 @property (nonatomic) NSString<Optional> *name;
 @property (nonatomic) NSString<Optional> *profile_pic;
 @property (nonatomic) NSString<Optional> *rate_per_hours;
 @property (nonatomic) NSString<Optional> *service;
 @property (nonatomic) NSString<Optional> *startTime;
 @property (nonatomic) NSString<Optional> *rating;
-
+@property (nonatomic) NSString<Optional> *dataid;
 @end

@@ -19,7 +19,7 @@
 
 #import "EZHomeVC.h"
 #import "imageAnimationCell.h"
-
+#import "EZClientAccountVC.h"
 @interface EZHomeVC ()
 
 @end
@@ -115,8 +115,24 @@
         [self.navigationController pushViewController:contorller animated:YES];
     }
     else if (indexPath.row==3){
-        UIViewController *contorller=[self.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
-        [self.navigationController pushViewController:contorller animated:YES];
+        NSString*userId=[EZCommonMethod getUserId];
+        NSUserDefaults *data = [NSUserDefaults standardUserDefaults];
+        NSString *myString = [data objectForKey:associateUserId];
+        if (userId) {
+            EZClientAccountVC*viewController=[self.storyboard instantiateViewControllerWithIdentifier:@"EZClientAccountVC"];
+            viewController.getUserId=userId;
+            [self.navigationController pushViewController:viewController animated:YES];
+        }
+        else if (myString){
+            UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZAssociateAccountVC"];
+            [self.navigationController pushViewController:controller animated:YES];
+        }
+        else{
+            UIViewController *contorller=[self.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
+            [self.navigationController pushViewController:contorller animated:YES];
+
+            
+        }
     }
 }
 
