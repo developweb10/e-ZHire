@@ -119,7 +119,6 @@
         }
         else{
         // [self showUIAlertControllerWithTitle:@"Successful Client login!"];
-
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"Please enter username and password" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
         [alertController addAction:ok];
@@ -202,7 +201,10 @@
                          handler:^(UIAlertAction * action)
                          {
                              if(checkAssociate){
-                                 UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZAssociateAccountVC"];
+                                 NSUserDefaults *dataStr = [NSUserDefaults standardUserDefaults];
+                                 NSString *userId = [dataStr objectForKey:associateUserId];
+                                 EZAssociateAccountVC*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZAssociateAccountVC"];
+                                 controller.assUserId=userId;
                                  [self.navigationController pushViewController:controller animated:YES];
                                  [alert dismissViewControllerAnimated:YES completion:nil];
                              }else{

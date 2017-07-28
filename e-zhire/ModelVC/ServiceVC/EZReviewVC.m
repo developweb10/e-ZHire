@@ -25,7 +25,7 @@
     NSMutableArray*videoArr;
     AVPlayer*player;
     NSString *videoStr;
-    
+       NSString*htmlstr;
 }
 @end
 
@@ -109,19 +109,20 @@
         [self.ratingLabel setFont:[UIFont fontWithName:@"OSWALD-BOLD" size:20.0f]];
         [self.aboutTextLabel setFont:[UIFont fontWithName:@"Oswald-Regular" size:18.0f]];
     }else{
+        
     }
 }
 #pragma mark - UICollectionViewDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
     if(indexPath.row == [collectionView numberOfItemsInSection:indexPath.section] - 1) {
-        //     [self reloadDataFromNetwork];
+        //[self reloadDataFromNetwork];
     }
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     if (collectionView==self.firstCollectionView) {
         return serviceArr.count;
-        
+
     }
     else if(collectionView==self.videoCollectionView){
         return videoArr.count;
@@ -131,6 +132,7 @@
     }
 }
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     if (collectionView==self.firstCollectionView) {
         EZAboutDetailCellVC *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"EZAboutDetailCellVC" forIndexPath:indexPath];
@@ -146,24 +148,17 @@
         ReviewCellVideo *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"ReviewCellVideo" forIndexPath:indexPath];
         NSString*cellVideo=[videoArr objectAtIndex:indexPath.row];
         //NSString *stringurl=[NSString stringWithFormat:@"%@",cellVideo];
-        
         videoStr = [cellVideo stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-        NSURLRequest*request=[NSURLRequest requestWithURL:[NSURL URLWithString:videoStr]];
-        dispatch_queue_t workerQueue = dispatch_queue_create("QueueIdentifier", NULL);
-        dispatch_async(workerQueue, ^ {
-            [cell.videoWebView loadRequest:request];
-        });
-        
-//        CGRect rect = [[UIScreen mainScreen] bounds];
-//        CGSize screenSize = rect.size;
-//        UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0,0,screenSize.width,screenSize.height)];
-//        webView.autoresizesSubviews = YES;
-//        webView.autoresizingMask=(UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth);
-//        NSString *htmlString = [NSString stringWithFormat:@"<html><head><meta name = \"viewport\" content = \"initial-scale = 1.0, user-scalable = no, width = 212\"/></head><body style=\"background:#F00;margin-top:0px;margin-left:0px\"><div><object width=\"320\" height=\"480\"><param name=\"movie\" value=\"%@\"></param><param name=\"wmode\" value=\"transparent\"></param><embed src=\"%@\" type=\"application/x-shockwave-flash\" wmode=\"transparent\" width=\"320\" height=\"480\"></embed></object></div></body></html>",videoStr,videoStr]    ;
-//        
-//        [webView loadHTMLString:htmlString baseURL:[NSURL URLWithString:@"http://www.youtube.com"]];
-//
-//        [self.tableView addSubview:webView];
+//        NSURLRequest*request=[NSURLRequest requestWithURL:[NSURL URLWithString:videoStr]];
+//        dispatch_queue_t workerQueue = dispatch_queue_create("QueueIdentifier", NULL);
+//        dispatch_async(workerQueue, ^ {
+//            [cell.videoWebView loadRequest:request];
+//        });
+       
+        NSString *htmlString = [NSString stringWithFormat:@"<html><head><meta name = \"viewport\" content = \"initial-scale = 1.0, user-scalable = no,\"/></head><div><object width=\"351\" height=\"158\"><param name=\"movie\" value=\"%@\"></param><param name=\"wmode\" value=\"transparent\"></param><embed src=\"%@\" type=\"application/x-shockwave-flash\" wmode=\"transparent\" width=\"351\" height=\"158\"></embed></object></div></body></html>",videoStr,videoStr];
+
+    //[cell.videoWebView loadRequest:substringForFirstMatch];
+     [cell.videoWebView loadHTMLString:htmlString baseURL:[NSURL URLWithString:@"http://www.youtube.com"]];
 
         return cell;
     }
@@ -175,13 +170,14 @@
         return secCell;
     }
 }
+
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath  {
     
     if (collectionView ==self.firstCollectionView){
         
     }
     else if (collectionView ==self.videoCollectionView){
-        
+    
     }
     else{
         currentImage=indexPath.item;
@@ -192,10 +188,10 @@
         [self.secondCollectionView reloadData];
     }
 }
+
 #pragma mark- TableView DataSource and Delegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -279,31 +275,33 @@
         [self.tableView endUpdates];
     }
     else{
+        
     }
 }
-#pragma mark- Button Arrow Action
+ #pragma mark- Button Arrow Action
+
 - (IBAction)rightActionArrow:(UIButton*)sender {
     if(currentImage < ImageArr.count-1) {
         currentImage = currentImage+1;
         sender.enabled = currentImage == ImageArr.count-1?NO:YES;
         self.leftArrowBtn.enabled = YES;
-        NSString *getImagePath = [ImageArr objectAtIndex:currentImage];
-        [self.photoImgage sd_setImageWithURL:[NSURL URLWithString:getImagePath] placeholderImage:[UIImage imageNamed:@"serivePlaceHolder"]];
-        [self.secondCollectionView reloadData];
+     NSString *getImagePath = [ImageArr objectAtIndex:currentImage];
+     [self.photoImgage sd_setImageWithURL:[NSURL URLWithString:getImagePath] placeholderImage:[UIImage imageNamed:@"serivePlaceHolder"]];
+     [self.secondCollectionView reloadData];
+        
     }
 }
 - (IBAction)leftActionArrow:(UIButton*)sender {
     if (currentImage > 0) {
-        currentImage = currentImage-1;
-        sender.enabled = currentImage == 0?NO:YES;
-        self.rightArrowBtn.enabled = YES;
-        NSString *getImagePath = [ImageArr objectAtIndex:currentImage];
-        [self.photoImgage sd_setImageWithURL:[NSURL URLWithString:getImagePath] placeholderImage:[UIImage imageNamed:@"serivePlaceHolder"]];
-        [self.secondCollectionView reloadData];
+      currentImage = currentImage-1;
+      sender.enabled = currentImage == 0?NO:YES;
+      self.rightArrowBtn.enabled = YES;
+      NSString *getImagePath = [ImageArr objectAtIndex:currentImage];
+    [self.photoImgage sd_setImageWithURL:[NSURL URLWithString:getImagePath] placeholderImage:[UIImage imageNamed:@"serivePlaceHolder"]];
+    [self.secondCollectionView reloadData];
     }
 }
 - (IBAction)howReviewAction:(id)sender {
- 
 
 }
 

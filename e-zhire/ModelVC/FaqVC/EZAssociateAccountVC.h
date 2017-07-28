@@ -12,5 +12,5 @@
 @interface EZAssociateAccountVC : UIViewController <MFMailComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *managementHeightConstant;
-
+@property(strong)NSString*assUserId;
 @end

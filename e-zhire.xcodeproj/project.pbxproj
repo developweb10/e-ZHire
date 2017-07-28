@@ -99,6 +99,10 @@
 		03E9690D1EEEBCC1000FD50C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E9690C1EEEBCC1000FD50C /* Reachability.m */; };
 		03EC06591EF12DB4008FBE16 /* EZForgotPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EC06581EF12DB4008FBE16 /* EZForgotPasswordVC.m */; };
 		03EC06611EF1798E008FBE16 /* EZServiceDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EC06601EF1798E008FBE16 /* EZServiceDetailVC.m */; };
+		03F1868B1F2A0F1400145F7E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F186881F2A0F1400145F7E /* CoreVideo.framework */; };
+		03F1868C1F2A0F1400145F7E /* VideoSubscriberAccount.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F186891F2A0F1400145F7E /* VideoSubscriberAccount.framework */; };
+		03F1868D1F2A0F1400145F7E /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F1868A1F2A0F1400145F7E /* VideoToolbox.framework */; };
+		03F186931F2A1C2800145F7E /* AssociateInfoJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F186921F2A1C2800145F7E /* AssociateInfoJsonModel.m */; };
 		03F6AAB61F0E39E000234B1D /* serviceProviderJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F6AAB51F0E39E000234B1D /* serviceProviderJsonModel.m */; };
 		03F6AABA1F0E62C600234B1D /* MaketingPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F6AAB91F0E62C600234B1D /* MaketingPageVC.m */; };
 		03F6AABD1F0E65BB00234B1D /* MaketingVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F6AABC1F0E65BA00234B1D /* MaketingVideoCell.m */; };
@@ -314,6 +318,11 @@
 		03EC06581EF12DB4008FBE16 /* EZForgotPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZForgotPasswordVC.m; sourceTree = "<group>"; };
 		03EC065F1EF1798E008FBE16 /* EZServiceDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZServiceDetailVC.h; sourceTree = "<group>"; };
 		03EC06601EF1798E008FBE16 /* EZServiceDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZServiceDetailVC.m; sourceTree = "<group>"; wrapsLines = 0; };
+		03F186881F2A0F1400145F7E /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		03F186891F2A0F1400145F7E /* VideoSubscriberAccount.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoSubscriberAccount.framework; path = System/Library/Frameworks/VideoSubscriberAccount.framework; sourceTree = SDKROOT; };
+		03F1868A1F2A0F1400145F7E /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		03F186911F2A1C2700145F7E /* AssociateInfoJsonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssociateInfoJsonModel.h; sourceTree = "<group>"; };
+		03F186921F2A1C2800145F7E /* AssociateInfoJsonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssociateInfoJsonModel.m; sourceTree = "<group>"; };
 		03F6AAB41F0E39E000234B1D /* serviceProviderJsonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = serviceProviderJsonModel.h; sourceTree = "<group>"; };
 		03F6AAB51F0E39E000234B1D /* serviceProviderJsonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = serviceProviderJsonModel.m; sourceTree = "<group>"; };
 		03F6AAB81F0E62C600234B1D /* MaketingPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaketingPageVC.h; sourceTree = "<group>"; };
@@ -379,6 +388,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03F1868B1F2A0F1400145F7E /* CoreVideo.framework in Frameworks */,
+				03F1868C1F2A0F1400145F7E /* VideoSubscriberAccount.framework in Frameworks */,
+				03F1868D1F2A0F1400145F7E /* VideoToolbox.framework in Frameworks */,
 				0345560B1F25D0AF00893762 /* AVFoundation.framework in Frameworks */,
 				8B873C441F065FF9009428A2 /* MessageUI.framework in Frameworks */,
 				8B86AA331EDC52120031793A /* Foundation.framework in Frameworks */,
@@ -434,6 +446,8 @@
 				03AE46601F1E3C5900DB5083 /* EditpaymentJsonModel.m */,
 				034FB0751F2867B00010ECF8 /* viewDetailModel.h */,
 				034FB0761F2867B00010ECF8 /* viewDetailModel.m */,
+				03F186911F2A1C2700145F7E /* AssociateInfoJsonModel.h */,
+				03F186921F2A1C2800145F7E /* AssociateInfoJsonModel.m */,
 			);
 			path = JSONModel;
 			sourceTree = "<group>";
@@ -1111,7 +1125,6 @@
 				8B40D0681EE0435A00739CA1 /* ServiceVC */,
 				03EC065E1EF17970008FBE16 /* ServiceDetailVC */,
 				03FA9EB21EFBBACD00DAC8CC /* SearchServiceVC */,
-				03C890441F0501D2002FC3DC /* PyamentInformatioVC */,
 				038A7FCC1EFE5C7D00B4C31E /* SearchZipCodeVC */,
 				03CBF7491EFD043D00F6C52D /* ReviewVC */,
 				8B40D0671EE0435500739CA1 /* HomeVC */,
@@ -1133,6 +1146,7 @@
 				03EC06561EF12D69008FBE16 /* ForgotPassword */,
 				8B52E1CA1EDED93C00211D79 /* FaqVC */,
 				03C18A4D1F0633B400672C3E /* AssociateManagement */,
+				03C890441F0501D2002FC3DC /* PyamentInformatioVC */,
 				03C8904B1F05268C002FC3DC /* AssociateAccountVC */,
 				03D8A6191F07874A00713B46 /* MyAvailbilityScheduleVC  */,
 				03DFD7B81F0A1DBA00E452E6 /* TimeTrackingVC */,
@@ -1193,6 +1207,9 @@
 		8B86AA311EDC52120031793A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				03F186881F2A0F1400145F7E /* CoreVideo.framework */,
+				03F186891F2A0F1400145F7E /* VideoSubscriberAccount.framework */,
+				03F1868A1F2A0F1400145F7E /* VideoToolbox.framework */,
 				0345560A1F25D0AF00893762 /* AVFoundation.framework */,
 				8B873C431F065FF9009428A2 /* MessageUI.framework */,
 				8B86AA321EDC52120031793A /* Foundation.framework */,
@@ -1401,6 +1418,7 @@
 				03E9690D1EEEBCC1000FD50C /* Reachability.m in Sources */,
 				03D8A6491F07B6F400713B46 /* FSCalendarDelegationProxy.m in Sources */,
 				8B86AA0C1EDC45550031793A /* main.m in Sources */,
+				03F186931F2A1C2800145F7E /* AssociateInfoJsonModel.m in Sources */,
 				03C74B911EE2E9FB00684199 /* EZServiceProviderCell.m in Sources */,
 				03DE87B01F163C580060D2D5 /* LearningCenterVC.m in Sources */,
 				038497E41F18BA4900BF06E7 /* WorkViewDetailCell.m in Sources */,

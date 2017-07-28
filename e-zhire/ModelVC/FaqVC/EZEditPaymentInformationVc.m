@@ -70,8 +70,6 @@
         urlStr=[NSString stringWithFormat:@"%@%@",BaseUrl,saveCreditdetails_Api];
     parameter=@{@"cardname":self.cardNameTextField.text,@"cardtype":self.cardTypeLbl.text,@"expiry":selectExpir,@"cvv":self.cvvTextField.text,@"clientid":_userIdStr,@"cardno":self.cardNumberTextField.text};
         
-        //        {"cardname":"Test Again","cardtype":"visa","expiry":"8/2019","cvv":"123","clientid":"1178","cardno":"4929000000014"}
-        
     }else{
         urlStr=[NSString stringWithFormat:@"%@%@",BaseUrl,editPaymentAcc_Api];
         parameter=@{@"clientid":_userIdStr,@"id":_paymentIdStr,@"expiry":selectExpir,@"cardno":self.cardNumberTextField.text,@"cardname":self.cardNameTextField.text,@"cardtype":self.cardTypeLbl.text,@"cvv":self.cvvTextField.text};
@@ -149,7 +147,8 @@
     cell.editBtn.tag=indexPath.row;
     [cell.deleteBtn addTarget:self action:@selector(deleteBtn:) forControlEvents:UIControlEventTouchUpInside];
     [cell.editBtn addTarget:self action:@selector(editAction:) forControlEvents:UIControlEventTouchUpInside];
-    if (checkAdd) {
+
+    if (!obj.is_default) {
         cell.defaultBtn.hidden=YES;
     }else{
          cell.defaultBtn.hidden=NO;
@@ -167,7 +166,7 @@
     [self deleteApi];
 }
 -(IBAction)editAction:(UIButton*)sender{
-   // checkAdd=NO;
+     checkAdd=NO;
     selectedTag=sender.tag;
     [UIView transitionWithView:self.creditView
                       duration:0.5
@@ -213,7 +212,7 @@
             [EZCommonMethod showAlert:nil message:@"Deleted successfull"];
         }
         else{
-            [EZCommonMethod showAlert:nil message:@"There is some problem to proceed"];
+            [EZCommonMethod showAlert:nil message:@"You can't delete default account"];
         }
         
     } onError:^(NSError *Error) {
@@ -224,11 +223,13 @@
 - (IBAction)selectMonthAction:(id)sender {
     checkMonth=NO;
     checkcardType=NO;
+    checkDefault=NO;
     [self monthPickerViewMethod:@"Select Month"];
 }
 - (IBAction)selectYearAction:(id)sender{
     checkMonth=YES;
     checkcardType=NO;
+    checkDefault=NO;
     [self monthPickerViewMethod:@"Select Year"];
 }
 - (IBAction)addAnotherAction:(id)sender {
@@ -249,6 +250,7 @@
                     completion:NULL];
 }
 - (IBAction)changeDefaultAction:(UIButton*)sender {
+    
     CGRect size=self.changeDefaultView.bounds;
     size.origin.x=50;
     size.origin.y=130;
@@ -265,6 +267,7 @@
 - (IBAction)selectCardTypeAction:(id)sender {
     checkcardType=YES;
     checkMonth=NO;
+    checkDefault=NO;
     [self monthPickerViewMethod:@"Select Card Type"];
 }
 #pragma mark- PickerView delegate
@@ -352,7 +355,7 @@
     //  [pickedView reloadAllComponents];
 }
 - (IBAction)changeDefaultCardAction:(id)sender {
-    
-    
+
 }
+
 @end

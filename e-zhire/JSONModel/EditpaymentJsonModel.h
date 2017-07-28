@@ -13,6 +13,6 @@
 @property (nonatomic) NSString<Optional> *expiry;
 @property (nonatomic) NSString<Optional> *id;
 @property (nonatomic) NSString<Optional> *name;
-
+@property (nonatomic) BOOL is_default;
 
 @end

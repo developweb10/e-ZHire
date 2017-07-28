@@ -42,6 +42,8 @@
 #define sendRequest_Api @"sendRequest.php"
 #define viewInvoice_Api @"viewInvoice.php"
 #define addDispute_Api @"addDispute.php"
-
+//////////After Associate login////
+#define associate_info_Api @"associate_info.php"
+#define save_associate_information_Api @"save_associate_information.php"
 
 #endif /* ApiConstant_h */

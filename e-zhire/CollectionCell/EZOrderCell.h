@@ -17,4 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *statrTimeLbl;
 @property (weak, nonatomic) IBOutlet UILabel *clientNameLbl;
 @property (weak, nonatomic) IBOutlet UILabel *associate;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *associateViewConstaintHeight;
+@property (weak, nonatomic) IBOutlet UILabel *orderTypeLbl;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *typeViewContsintHeight;
 @end

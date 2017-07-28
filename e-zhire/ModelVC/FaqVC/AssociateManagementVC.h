@@ -45,7 +45,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *ageLbl;
 - (IBAction)saveChangeAction:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *signByTxt;
-
-
+@property(strong)NSString*sendUserId;
 
 @end

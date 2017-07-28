@@ -131,8 +131,22 @@
      cell.dateSechduleLbl.text=[[workOrderArr objectAtIndex:indexPath.row]valueForKey:@"schedule_service_date"];
      cell.statrTimeLbl.text=[[workOrderArr objectAtIndex:indexPath.row]valueForKey:@"schedule_start_time"];
      cell.clientNameLbl.text=[[workOrderArr objectAtIndex:indexPath.row]valueForKey:@"client"];
-     cell.associate.text=[[workOrderArr objectAtIndex:indexPath.row]valueForKey:@"service_type"];
-    
+     NSString*associateStr=[[workOrderArr objectAtIndex:indexPath.row]valueForKey:@"type_value"];
+     NSString*typeStr=[[workOrderArr objectAtIndex:indexPath.row]valueForKey:@"type"];
+    if(![associateStr isKindOfClass:[NSNull class]]) {
+      cell.associate.text=associateStr;
+      cell.associateViewConstaintHeight.constant=30;
+    }
+    else{
+       cell.associateViewConstaintHeight.constant=0;
+    }
+    if(![typeStr isKindOfClass:[NSNull class]]) {
+         cell.orderTypeLbl.text=typeStr;
+         cell.typeViewContsintHeight.constant=30;
+    }else{
+        cell.typeViewContsintHeight.constant=0;
+    }
+
     return cell;
 }
 -(IBAction)viewOrderClicked:(id)sender{

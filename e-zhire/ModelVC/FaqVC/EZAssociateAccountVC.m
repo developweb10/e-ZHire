@@ -10,6 +10,7 @@
 #import "AssociateAccountCell.h"
 #import "EZTimeTrackingVC.h"
 #import "EZTodoListVC.h"
+#import "AssociateManagementVC.h"
 @interface EZAssociateAccountVC ()
 {
     NSArray*profileArr;
@@ -27,6 +28,19 @@
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     profileArr=[NSArray arrayWithObjects:@"Set-up Your Account",@"Time Tracking",@"Account Info",@"Accountting",@"Add Service",@"Event Calender",@"Set My Schedule",@"To-do-List",@"My Marketing Page",@"Work History",@"My Pay Setup",@"Learning center",@"Manage Team", nil];
     self.managementHeightConstant.constant = profileArr.count*50;
+    
+    NSLog(@"%@",_assUserId);
+//    
+//    1.      Associate Information:
+//https://www.e-zhire.com/api/associate_info.php
+//    {"userId":"3031"}
+//    
+//    2.     Save Associate Details:
+//https://www.e-zhire.com/api/save_associate_information.php
+//    
+//    {"userId":"3031", "firstName":"first", "lastName":"last", "middleName":"middle", "streetAddreess1":"addresss1", "streetAddreess2":"address2", "city":"city", "zipcode":"131113", "homePhone":"77777", "cellPhone":"66666", "email":"abhinavahuja35@gmail.com", "carrier":"@mms.att.net", "crime":"no", "offender":"no", "tandcfinal":"1", "newpass":"","resides":"no", "signfull":"xyz", "days":"09", "months":"06", "years":"1990","ageassoc":"47.6"}
+
+    
    }
 
 - (void)didReceiveMemoryWarning {
@@ -59,15 +73,18 @@
     
     selectindex= indexPath.row;
     if (indexPath.row==0) {
-        UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"AssociateManagementVC"];
-        [self.navigationController pushViewController:controller animated:YES];
+//        UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"AssociateManagementVC"];
+//        [self.navigationController pushViewController:controller animated:YES];
     }
     else if(indexPath.row==1){
         UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"EZTimeTrackingVC"];
         [self.navigationController pushViewController:controller animated:YES];
     }
     else if(indexPath.row==2){
-        UIViewController*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"AssociateManagementVC"];
+        NSUserDefaults *dataStr = [NSUserDefaults standardUserDefaults];
+      NSString*userId = [dataStr objectForKey:associateUserId];
+        AssociateManagementVC*controller=[self.storyboard instantiateViewControllerWithIdentifier:@"AssociateManagementVC"];
+        controller.sendUserId=userId;
         [self.navigationController pushViewController:controller animated:YES];
     }else if(indexPath.row==3){
         
@@ -119,7 +136,6 @@
     NSString *phoneNumber = sender.titleLabel.text;
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",phoneNumber]]];
 }
-
 - (IBAction)mailAction:(id)sender
 {
     // Email Subject
